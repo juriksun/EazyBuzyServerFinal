@@ -71,4 +71,4 @@ module.exports = {
         },
         "place_id": "ChIJLXgkPjVKHRURN1jg_EdA7I4",
     }
-}
+};
