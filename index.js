@@ -2,6 +2,7 @@ let taskPlaces = [];
 let createAllWays = ()=>{
 
 };
+const test;
 let getPlacesForTaskInPoligonPoint = (task, poligonPoint, radius, callback)=>{
 
         const url = `https://maps.googleapis.com/maps/api/place/radarsearch/json?location=${poligonPoint.lat},${poligonPoint.lng}&radius=${radius}&type=${task.place.type}&keyword=${task.place.key_words[0]}&key=AIzaSyAkz6xddABYhnT-iPqJePo3MIsiy1kxE9Q&language=en`;
