@@ -7,7 +7,7 @@ const   express     = require('express'),
 
 const   get_info_ctrl       = require('./controllers/get_info_ctrl'),
         create_route_ctrl   = require('./controllers/create_route_ctrl');
-
+        get_route_ctrl      = require('./controllers/get_route_ctrl');
 
 
 app.use(bodyParser.urlencoded({'extended':'true'}));
@@ -27,6 +27,7 @@ app.use((req, res, next) => {
 // app.get('/', (req, res)=>{res.status(200).sendFile(__dirname + "public/api.html")});//for api
 app.use('/info', get_info_ctrl.execute);
 app.use('/create_route', get_info_ctrl.execute);
+app.use('/get_route', get_route_ctrl.execute);
 
 
 
