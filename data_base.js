@@ -16,7 +16,7 @@ module.exports = {
             },
             "place": {
                 "type": "bank",
-                "key_words": ["leumi"],
+                "key_words": ["hapolim"],
                 "location": {
                     "address": "string",
                     "place_id": "string",
@@ -62,6 +62,12 @@ module.exports = {
             "lng": 34.8030246   
         },
         "place_id": "ChIJEUjyOsRLHRURe25DzdVkh18",
+        "geometry":{
+            "location":{
+                "lat": 32.0900011,
+                "lng":34.8030246
+            }
+        }
     },
     "end_place": {
         "address": "Hertsel St 1, Ramat Gan, Israel",
@@ -70,5 +76,11 @@ module.exports = {
             "lng": 34.8196098
         },
         "place_id": "ChIJLXgkPjVKHRURN1jg_EdA7I4",
+        "geometry":{
+            "location":{
+                "lat": 32.08051859999999,
+                "lng": 34.8196098
+            }
+        }
     }
 };
