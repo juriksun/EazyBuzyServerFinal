@@ -112,6 +112,7 @@ module.exports = class {
                                     .then((recommendedRoute) => {
                                         resolve(
                                             {
+                                                
                                                 recommended_route: recommendedRoute,
                                                 all_routes: directionsForRoutesWithSegments,
                                                 all_tasks: this.userTasks
