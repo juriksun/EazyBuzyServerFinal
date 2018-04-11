@@ -7,10 +7,8 @@ require('./server');
 // let createAllWays = (tasks) => {
 //     function permutator(inputArr) {
 //         let results = [];
-
 //         function permute(arr, memo) {
 //             var cur, memo = memo || [];
-
 //             for (let i = 0; i < arr.length; i++) {
 //                 cur = arr.splice(i, 1);
 //                 if (arr.length === 0) {
@@ -21,10 +19,8 @@ require('./server');
 //             }
 //             return results;
 //         }
-
 //         return permute(inputArr);
 //     }
-
 //     let tasksForPermutation = [];
 
 //     for(let i = 0; i < tasks.length; i++){
@@ -99,7 +95,7 @@ require('./server');
 //     }
 // });
 
-// let calcPoligonsForSearch = (places, startPoint, endPoint, radius)=>{
+// let calcPolygonsForSearch = (places, startPoint, endPoint, radius)=>{
 
 //     let firstDot = startPoint.coordinate;
 //     return [

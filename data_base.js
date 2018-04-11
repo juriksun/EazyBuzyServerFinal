@@ -16,7 +16,7 @@ module.exports = {
             },
             "place": {
                 "type": "bank",
-                "key_words": ["hapolim"],
+                "key_words": ["leumi"],
                 "location": {
                     "address": "string",
                     "place_id": "string",
