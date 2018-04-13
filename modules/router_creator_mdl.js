@@ -1,6 +1,6 @@
 let     db              = require('../data_base');
 const   googleApiMdl    = require('./google_api_mdl');
-let     Combinatorics   = require('./combinatorics_mdl'); 
+let     Combinatorics   = require('./combinatorics_mdl');
 module.exports = class {
     //no now
     constructor(){
@@ -50,7 +50,7 @@ module.exports = class {
                         "name": suiteblePlaces[i].name
                     };
                     let task = [];
-                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 3; k++) {
+                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 6; k++) {
                         let place = suiteblePlaces[i].places[k];
                         place.task_indificator = task_indificator;
                         task.push(place);
@@ -112,7 +112,6 @@ module.exports = class {
                                     .then((recommendedRoute) => {
                                         resolve(
                                             {
-                                                
                                                 recommended_route: recommendedRoute,
                                                 all_routes: directionsForRoutesWithSegments,
                                                 all_tasks: this.userTasks
@@ -133,8 +132,7 @@ module.exports = class {
         })
     };
 
-    calcPolygon() {
-        
+    calcPolygon() {      
         return new Promise((resolve, reject)=>{
             resolve([this.startPoint.coordinate]);
         });
@@ -168,10 +166,12 @@ module.exports = class {
 
     getAllDirectionForRoutesWithSegments(allRoutesWithSegments){
         return new Promise((resolve, reject)=>{
+            let sumOfRequers = 0;
             let promises = [];
             let allRoutesWithSegmentsWithSums = [];
             for (let i = 0; i < allRoutesWithSegments.length; i++) {
                 for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
+                    sumOfRequers++;
                     promises.push(googleApiMdl.googleGetDirection(
                         allRoutesWithSegments[i][k].startPoint.place_id,
                         allRoutesWithSegments[i][k].endPoint.place_id,
@@ -179,7 +179,7 @@ module.exports = class {
                     ));
                 }
             }
-            
+            console.log(sumOfRequers);
             Promise.all(promises)
             .then((allData) => {
                 let promisesIndex = 0;
