@@ -1,35 +1,36 @@
 import { Schema } from 'mongoose';
 
 let mongoose = require('mongoose'),
-    schema = mongoose.Schema,
-    shareSchema = new Schema({
-        user_name: { type : String , required : true },
+    Schema = mongoose.Schema,
+    ShareSchema = new Schema({
+        username: { type : String , required : true },
         share_status: { type : String , required : true }
     })
-    editTimeSchema = new Schema({
+    EditTimeSchema = new Schema({
         create: { type : Number , required : true },
         last_edited: { type : Number , required : true }
     })
-    timeSchema = new Schema({
+    TimeSchema = new Schema({
         start_hour: { type : Number , required : true },
         end_hour: { type : Number , required : true },
         duration: { type : Number , required : true }
     })
-    taskPlaceSchema = new Schema({
+    TaskPlaceSchema = new Schema({
         place_type : { type : String , required : true },
         palce_key_word : { type : String , required : true }
     })
-    coordinateSchema = new schema({
+    CoordinateSchema = new Schema({
         lat : { type : Number , required : true },
         long : { type : Number , required : true }
     }),
-    locationSchema = new schema({
+    LocationSchema = new Schema({
         address : { type : String , required : true },
         place_id : { type : String , required : true },
         coordinate : coordinateSchema
     }),
-    taskSchema = new schema({
+    TaskSchema = new Schema({
         id : { type : Number , required : true , unique : true },
+        user_token_id : { type : String , required : true },
         name : { type : String , required : true },
         status : { type : String , required : true },
         priority : { type : Number , required : true },
