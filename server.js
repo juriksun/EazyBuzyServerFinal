@@ -7,8 +7,8 @@ const   express     = require('express'),
 
 const   get_info_ctrl       = require('./controllers/get_info_ctrl'),
         create_route_ctrl   = require('./controllers/create_route_ctrl'),
-        get_route_ctrl      = require('./controllers/get_route_ctrl');
-
+        get_route_ctrl      = require('./controllers/get_route_ctrl'),
+        get_all_tasks_crtl  = require('./controllers/get_all_tasks_ctrl');
 
 app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
@@ -28,6 +28,7 @@ app.use((req, res, next) => {
 app.use('/info', get_info_ctrl.execute);
 app.use('/create_route', create_route_ctrl.execute);
 app.use('/get_route', get_route_ctrl.execute);
+app.use('/get_all_tasks', get_all_tasks_crtl.execute);
 
 
 
