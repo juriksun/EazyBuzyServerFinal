@@ -30,8 +30,6 @@ app.use('/create_route', create_route_ctrl.execute);
 app.use('/get_route', get_route_ctrl.execute);
 app.use('/get_all_tasks', get_all_tasks_crtl.execute);
 
-
-
 // app.use('/search', controller.getSearchResult);
 
 // app.use('/admin_login', controller.adminLogin);

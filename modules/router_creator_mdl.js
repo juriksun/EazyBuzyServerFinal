@@ -1,6 +1,6 @@
 let     db              = require('../data_base');
 const   googleApiMdl    = require('./google_api_mdl');
-let     Combinatorics   = require('./combinatorics_mdl'); 
+let     Combinatorics   = require('./combinatorics_mdl');
 module.exports = class {
     //no now
     constructor(){
