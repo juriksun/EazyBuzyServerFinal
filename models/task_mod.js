@@ -29,7 +29,9 @@ let mongoose = require('mongoose'),
         coordinate : coordinateSchema
     }),
     TaskSchema = new Schema({
-        id : { type : Number , required : true , unique : true },
+        // ---------------- will use id from mlab on create ---------------- 
+        // id : { type : Number , required : true , unique : true },
+        // -----------------------------------------------------------------
         user_token_id : { type : String , required : true },
         name : { type : String , required : true },
         status : { type : String , required : true },
