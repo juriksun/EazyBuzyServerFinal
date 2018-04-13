@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose';
+//import { Schema } from 'mongoose';
 
 let mongoose = require('mongoose'),
     Schema = mongoose.Schema,
@@ -26,7 +26,7 @@ let mongoose = require('mongoose'),
     LocationSchema = new Schema({
         address : { type : String , required : true },
         place_id : { type : String , required : true },
-        coordinate : coordinateSchema
+        coordinate : CoordinateSchema
     }),
     TaskSchema = new Schema({
         // ---------------- will use id from mlab on create ---------------- 
@@ -35,17 +35,17 @@ let mongoose = require('mongoose'),
         user_token_id : { type : String , required : true },
         name : { type : String , required : true },
         status : { type : String , required : true },
-        priority : { type : Number , required : true },
-        share : shareSchema,
-        edit_time : editTimeSchema,
-        time : timeSchema,
-        task_place : taskPlaceSchema,
-        location : locationSchema
+        priority : { type : Number , required : false },
+        share : ShareSchema,
+        edit_time : EditTimeSchema,
+        time : TimeSchema,
+        task_place : TaskPlaceSchema,
+        location : LocationSchema
 
     },
     {   strict: true    },
     {   collection: 'tasks' });
 
-let Tasks = mongoose.model('Tasks',userSchema);
+let Tasks = mongoose.model('Tasks', TaskSchema);
 
 module.exports = Tasks;

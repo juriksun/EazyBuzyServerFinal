@@ -27,8 +27,9 @@ module.exports = class{
         })
     }
 
-    createTask(){
-        const { name , type , status , share , edit_time , time , priority , task_place , location } = arguments
-        console.log("TEST : "+ name , type , status , share , edit_time , time , priority , task_place , location)
+    createTask(...arg){
+        // const { name , type , status , share , edit_time , time , priority , task_place , location } = arg
+        // console.log("TEST : "+ name , type , status , share , edit_time , time , priority , task_place , location)
+        console.log(JSON.stringify(arg));
     }
 }
