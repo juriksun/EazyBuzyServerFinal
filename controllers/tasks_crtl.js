@@ -58,3 +58,34 @@ exports.getAllTasks = (req, res) => {
         );
     }   
 };
+
+exports.deleteTask = (req, res) => {
+    console.log("get_all_tasks route executing");
+    
+    if(req.body.user !== undefined && req.body.taskId !== undefined ){
+        taskController.deleteTask(req.body.user , req.body.taskId)
+        .then( result => {
+            res.status(200).json(
+                {
+                    status : true,
+                    tasks : result
+                }
+            );
+        })
+        .catch( error => {
+            res.status(200).json(
+                {
+                    status : "false",
+                    error : error
+                }
+            );
+        })
+
+    } else {
+        res.status(200).json(
+            {
+                massage: 'undefined'
+            }
+        );
+    }   
+};

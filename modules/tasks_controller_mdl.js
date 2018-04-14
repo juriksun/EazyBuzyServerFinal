@@ -1,3 +1,5 @@
+import { Promise } from 'mongoose';
+
 'use strict';
  let TaskMod        = require('../models/task_mod'),
      UserMod        = require('../models/task_mod'),
@@ -56,5 +58,26 @@ module.exports = class{
                 });
             });
         });
+    }
+
+    deleteTask(user , taskId){
+        return new Promise( (resolve,reject) => {
+            this.getAllTasks(user)
+            .then( allTasks => {
+                let taskToDelete = allTasks.filter( i => i._id === taskId)
+                if(taskToDelete.length === 1 ){
+                    TaskMod.deleteOne({_id : taskId})
+                    .then( result => {
+                        resolve(result)
+                    })
+                    .catch( error => {
+                        reject(error)
+                    })
+                }else{
+                    reject(`Error delete task id - ${taskId}`)
+                }
+            })
+        })
+        
     }
 }
