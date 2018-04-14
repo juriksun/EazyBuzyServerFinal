@@ -12,10 +12,8 @@ exports.execute = (req, res) => {
         travelMode  = req.body.travel_mode;
 
     let routeController = new RouteController();
-    
-    //let nirMekin = "'sdfdasf' sfadfsf";
 
-    routeController.createNewRoute(userId, startTime, endTime,startPoint, endPoint, travelMode)
+    routeController.createNewRoute(userId, startTime, endTime, startPoint, endPoint, travelMode)
     .then((data) => {
         res.status(200).json(
             {
