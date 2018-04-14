@@ -4,7 +4,7 @@ let RouteController    = require('../modules/route_controller_mdl');
 exports.execute = (req, res) => {
     console.log("create_route route executing");
 
-    let userId      = req.body.uder_id,
+    let user      = req.body.user,
         startTime   = req.body.start_time,
         endTime     = req.body.end_time,
         startPoint  = req.body.start_point,
@@ -13,7 +13,7 @@ exports.execute = (req, res) => {
 
     let routeController = new RouteController();
 
-    routeController.createNewRoute(userId, startTime, endTime, startPoint, endPoint, travelMode)
+    routeController.createNewRoute(user, startTime, endTime, startPoint, endPoint, travelMode)
     .then((data) => {
         res.status(200).json(
             {

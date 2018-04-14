@@ -8,7 +8,7 @@ module.exports = class{
         this.routeCreator = new RouteCreator();
     }
 
-    createNewRoute( userId, startTime, endTime,
+    createNewRoute( user, startTime, endTime,
                     startPoint, endPoint, travelMode
     ){
         return new Promise((resolve, reject)=>{
@@ -17,16 +17,20 @@ module.exports = class{
             this.routeCreator.setStartPoint(startPoint);
             this.routeCreator.setEndPoint(endPoint);
             //routeCreator.setTRavelMode(travelMode);
-            this.routeCreator.setUser(userId)
+            console.log(user)
+            this.routeCreator.setUser(JSON.parse(user))
             .then((resultSetUser) => {
                 if(resultSetUser !== 0){
-
+                    console.log(resultSetUser)
                 }
                 this.routeCreator.dispatch()
                 .then((data) => {
                     resolve(data);
                 }
-                );
+                )
+                .catch(error => {
+                    console.log(error)
+                })
             })
             .catch();
 
