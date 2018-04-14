@@ -10,6 +10,6 @@ let mongoose = require('mongoose'),
     {   strict: true    },
     {   collection: 'users' });
 
-let Users = mongoose.model('Users',userSchema);
+let Users = mongoose.model('Users',UserSchema);
 
 module.exports = Users;

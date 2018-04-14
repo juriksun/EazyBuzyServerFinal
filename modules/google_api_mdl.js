@@ -3,7 +3,7 @@ const axios = require("axios");
 module.exports.googleGetPlacesByRadius = (taskIndex, task, polygonPoint, radius) => {
     return new Promise((resolve, reject) => {
 
-        const url = `https://maps.googleapis.com/maps/api/place/radarsearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&radius=${radius}&type=${task.place.type}&keyword=${task.place.key_words[0]}&key=AIzaSyAkz6xddABYhnT-iPqJePo3MIsiy1kxE9Q&language=en`;
+        const url = `https://maps.googleapis.com/maps/api/place/radarsearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&radius=${radius}&type=${task.place.type}&keyword=${task.place.key_word}&key=AIzaSyAkz6xddABYhnT-iPqJePo3MIsiy1kxE9Q&language=en`;
         axios
             .get(url)
             .then(response => {

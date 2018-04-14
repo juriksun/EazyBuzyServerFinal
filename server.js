@@ -9,7 +9,7 @@ const   get_info_ctrl       = require('./controllers/get_info_ctrl'),
         create_route_ctrl   = require('./controllers/create_route_ctrl'),
         get_route_ctrl      = require('./controllers/get_route_ctrl'),
         tasks_crtl          = require('./controllers/tasks_crtl');
-        
+
 app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
 

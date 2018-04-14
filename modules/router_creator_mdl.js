@@ -50,7 +50,7 @@ module.exports = class {
                         "name": suiteblePlaces[i].name
                     };
                     let task = [];
-                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 6; k++) {
+                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 2; k++) {
                         let place = suiteblePlaces[i].places[k];
                         place.task_indificator = task_indificator;
                         task.push(place);

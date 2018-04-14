@@ -17,7 +17,7 @@ let mongoose = require('mongoose'),
     })
     TaskPlaceSchema = new Schema({
         place_type : { type : String , required : true },
-        palce_key_word : { type : String , required : true }
+        place_key_word : { type : String , required : true }
     })
     CoordinateSchema = new Schema({
         lat : { type : Number , required : true },
@@ -32,10 +32,11 @@ let mongoose = require('mongoose'),
         // ---------------- will use id from mlab on create ---------------- 
         // id : { type : Number , required : true , unique : true },
         // -----------------------------------------------------------------
-        user_token_id : { type : String , required : true },
-        name : { type : String , required : true },
-        status : { type : String , required : true },
-        priority : { type : Number , required : false },
+        user_token_id : { type : String},
+        name : { type : String},
+        type: { type : String},
+        status : { type : String},
+        priority : { type : Number},
         share : ShareSchema,
         edit_time : EditTimeSchema,
         time : TimeSchema,
@@ -43,7 +44,7 @@ let mongoose = require('mongoose'),
         location : LocationSchema
 
     },
-    {   strict: true    },
+    {   strict: false},
     {   collection: 'tasks' });
 
 let Tasks = mongoose.model('Tasks', TaskSchema);
