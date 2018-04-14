@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 // app.get('/', (req, res)=>{res.status(200).sendFile(__dirname + "public/api.html")});//for api
 app.use('/info', get_info_ctrl.execute);
 app.use('/create_route', create_route_ctrl.execute);
-app.use('/get_route', get_route_ctrl.execute);
+//app.use('/get_route', get_route_ctrl.execute);
 app.use('/get_all_tasks', tasks_crtl.getAllTasks);
 app.use('/create_task', tasks_crtl.createTask);
 

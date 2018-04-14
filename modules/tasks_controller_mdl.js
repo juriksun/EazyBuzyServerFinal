@@ -33,7 +33,7 @@ module.exports = class{
     createTask(user, task){
         return new Promise((resolve, reject) => {
 
-            // console.log(task);
+            //console.log(task);
             //resolve('blaaa');
             this.userController.getUserWithId(user)
             .then(user => {
@@ -45,7 +45,6 @@ module.exports = class{
                         place_type: task.type,
                         place_key_word: task.name
                     }
-
                 });
                 newTask.save((err1, doc5) => {
                     if(err1){
