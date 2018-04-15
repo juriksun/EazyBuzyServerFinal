@@ -6,10 +6,9 @@ const   express     = require('express'),
 
 
 const   get_info_ctrl       = require('./controllers/get_info_ctrl'),
-        create_route_ctrl   = require('./controllers/create_route_ctrl'),
-        get_route_ctrl      = require('./controllers/get_route_ctrl'),
         tasks_crtl          = require('./controllers/tasks_crtl'),
-        users_ctrl           = require('./controllers/users_ctrl')
+        users_ctrl           = require('./controllers/users_ctrl'),
+        routes_ctrl           = require('./controllers/routes_ctrl');
 
 app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
@@ -28,8 +27,8 @@ app.use((req, res, next) => {
 // app.get('/', (req, res)=>{res.status(200).sendFile(__dirname + "public/api.html")});//for api
 app.use('/info', get_info_ctrl.execute);
 // ROUTES
-app.use('/create_route', create_route_ctrl.execute);
-//app.use('/get_route', get_route_ctrl.execute);
+app.use('/create_route', routes_ctrl.createRoute);
+//app.use('/get_route', routes_ctrl.getRoute);
 
 // USERS
 app.use('/get_user', users_ctrl.getUser);
@@ -38,8 +37,7 @@ app.use('/get_user', users_ctrl.getUser);
 app.use('/get_all_tasks', tasks_crtl.getAllTasks);
 app.use('/create_task', tasks_crtl.createTask);
 app.use('/delete_task', tasks_crtl.deleteTask);
-
-
+app.use('/update_task', tasks_crtl.updateTask);
 
 //response friendly 404 Page
 app.all('*', (req, res) => {
