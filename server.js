@@ -31,7 +31,7 @@ app.use('/create_route', create_route_ctrl.execute);
 app.use('/get_all_tasks', tasks_crtl.getAllTasks);
 app.use('/create_task', tasks_crtl.createTask);
 app.use('/delete_task', tasks_crtl.deleteTask);
-
+app.use('/update_task', tasks_crtl.updateTask);
 // app.use('/search', controller.getSearchResult);
 
 // app.use('/admin_login', controller.adminLogin);
