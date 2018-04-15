@@ -96,7 +96,7 @@ module.exports = class{
             this.getTask(user)
             .then( taskToDelete => {
                 if(taskToDelete!== {} ){
-                    
+
                     let toUpDate = {};
 
                     toUpDate.name = taskUpdateData.name;
@@ -105,8 +105,6 @@ module.exports = class{
                         place_type: taskUpdateData.type,
                         place_key_word: taskUpdateData.name
                     };
-                
-                    console.log(toUpDate);
                 
                     let conditions  = { _id: taskId },
                         update      = { $set:  toUpDate },

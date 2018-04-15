@@ -97,9 +97,6 @@ exports.updateTask = (req, res) => {
         req.body.task_id !== undefined &&
         req.body.task_update_data !== undefined
     ){
-        console.log(req.body.user);
-        console.log(req.body.task_id);
-        console.log(req.body.task_update_data);
         taskController.updateTask(
             JSON.parse(req.body.user),
             req.body.task_id,
