@@ -91,5 +91,38 @@ module.exports = class{
         })
     }
 
-    // updateTask(JSON.parse(req.body.user),req.body.task_id,JSON.parse(req.body.task_update_data)
+    updateTask(user, taskId, taskUpdateData){
+        return new Promise( (resolve,reject) => {
+            this.getTask(user)
+            .then( taskToDelete => {
+                if(taskToDelete!== {} ){
+                    
+                    let toUpDate = {};
+
+                    toUpDate.name = taskUpdateData.name;
+                    toUpDate.type = taskUpdateData.type;
+                    toUpDate.task_place = {
+                        place_type: taskUpdateData.type,
+                        place_key_word: taskUpdateData.name
+                    };
+                
+                    console.log(toUpDate);
+                
+                    let conditions  = { _id: taskId },
+                        update      = { $set:  toUpDate },
+                        opts = { new: true, upsert: false };
+
+                    TaskMod.findOneAndUpdate(conditions, update, opts)
+                    .then( result => {
+                        resolve(result)
+                    })
+                    .catch( error => {
+                        reject(error)
+                    });
+                }else{
+                    reject(`Error delete task id - ${taskId}`)
+                }
+            })
+        }) 
+    }
 }

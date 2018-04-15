@@ -90,44 +90,43 @@ exports.deleteTask = (req, res) => {
     }   
 };
 
-// exports.updateTask = (req, res) => {
-//     console.log("delete_task route executing");
-    
-//     if(
-//         req.body.user !== undefined && 
-//         req.body.task_id !== undefined &&
-//         req.body.task_update_data !== undefined
-//     ){
-//         console.log(req.body.user);
-//         console.log(req.body.task_id);
-//         console.log(req.body.task_update_data);
-//         taskController.updateTask(
-//             JSON.parse(req.body.user),
-//             req.body.task_id,
-//             JSON.parse(req.body.task_update_data)
-//         )
-//         .then( result => {
-//             res.status(200).json(
-//                 {
-//                     status : true,
-//                     tasks : result
-//                 }
-//             );
-//         })
-//         .catch( error => {
-//             res.status(200).json(
-//                 {
-//                     status : "false",
-//                     error : error
-//                 }
-//             );
-//         })
+exports.updateTask = (req, res) => {
+    console.log("update_task route executing");
+    if(
+        req.body.user !== undefined && 
+        req.body.task_id !== undefined &&
+        req.body.task_update_data !== undefined
+    ){
+        console.log(req.body.user);
+        console.log(req.body.task_id);
+        console.log(req.body.task_update_data);
+        taskController.updateTask(
+            JSON.parse(req.body.user),
+            req.body.task_id,
+            JSON.parse(req.body.task_update_data)
+        )
+        .then( result => {
+            res.status(200).json(
+                {
+                    status : true,
+                    tasks : result
+                }
+            );
+        })
+        .catch( error => {
+            res.status(200).json(
+                {
+                    status : "false",
+                    error : error
+                }
+            );
+        })
 
-//     } else {
-//         res.status(200).json(
-//             {
-//                 massage: 'undefined'
-//             }
-//         );
-//     }   
-// };
+    } else {
+        res.status(200).json(
+            {
+                massage: 'undefined'
+            }
+        );
+    }   
+};
