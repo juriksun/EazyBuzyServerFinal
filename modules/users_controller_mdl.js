@@ -14,7 +14,21 @@ module.exports = class{
 
             } )
             .catch(err => { 
-                console.log(err)
+                reject(err);
+            });
+        });
+    }
+    // Secure method only information not sensative will be returned
+    getUserPartialData(user){
+        return new Promise((resolve, reject) => {
+            User.findOne({username: user.username, password: user.password},["-_id","-password"])
+            .then(user => {
+                console.log(user)
+                resolve(user);
+
+            } )
+            .catch(err => { 
+                reject(err);
             });
         });
     }

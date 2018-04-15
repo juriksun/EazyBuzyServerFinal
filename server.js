@@ -8,7 +8,8 @@ const   express     = require('express'),
 const   get_info_ctrl       = require('./controllers/get_info_ctrl'),
         create_route_ctrl   = require('./controllers/create_route_ctrl'),
         get_route_ctrl      = require('./controllers/get_route_ctrl'),
-        tasks_crtl          = require('./controllers/tasks_crtl');
+        tasks_crtl          = require('./controllers/tasks_crtl'),
+        users_ctrl           = require('./controllers/users_ctrl')
 
 app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
@@ -26,24 +27,18 @@ app.use((req, res, next) => {
 /*** All routes ***/
 // app.get('/', (req, res)=>{res.status(200).sendFile(__dirname + "public/api.html")});//for api
 app.use('/info', get_info_ctrl.execute);
+// ROUTES
 app.use('/create_route', create_route_ctrl.execute);
 //app.use('/get_route', get_route_ctrl.execute);
+
+// USERS
+app.use('/get_user', users_ctrl.getUser);
+
+// TASKS
 app.use('/get_all_tasks', tasks_crtl.getAllTasks);
 app.use('/create_task', tasks_crtl.createTask);
 app.use('/delete_task', tasks_crtl.deleteTask);
 
-// app.use('/search', controller.getSearchResult);
-
-// app.use('/admin_login', controller.adminLogin);
-// app.use('/set_new_admin_user', controller.setNewAdminUser);
-
-// app.use('/add_documents', controller.setNewDocuments);
-// // // app.use('/remove_document', controller.removeDocument);
-// app.use('/edit_document_summary', controller.editDocumentSummary);
-
-// app.use('/get_all_documents', controller.getAllDocuments);
-
-// app.use('/get_document', controller.getDocument);
 
 
 //response friendly 404 Page
