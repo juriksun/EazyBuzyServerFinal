@@ -31,8 +31,8 @@ exports.createTask = (req, res) => {
 exports.getAllTasks = (req, res) => {
     console.log("get_all_tasks route executing");
     
-    if(req.body.username !== undefined && req.body.password !== undefined ){
-        taskController.getAllTasks({username: req.body.username, password: req.body.password})
+    if(req.body.user !== undefined){
+        taskController.getAllTasks(JSON.parse(req.body.user))
         .then( allTasks => {
             res.status(200).json(
                 {
@@ -60,10 +60,10 @@ exports.getAllTasks = (req, res) => {
 };
 
 exports.deleteTask = (req, res) => {
-    console.log("get_all_tasks route executing");
+    console.log("delete_task route executing");
     
-    if(req.body.user !== undefined && req.body.taskId !== undefined ){
-        taskController.deleteTask(req.body.user , req.body.taskId)
+    if(req.body.user !== undefined && req.body.task_id !== undefined ){
+        taskController.deleteTask(JSON.parse(req.body.user) , req.body.task_id)
         .then( result => {
             res.status(200).json(
                 {
@@ -89,3 +89,45 @@ exports.deleteTask = (req, res) => {
         );
     }   
 };
+
+// exports.updateTask = (req, res) => {
+//     console.log("delete_task route executing");
+    
+//     if(
+//         req.body.user !== undefined && 
+//         req.body.task_id !== undefined &&
+//         req.body.task_update_data !== undefined
+//     ){
+//         console.log(req.body.user);
+//         console.log(req.body.task_id);
+//         console.log(req.body.task_update_data);
+//         taskController.updateTask(
+//             JSON.parse(req.body.user),
+//             req.body.task_id,
+//             JSON.parse(req.body.task_update_data)
+//         )
+//         .then( result => {
+//             res.status(200).json(
+//                 {
+//                     status : true,
+//                     tasks : result
+//                 }
+//             );
+//         })
+//         .catch( error => {
+//             res.status(200).json(
+//                 {
+//                     status : "false",
+//                     error : error
+//                 }
+//             );
+//         })
+
+//     } else {
+//         res.status(200).json(
+//             {
+//                 massage: 'undefined'
+//             }
+//         );
+//     }   
+// };

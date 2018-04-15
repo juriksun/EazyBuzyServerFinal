@@ -1,9 +1,8 @@
-import { Promise } from 'mongoose';
-
 'use strict';
  let TaskMod        = require('../models/task_mod'),
      UserMod        = require('../models/task_mod'),
-     UserController = require('./users_controller_mdl');
+     UserController = require('./users_controller_mdl'),
+     mongoose       = require('mongoose');
 
 module.exports = class{
 
@@ -13,9 +12,6 @@ module.exports = class{
 
     getAllTasks(user){
         return new Promise( (resolve,reject) => {
-            // resolve('all task resulve')
-            // console.log(user);
-            // console.log(req.body.password);
             this.userController.getUserWithId(user)
             .then(userData => {
                 TaskMod.find({user_token_id: userData._id})
@@ -34,9 +30,6 @@ module.exports = class{
 
     createTask(user, task){
         return new Promise((resolve, reject) => {
-
-            //console.log(task);
-            //resolve('blaaa');
             this.userController.getUserWithId(user)
             .then(user => {
                 let newTask = new TaskMod({
@@ -62,10 +55,9 @@ module.exports = class{
 
     deleteTask(user , taskId){
         return new Promise( (resolve,reject) => {
-            this.getAllTasks(user)
-            .then( allTasks => {
-                let taskToDelete = allTasks.filter( i => i._id === taskId)
-                if(taskToDelete.length === 1 ){
+            this.getTask(user)
+            .then( taskToDelete => {
+                if(taskToDelete!== {} ){
                     TaskMod.deleteOne({_id : taskId})
                     .then( result => {
                         resolve(result)
@@ -77,7 +69,27 @@ module.exports = class{
                     reject(`Error delete task id - ${taskId}`)
                 }
             })
-        })
-        
+        }) 
     }
+
+    getTask(user){
+        return new Promise( (resolve,reject) => {
+            this.userController.getUserWithId(user)
+            .then(userData => {
+                TaskMod.findOne({user_token_id: userData._id})
+                .then( taskDasks => {
+                    // console.log(taskDasks);
+                    resolve(taskDasks)
+                })
+                .catch( error => {
+
+                })
+            })
+            .catch( error => {
+
+            })
+        })
+    }
+
+    // updateTask(JSON.parse(req.body.user),req.body.task_id,JSON.parse(req.body.task_update_data)
 }
