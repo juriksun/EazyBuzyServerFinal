@@ -31,4 +31,46 @@ module.exports = class{
             });
         });
     }
+
+    userExist(user){
+        return new Promise((resolve, reject) => {
+            User.findOne({$or : [{ username : user.username }, { email : user.email }]},["-_id","-password"])
+            .then(user => {
+                if(user) resolve(true);
+                else reject(false)
+            } )
+            .catch(err => { 
+                reject(false);
+            });
+        });
+    }
+
+    setNewUser(user){
+        return new Promise( (resolve,reject) => {
+            this.userExist(user)
+            .then( userAlreadyExist => {
+                reject("user already exist");
+            })
+            .catch( () => {
+                let newUser = new User({
+                    username : user.username,
+                    first_name: user.first_name,
+                    last_name: user.last_name,
+                    email: user.email,
+                    password : user.password
+                })
+                newUser.save( (err,success) => {
+                    if(err){
+                        reject( "can't save user: \n" + err)
+                    }
+                    else resolve({
+                        username : success.username,
+                        first_name : success.first_name,
+                        last_name : success.last_name,
+                        email : success.email
+                    })
+                })
+            })
+        })
+    }
 }

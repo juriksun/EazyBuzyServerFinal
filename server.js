@@ -32,6 +32,7 @@ app.use('/create_route', routes_ctrl.createRoute);
 
 // USERS
 app.use('/get_user', users_ctrl.getUser);
+app.use('/set_new_user', users_ctrl.setNewUser);
 
 // TASKS
 app.use('/get_all_tasks', tasks_crtl.getAllTasks);
