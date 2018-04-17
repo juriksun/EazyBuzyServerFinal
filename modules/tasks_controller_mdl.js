@@ -12,6 +12,7 @@ module.exports = class{
 
     getAllTasks(user){
         return new Promise( (resolve,reject) => {
+            console.log(user);
             this.userController.getUserWithId(user)
             .then(userData => {
                 TaskMod.find({user_token_id: userData._id})
