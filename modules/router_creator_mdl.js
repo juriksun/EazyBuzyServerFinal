@@ -142,7 +142,7 @@ module.exports = class {
                     for(let k = 0; k < possibleRoutes[i].length - 1; k++){
                         let segment = {
                             startPoint: possibleRoutes[i][k],
-                            endPoint: possibleRoutes[i][k + 1],
+                            endPoint: possibleRoutes[i][k + 1]
                         }
                         route.push(segment);
                     }
@@ -251,7 +251,9 @@ module.exports = class {
                         let sumOfDuration = 0;
                         for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
                             allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
+                            allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
                             sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
+
                             promisesIndex++;
                         }
                         allRoutesWithSegmentsWithSums.push(

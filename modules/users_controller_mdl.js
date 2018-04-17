@@ -8,10 +8,10 @@ module.exports = class{
 
     getUserWithId(user){
         return new Promise((resolve, reject) => {
-            User.findOne({email: user.email, password: user.password})
+            User.findOne({$and :[ {password: user.password } , {$or : [{ username : user.key_entry }, { email : user.key_entry }] }]})
             .then(user => {
-                resolve(user);
-
+                if(user) resolve(user);
+                else reject("user not found")
             } )
             .catch(err => { 
                 reject(err);
@@ -21,11 +21,10 @@ module.exports = class{
     // Secure method only information not sensative will be returned
     getUserPartialData(user){
         return new Promise((resolve, reject) => {
-            User.findOne({email: user.email, password: user.password},["-_id","-password"])
+            User.findOne({$and :[ {password: user.password } , {$or : [{ username : user.key_entry }, { email : user.key_entry }] }]},["-_id","-password"])
             .then(user => {
-                console.log(user)
-                resolve(user);
-
+                if(user) resolve(user);
+                else reject("user not found")
             } )
             .catch(err => { 
                 reject(err);
