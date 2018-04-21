@@ -79,12 +79,12 @@ module.exports = class {
 
     //
     setStartPoint(startPoint){
-        this.startPoint = JSON.parse(startPoint);
+        this.startPoint = startPoint;
     }
 
     //
     setEndPoint(endPoint){
-        this.endPoint = JSON.parse(endPoint);
+        this.endPoint = endPoint;
     }
 
     //
