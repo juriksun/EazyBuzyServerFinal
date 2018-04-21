@@ -8,16 +8,13 @@ module.exports = class{
         this.routeCreator = new RouteCreator();
     }
 
-    createNewRoute( user, startTime, endTime,
-                    startPoint, endPoint, travelMode
-    ){
+    createNewRoute( user, routeInitData){
         return new Promise((resolve, reject)=>{
-            //routeCreator.setStartTime()
-            //routeCreator.setEndPoint()
-            this.routeCreator.setStartPoint(startPoint);
-            this.routeCreator.setEndPoint(endPoint);
-            //routeCreator.setTRavelMode(travelMode);
-            console.log(user)
+
+            this.routeCreator.setStartPoint(routeInitData.location.start_point);
+
+            this.routeCreator.setEndPoint(routeInitData.location.end_point);
+
             this.routeCreator.setUser(JSON.parse(user))
             .then((resultSetUser) => {
                 if(resultSetUser !== 0){
@@ -32,9 +29,9 @@ module.exports = class{
                     console.log(error)
                 })
             })
-            .catch();
-
-            
+            .catch(error => {
+                console.log(error)
+            });
         });
     }
 
