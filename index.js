@@ -1,6 +1,6 @@
 'use strict';
 require('./server');
-require('./database');
+//require('./database');
 
 
 
