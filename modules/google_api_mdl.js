@@ -9,7 +9,6 @@ module.exports.googleGetPlacesByRadius = (taskIndex, task, polygonPoint, radius,
             axios
             .get(url)
             .then(response => {
-                //console.log(response.data.results);
                 resolve(
                     {
                         'taskIndex':  taskIndex,
@@ -32,14 +31,11 @@ module.exports.googleGetDirection = (startPoint, endPoint, mode, timeout) => {
             axios
             .get(url)
             .then(response => {
-                //console.log(response.data.results);
                 resolve(response.data);
             })
             .catch(error => {
                 reject({error:error})
             });
-            //console.log(timeout)
         },timeout)
-        
     });
 }

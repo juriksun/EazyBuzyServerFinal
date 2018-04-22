@@ -17,9 +17,7 @@ module.exports = class{
 
             this.routeCreator.setUser(JSON.parse(user))
             .then((resultSetUser) => {
-                if(resultSetUser !== 0){
-                    console.log(resultSetUser)
-                }
+
                 this.routeCreator.dispatch()
                 .then((data) => {
                     resolve(data);

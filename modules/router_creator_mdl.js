@@ -11,7 +11,6 @@ class ApiHandler{
 
     handleRequst(promisesList,requstTemp){
         return new Promise( (resolve,reject) => {
-            console.log("temp: "+this.temp+1)
             Promise.all(promisesList)
             .then( data => {
                 resolve(data);
@@ -19,7 +18,6 @@ class ApiHandler{
             .catch( error => {
                 if(this.temp < 3){
                     this.temp++;
-                    console.log("temp: "+this.temp+1)
                     this.handleRequst(promisesList)
                 }
                 else{
@@ -100,7 +98,7 @@ module.exports = class {
         return new Promise((resolve, reject) => {
 
                 let tasksForPermutation = [];
-                console.log("suiteblePlaces",suiteblePlaces)
+
                 for (let i = 0; i < suiteblePlaces.length; i++) {
                     let task_indificator = {
                         "id": suiteblePlaces[i].id,
@@ -240,8 +238,6 @@ module.exports = class {
                     timeout+=25
                 }
             }
-            console.log(sumOfRequers);
-            //apiHandleRequst(promises,0)
              let apiHandler = new ApiHandler()
              apiHandler.handleRequst(promises)
             .then((allData) => {

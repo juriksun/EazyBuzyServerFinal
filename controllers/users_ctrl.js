@@ -4,7 +4,7 @@ let UserController = require('../modules/users_controller_mdl'),
     userController = new UserController();
 
 exports.getUser = (req , res) => {
-    console.log("get user information");
+    console.log("get_user route executing");
     if(req.body.user !== undefined){
         let user = JSON.parse(req.body.user)
         userController.getUserPartialData(user)
@@ -30,11 +30,10 @@ exports.getUser = (req , res) => {
 }
 
 exports.setNewUser = (req , res) => {
-    console.log("set new user");
+    console.log("set_new_user route executing");
     if(req.body.user !== undefined){
       
         let user = JSON.parse(req.body.user)
-        console.log(userController)
         userController.setNewUser(user)
         .then(userData => {
             res.status(200).json({

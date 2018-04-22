@@ -6,7 +6,6 @@ exports.createRoute = (req, res) => {
 
     let routeController = new RouteController();
     if(req.body.user !== undefined && req.body.route_init_data !== undefined ){
-        console.log(JSON.parse(req.body.route_init_data));
 
         routeController.createNewRoute(
             JSON.parse(req.body.user), 
