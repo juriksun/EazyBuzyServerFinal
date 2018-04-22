@@ -24,14 +24,14 @@ require('./database');
 //     let tasksForPermutation = [];
 
 //     for(let i = 0; i < tasks.length; i++){
-//         let task_indificator = {
+//         let task_identifier = {
 //             "id": tasks[i].id,
 //             "name": tasks[i].name
 //         };
 //         let task = [];
 //         for(let k = 0; k < tasks[i].places.length; k++){
 //             let place = tasks[i].places[k];
-//             place.task_indificator = task_indificator;
+//             place.task_identifier = task_identifier;
 //             task.push(place);
 //         }
 //         tasksForPermutation.push(task);

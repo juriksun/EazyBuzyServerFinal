@@ -100,14 +100,14 @@ module.exports = class {
                 let tasksForPermutation = [];
 
                 for (let i = 0; i < suiteblePlaces.length; i++) {
-                    let task_indificator = {
+                    let task_identifier = {
                         "id": suiteblePlaces[i].id,
                         "name": suiteblePlaces[i].name
                     };
                     let task = [];
                     for (let k = 0; k < suiteblePlaces[i].places.length && k < 6; k++) {
                         let place = suiteblePlaces[i].places[k];
-                        place.task_indificator = task_indificator;
+                        place.task_identifier = task_identifier;
                         task.push(place);
                     }
                     tasksForPermutation.push(task);
