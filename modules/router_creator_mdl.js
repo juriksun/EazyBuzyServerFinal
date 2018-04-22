@@ -79,7 +79,9 @@ module.exports = class {
     setStartPoint(startPoint){
         this.startPoint = startPoint;
     }
-
+    setTravelMode(travelMode){
+        this.travelMode = travelMode;
+    }
     //
     setEndPoint(endPoint){
         this.endPoint = endPoint;
@@ -105,7 +107,7 @@ module.exports = class {
                         "name": suiteblePlaces[i].name
                     };
                     let task = [];
-                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 3; k++) {
+                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 6; k++) {
                         let place = suiteblePlaces[i].places[k];
                         place.task_identifier = task_identifier;
                         task.push(place);
@@ -136,15 +138,15 @@ module.exports = class {
         return new Promise((resolve, reject) => {
             let allRoutsWithSegments = [];
                 for(let i = 0; i < possibleRoutes.length; i++){
-                    let route = [];
+                    let segments = [];
                     for(let k = 0; k < possibleRoutes[i].length - 1; k++){
                         let segment = {
                             startPoint: possibleRoutes[i][k],
                             endPoint: possibleRoutes[i][k + 1]
                         }
-                        route.push(segment);
+                        segments.push(segment);
                     }
-                    allRoutsWithSegments.push(route);
+                    allRoutsWithSegments.push(segments);
                 }
             resolve(allRoutsWithSegments);
         });
@@ -168,7 +170,7 @@ module.exports = class {
                                         resolve(
                                             {
                                                 recommended_route: recommendedRoute,
-                                                all_routes: directionsForRoutesWithSegments,
+                                                // all_routes: directionsForRoutesWithSegments,
                                                 all_tasks: this.userTasks
                                             }
                                         );
@@ -189,7 +191,7 @@ module.exports = class {
 
     calcPolygon() {      
         return new Promise((resolve, reject)=>{
-            resolve([this.startPoint.coordinate]);
+            resolve([this.startPoint.geometry.location]);
         });
         
     }
@@ -200,7 +202,7 @@ module.exports = class {
             let timeout = 0
             for (let i = 0; i < polygonPoints.length; i++) {
                 for (let k = 0; k < tasks.length; k++) {
-                    promises.push( googleApiMdl.googleGetPlacesByRadius(k, tasks[k], polygonPoints[i], 1200,timeout));
+                    promises.push( googleApiMdl.googleGetPlacesByRadius(k, tasks[k], polygonPoints[i], 1500,timeout));
                     timeout += 25 ;
                 }
             }
@@ -232,7 +234,7 @@ module.exports = class {
                     promises.push(googleApiMdl.googleGetDirection(
                         allRoutesWithSegments[i][k].startPoint.place_id,
                         allRoutesWithSegments[i][k].endPoint.place_id,
-                        'walking',
+                        this.travelMode,
                         timeout
                     ));
                     timeout+=25
@@ -254,7 +256,7 @@ module.exports = class {
                         }
                         allRoutesWithSegmentsWithSums.push(
                             {
-                                route: allRoutesWithSegments[i],
+                                segments: allRoutesWithSegments[i],
                                 num_of_segments: allRoutesWithSegments[i].length,
                                 sum_of_durations: sumOfDuration
                             }

@@ -15,6 +15,7 @@ module.exports = class{
 
             this.routeCreator.setEndPoint(routeInitData.location.end_point);
 
+            this.routeCreator.setTravelMode(routeInitData.mode);
             this.routeCreator.setUser(user)
             .then((resultSetUser) => {
 
