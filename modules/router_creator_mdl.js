@@ -105,7 +105,7 @@ module.exports = class {
                         "name": suiteblePlaces[i].name
                     };
                     let task = [];
-                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 6; k++) {
+                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 3; k++) {
                         let place = suiteblePlaces[i].places[k];
                         place.task_identifier = task_identifier;
                         task.push(place);

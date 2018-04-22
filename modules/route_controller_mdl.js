@@ -15,7 +15,7 @@ module.exports = class{
 
             this.routeCreator.setEndPoint(routeInitData.location.end_point);
 
-            this.routeCreator.setUser(JSON.parse(user))
+            this.routeCreator.setUser(user)
             .then((resultSetUser) => {
 
                 this.routeCreator.dispatch()
