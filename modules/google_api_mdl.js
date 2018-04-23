@@ -4,7 +4,7 @@ const axios = require("axios"),
 module.exports.googleGetPlacesByRadius = (taskIndex, task, polygonPoint, radius, timeout) => {
     if(!timeout) timeout = 0;
     return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&radius=${radius}&type=${task.task_place.place_type}&keyword=${task.task_place.place_key_word}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
+        const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&radius=${radius}&type=${task.task_place.place_type}&keyword=${task.task_place.place_key_word}&key=${consts.GOOGLE_API_NIR}&language=en`;
         setTimeout(()=>{
             axios
             .get(url)
@@ -26,7 +26,7 @@ module.exports.googleGetPlacesByRadius = (taskIndex, task, polygonPoint, radius,
 module.exports.googleGetDirection = (startPoint, endPoint, mode, timeout) => {
     if(!timeout) timeout = 0;
     return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
+        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_NIR}&language=en`;
         setTimeout(()=>{
             axios
             .get(url)
