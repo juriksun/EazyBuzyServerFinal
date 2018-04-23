@@ -251,7 +251,7 @@ module.exports = class {
                         for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
                             allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
                             // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
-                            allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].overview_polyline
+                            allRoutesWithSegments[i][k].steps_polyline = allData[promisesIndex].routes[0].overview_polyline
                             .points;
 
                             sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
@@ -312,6 +312,31 @@ module.exports = class {
                     recommendedRoute = directionsForRoutesWithSegments[i];
                 }
             }
+
+            recommendedRoute.polylins = [];
+            recommendedRoute.markers = [];
+            for(let i = 0; i < recommendedRoute.segments.length; i++ ){
+
+                recommendedRoute.markers.push(
+                    [
+                        recommendedRoute.segments[i].startPoint.geometry.location.lat,
+                        recommendedRoute.segments[i].startPoint.geometry.location.lng,
+                    ]
+                );
+
+                if(i === recommendedRoute.segments.length - 1){
+                    recommendedRoute.markers.push(
+                        [
+                            recommendedRoute.segments[i].endPoint.geometry.location.lat,
+                            recommendedRoute.segments[i].endPoint.geometry.location.lng,
+                        ]
+                    );
+                }
+
+                recommendedRoute.polylins = recommendedRoute.polylins.concat(Polyline.decode(recommendedRoute.segments[i].steps_polyline));
+
+            }
+
             resolve(recommendedRoute);
         });
     }
