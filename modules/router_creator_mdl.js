@@ -79,6 +79,7 @@ module.exports = class {
     //
     setStartPoint(startPoint){
         this.startPoint = startPoint;
+        this.startPoint.task_identifier = { name : "Start" };
     }
     setTravelMode(travelMode){
         this.travelMode = travelMode;
@@ -86,6 +87,7 @@ module.exports = class {
     //
     setEndPoint(endPoint){
         this.endPoint = endPoint;
+        this.endPoint.task_identifier = { name : "End" };
     }
 
     //
@@ -104,8 +106,8 @@ module.exports = class {
 
                 for (let i = 0; i < suiteblePlaces.length; i++) {
                     let task_identifier = {
-                        "id": suiteblePlaces[i].id,
-                        "name": suiteblePlaces[i].name
+                        id: suiteblePlaces[i].id,
+                        name: suiteblePlaces[i].name
                     };
                     let task = [];
                     for (let k = 0; k < suiteblePlaces[i].places.length && k < 2; k++) {
@@ -145,6 +147,7 @@ module.exports = class {
                             startPoint: possibleRoutes[i][k],
                             endPoint: possibleRoutes[i][k + 1]
                         }
+
                         segments.push(segment);
                     }
                     allRoutsWithSegments.push(segments);
@@ -251,8 +254,7 @@ module.exports = class {
                         for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
                             allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
                             // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
-                            allRoutesWithSegments[i][k].steps_polyline = allData[promisesIndex].routes[0].overview_polyline
-                            .points;
+                            allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
 
                             sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
 
@@ -313,27 +315,39 @@ module.exports = class {
                 }
             }
 
-            recommendedRoute.polylins = [];
-            recommendedRoute.markers = [];
+            recommendedRoute.tasks = [];
             for(let i = 0; i < recommendedRoute.segments.length; i++ ){
 
-                recommendedRoute.markers.push(
-                    [
-                        recommendedRoute.segments[i].startPoint.geometry.location.lat,
-                        recommendedRoute.segments[i].startPoint.geometry.location.lng,
-                    ]
-                );
+                recommendedRoute.tasks.push({
+                    name : recommendedRoute.segments[i].startPoint.task_identifier.name,
+                    duration : Math.random()*10%15, // need to change
+                    place : {
+                        location : {
+                            lat :  recommendedRoute.segments[i].startPoint.geometry.location.lat,
+                            lng : recommendedRoute.segments[i].startPoint.geometry.location.lng
+                        },
+                        name : recommendedRoute.segments[i].startPoint.name,
+                        id : recommendedRoute.segments[i].startPoint.place_id,
+                        address : recommendedRoute.segments[i].startPoint.vicinity || recommendedRoute.segments[i].startPoint.address
+                    }
+                });
 
                 if(i === recommendedRoute.segments.length - 1){
-                    recommendedRoute.markers.push(
-                        [
-                            recommendedRoute.segments[i].endPoint.geometry.location.lat,
-                            recommendedRoute.segments[i].endPoint.geometry.location.lng,
-                        ]
-                    );
+                    recommendedRoute.tasks.push({
+                        name : recommendedRoute.segments[i].endPoint.task_identifier.name,
+                        duration : Math.random()*10%15, // need to change
+                        place : {
+                            location : {
+                                lat :  recommendedRoute.segments[i].endPoint.geometry.location.lat,
+                                lng : recommendedRoute.segments[i].endPoint.geometry.location.lng
+                            },
+                            name : recommendedRoute.segments[i].endPoint.name,
+                            id : recommendedRoute.segments[i].endPoint.place_id,
+                            address : recommendedRoute.segments[i].endPoint.vicinity || recommendedRoute.segments[i].endPoint.address
+                        }
+                    });
                 }
 
-                recommendedRoute.polylins = recommendedRoute.polylins.concat(Polyline.decode(recommendedRoute.segments[i].steps_polyline));
 
             }
 

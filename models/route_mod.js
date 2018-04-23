@@ -72,7 +72,8 @@ let mongoose = require('mongoose'),
         distance: Number, //V
         status: String, //V
         // segments: [ SegmentSchema ],
-        // tasks: [ TaskSchema ]
+        // tasks: [ TaskSchema ],
+        // 
     },
     {   strict: false},
     {   collection: 'routs' });
