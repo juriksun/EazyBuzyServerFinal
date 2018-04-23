@@ -1,7 +1,7 @@
 'use strict';
 
 let     RouteCreator    = require('./router_creator_mdl');
-
+const   Route            = require('../models/route_mod');
 module.exports = class{
 
     constructor(){
@@ -21,7 +21,14 @@ module.exports = class{
 
                 this.routeCreator.dispatch()
                 .then((data) => {
-                    resolve(data);
+                    this.seveRoute(data)
+                    .then((newRoute) => {
+                        resolve(newRoute);
+                    })
+                    .catch( error => {
+                        console.log(error);
+                    });
+                    
                 }
                 )
                 .catch(error => {
@@ -36,5 +43,23 @@ module.exports = class{
 
     getRoute(){
         
+    }
+
+    seveRoute(newRouteRes){
+        return new Promise((resolve, reject) => {
+
+            let newRoute = new Route(
+                newRouteRes
+            )
+            
+            newRoute.save((err, success) => {
+                if (err) {
+                    reject("can't save user: \n" + err)
+                }
+                else resolve(
+                    success
+                )
+            })
+        })
     }
 };

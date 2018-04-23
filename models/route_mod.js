@@ -59,9 +59,9 @@ let mongoose = require('mongoose'),
         start_point: PointScheme, //V
         end_point: PointScheme, //V
         duration: DurationSchema, //V
-        task: TaskSchema, 
-        place: PlaceSchema,
-        steps: [ StepsSchema ],
+        // task: TaskSchema, 
+        // place: PlaceSchema,
+        // steps: [ StepsSchema ],
     });
 
     RouteSchema = new Schema({
@@ -71,8 +71,8 @@ let mongoose = require('mongoose'),
         duration: DurationSchema, //V
         distance: Number, //V
         status: String, //V
-        segments: [ SegmentSchema ],
-        tasks: [ TaskSchema ]
+        // segments: [ SegmentSchema ],
+        // tasks: [ TaskSchema ]
     },
     {   strict: false},
     {   collection: 'routs' });
