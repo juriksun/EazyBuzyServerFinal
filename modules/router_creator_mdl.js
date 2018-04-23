@@ -1,7 +1,8 @@
-const     db              = require('../data_base'),
-          googleApiMdl    = require('./google_api_mdl'),
-          Combinatorics   = require('./combinatorics_mdl'),
-          TasksController  = require('./tasks_controller_mdl');
+const       db              = require('../data_base'),
+            googleApiMdl    = require('./google_api_mdl'),
+            Combinatorics   = require('./combinatorics_mdl'),
+            TasksController = require('./tasks_controller_mdl'),
+            Polyline        = require('@mapbox/polyline');
 //        UserMod         = require('../models/user_mod');
 
 class ApiHandler{
@@ -107,7 +108,7 @@ module.exports = class {
                         "name": suiteblePlaces[i].name
                     };
                     let task = [];
-                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 6; k++) {
+                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 2; k++) {
                         let place = suiteblePlaces[i].places[k];
                         place.task_identifier = task_identifier;
                         task.push(place);
@@ -249,7 +250,10 @@ module.exports = class {
                         let sumOfDuration = 0;
                         for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
                             allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
-                            allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
+                            // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
+                            allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].overview_polyline
+                            .points;
+
                             sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
 
                             promisesIndex++;
