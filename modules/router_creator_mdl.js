@@ -317,7 +317,22 @@ module.exports = class {
 
             recommendedRoute.tasks = [];
             for(let i = 0; i < recommendedRoute.segments.length; i++ ){
+                let poliline = [];
 
+                for(let k = 0; k < recommendedRoute.segments[i].polylines.length - 1; k++){
+                    poliline.push({
+                        start: {
+                            lat: recommendedRoute.segments[i].polylines[k][0],
+                            lng: recommendedRoute.segments[i].polylines[k][1]
+                        },
+                        end: {
+                            lat: recommendedRoute.segments[i].polylines[k + 1][0],
+                            lng: recommendedRoute.segments[i].polylines[k + 1][1]
+                        }
+                    });
+                }
+                recommendedRoute.segments[i].polylines = poliline;
+                
                 recommendedRoute.tasks.push({
                     name : recommendedRoute.segments[i].startPoint.task_identifier.name,
                     duration : Math.random()*10%15, // need to change
@@ -331,6 +346,7 @@ module.exports = class {
                         address : recommendedRoute.segments[i].startPoint.vicinity || recommendedRoute.segments[i].startPoint.address
                     }
                 });
+
 
                 if(i === recommendedRoute.segments.length - 1){
                     recommendedRoute.tasks.push({
@@ -347,8 +363,6 @@ module.exports = class {
                         }
                     });
                 }
-
-
             }
 
             resolve(recommendedRoute);
