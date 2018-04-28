@@ -251,12 +251,16 @@ module.exports = class {
                 while(promisesIndex < promises.length){
                     for (let i = 0; i < allRoutesWithSegments.length; i++) {
                         let sumOfDuration = 0;
+                        let sumOfDistance = 0;
                         for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
                             allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
+                            allRoutesWithSegments[i][k].distance = allData[promisesIndex].routes[0].legs[0].distance.value;
                             // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
                             allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
 
                             sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
+
+                            sumOfDistance = sumOfDistance + allRoutesWithSegments[i][k].distance;
 
                             promisesIndex++;
                         }
@@ -264,7 +268,8 @@ module.exports = class {
                             {
                                 segments: allRoutesWithSegments[i],
                                 num_of_segments: allRoutesWithSegments[i].length,
-                                sum_of_durations: sumOfDuration
+                                sum_of_durations: sumOfDuration,
+                                sum_of_distance: sumOfDistance
                             }
                         );
                     }

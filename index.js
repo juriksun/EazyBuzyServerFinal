@@ -105,7 +105,7 @@ require('./database');
 
 // let getTasksPlaces = (places, startPoint, endPoint, callback)=>{
 
-//     let poligonForDotsSearch = calcPoligonsForSearch(places, startPoint, endPoint, 10000);
+    // let poligonForDotsSearch = calcPoligonsForSearch(places, startPoint, endPoint, 10000);
 //     getPlacesForTasks(places, poligonForDotsSearch, 2000)
 //     .then( response =>{
 //         callback(response);
