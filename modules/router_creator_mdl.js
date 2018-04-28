@@ -257,7 +257,7 @@ module.exports = class {
                             allRoutesWithSegments[i][k].distance = allData[promisesIndex].routes[0].legs[0].distance.value;
                             // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
                             allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
-
+                            allRoutesWithSegments[i][k].travel_mode = allData[promisesIndex].routes[0].legs[0].distance.value;
                             sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
 
                             sumOfDistance = sumOfDistance + allRoutesWithSegments[i][k].distance;
