@@ -127,3 +127,56 @@ exports.updateTask = (req, res) => {
         );
     }   
 };
+
+exports.getTypes = (req, res) => {
+    console.log("get_typs route executing");
+    
+    taskController.getTypes()
+    .then( result => {
+        res.status(200).json(
+            {
+                status : true,
+                types : result
+            }
+        );
+    })
+    .catch( error => {
+        res.status(200).json(
+            {
+                status : "false",
+                error : error
+            }
+        );
+    })
+};
+
+exports.getCompanies = (req, res) => {
+    console.log("delete_task route executing");
+    
+    if(req.params.type !== undefined){
+        taskController.getCompanies(req.params.type)
+        .then( result => {
+            res.status(200).json(
+                {
+                    status : true,
+                    companies : result
+                }
+            );
+        })
+        .catch( error => {
+            res.status(200).json(
+                {
+                    status : "false",
+                    error : error
+                }
+            );
+        })
+
+    } else {
+        res.status(200).json(
+            {
+                massage: 'undefined'
+            }
+        );
+    }   
+};
