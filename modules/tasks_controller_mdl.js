@@ -1,7 +1,11 @@
 'use strict';
  let TaskMod        = require('../models/task_mod'),
      UserMod        = require('../models/task_mod'),
+     Type           = require('../models/type_mod'),
+     Comany         = requere('../models/company_mod'),
+
      UserController = require('./users_controller_mdl'),
+
      mongoose       = require('mongoose');
 
 module.exports = class{
@@ -121,6 +125,30 @@ module.exports = class{
                     reject(`Error delete task id - ${taskId}`)
                 }
             })
+        }) 
+    }
+
+    getType(){
+        return new Promise((resolve, reject) => {
+            Type.find({})
+            .then(result => {
+                resolve(result)
+            })
+            .catch(error => {
+                reject(error)
+            });
+        }) 
+    }
+
+    getCompanies(type){
+        return new Promise((resolve, reject) => {
+            Comany.find({formated_tipe: type})
+            .then(result => {
+                resolve(result)
+            })
+            .catch(error => {
+                 reject(error)
+            });
         }) 
     }
 }
