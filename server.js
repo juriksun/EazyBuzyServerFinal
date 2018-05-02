@@ -39,6 +39,8 @@ app.use('/get_all_tasks', tasks_crtl.getAllTasks);
 app.use('/create_task', tasks_crtl.createTask);
 app.use('/delete_task', tasks_crtl.deleteTask);
 app.use('/update_task', tasks_crtl.updateTask);
+app.use('/get_types', tasks_crtl.getTypes);
+app.use('/get_companies', tasks_crtl.getCompanies);
 
 //response friendly 404 Page
 app.all('*', (req, res) => {
