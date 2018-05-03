@@ -2,7 +2,7 @@
  let TaskMod        = require('../models/task_mod'),
      UserMod        = require('../models/task_mod'),
      Type           = require('../models/type_mod'),
-     Comany         = requere('../models/company_mod'),
+     Comany         = require('../models/companies_mod'),
 
      UserController = require('./users_controller_mdl'),
 
@@ -128,7 +128,7 @@ module.exports = class{
         }) 
     }
 
-    getType(){
+    getTypes(){
         return new Promise((resolve, reject) => {
             Type.find({})
             .then(result => {

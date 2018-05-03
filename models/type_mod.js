@@ -3,8 +3,8 @@ const   mongoose = require('mongoose'),
 
  
 TypeSchema = new Schema({
-    formated_type: {type: String},
-    type: {type: String},
+    formated_name: {type: String},
+    name: {type: String},
     icon: {type: String}
 },
 {strict: false},

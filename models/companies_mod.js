@@ -2,8 +2,9 @@ const   mongoose = require('mongoose'),
         Schema = mongoose.Schema;
 
 CompanySchema = new Schema({
-    formated_company: {type: String},
-    company: {type: String}
+    formated_name: {type: String},
+    name: {type: String},
+    icon:{type: String}
 });
 
 CompaniesSchema = new Schema({
@@ -13,6 +14,6 @@ CompaniesSchema = new Schema({
 {strict: false},
 {collection: 'companies'});
 
-let Companiess = mongoose.model('Companies', CompaniesSchema);
+let Companies = mongoose.model('Companies', CompaniesSchema);
 
-module.exports = Companys;
+module.exports = Companies;
