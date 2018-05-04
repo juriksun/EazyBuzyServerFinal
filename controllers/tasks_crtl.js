@@ -128,6 +128,49 @@ exports.updateTask = (req, res) => {
     }   
 };
 
+exports.addOrUpdateTask = (req, res) => {
+    console.log("add_or_update_task route executing");
+
+    if(
+        req.body.user !== undefined &&
+        req.body.task_update_data !== undefined
+    ){
+        console.log(req.body.user);
+        console.log(req.body.task_id);
+        console.log(req.body.task_update_data);
+        console.log(req.body.task_location_data);
+        taskController.updateTask(
+            JSON.parse(req.body.user),
+            req.body.task_id,
+            JSON.parse(req.body.task_update_data),
+            JSON.parse(req.body.task_location_data)
+        )
+        .then( result => {
+            res.status(200).json(
+                {
+                    status : true,
+                    tasks : result
+                }
+            );
+        })
+        .catch( error => {
+            res.status(200).json(
+                {
+                    status : "false",
+                    error : error
+                }
+            );
+        })
+
+    } else {
+        res.status(200).json(
+            {
+                massage: 'undefined'
+            }
+        );
+    }   
+};
+
 exports.getTypes = (req, res) => {
     console.log("get_typs route executing");
     
@@ -151,15 +194,14 @@ exports.getTypes = (req, res) => {
 };
 
 exports.getCompanies = (req, res) => {
-    console.log("delete_task route executing");
-    
+    console.log("get_companies route executing");
     if(req.params.type !== undefined){
         taskController.getCompanies(req.params.type)
         .then( result => {
             res.status(200).json(
                 {
                     status : true,
-                    companies : result
+                    data : result
                 }
             );
         })

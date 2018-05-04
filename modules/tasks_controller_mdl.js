@@ -128,6 +128,39 @@ module.exports = class{
         }) 
     }
 
+    addOrUpdateTask(user, taskId, taskUpdateData, locationData){
+        return new Promise( (resolve,reject) => {
+            this.getTask(user)
+            .then( taskToDelete => {
+                if(taskToDelete!== {} ){
+
+                    let toUpDate = {};
+
+                    toUpDate.name = taskUpdateData.name;
+                    toUpDate.type = taskUpdateData.type;
+                    toUpDate.task_place = {
+                        place_type: taskUpdateData.type,
+                        place_key_word: taskUpdateData.name
+                    };
+                
+                    let conditions  = { _id: taskId },
+                        update      = { $set:  toUpDate },
+                        opts = { new: true, upsert: false };
+
+                    TaskMod.findOneAndUpdate(conditions, update, opts)
+                    .then( result => {
+                        resolve(result)
+                    })
+                    .catch( error => {
+                        reject(error)
+                    });
+                }else{
+                    reject(`Error delete task id - ${taskId}`)
+                }
+            })
+        }) 
+    }
+
     getTypes(){
         return new Promise((resolve, reject) => {
             Type.find({})
@@ -142,7 +175,7 @@ module.exports = class{
 
     getCompanies(type){
         return new Promise((resolve, reject) => {
-            Comany.find({formated_tipe: type})
+            Comany.findOne({formated_name: type})
             .then(result => {
                 resolve(result)
             })

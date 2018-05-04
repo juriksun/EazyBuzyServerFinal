@@ -8,8 +8,8 @@ CompanySchema = new Schema({
 });
 
 CompaniesSchema = new Schema({
-    formated_type: {type: String},
-    companys: [CompanySchema]
+    formated_name: {type: String},
+    companies: [CompanySchema]
 },
 {strict: false},
 {collection: 'companies'});
