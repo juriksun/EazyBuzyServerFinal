@@ -2,7 +2,7 @@ const   mongoose = require('mongoose'),
         Schema = mongoose.Schema;
 
  
-TypeSchema = new Schema({
+let TypeSchema = new Schema({
     formated_name: {type: String},
     name: {type: String},
     icon: {type: String}

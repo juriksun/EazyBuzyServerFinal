@@ -99,6 +99,7 @@ module.exports = class{
         return new Promise( (resolve,reject) => {
             this.getTask(user)
             .then( taskToDelete => {
+               
                 if(taskToDelete!== {} ){
 
                     let toUpDate = {};
@@ -130,25 +131,42 @@ module.exports = class{
 
     addOrUpdateTask(user, taskId, taskUpdateData, locationData){
         return new Promise( (resolve,reject) => {
-            this.getTask(user)
-            .then( taskToDelete => {
-                if(taskToDelete!== {} ){
-
+           
+            this.userController.getUserWithId(user)
+            .then(user => {
+                
+                if(user !== {} ){
+                    
                     let toUpDate = {};
 
+                    toUpDate.user_token_id = user._id;
+
                     toUpDate.name = taskUpdateData.name;
+
                     toUpDate.type = taskUpdateData.type;
-                    toUpDate.task_place = {
-                        place_type: taskUpdateData.type,
-                        place_key_word: taskUpdateData.name
+
+                    toUpDate.status = 'ready';
+
+                    toUpDate.time = {
+                        start_time: taskUpdateData.time_start,
+                        date: taskUpdateData.time_date,
+                        duration: taskUpdateData.time_duration
                     };
-                
-                    let conditions  = { _id: taskId },
+
+
+                    toUpDate.priority = taskUpdateData.priority;
+
+                    toUpDate.task_place = taskUpdateData.task_place;
+                    
+                    toUpDate.location = locationData;
+
+                    let conditions = { _id: taskId || mongoose.Types.ObjectId()} ,
                         update      = { $set:  toUpDate },
-                        opts = { new: true, upsert: false };
+                        opts = { new: true, upsert: true };
 
                     TaskMod.findOneAndUpdate(conditions, update, opts)
                     .then( result => {
+                        // console.log(result);
                         resolve(result)
                     })
                     .catch( error => {
@@ -160,6 +178,10 @@ module.exports = class{
             })
         }) 
     }
+
+                    
+
+
 
     getTypes(){
         return new Promise((resolve, reject) => {

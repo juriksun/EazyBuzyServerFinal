@@ -1,24 +1,36 @@
 //import { Schema } from 'mongoose';
 
 let mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
-    ShareSchema = new Schema({
+    Schema = mongoose.Schema;
+
+
+let    ShareSchema = new Schema({
         username: { type : String , required : true },
         share_status: { type : String , required : true }
-    })
+    }),
+    TypeSchema = new Schema({
+        formated_name: {type: String},
+        name: {type: String},
+        icon: {type: String}
+    }),
+    CompanySchema = new Schema({
+        formated_name: {type: String},
+        name: {type: String},
+        icon:{type: String}
+    }),
     EditTimeSchema = new Schema({
         create: { type : Number , required : true },
         last_edited: { type : Number , required : true }
-    })
+    }),
     TimeSchema = new Schema({
-        start_hour: { type : Number , required : true },
-        end_hour: { type : Number , required : true },
-        duration: { type : Number , required : true }
-    })
+        start_time: { type : String , required : true },
+        date: { type : String , required : true },
+        duration: { type : String , required : true }
+    }),
     TaskPlaceSchema = new Schema({
-        place_type : { type : String , required : true },
-        place_key_word : { type : String , required : true }
-    })
+        place_type : TypeSchema,
+        place_company : CompanySchema
+    }),
     CoordinateSchema = new Schema({
         lat : { type : Number , required : true },
         long : { type : Number , required : true }
@@ -27,8 +39,9 @@ let mongoose = require('mongoose'),
         address : { type : String , required : true },
         place_id : { type : String , required : true },
         coordinate : CoordinateSchema
-    }),
-    TaskSchema = new Schema({
+    });
+
+    let TaskSchema = new Schema({
         // ---------------- will use id from mlab on create ---------------- 
         // id : { type : Number , required : true , unique : true },
         // -----------------------------------------------------------------
@@ -36,7 +49,7 @@ let mongoose = require('mongoose'),
         name : { type : String},
         type: { type : String},
         status : { type : String},
-        priority : { type : Number},
+        priority : { type : String},
         share : ShareSchema,
         edit_time : EditTimeSchema,
         time : TimeSchema,

@@ -135,15 +135,16 @@ exports.addOrUpdateTask = (req, res) => {
         req.body.user !== undefined &&
         req.body.task_update_data !== undefined
     ){
-        console.log(req.body.user);
-        console.log(req.body.task_id);
-        console.log(req.body.task_update_data);
-        console.log(req.body.task_location_data);
-        taskController.updateTask(
+        // console.log(req.body.user);
+        // console.log(req.body.task_id);
+        // console.log(req.body.task_update_data);
+        // console.log(req.body.task_location_data);
+
+        taskController.addOrUpdateTask(
             JSON.parse(req.body.user),
             req.body.task_id,
             JSON.parse(req.body.task_update_data),
-            JSON.parse(req.body.task_location_data)
+            JSON.parse(req.body.task_location_data) 
         )
         .then( result => {
             res.status(200).json(
