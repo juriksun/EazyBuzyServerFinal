@@ -197,7 +197,7 @@ module.exports = class{
 
     getCompanies(type){
         return new Promise((resolve, reject) => {
-            Comany.findOne({formated_name: type})
+            Comany.findOne({name: type})
             .then(result => {
                 resolve(result)
             })
