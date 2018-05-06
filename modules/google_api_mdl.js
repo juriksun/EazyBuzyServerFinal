@@ -25,11 +25,10 @@ module.exports.googleGetPlacesByRadius = (taskIndex, task, polygonPoint, radius,
     });
 };
 
-module.exports.googleGetPlacesByQuery = (taskIndex, query) => {
-    if(!timeout) timeout = 0;
+module.exports.googleGetPlacesByQuery = (taskIndex, query , timeout = 0) => {
     return new Promise((resolve, reject) => {
         
-        const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
+        const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
         setTimeout(()=>{
             axios
             .get(url)

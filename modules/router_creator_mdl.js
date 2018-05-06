@@ -3,7 +3,9 @@ const       db              = require('../data_base'),
             Combinatorics   = require('./combinatorics_mdl'),
             TasksController = require('./tasks_controller_mdl'),
             Polyline        = require('@mapbox/polyline');
+            fs              = require('fs')
 //        UserMod         = require('../models/user_mod');
+
 
 class ApiHandler{
     constructor(){
@@ -219,25 +221,38 @@ module.exports = class {
         return new Promise((resolve, reject)=>{
             let promises = [];
             let timeout = 0
-            for (let i = 0; i < polygonPoints.length; i++) {
-                for (let k = 0; k < tasks.length; k++) {
-                    //if with address send to  googleApiMdl.getPlaceByQuery(k, query = "tasks[k]...");
-                    if(tasks[k].location.address != ''){
-                        promises.push( googleApiMdl.googleGetPlacesByRadius(k, tasks[k], polygonPoints[i], 1500,timeout));
+            // for (let i = 0; i < polygonPoints.length; i++) {
+            //     for (let k = 0; k < tasks.length; k++) {
+            //         //if with address send to  googleApiMdl.getPlaceByQuery(k, query = "tasks[k]...");
+            //         if(tasks[k].location.address === ''){
+            //             console.log("kkkkk"+k)
+            //             promises.push( googleApiMdl.googleGetPlacesByRadius(k, tasks[k], polygonPoints[i], 1500,timeout));
+            //             timeout += 25 ;
+            //         }
+            //         else   promises.push( googleApiMdl.googleGetPlacesByQuery(k , `${tasks[k].task_place.place_type.name !== '' ? tasks[k].task_place.place_type.formated_name : ''}  ${tasks[k].task_place.place_company.formated_name} ${tasks[k].location.address}`));
+                    
+            //     }
+            // }
+
+            for(let i = 0 ; i < tasks.length ; i++){
+                if(tasks[i].location.address === ''){
+                    for(let k = 0 ; k < polygonPoints.length ; k ++){
+                        promises.push( googleApiMdl.googleGetPlacesByRadius(i, tasks[i], polygonPoints[k], 1500,timeout));
                         timeout += 25 ;
                     }
-                    else   promises.push( googleApiMdl.getPlaceByQuery(k , `${tasks[k].task_place.task_type.name !== '' ? tasks[k].task_place.task_type.formated_name : ''}  ${tasks[k].task_place.task_company.formated_name} ${tasks[k].location.address}`));
-                    
+                }else{
+                    promises.push( googleApiMdl.googleGetPlacesByQuery(i , `${tasks[i].task_place.place_type.name !== '' ? tasks[i].task_place.place_type.formated_name : ''}  ${tasks[i].task_place.place_company.formated_name} ${tasks[i].location.address}`));
                 }
             }
 
             Promise.all(promises)
             .then((allData) => {
-                Promise.all(allData.map( data => data.map(getFullData)))
-                .then( allDataFull => {
-                       console.log(allDataFull) 
-                })
-                //console.log(allData);
+                // Promise.all(allData.map( data => console.log(data)))
+                // .then( allDataFull => {
+                //        console.log(allDataFull) 
+                // })
+                console.log(JSON.stringify(allData));
+                // fs.writeFileSync('C:\\Users\\nir\\Projects\\FinalProject\\log.json',JSON.stringify(allData))
                 for (let i = 0; i < allData.length; i++) {
                     tasks[allData[i].taskIndex].places ?
                         tasks[allData[i].taskIndex].places.concat(tasks[allData[i].taskIndex].places, allData[i].response):
