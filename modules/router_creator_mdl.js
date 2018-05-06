@@ -99,6 +99,7 @@ module.exports = class {
 
     }
 
+    //
     calcPossibleRoutes(suiteblePlaces, startPoint, endPoint) {
         return new Promise((resolve, reject) => {
 
@@ -158,7 +159,7 @@ module.exports = class {
     //
     dispatch(){
         return new Promise((resolve, reject)=>{
-            this.calcPolygon()
+            this.calcPolygon()// need to develop
                 .then((polygon) => {
                 this.getSuiteblePlaces(polygon, this.userTasks)//alex
                     .then((suiteblePlaces) => {
@@ -187,7 +188,7 @@ module.exports = class {
                         })
                         .catch(errPossibleRoutes => reject({error:"Error PossibleRoutes"}));
                     })
-                    .catch(errSuiteblePlaces => reject({error:"Error SuiteblePlaces"}));
+                    .catch(errSuiteblePlaces => reject({error:"Error SuiteblePlaces" + errSuiteblePlaces}));
                 })
                 .catch(errPolygon => reject({error:"Error Polygon"}));
         })
@@ -200,25 +201,50 @@ module.exports = class {
         
     }
 
+    getFullData(data){
+        return new Promise( (resolve,reject) => {
+            googleApiMdl.googleGetPlaceData(data.taskIndex,data.place_id)
+            .then(result => {
+                data.more = result
+                resolve(data)
+            })
+            .catch(error => {
+                console.log(error)
+                resolve(data)
+            })
+        })
+    }
+
     getSuiteblePlaces(polygonPoints, tasks){
         return new Promise((resolve, reject)=>{
             let promises = [];
             let timeout = 0
             for (let i = 0; i < polygonPoints.length; i++) {
                 for (let k = 0; k < tasks.length; k++) {
-                    promises.push( googleApiMdl.googleGetPlacesByRadius(k, tasks[k], polygonPoints[i], 1500,timeout));
-                    timeout += 25 ;
+                    //if with address send to  googleApiMdl.getPlaceByQuery(k, query = "tasks[k]...");
+                    if(tasks[k].location.address != ''){
+                        promises.push( googleApiMdl.googleGetPlacesByRadius(k, tasks[k], polygonPoints[i], 1500,timeout));
+                        timeout += 25 ;
+                    }
+                    else   promises.push( googleApiMdl.getPlaceByQuery(k , `${tasks[k].task_place.task_type.name !== '' ? tasks[k].task_place.task_type.formated_name : ''}  ${tasks[k].task_place.task_company.formated_name} ${tasks[k].location.address}`));
+                    
                 }
             }
 
             Promise.all(promises)
             .then((allData) => {
+                Promise.all(allData.map( data => data.map(getFullData)))
+                .then( allDataFull => {
+                       console.log(allDataFull) 
+                })
                 //console.log(allData);
                 for (let i = 0; i < allData.length; i++) {
                     tasks[allData[i].taskIndex].places ?
                         tasks[allData[i].taskIndex].places.concat(tasks[allData[i].taskIndex].places, allData[i].response):
                         tasks[allData[i].taskIndex].places = allData[i].response;
                 }
+
+                
                 resolve({
                     tasks: tasks,
                 });

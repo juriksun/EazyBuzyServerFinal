@@ -24,5 +24,5 @@ conn.on('disconnected', () => {
     mongoose.connect(consts.MLAB_KEY, options);
 });
 conn.on('reconnected', () => {
-    console.info('Mongoose reconnected!');
+    console.info('Mongoose: Reconnection');
 });

@@ -199,7 +199,8 @@ module.exports = class{
         return new Promise((resolve, reject) => {
             Comany.findOne({name: type})
             .then(result => {
-                resolve(result)
+                
+                resolve(result || {companies: null})
             })
             .catch(error => {
                  reject(error)
