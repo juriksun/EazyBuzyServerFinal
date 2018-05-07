@@ -220,19 +220,7 @@ module.exports = class {
     getSuiteblePlaces(polygonPoints, tasks){
         return new Promise((resolve, reject)=>{
             let promises = [];
-            let timeout = 0
-            // for (let i = 0; i < polygonPoints.length; i++) {
-            //     for (let k = 0; k < tasks.length; k++) {
-            //         //if with address send to  googleApiMdl.getPlaceByQuery(k, query = "tasks[k]...");
-            //         if(tasks[k].location.address === ''){
-            //             console.log("kkkkk"+k)
-            //             promises.push( googleApiMdl.googleGetPlacesByRadius(k, tasks[k], polygonPoints[i], 1500,timeout));
-            //             timeout += 25 ;
-            //         }
-            //         else   promises.push( googleApiMdl.googleGetPlacesByQuery(k , `${tasks[k].task_place.place_type.name !== '' ? tasks[k].task_place.place_type.formated_name : ''}  ${tasks[k].task_place.place_company.formated_name} ${tasks[k].location.address}`));
-                    
-            //     }
-            // }
+            let timeout = 0;
 
             for(let i = 0 ; i < tasks.length ; i++){
                 if(tasks[i].location.address === ''){
@@ -241,17 +229,20 @@ module.exports = class {
                         timeout += 25 ;
                     }
                 }else{
-                    promises.push( googleApiMdl.googleGetPlacesByQuery(i , `${tasks[i].task_place.place_type.name !== '' ? tasks[i].task_place.place_type.formated_name : ''}  ${tasks[i].task_place.place_company.formated_name} ${tasks[i].location.address}`));
+                    promises.push( googleApiMdl.googleGetPlacesByQuery(i , `${tasks[i].task_place.place_type.name !== '' ? '' : tasks[i].task_place.place_type.formated_name}  ${tasks[i].task_place.place_company.formated_name} ${tasks[i].location.address}`));
                 }
             }
 
             Promise.all(promises)
             .then((allData) => {
-                // Promise.all(allData.map( data => console.log(data)))
-                // .then( allDataFull => {
-                //        console.log(allDataFull) 
-                // })
-                console.log(JSON.stringify(allData));
+                Promise.all(allData.map( data => data.response.map(this.getFullData)))
+                .then( allDataFull => {
+                       console.log(allDataFull) 
+                })
+                .catch( err => {
+                    console.log("error getting full data:\n",err)
+                })
+               // console.log(JSON.stringify(allData));
                 // fs.writeFileSync('C:\\Users\\nir\\Projects\\FinalProject\\log.json',JSON.stringify(allData))
                 for (let i = 0; i < allData.length; i++) {
                     tasks[allData[i].taskIndex].places ?
