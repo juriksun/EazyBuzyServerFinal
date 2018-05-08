@@ -27,10 +27,9 @@ module.exports.googleGetPlacesByRadius = (taskIndex, task, polygonPoint, radius,
 
 module.exports.googleGetPlacesByQuery = (taskIndex, query , timeout = 0) => {
     return new Promise((resolve, reject) => {
-        query = query.replace(/\s+/g,'%20')
-        console.log(query)
+        // query = query.replace(/\s+/g,'%20')
         const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
-        setTimeout(()=>{
+        // setTimeout(()=>{
             axios
             .get(url)
             .then(response => {
@@ -44,21 +43,22 @@ module.exports.googleGetPlacesByQuery = (taskIndex, query , timeout = 0) => {
             .catch(error => {
                 console.log(error);
             });
-        },timeout)
+        // },timeout)
     });
 };
 
-module.exports.googleGetPlaceData = (taskIndex, palaceId) => {
-    if(!timeout) timeout = 0;
+module.exports.googleGetPlaceData = (taskIndex, palaceId, timeout = 0) => {
+    
     return new Promise((resolve, reject) => {
         const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${palaceId}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
-        setTimeout(()=>{
+
+        // setTimeout(()=>{
             axios
             .get(url)
             .then(response => {
                 resolve(
                     {
-                        'taskIndex':  taskIndex,
+                        taskIndex: taskIndex,
                         response: response.data.result
                     }
                 );
@@ -66,7 +66,7 @@ module.exports.googleGetPlaceData = (taskIndex, palaceId) => {
             .catch(error => {
                 console.log(error);
             });
-        },timeout)
+        // },timeout)
     });
 };
 

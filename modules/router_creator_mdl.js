@@ -203,18 +203,8 @@ module.exports = class {
         
     }
 
-    getFullData(data){
-        return new Promise( (resolve,reject) => {
-            googleApiMdl.googleGetPlaceData(data.taskIndex,data.place_id)
-            .then(result => {
-                data.more = result
-                resolve(data)
-            })
-            .catch(error => {
-                console.log(error)
-                resolve(data)
-            })
-        })
+    getFullData(data){  
+      return googleApiMdl.googleGetPlaceData(data.taskIndex,data.place_id);
     }
 
     getSuiteblePlaces(polygonPoints, tasks){
@@ -235,25 +225,57 @@ module.exports = class {
 
             Promise.all(promises)
             .then((allData) => {
-                Promise.all(allData.map( data => data.response.map(this.getFullData)))
-                .then( allDataFull => {
-                       console.log(allDataFull) 
-                })
-                .catch( err => {
-                    console.log("error getting full data:\n",err)
-                })
-               // console.log(JSON.stringify(allData));
-                // fs.writeFileSync('C:\\Users\\nir\\Projects\\FinalProject\\log.json',JSON.stringify(allData))
-                for (let i = 0; i < allData.length; i++) {
-                    tasks[allData[i].taskIndex].places ?
-                        tasks[allData[i].taskIndex].places.concat(tasks[allData[i].taskIndex].places, allData[i].response):
-                        tasks[allData[i].taskIndex].places = allData[i].response;
-                }
+
+                Promise.all(allData.map( (dataArr) => {
+                    return dataArr.response.map((data) => {
+                        return googleApiMdl.googleGetPlaceData(dataArr.taskIndex, data.place_id);
+                    });
+                }).reduce((accumulator, currentValue) => {
+                    return accumulator.concat(currentValue);
+                }))
+                .then((allFullDadaPlace) => {
+
+                    for (let i = 0; i < allFullDadaPlace.length; i++) {
+
+                        (tasks[allFullDadaPlace[i].taskIndex].places) ?
+                            tasks[allFullDadaPlace[i].taskIndex].places.concat(
+                                tasks[allFullDadaPlace[i].taskIndex].places,
+                                allFullDadaPlace[i].response
+                            ):
+                            tasks[allFullDadaPlace[i].taskIndex].places = allFullDadaPlace[i].response;
+                    }
+
+                    resolve({
+                        tasks: tasks,
+                    });
+                }).catch(err => {
+                    console.log("error 999 - get place full data: ", err, "\n");
+                });
+
+                // Promise.all(allData.map( data => data.map(this.getFullData)))
+                // .then( allDataFull => {
+                //        console.log(JSON.stringify(allDataFull)); 
+                // })
+                // .catch( err => {
+                //     console.log("error getting full data:\n",err)
+                // })
+
+
+                // console.log(JSON.stringify(allData));
+
+                // for (let i = 0; i < allData.length; i++) {
+                //     tasks[allData[i].taskIndex].places ?
+                //         tasks[allData[i].taskIndex].places.concat(tasks[allData[i].taskIndex].places, allData[i].response):
+                //         tasks[allData[i].taskIndex].places = allData[i].response;
+                // }
 
                 
-                resolve({
-                    tasks: tasks,
-                });
+                // resolve({
+                //     tasks: tasks,
+                // });
+            })
+            .catch( err => {
+                console.log("error 999 - getting map data:",err);
             });
         });
     }
