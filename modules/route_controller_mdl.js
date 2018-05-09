@@ -10,7 +10,7 @@ module.exports = class{
 
     createNewRoute( user, routeInitData){
         return new Promise((resolve, reject)=>{
-
+            this.routeCreator.setTimeWindow(routeInitData.time);
             this.routeCreator.setStartPoint(routeInitData.location.start_point);
 
             this.routeCreator.setEndPoint(routeInitData.location.end_point);

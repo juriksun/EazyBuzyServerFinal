@@ -61,8 +61,11 @@ module.exports = class {
     }
 
     //not for alpha
-    setTimeWindow(){
-    
+    setTimeWindow(time){
+        this.start_time = time.start_time;
+        this.end_time = time.end_time;
+        this.date = time.date;
+        this.day = 
     }
 
     setUser(user){
