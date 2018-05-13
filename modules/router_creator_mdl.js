@@ -65,7 +65,7 @@ module.exports = class {
         this.start_time = time.start_time;
         this.end_time = time.end_time;
         this.date = time.date;
-        this.day = 
+        this.day = 0;
     }
 
     setUser(user){
@@ -166,13 +166,16 @@ module.exports = class {
         return new Promise((resolve, reject)=>{
             this.calcPolygon()// need to develop
                 .then((polygon) => {
-                this.getSuiteblePlaces(polygon, this.userTasks)//alex
+                    // do prefilter of hours of tasks 
+                this.getSuiteblePlaces(polygon, this.userTasks)// get all suitebale
+                    // do next filter of open hours of places
                     .then((suiteblePlaces) => {
                         this.calcPossibleRoutes(suiteblePlaces.tasks,this.startPoint, this.endPoint)//alex
                         .then(possibleRoutes => {
                             this.buildAllRoutesWithSegments(possibleRoutes)//alex
                             .then(allRoutesWithSegments => {
                                 this.getAllDirectionForRoutesWithSegments(allRoutesWithSegments)//alex
+                            
                                 .then(directionsForRoutesWithSegments => {
                                     //this.directionsForRoutesWithSegments = directionsForRoutesWithSegments
                                     this.chooseRecommendedRoute(directionsForRoutesWithSegments)
