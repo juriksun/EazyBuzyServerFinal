@@ -1,7 +1,7 @@
 'use strict';
 
 class DateTime{
-    static compareHover(hour1, hour2){
+    static compareHour(hour1, hour2){
         let hour1Splited = hour1.split(':'),
             hour2Splited = hour2.split(':');
             
