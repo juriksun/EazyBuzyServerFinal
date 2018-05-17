@@ -2,9 +2,8 @@ const       db              = require('../data_base'),
             googleApiMdl    = require('./google_api_mdl'),
             Combinatorics   = require('./combinatorics_mdl'),
             TasksController = require('./tasks_controller_mdl'),
-            Polyline        = require('@mapbox/polyline');
-            fs              = require('fs')
-//        UserMod         = require('../models/user_mod');
+            Polyline        = require('@mapbox/polyline'),
+            DateTime        = require('./date_time_mdl');
 
 
 class ApiHandler{
@@ -60,12 +59,12 @@ module.exports = class {
         this.tasksController = new TasksController()
     }
 
-    //not for alpha
+    // determine all time sets of route
     setTimeWindow(time){
-        this.start_time = time.start_time;
-        this.end_time = time.end_time;
+        this.startTime = time.start_time;
+        this.endTime = time.end_time;
         this.date = time.date;
-        this.day = 0;
+        this.day = DateTime.convertDateToDay(this.date);
     }
 
     setUser(user){
@@ -161,6 +160,8 @@ module.exports = class {
             resolve(allRoutsWithSegments);
         });
     }
+
+    
     //
     dispatch(){
         return new Promise((resolve, reject)=>{

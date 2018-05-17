@@ -10,21 +10,17 @@ class DateTime{
     
         return hour1InMinutes - hour2InMinutes;
     };
-    
+   
     static convertDateToDay(date){
-        return normalizeDate(date).getDay();
+        return this.normalizeDate(date).getDay();
     };
     
     static normalizeDate(date){
-        let dateSplited = date.split("-");
-        return new Date(
-            dateSplited[2] + "-" + dateSplited[1] +
-             "-" + dateSplited[0]
-        );
+        return new Date(date);
     };
     
     static compareDate(date1, date2){
-        return ((normalizeDate(date1).getTime() / 1000) - (normalizeDate(date2).getTime() / 1000));
+        return ((this.normalizeDate(date1).getTime() / 1000) - (this.normalizeDate(date2).getTime() / 1000));
     };
 }
 
