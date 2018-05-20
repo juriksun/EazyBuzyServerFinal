@@ -191,7 +191,6 @@ module.exports = class {
         return new Promise((resolve, reject)=>{
             this.calcPolygon()// need to develop
                 .then((polygon) => {
-                    // do prefilter of hours of tasks 
                 this.getSuiteblePlaces(polygon, this.filterTasksByTimeWindow(this.userTasks))// get all suitebale
                     // do next filter of open hours of places
                     .then((suiteblePlaces) => {
@@ -199,7 +198,7 @@ module.exports = class {
                         .then(possibleRoutes => {
                             this.buildAllRoutesWithSegments(possibleRoutes)//alex
                             .then(allRoutesWithSegments => {
-                                this.getAllDirectionForRoutesWithSegments(allRoutesWithSegments)//alex
+                                this.getAllDirectionForRoutesWithSegmentsLL(allRoutesWithSegments)//alex
                             
                                 .then(directionsForRoutesWithSegments => {
                                     //this.directionsForRoutesWithSegments = directionsForRoutesWithSegments
@@ -289,7 +288,7 @@ module.exports = class {
         });
     }
 
-    getAllDirectionForRoutesWithSegments(allRoutesWithSegments){
+    getAllDirectionForRoutesWithSegmentsLL(allRoutesWithSegments){
         return new Promise((resolve, reject)=>{
             let sumOfRequers = 0;
             let promises = [];
