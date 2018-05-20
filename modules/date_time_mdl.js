@@ -23,10 +23,20 @@ class DateTime{
 
     static checkTaskInTimeWindow(startWindowTime, endWindowTime, startTaskTime, durationTask){
 
+        durationTask = (durationTask === "") ? "00:15" : durationTask;
+
         if(startTaskTime === ""){
+            if(
+                this.convertTimeToMinutes(startWindowTime) +
+                this.convertTimeToMinutes(durationTask)
+                > 
+                this.convertTimeToMinutes(endWindowTime)
+            ){
+                return this.convertTimeToMinutes(startWindowTime) +
+                this.convertTimeToMinutes(durationTask) -
+                this.convertTimeToMinutes(endWindowTime);
+            }
             return 0;
-        } else {
-            dration = (dration === "") ? "00:15" : dration;
         }
 
         if(
@@ -40,12 +50,12 @@ class DateTime{
 
         if(
             this.convertTimeToMinutes(startTaskTime) +
-            this.convertTimeToMinutes(dration)
+            this.convertTimeToMinutes(durationTask)
             > 
             this.convertTimeToMinutes(endWindowTime)
         ){
             return this.convertTimeToMinutes(startTaskTime) +
-            this.convertTimeToMinutes(dration) -
+            this.convertTimeToMinutes(durationTask) -
             this.convertTimeToMinutes(endWindowTime);
         }
 
