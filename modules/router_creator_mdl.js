@@ -109,14 +109,20 @@ module.exports = class {
                     userTasks[i].time.start_time,
                     userTasks[i].time.duration) 
                 === 0
+                && DateTime.compareDate(userTasks[i].time.date, this.date)
+                === 0
             ){
-                console.log("In time window");
-                console.log(JSON.stringify(userTasks[i]));
+                // for debuging
+                // console.log("In time window");
+                // console.log(JSON.stringify(userTasks[i]));
+
                 sutebleTask.push(userTasks[i]);
-            } else {
-                console.log("Not in time window");
-                console.log(JSON.stringify(userTasks[i]));
             }
+            //for debuging
+            //  else {
+            //     console.log("Not in time window");
+            //     console.log(JSON.stringify(userTasks[i]));
+            // }
         }
         return sutebleTask;
     }
