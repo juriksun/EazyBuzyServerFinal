@@ -2,15 +2,13 @@
 
 class DateTime{
     static compareHour(hour1, hour2){
-        let hour1Splited = hour1.split(':'),
-            hour2Splited = hour2.split(':');
-            
-        let hour1InMinutes = + hour1Splited[1] + hour1Splited[0] * 60 ,
-            hour2InMinutes = + hour2Splited[1] + hour2Splited[0] * 60 ;
-    
-        return hour1InMinutes - hour2InMinutes;
+        return this.convertTimeToMinutes(hour1) - this.convertTimeToMinutes(hour2);
     };
-   
+
+    static convertTimeToMinutes(time){
+        let timeSplited = time.split(':');
+        return + timeSplited[1] + timeSplited[0] * 60 ;
+    }
     static convertDateToDay(date){
         return this.normalizeDate(date).getDay();
     };
@@ -22,6 +20,37 @@ class DateTime{
     static compareDate(date1, date2){
         return ((this.normalizeDate(date1).getTime() / 1000) - (this.normalizeDate(date2).getTime() / 1000));
     };
+
+    static checkTaskInTimeWindow(startWindowTime, endWindowTime, startTaskTime, durationTask){
+
+        if(startTaskTime === ""){
+            return 0;
+        } else {
+            dration = (dration === "") ? "00:15" : dration;
+        }
+
+        if(
+            this.convertTimeToMinutes(startWindowTime)
+            > 
+            this.convertTimeToMinutes(startTaskTime)
+        ){
+            return this.convertTimeToMinutes(startWindowTime) - 
+                this.convertTimeToMinutes(startTaskTime);
+        }
+
+        if(
+            this.convertTimeToMinutes(startTaskTime) +
+            this.convertTimeToMinutes(dration)
+            > 
+            this.convertTimeToMinutes(endWindowTime)
+        ){
+            return this.convertTimeToMinutes(startTaskTime) +
+            this.convertTimeToMinutes(dration) -
+            this.convertTimeToMinutes(endWindowTime);
+        }
+
+        return 0;
+    }
 }
 
 module.exports = DateTime;
