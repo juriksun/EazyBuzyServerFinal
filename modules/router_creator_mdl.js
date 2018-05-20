@@ -98,9 +98,20 @@ module.exports = class {
     setTaskForSearchPath(allTasksForSearch){
         this.allTasksForSearch = allTasksForSearch
     }
-    //not for alpha
-    filterByTime(){
 
+    // filter task with invariable time and date 
+    filterTasksByTimeWindow(userTasks){
+        let sutebleTask = [];
+        for(let i = 0; i < userTasks.length; i++){
+            if(
+                userTasks[i].time.date !== ""
+            ){
+
+            } else {
+
+            }
+        }
+        return userTasks;
     }
 
     //
