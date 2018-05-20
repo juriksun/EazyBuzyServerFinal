@@ -189,17 +189,17 @@ module.exports = class {
                                             }
                                         );
                                     })
-                                    .catch(errRecommendedRoute => reject({error:"Error RecommendedRoute"}));
+                                    .catch(errRecommendedRoute => reject({error:"Error RecommendedRoute" + errRecommendedRoute}));
                                 })
-                                .catch(errDirectionsForRoutesWithSegments => reject({error:"Error DirectionsForRoutesWithSegments"}));
+                                .catch(errDirectionsForRoutesWithSegments => reject({error:"Error DirectionsForRoutesWithSegments" + errDirectionsForRoutesWithSegments}));
                             })
-                            .catch(errRoutesWithSegments => reject({error:"Error RoutesWithSegments"}));
+                            .catch(errRoutesWithSegments => reject({error:"Error RoutesWithSegments" + errRoutesWithSegments}));
                         })
-                        .catch(errPossibleRoutes => reject({error:"Error PossibleRoutes"}));
+                        .catch(errPossibleRoutes => reject({error:"Error PossibleRoutes" + errPossibleRoutes}));
                     })
                     .catch(errSuiteblePlaces => reject({error:"Error SuiteblePlaces" + errSuiteblePlaces}));
                 })
-                .catch(errPolygon => reject({error:"Error Polygon"}));
+                .catch(errPolygon => reject({error:"Error Polygon" + errPolygon}));
         })
     };
 

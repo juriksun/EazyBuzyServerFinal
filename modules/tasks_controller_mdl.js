@@ -23,11 +23,11 @@ module.exports = class{
                     resolve(allTasks)
                 })
                 .catch( error => {
-
+                    reject("Error, can't find tasks")
                 })
             })
             .catch( error => {
-
+                reject("Error, can't find user")
             })
         })
     }

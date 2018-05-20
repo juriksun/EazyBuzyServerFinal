@@ -27,16 +27,19 @@ module.exports = class{
                     })
                     .catch( error => {
                         console.log(error);
+                        reject("Error, can't save route");
                     });
                     
                 }
                 )
                 .catch(error => {
-                    console.log(error)
+                    console.log(error);
+                    reject("Error, can't dispatch route");
                 })
             })
             .catch(error => {
-                console.log(error)
+                console.log(error);
+                reject("Error, can't set user");
             });
         });
     }
@@ -54,7 +57,7 @@ module.exports = class{
             
             newRoute.save((err, success) => {
                 if (err) {
-                    reject("can't save user: \n" + err)
+                    reject("Error, can't save user: \n" + err)
                 }
                 else resolve(
                     success
