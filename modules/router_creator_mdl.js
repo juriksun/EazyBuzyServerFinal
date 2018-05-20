@@ -104,14 +104,21 @@ module.exports = class {
         let sutebleTask = [];
         for(let i = 0; i < userTasks.length; i++){
             if(
-                userTasks[i].time.date !== ""
+                DateTime.checkTaskInTimeWindow(
+                    this.startTime, this.endTime, 
+                    userTasks[i].time.start_time,
+                    userTasks[i].time.duration) 
+                === 0
             ){
-
+                console.log("In time window");
+                console.log(JSON.stringify(userTasks[i]));
+                sutebleTask.push(userTasks[i]);
             } else {
-
+                console.log("Not in time window");
+                console.log(JSON.stringify(userTasks[i]));
             }
         }
-        return userTasks;
+        return sutebleTask;
     }
 
     //
@@ -179,7 +186,7 @@ module.exports = class {
             this.calcPolygon()// need to develop
                 .then((polygon) => {
                     // do prefilter of hours of tasks 
-                this.getSuiteblePlaces(polygon, this.userTasks)// get all suitebale
+                this.getSuiteblePlaces(polygon, this.filterTasksByTimeWindow(this.userTasks))// get all suitebale
                     // do next filter of open hours of places
                     .then((suiteblePlaces) => {
                         this.calcPossibleRoutes(suiteblePlaces.tasks,this.startPoint, this.endPoint)//alex
