@@ -18,7 +18,12 @@ class DateTime{
     };
     
     static compareDate(date1, date2){
-        return ((this.normalizeDate(date1).getTime() / 1000) - (this.normalizeDate(date2).getTime() / 1000));
+        if(date1 === "" || date2 === ""){
+            return 0;
+        } else {
+            return ((this.normalizeDate(date1).getTime() / 1000) -
+                (this.normalizeDate(date2).getTime() / 1000));
+        }
     };
 
     static checkTaskInTimeWindow(startWindowTime, endWindowTime, startTaskTime, durationTask){
@@ -33,8 +38,8 @@ class DateTime{
                 this.convertTimeToMinutes(endWindowTime)
             ){
                 return this.convertTimeToMinutes(startWindowTime) +
-                this.convertTimeToMinutes(durationTask) -
-                this.convertTimeToMinutes(endWindowTime);
+                    this.convertTimeToMinutes(durationTask) -
+                    this.convertTimeToMinutes(endWindowTime);
             }
             return 0;
         }
@@ -55,8 +60,8 @@ class DateTime{
             this.convertTimeToMinutes(endWindowTime)
         ){
             return this.convertTimeToMinutes(startTaskTime) +
-            this.convertTimeToMinutes(durationTask) -
-            this.convertTimeToMinutes(endWindowTime);
+                this.convertTimeToMinutes(durationTask) -
+                this.convertTimeToMinutes(endWindowTime);
         }
 
         return 0;
