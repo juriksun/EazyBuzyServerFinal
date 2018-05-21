@@ -11,12 +11,14 @@ exports.getUser = (req , res) => {
         .then(userData => {
             res.status(200).json({
                 status: true,
+                message : `Welcome, ${userData.last_name} ${userData.first_name}`,
                 user: userData
             })
         })
         .catch(error => {
             res.status(200).json({
                 status: false,
+                message : 'Error, Email/Username Not Valid',
                 error: error
             })
         })
