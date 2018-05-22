@@ -37,6 +37,7 @@ exports.getAllTasks = (req, res) => {
             res.status(200).json(
                 {
                     status : true,
+                    message : 'Success, Get All Tasks',
                     tasks : allTasks
                 }
             );
@@ -45,6 +46,7 @@ exports.getAllTasks = (req, res) => {
             res.status(200).json(
                 {
                     status : "false",
+                    message : "Error, Can't Fetch Tasks",
                     error : error
                 }
             );
