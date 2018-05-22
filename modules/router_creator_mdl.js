@@ -99,9 +99,35 @@ module.exports = class {
         this.allTasksForSearch = allTasksForSearch
     }
 
+    // filter places with open hour
+    filterPlacesByTimeWindow(allFullDadaPlace, tasks){
+        let suteblePlaces = [];
+        for(let i = 0; i < allFullDadaPlace.length; i++){
+            if(
+                DateTime.checkPlaceInTimeWindow(
+                    this.startTime, this.endTime, this.day,
+                    allFullDadaPlace[i].response.opening_hours,
+                    tasks[allFullDadaPlace[i].taskIndex].time.duration
+                ) === 0
+            ){
+                // for debuging
+                console.log("In time window");
+                // console.log(JSON.stringify(userTasks[i]));
+
+                suteblePlaces.push(allFullDadaPlace[i]);
+            }
+            //for debuging
+             else {
+                console.log("Not in time window");
+            //     console.log(JSON.stringify(userTasks[i]));
+            }
+        }
+        return suteblePlaces;
+    }
+
     // filter task with invariable time and date 
     filterTasksByTimeWindow(userTasks){
-        let sutebleTask = [];
+        let sutebleTasks = [];
         for(let i = 0; i < userTasks.length; i++){
             if(
                 DateTime.checkTaskInTimeWindow(
@@ -116,7 +142,7 @@ module.exports = class {
                 // console.log("In time window");
                 // console.log(JSON.stringify(userTasks[i]));
 
-                sutebleTask.push(userTasks[i]);
+                sutebleTasks.push(userTasks[i]);
             }
             //for debuging
             //  else {
@@ -124,7 +150,7 @@ module.exports = class {
             //     console.log(JSON.stringify(userTasks[i]));
             // }
         }
-        return sutebleTask;
+        return sutebleTasks;
     }
 
     //
@@ -134,17 +160,20 @@ module.exports = class {
                 let tasksForPermutation = [];
 
                 for (let i = 0; i < suiteblePlaces.length; i++) {
-                    let task_identifier = {
-                        id: suiteblePlaces[i].id,
-                        name: suiteblePlaces[i].name
-                    };
-                    let task = [];
-                    for (let k = 0; k < suiteblePlaces[i].places.length && k < 2; k++) {
-                        let place = suiteblePlaces[i].places[k];
-                        place.task_identifier = task_identifier;
-                        task.push(place);
+                    if(suiteblePlaces[i].places){
+                        let task_identifier = {
+                            id: suiteblePlaces[i].id,
+                            name: suiteblePlaces[i].name
+                        };
+                        let task = [];
+                        for (let k = 0; k < suiteblePlaces[i].places.length && k < 2; k++) {
+                            let place = suiteblePlaces[i].places[k];
+                            place.task_identifier = task_identifier;
+                            task.push(place);
+                        }
+                        tasksForPermutation.push(task);
                     }
-                    tasksForPermutation.push(task);
+                    
                 }
 
                 let allPermutationAndCombianationOfTasks = Combinatorics.permutationCombination(tasksForPermutation).toArray();
@@ -265,10 +294,13 @@ module.exports = class {
                     return dataArr.response.map((data) => {
                         return googleApiMdl.googleGetPlaceData(dataArr.taskIndex, data.place_id);
                     });
+                    // rerange object schem
                 }).reduce((accumulator, currentValue) => {
                     return accumulator.concat(currentValue);
                 }))
                 .then((allFullDadaPlace) => {
+                    allFullDadaPlace = this.filterPlacesByTimeWindow(allFullDadaPlace, tasks);
+                    
                     // match all responses from googleGetPlaceData to proper task 
                     for (let i = 0; i < allFullDadaPlace.length; i++) {
                         (tasks[allFullDadaPlace[i].taskIndex].places) ?
