@@ -376,33 +376,11 @@ module.exports = class {
             .catch(error => {
                 console.log(error)
             })
-            // Promise.all(promises)
-            // .then((allData) => {
-            //     let promisesIndex = 0;
-            //     while(promisesIndex < promises.length){
-            //         for (let i = 0; i < allRoutesWithSegments.length; i++) {
-            //             let sumOfDuration = 0;
-            //             for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
-            //                 allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
-            //                 sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
-            //                 promisesIndex++;
-            //             }
-            //             allRoutesWithSegmentsWithSums.push(
-            //                 {
-            //                     route: allRoutesWithSegments[i],
-            //                     num_of_segments: allRoutesWithSegments[i].length,
-            //                     sum_of_durations: sumOfDuration
-            //                 }
-            //             );
-            //         }
-            //     }
-            //     resolve(allRoutesWithSegmentsWithSums);
-            // })
-            // .catch(error => {
-            //     console.log(error)
-            // })
         });
     }
+
+
+    
 
     chooseRecommendedRoute(directionsForRoutesWithSegments){
         return new Promise((resolve, reject)=>{
@@ -471,7 +449,89 @@ module.exports = class {
         });
     }
 
+    //need
     saveRoute(){
 
     }
+
+    //********************new functions***************************//
+
+
+    buildRouteWithSegmentsAndDerection(RouteWithSegments){
+        return new Promise((resolve, reject) => {
+            let ruoteStartTime = 0,
+                routeDuration = 0,
+                routeWaitTime = 0,
+                routeEndTime = 0,
+                routeDistance = 0
+            for(let i = 0; i < RouteWithSegments.length; i++){
+                this.calcWaitTimeBeforeStart();
+                this.calcDuration();
+                this.getDirectionToNextPoint();
+                this.setStartTimeToNextSegment();
+            }
+            // get segment and match to open hower or invariable time and set the start time
+            // get diriction by arival or desparcher time
+        });
+    }
+
+    getAllDirectionForRoutesWithSegments(allRoutesWithSegments){
+        return new Promise((resolve, reject) => {
+            
+            // send route to build the and check the route
+
+            let sumOfRequers = 0;
+            let promises = [];
+            let allRoutesWithSegmentsWithSums = [];
+            let timeout = 0;
+            for (let i = 0; i < allRoutesWithSegments.length; i++) {
+                for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
+                    sumOfRequers++;
+                    promises.push(googleApiMdl.googleGetDirection(
+                        allRoutesWithSegments[i][k].startPoint.place_id,
+                        allRoutesWithSegments[i][k].endPoint.place_id,
+                        this.travelMode,
+                        timeout
+                    ));
+                    timeout+=25
+                }
+            }
+             let apiHandler = new ApiHandler()
+             apiHandler.handleRequst(promises)
+            .then((allData) => {
+                let promisesIndex = 0;
+                while(promisesIndex < promises.length){
+                    for (let i = 0; i < allRoutesWithSegments.length; i++) {
+                        let sumOfDuration = 0;
+                        let sumOfDistance = 0;
+                        for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
+                            allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
+                            allRoutesWithSegments[i][k].distance = allData[promisesIndex].routes[0].legs[0].distance.value;
+                            // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
+                            allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
+                            allRoutesWithSegments[i][k].travel_mode = allData[promisesIndex].routes[0].legs[0].distance.value;
+                            sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
+
+                            sumOfDistance = sumOfDistance + allRoutesWithSegments[i][k].distance;
+
+                            promisesIndex++;
+                        }
+                        allRoutesWithSegmentsWithSums.push(
+                            {
+                                segments: allRoutesWithSegments[i],
+                                num_of_segments: allRoutesWithSegments[i].length,
+                                sum_of_durations: sumOfDuration,
+                                sum_of_distance: sumOfDistance
+                            }
+                        );
+                    }
+                }
+                resolve(allRoutesWithSegmentsWithSums);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        });
+    }
+
 }
