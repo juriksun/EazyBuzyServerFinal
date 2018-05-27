@@ -162,8 +162,12 @@ module.exports = class {
                 for (let i = 0; i < suiteblePlaces.length; i++) {
                     if(suiteblePlaces[i].places){
                         let task_identifier = {
-                            id: suiteblePlaces[i].id,
-                            name: suiteblePlaces[i].name
+                            name: suiteblePlaces[i].name,
+                            status: suiteblePlaces[i].status,
+                            time: suiteblePlaces[i].time,
+                            priority: suiteblePlaces[i].priority,
+                            task_place: suiteblePlaces[i].task_place,
+                            location: suiteblePlaces[i].location
                         };
                         let task = [];
                         for (let k = 0; k < suiteblePlaces[i].places.length && k < 2; k++) {
@@ -173,7 +177,6 @@ module.exports = class {
                         }
                         tasksForPermutation.push(task);
                     }
-                    
                 }
 
                 let allPermutationAndCombianationOfTasks = Combinatorics.permutationCombination(tasksForPermutation).toArray();
