@@ -111,15 +111,15 @@ module.exports = class {
                 ) === 0
             ){
                 // for debuging
-                console.log("In time window");
-                // console.log(JSON.stringify(userTasks[i]));
+                // console.log("In time window");
+                // console.log(JSON.stringify(allFullDadaPlace[i]));
 
                 suteblePlaces.push(allFullDadaPlace[i]);
             }
             //for debuging
              else {
-                console.log("Not in time window");
-            //     console.log(JSON.stringify(userTasks[i]));
+                // console.log("Not in time window");
+                // console.log(JSON.stringify(allFullDadaPlace[i]));
             }
         }
         return suteblePlaces;
@@ -145,10 +145,10 @@ module.exports = class {
                 sutebleTasks.push(userTasks[i]);
             }
             //for debuging
-            //  else {
-            //     console.log("Not in time window");
-            //     console.log(JSON.stringify(userTasks[i]));
-            // }
+             else {
+                // console.log("Not in time window");
+                // console.log(JSON.stringify(userTasks[i]));
+            }
         }
         return sutebleTasks;
     }
@@ -230,21 +230,25 @@ module.exports = class {
                         .then(possibleRoutes => {
                             this.buildAllRoutesWithSegments(possibleRoutes)//alex
                             .then(allRoutesWithSegments => {
-                                this.getAllDirectionForRoutesWithSegmentsLL(allRoutesWithSegments)//alex
+                                this.getAllDirectionForRoutesWithSegments(allRoutesWithSegments)//alex
                             
                                 .then(directionsForRoutesWithSegments => {
                                     //this.directionsForRoutesWithSegments = directionsForRoutesWithSegments
-                                    this.chooseRecommendedRoute(directionsForRoutesWithSegments)
-                                    .then((recommendedRoute) => {
+
+                                    // this.chooseRecommendedRoute(directionsForRoutesWithSegments)
+                                    // .then((recommendedRoute) => {
                                         resolve(
                                             {
-                                                recommended_route: recommendedRoute,
+                                                
+                                                
+                                                // recommended_route: recommendedRoute,
+                                                recommended_route: directionsForRoutesWithSegments,
                                                 // all_routes: directionsForRoutesWithSegments,
                                                 all_tasks: this.userTasks
                                             }
                                         );
-                                    })
-                                    .catch(errRecommendedRoute => reject({error:"Error RecommendedRoute" + errRecommendedRoute}));
+                                    // })
+                                    // .catch(errRecommendedRoute => reject({error:"Error RecommendedRoute" + errRecommendedRoute}));
                                 })
                                 .catch(errDirectionsForRoutesWithSegments => reject({error:"Error DirectionsForRoutesWithSegments" + errDirectionsForRoutesWithSegments}));
                             })
@@ -455,79 +459,121 @@ module.exports = class {
     }
 
     //********************new functions***************************//
+    calcWaitTimeToOpenBeforeStart(point, routeCurrentTime){
+        return DateTime.getNearestOpeningTime(
+            routeCurrentTime, this.day, point.opening_hours,
+            point.task_identifier.time.duration
+        );
+    }
 
-
-    buildRouteWithSegmentsAndDerection(RouteWithSegments){
+    buildRouteWithSegmentsAndDerection(routeWithSegments){
         return new Promise((resolve, reject) => {
-            let ruoteStartTime = 0,
-                routeDuration = 0,
-                routeWaitTime = 0,
-                routeEndTime = 0,
-                routeDistance = 0
-            for(let i = 0; i < RouteWithSegments.length; i++){
-                this.calcWaitTimeBeforeStart();
-                this.calcDuration();
-                this.getDirectionToNextPoint();
-                this.setStartTimeToNextSegment();
+            let route = {
+                routeStartTime: DateTime.convertTimeToMinutes(this.startTime),
+                routeEndTime: DateTime.convertTimeToMinutes(this.endTime),
+                routeDistance: 0,
+                routeDuration: 0,
+                routeWaitTime: 0,
+                routeCurrentTime: DateTime.convertTimeToMinutes(this.startTime),
+                segments: []
+            };
+
+            for(let i = 0; i < routeWithSegments.length; i++){
+                routeWithSegments[i].arriveTime = route.routeCurrentTime;
+                if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
+                ){
+                    let waitTime = this.calcWaitTimeToOpenBeforeStart(routeWithSegments[i].startPoint, route.routeCurrentTime);
+                    console.log("wait time:", waitTime);
+                    if(waitTime === undefined){
+                        resolve(null);
+                    }
+                   
+                    
+                    route.routeWaitTime += waitTime;
+                    route.routeCurrentTime += waitTime;
+                    routeWithSegments[i].waitTime = waitTime;
+                    routeWithSegments[i].duration = 
+                        DateTime.convertTimeToMinutes(
+                            (routeWithSegments[i].startPoint.task_identifier.time.duration === "")?
+                            "00:15": routeWithSegments[i].startPoint.task_identifier.time.duration
+                        );
+
+                    // routeDuration += this.calcDuration(RouteWithSegments[i].startPoint);
+                    
+                } else {
+                    routeWithSegments[i].duration = 0;
+                    routeWithSegments[i].waitTime = 0;
+                }
+                route.routeDuration += routeWithSegments[i].duration;
+                route.routeDuration += routeWithSegments[i].waitTime;
+                route.routeCurrentTime += routeWithSegments[i].duration;
+                route.routeCurrentTime += routeWithSegments[i].waitTime;
+                route.segments.push(routeWithSegments[i]);        
+                console.log(routeWithSegments[i].waitTime);        
+                // this.getDirectionToNextPoint();
+                // this.setStartTimeToNextSegment(); 
             }
-            // get segment and match to open hower or invariable time and set the start time
-            // get diriction by arival or desparcher time
+            resolve(route);
         });
     }
 
     getAllDirectionForRoutesWithSegments(allRoutesWithSegments){
         return new Promise((resolve, reject) => {
-            
+            Promise.all(
+                allRoutesWithSegments.map(i => this.buildRouteWithSegmentsAndDerection(i))
+            ).then((allData) => {
+                resolve(allData);
+            })
+
             // send route to build the and check the route
 
-            let sumOfRequers = 0;
-            let promises = [];
-            let allRoutesWithSegmentsWithSums = [];
-            let timeout = 0;
-            for (let i = 0; i < allRoutesWithSegments.length; i++) {
-                for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
-                    sumOfRequers++;
-                    promises.push(googleApiMdl.googleGetDirection(
-                        allRoutesWithSegments[i][k].startPoint.place_id,
-                        allRoutesWithSegments[i][k].endPoint.place_id,
-                        this.travelMode,
-                        timeout
-                    ));
-                    timeout+=25
-                }
-            }
-             let apiHandler = new ApiHandler()
-             apiHandler.handleRequst(promises)
-            .then((allData) => {
-                let promisesIndex = 0;
-                while(promisesIndex < promises.length){
-                    for (let i = 0; i < allRoutesWithSegments.length; i++) {
-                        let sumOfDuration = 0;
-                        let sumOfDistance = 0;
-                        for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
-                            allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
-                            allRoutesWithSegments[i][k].distance = allData[promisesIndex].routes[0].legs[0].distance.value;
-                            // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
-                            allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
-                            allRoutesWithSegments[i][k].travel_mode = allData[promisesIndex].routes[0].legs[0].distance.value;
-                            sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
+            // let sumOfRequers = 0;
+            // let promises = [];
+            // let allRoutesWithSegmentsWithSums = [];
+            // let timeout = 0;
+            // for (let i = 0; i < allRoutesWithSegments.length; i++) {
+            //     for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
+            //         sumOfRequers++;
+            //         promises.push(googleApiMdl.googleGetDirection(
+            //             allRoutesWithSegments[i][k].startPoint.place_id,
+            //             allRoutesWithSegments[i][k].endPoint.place_id,
+            //             this.travelMode,
+            //             timeout
+            //         ));
+            //         timeout+=25
+            //     }
+            // }
+            //  let apiHandler = new ApiHandler()
+            //  apiHandler.handleRequst(promises)
+            // .then((allData) => {
+            //     let promisesIndex = 0;
+            //     while(promisesIndex < promises.length){
+            //         for (let i = 0; i < allRoutesWithSegments.length; i++) {
+            //             let sumOfDuration = 0;
+            //             let sumOfDistance = 0;
+            //             for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
+            //                 allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
+            //                 allRoutesWithSegments[i][k].distance = allData[promisesIndex].routes[0].legs[0].distance.value;
+            //                 // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
+            //                 allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
+            //                 allRoutesWithSegments[i][k].travel_mode = allData[promisesIndex].routes[0].legs[0].distance.value;
+            //                 sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
 
-                            sumOfDistance = sumOfDistance + allRoutesWithSegments[i][k].distance;
+            //                 sumOfDistance = sumOfDistance + allRoutesWithSegments[i][k].distance;
 
-                            promisesIndex++;
-                        }
-                        allRoutesWithSegmentsWithSums.push(
-                            {
-                                segments: allRoutesWithSegments[i],
-                                num_of_segments: allRoutesWithSegments[i].length,
-                                sum_of_durations: sumOfDuration,
-                                sum_of_distance: sumOfDistance
-                            }
-                        );
-                    }
-                }
-                resolve(allRoutesWithSegmentsWithSums);
-            })
+            //                 promisesIndex++;
+            //             }
+            //             allRoutesWithSegmentsWithSums.push(
+            //                 {
+            //                     segments: allRoutesWithSegments[i],
+            //                     num_of_segments: allRoutesWithSegments[i].length,
+            //                     sum_of_durations: sumOfDuration,
+            //                     sum_of_distance: sumOfDistance
+            //                 }
+            //             );
+            //         }
+            //     }
+
             .catch(error => {
                 console.log(error)
             })

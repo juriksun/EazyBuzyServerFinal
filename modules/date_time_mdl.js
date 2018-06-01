@@ -13,6 +13,9 @@ class DateTime{
     }
 
     static convertTimeToMinutes(time){
+        if(typeof time === "number"){
+            return time;
+        }
         let timeSplited = time.split(':');
         if(timeSplited.length === 1){
            return ((~~(+ time / 100)) * 60) + (+ time % 100);
@@ -77,6 +80,64 @@ class DateTime{
         }
 
         return 0;
+    }
+
+    static getNearestOpeningTime(currrentRouteTime, dayWindowTime,
+        opening_hours, durationTask
+    ){
+        let nearestOpeningHours = undefined;
+        durationTask = this.convertTimeToMinutes((durationTask === "") ? "00:15" : durationTask);
+        
+        if(
+            opening_hours == undefined
+            || opening_hours.periods == undefined
+            || opening_hours.periods.length === 0
+        ){
+            return 0;
+        }
+
+        for(let i = 0; i < opening_hours.periods.length; i++){
+            if(
+                this.compareHour(
+                    opening_hours.periods[i].open.time, currrentRouteTime,
+                    opening_hours.periods[i].open.day, dayWindowTime
+                )
+                <= 0
+                && 
+                this.compareHour(
+                    opening_hours.periods[i].close.time, currrentRouteTime,
+                    opening_hours.periods[i].close.day, dayWindowTime
+                ) - durationTask
+                >= 0
+            ){
+                console.log("in");
+                return 0;
+            } else {
+                let newNearestOpeningHours = this.compareHour(
+                    opening_hours.periods[i].open.time, currrentRouteTime,
+                    opening_hours.periods[i].open.day, dayWindowTime
+                );
+
+                if( newNearestOpeningHours > 0
+                    &&
+                    opening_hours.periods[i].open.day === dayWindowTime
+                    && 
+                    this.compareHour(
+                        opening_hours.periods[i].close.time,
+                        opening_hours.periods[i].open.time,
+                        opening_hours.periods[i].close.day,
+                        opening_hours.periods[i].open.day
+                    ) - durationTask 
+                    >= 0
+                 ){
+                    nearestOpeningHours = nearestOpeningHours || newNearestOpeningHours;
+                    if(nearestOpeningHours > newNearestOpeningHours){
+                        nearestOpeningHours = newNearestOpeningHours;
+                    }
+                }
+            }
+        }
+        return nearestOpeningHours;
     }
 
     static checkPlaceInTimeWindow(startWindowTime, endWindowTime,
@@ -159,10 +220,10 @@ class DateTime{
                 )
                 <= 0
             ){
-                console.log("-----------------------------------In time");
+                //console.log("-----------------------------------In time");
                 return 0;
             } else {
-                console.log("-----------------------------------Not in time");
+                //console.log("-----------------------------------Not in time");
             }
         }
         return -1;
