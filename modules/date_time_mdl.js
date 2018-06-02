@@ -41,6 +41,26 @@ class DateTime{
         }
     };
 
+    static convertDateHourToMilliseconds(date, time){
+        let splitedDate = date.split('-'),
+            splitedTime = time.split(':');
+            console.log(date + 'T' + time + ":00");
+        return new Date(date + 'T' + time + ":00").getTime();
+    }
+
+    static convertMinutesToTime(minutes){   
+        let hoursNumber = ~~(minutes / 60),
+            minutesNumber = minutes - hoursNumber * 60;
+        
+        let stringHours = hoursNumber.toString(),
+            stringMinutes = minutesNumber.toString();
+
+        stringHours = (stringHours.length == 1)? ("0" + stringHours) : stringHours;
+        stringMinutes = (stringMinutes.length == 1)? ("0" + stringMinutes) : stringMinutes;
+
+        return stringHours + ":" + stringMinutes;
+    }
+
     static checkTaskInTimeWindow(startWindowTime, endWindowTime, startTaskTime, durationTask){
 
         durationTask = (durationTask === "") ? "00:15" : durationTask;

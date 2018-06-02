@@ -70,7 +70,7 @@ module.exports.googleGetPlaceData = (taskIndex, palaceId, timeout = 0) => {
     });
 };
 
-module.exports.googleGetDirection = (startPoint, endPoint, mode, timeout) => {
+module.exports.googleGetDirectionNN = (startPoint, endPoint, mode, timeout) => {
     if(!timeout) timeout = 0;
     return new Promise((resolve, reject) => {
         const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
@@ -84,5 +84,20 @@ module.exports.googleGetDirection = (startPoint, endPoint, mode, timeout) => {
                 reject({error:error})
             });
         },timeout)
+    });
+};
+
+module.exports.googleGetDirection = (startPoint, endPoint, mode, departureTime ) => {
+    return new Promise((resolve, reject) => {
+        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_SHAMIR}&departure_time=${departureTime}&language=en`;
+       
+            axios
+            .get(url)
+            .then(response => {
+                resolve(response.data);
+            })
+            .catch(error => {
+                reject({error:error})
+            });
     });
 };

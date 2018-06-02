@@ -61,9 +61,11 @@ module.exports = class {
 
     // determine all time sets of route
     setTimeWindow(time){
+
         this.startTime = time.start_time;
         this.endTime = time.end_time;
         this.date = time.date;
+        console.log(this.date);
         this.day = DateTime.convertDateToDay(this.date);
     }
 
@@ -460,6 +462,16 @@ module.exports = class {
 
     //********************new functions***************************//
     calcWaitTimeToOpenBeforeStart(point, routeCurrentTime){
+        if(point.task_identifier.time.start_time !== "" ){
+            return DateTime.compareHour(
+                    routeCurrentTime,
+                    point.task_identifier.time.start_time
+                ) > 0 ?
+                    undefined : DateTime.compareHour(
+                        routeCurrentTime,
+                        point.task_identifier.time.start_time
+                    );
+        }
         return DateTime.getNearestOpeningTime(
             routeCurrentTime, this.day, point.opening_hours,
             point.task_identifier.time.duration
@@ -467,7 +479,7 @@ module.exports = class {
     }
 
     buildRouteWithSegmentsAndDerection(routeWithSegments){
-        return new Promise((resolve, reject) => {
+        return new Promise(async (resolve, reject) => {
             let route = {
                 routeStartTime: DateTime.convertTimeToMinutes(this.startTime),
                 routeEndTime: DateTime.convertTimeToMinutes(this.endTime),
@@ -483,7 +495,6 @@ module.exports = class {
                 if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
                 ){
                     let waitTime = this.calcWaitTimeToOpenBeforeStart(routeWithSegments[i].startPoint, route.routeCurrentTime);
-                    console.log("wait time:", waitTime);
                     if(waitTime === undefined){
                         resolve(null);
                     }
@@ -497,8 +508,6 @@ module.exports = class {
                             (routeWithSegments[i].startPoint.task_identifier.time.duration === "")?
                             "00:15": routeWithSegments[i].startPoint.task_identifier.time.duration
                         );
-
-                    // routeDuration += this.calcDuration(RouteWithSegments[i].startPoint);
                     
                 } else {
                     routeWithSegments[i].duration = 0;
@@ -508,8 +517,17 @@ module.exports = class {
                 route.routeDuration += routeWithSegments[i].waitTime;
                 route.routeCurrentTime += routeWithSegments[i].duration;
                 route.routeCurrentTime += routeWithSegments[i].waitTime;
-                route.segments.push(routeWithSegments[i]);        
-                console.log(routeWithSegments[i].waitTime);        
+
+                let direction = await googleApiMdl.googleGetDirection(
+                    routeWithSegments[i].startPoint.place_id,
+                    routeWithSegments[i].endPoint.place_id,
+                    this.travelMode, DateTime.convertDateHourToMilliseconds(
+                        this.date,
+                        DateTime.convertMinutesToTime(route.routeCurrentTime)
+                    )
+                );
+                routeWithSegments[i].direction = direction;
+                route.segments.push(routeWithSegments[i]);     
                 // this.getDirectionToNextPoint();
                 // this.setStartTimeToNextSegment(); 
             }
