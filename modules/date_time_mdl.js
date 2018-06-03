@@ -44,7 +44,7 @@ class DateTime{
     static convertDateHourToMilliseconds(date, time){
         let splitedDate = date.split('-'),
             splitedTime = time.split(':');
-            console.log(date + 'T' + time + ":00");
+            // console.log(date + 'T' + time + ":00");
         return new Date(date + 'T' + time + ":00").getTime();
     }
 
@@ -130,7 +130,7 @@ class DateTime{
                 ) - durationTask
                 >= 0
             ){
-                console.log("in");
+                // console.log("in");
                 return 0;
             } else {
                 let newNearestOpeningHours = this.compareHour(

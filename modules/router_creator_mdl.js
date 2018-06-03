@@ -65,7 +65,7 @@ module.exports = class {
         this.startTime = time.start_time;
         this.endTime = time.end_time;
         this.date = time.date;
-        console.log(this.date);
+        // console.log(this.date);
         this.day = DateTime.convertDateToDay(this.date);
     }
 
@@ -481,27 +481,30 @@ module.exports = class {
     buildRouteWithSegmentsAndDerection(routeWithSegments){
         return new Promise(async (resolve, reject) => {
             let route = {
-                routeStartTime: DateTime.convertTimeToMinutes(this.startTime),
-                routeEndTime: DateTime.convertTimeToMinutes(this.endTime),
-                routeDistance: 0,
-                routeDuration: 0,
-                routeWaitTime: 0,
-                routeCurrentTime: DateTime.convertTimeToMinutes(this.startTime),
+                route_tasks_number: routeWithSegments.length - 1,
+                route_start_time: DateTime.convertTimeToMinutes(this.startTime),
+                route_end_time: DateTime.convertTimeToMinutes(this.endTime),
+                route_distance: 0,
+                route_duration: 0,
+                route_wait_time: 0,
+                route_duration_in_road: 0,
+                route_current_time: DateTime.convertTimeToMinutes(this.startTime),
                 segments: []
             };
 
             for(let i = 0; i < routeWithSegments.length; i++){
-                routeWithSegments[i].arriveTime = route.routeCurrentTime;
+                routeWithSegments[i].arriveTime = route.route_current_time;
                 if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
                 ){
-                    let waitTime = this.calcWaitTimeToOpenBeforeStart(routeWithSegments[i].startPoint, route.routeCurrentTime);
+                    let waitTime = this.calcWaitTimeToOpenBeforeStart(routeWithSegments[i].startPoint, route.route_current_time);
                     if(waitTime === undefined){
                         resolve(null);
+                        return;
                     }
                    
                     
-                    route.routeWaitTime += waitTime;
-                    route.routeCurrentTime += waitTime;
+                    route.route_wait_time += waitTime;
+                    route.route_current_time += waitTime;
                     routeWithSegments[i].waitTime = waitTime;
                     routeWithSegments[i].duration = 
                         DateTime.convertTimeToMinutes(
@@ -513,23 +516,39 @@ module.exports = class {
                     routeWithSegments[i].duration = 0;
                     routeWithSegments[i].waitTime = 0;
                 }
-                route.routeDuration += routeWithSegments[i].duration;
-                route.routeDuration += routeWithSegments[i].waitTime;
-                route.routeCurrentTime += routeWithSegments[i].duration;
-                route.routeCurrentTime += routeWithSegments[i].waitTime;
 
-                let direction = await googleApiMdl.googleGetDirection(
-                    routeWithSegments[i].startPoint.place_id,
-                    routeWithSegments[i].endPoint.place_id,
-                    this.travelMode, DateTime.convertDateHourToMilliseconds(
-                        this.date,
-                        DateTime.convertMinutesToTime(route.routeCurrentTime)
-                    )
-                );
-                routeWithSegments[i].direction = direction;
-                route.segments.push(routeWithSegments[i]);     
-                // this.getDirectionToNextPoint();
-                // this.setStartTimeToNextSegment(); 
+                route.route_duration += routeWithSegments[i].duration;
+                route.route_duration += routeWithSegments[i].waitTime;
+                route.route_current_time += routeWithSegments[i].duration;
+                route.route_current_time += routeWithSegments[i].waitTime;
+                let direction;
+                // console.log("=================================", route.route_current_time);
+                try{
+                    direction = await googleApiMdl.googleGetDirection(
+                        routeWithSegments[i].startPoint.place_id,
+                        routeWithSegments[i].endPoint.place_id,
+                        this.travelMode, DateTime.convertDateHourToMilliseconds(
+                            this.date,
+                            DateTime.convertMinutesToTime(route.route_current_time)
+                        )
+                    );
+                } catch(error){
+                    console.log(error);
+                }
+
+                routeWithSegments[i].duration_in_road = ~~(direction.routes[0].legs[0].duration.value / 60);
+                // console.log("++++++++++++++++++++++++++++", routeWithSegments[i].duration_in_road);
+                routeWithSegments[i].distance = direction.routes[0].legs[0].distance.value;
+                routeWithSegments[i].polilines = direction.routes[0].overview_polyline.points;
+
+                route.route_duration += routeWithSegments[i].duration_in_road;
+                route.route_current_time += routeWithSegments[i].duration_in_road;
+
+                route.route_duration_in_road += routeWithSegments[i].duration_in_road;
+                route.route_distance += routeWithSegments[i].distance;
+
+
+                route.segments.push(routeWithSegments[i]);
             }
             resolve(route);
         });
