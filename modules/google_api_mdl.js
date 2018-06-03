@@ -28,6 +28,7 @@ module.exports.googleGetPlacesByRadius = (taskIndex, task, polygonPoint, radius,
 module.exports.googleGetPlacesByQuery = (taskIndex, query , timeout = 0) => {
     return new Promise((resolve, reject) => {
         // query = query.replace(/\s+/g,'%20')
+        // console.log("query: ", query);
         const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
         // setTimeout(()=>{
             axios

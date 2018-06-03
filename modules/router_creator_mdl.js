@@ -235,22 +235,20 @@ module.exports = class {
                                 this.getAllDirectionForRoutesWithSegments(allRoutesWithSegments)//alex
                             
                                 .then(directionsForRoutesWithSegments => {
-                                    //this.directionsForRoutesWithSegments = directionsForRoutesWithSegments
+                                    this.directionsForRoutesWithSegments = directionsForRoutesWithSegments
 
-                                    // this.chooseRecommendedRoute(directionsForRoutesWithSegments)
-                                    // .then((recommendedRoute) => {
+                                    this.chooseRecommendedRoute(directionsForRoutesWithSegments)
+                                    .then((recommendedRoute) => {
                                         resolve(
                                             {
-                                                
-                                                
                                                 // recommended_route: recommendedRoute,
                                                 recommended_route: directionsForRoutesWithSegments,
-                                                // all_routes: directionsForRoutesWithSegments,
+                                                all_routes: directionsForRoutesWithSegments,
                                                 all_tasks: this.userTasks
                                             }
                                         );
-                                    // })
-                                    // .catch(errRecommendedRoute => reject({error:"Error RecommendedRoute" + errRecommendedRoute}));
+                                    })
+                                    .catch(errRecommendedRoute => reject({error:"Error RecommendedRoute" + errRecommendedRoute}));
                                 })
                                 .catch(errDirectionsForRoutesWithSegments => reject({error:"Error DirectionsForRoutesWithSegments" + errDirectionsForRoutesWithSegments}));
                             })
@@ -291,7 +289,12 @@ module.exports = class {
                         timeout += 25 ;
                     }
                 }else{
-                    promises.push( googleApiMdl.googleGetPlacesByQuery(i , `${tasks[i].task_place.place_type.name !== '' ? '' : tasks[i].task_place.place_type.formated_name}  ${tasks[i].task_place.place_company.formated_name} ${tasks[i].location.address}`));
+                    console.log("tasks[i].task_place.place_type.name: ", tasks[i].task_place.place_type.name);
+                    console.log("tasks[i].task_place.place_type.formated_name: ", tasks[i].task_place.place_type.formated_name);
+                    
+                    let query = `${tasks[i].task_place.place_type.formated_name}  ${tasks[i].task_place.place_company.formated_name} ${tasks[i].location.address}`;
+                    console.log("query", query);
+                    promises.push( googleApiMdl.googleGetPlacesByQuery(i, query));
                 }
             }
 
@@ -388,7 +391,7 @@ module.exports = class {
 
     
 
-    chooseRecommendedRoute(directionsForRoutesWithSegments){
+    chooseRecommendedRouteLL(directionsForRoutesWithSegments){
         return new Promise((resolve, reject)=>{
             let recommendedRoute = directionsForRoutesWithSegments[0];
             for (let i = 1; i < directionsForRoutesWithSegments.length; i++) {
@@ -461,6 +464,75 @@ module.exports = class {
     }
 
     //********************new functions***************************//
+    chooseRecommendedRoute(directionsForRoutesWithSegments){
+        return new Promise((resolve, reject)=>{
+            let recommendedRoute;
+
+            // for (let i = 1; i < directionsForRoutesWithSegments.length; i++) {
+            //     recommendedRoute || (recommendedRoute);
+            //     if(
+            //         recommendedRoute.num_of_segments < directionsForRoutesWithSegments[i].num_of_segments ||
+            //         recommendedRoute.num_of_segments === directionsForRoutesWithSegments[i].num_of_segments &&
+            //         recommendedRoute.sum_of_durations > directionsForRoutesWithSegments[i].sum_of_durations
+            //     ){
+            //         recommendedRoute = directionsForRoutesWithSegments[i];
+            //     }
+            // }
+
+            // recommendedRoute.tasks = [];
+            // for(let i = 0; i < recommendedRoute.segments.length; i++ ){
+            //     let poliline = [];
+
+            //     for(let k = 0; k < recommendedRoute.segments[i].polylines.length - 1; k++){
+            //         poliline.push({
+            //             start: {
+            //                 lat: recommendedRoute.segments[i].polylines[k][0],
+            //                 lng: recommendedRoute.segments[i].polylines[k][1]
+            //             },
+            //             end: {
+            //                 lat: recommendedRoute.segments[i].polylines[k + 1][0],
+            //                 lng: recommendedRoute.segments[i].polylines[k + 1][1]
+            //             }
+            //         });
+            //     }
+            //     recommendedRoute.segments[i].polylines = poliline;
+                
+            //     recommendedRoute.tasks.push({
+            //         name : recommendedRoute.segments[i].startPoint.task_identifier.name,
+            //         duration : Math.random()*10%15, // need to change
+            //         place : {
+            //             location : {
+            //                 lat :  recommendedRoute.segments[i].startPoint.geometry.location.lat,
+            //                 lng : recommendedRoute.segments[i].startPoint.geometry.location.lng
+            //             },
+            //             name : recommendedRoute.segments[i].startPoint.name,
+            //             id : recommendedRoute.segments[i].startPoint.place_id,
+            //             address : recommendedRoute.segments[i].startPoint.vicinity || recommendedRoute.segments[i].startPoint.address
+            //         }
+            //     });
+
+
+            //     if(i === recommendedRoute.segments.length - 1){
+            //         recommendedRoute.tasks.push({
+            //             name : recommendedRoute.segments[i].endPoint.task_identifier.name,
+            //             duration : Math.random()*10%15, // need to change
+            //             place : {
+            //                 location : {
+            //                     lat :  recommendedRoute.segments[i].endPoint.geometry.location.lat,
+            //                     lng : recommendedRoute.segments[i].endPoint.geometry.location.lng
+            //                 },
+            //                 name : recommendedRoute.segments[i].endPoint.name,
+            //                 id : recommendedRoute.segments[i].endPoint.place_id,
+            //                 address : recommendedRoute.segments[i].endPoint.vicinity || recommendedRoute.segments[i].endPoint.address
+            //             }
+            //         });
+            //     }
+            // }
+
+            resolve(directionsForRoutesWithSegments);
+        });
+    }
+
     calcWaitTimeToOpenBeforeStart(point, routeCurrentTime){
         if(point.task_identifier.time.start_time !== "" ){
             return DateTime.compareHour(
@@ -497,9 +569,10 @@ module.exports = class {
                 if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
                 ){
                     let waitTime = this.calcWaitTimeToOpenBeforeStart(routeWithSegments[i].startPoint, route.route_current_time);
-                    console.log("---------------------------", waitTime);
+                    // console.log("---------------------------", waitTime);
                     if(waitTime === undefined){
-                        resolve(null);
+                        route.status = false;
+                        resolve(route);
                         return;
                     }
                    
@@ -536,7 +609,7 @@ module.exports = class {
                 } catch(error){
                     console.log(error);
                 }
-
+                // console.log("direction: ", JSON.stringify(direction.routes[0]));
                 routeWithSegments[i].duration_in_road = Math.round(direction.routes[0].legs[0].duration.value / 60);
                 // console.log("++++++++++++++++++++++++++++", routeWithSegments[i].duration_in_road);
                 routeWithSegments[i].distance = direction.routes[0].legs[0].distance.value;
