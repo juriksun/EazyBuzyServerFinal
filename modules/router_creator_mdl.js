@@ -536,7 +536,7 @@ module.exports = class {
                     console.log(error);
                 }
 
-                routeWithSegments[i].duration_in_road = ~~(direction.routes[0].legs[0].duration.value / 60);
+                routeWithSegments[i].duration_in_road = Math.round(direction.routes[0].legs[0].duration.value / 60);
                 // console.log("++++++++++++++++++++++++++++", routeWithSegments[i].duration_in_road);
                 routeWithSegments[i].distance = direction.routes[0].legs[0].distance.value;
                 routeWithSegments[i].polilines = direction.routes[0].overview_polyline.points;
