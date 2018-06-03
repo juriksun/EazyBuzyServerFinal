@@ -497,6 +497,7 @@ module.exports = class {
                 if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
                 ){
                     let waitTime = this.calcWaitTimeToOpenBeforeStart(routeWithSegments[i].startPoint, route.route_current_time);
+                    console.log("---------------------------", waitTime);
                     if(waitTime === undefined){
                         resolve(null);
                         return;
