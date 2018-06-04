@@ -6,7 +6,7 @@ const axios = require("axios"),
 module.exports.googleGetPlacesByRadius = (taskIndex, task, polygonPoint, radius, timeout) => {
     if(!timeout) timeout = 0;
     return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&radius=${radius}&type=${task.task_place.place_type.name}&keyword=${task.task_place.place_company.name}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
+        const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&radius=${radius}&type=${task.task_place.place_type.name}&keyword=${task.task_place.place_company.name}&key=${consts.GOOGLE_API_ALEX}&language=en`;
         setTimeout(()=>{
             axios
             .get(url)
@@ -29,7 +29,7 @@ module.exports.googleGetPlacesByQuery = (taskIndex, query , timeout = 0) => {
     return new Promise((resolve, reject) => {
         // query = query.replace(/\s+/g,'%20')
         // console.log("query: ", query);
-        const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
+        const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${consts.GOOGLE_API_ALEX}&language=en`;
         // setTimeout(()=>{
             axios
             .get(url)
@@ -51,7 +51,7 @@ module.exports.googleGetPlacesByQuery = (taskIndex, query , timeout = 0) => {
 module.exports.googleGetPlaceData = (taskIndex, palaceId, timeout = 0) => {
     
     return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${palaceId}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
+        const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${palaceId}&key=${consts.GOOGLE_API_ALEX}&language=en`;
 
         // setTimeout(()=>{
             axios
@@ -74,7 +74,7 @@ module.exports.googleGetPlaceData = (taskIndex, palaceId, timeout = 0) => {
 module.exports.googleGetDirectionNN = (startPoint, endPoint, mode, timeout) => {
     if(!timeout) timeout = 0;
     return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_SHAMIR}&language=en`;
+        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_ALEX}&language=en`;
         setTimeout(()=>{
             axios
             .get(url)
@@ -90,7 +90,7 @@ module.exports.googleGetDirectionNN = (startPoint, endPoint, mode, timeout) => {
 
 module.exports.googleGetDirection = (startPoint, endPoint, mode, departureTime ) => {
     return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_SHAMIR}&departure_time=${departureTime}&language=en`;
+        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_ALEX}&departure_time=${departureTime}&language=en`;
        
             axios
             .get(url)

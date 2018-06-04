@@ -226,23 +226,72 @@ module.exports = class {
             this.calcPolygon()// need to develop
                 .then((polygon) => {
                 this.getSuiteblePlaces(polygon, this.filterTasksByTimeWindow(this.userTasks))// get all suitebale
-                    // do next filter of open hours of places
                     .then((suiteblePlaces) => {
+                        if(suiteblePlaces.length === 0){
+                            resolve(
+                                {
+                                    recommended_route: undefined,
+                                    all_routes: undefined,
+                                    all_tasks: this.userTasks
+                                }
+                            );
+                            return;
+                        }
                         this.calcPossibleRoutes(suiteblePlaces.tasks,this.startPoint, this.endPoint)//alex
                         .then(possibleRoutes => {
+                            if(possibleRoutes.length === 0){
+                                resolve(
+                                    {
+                                        recommended_route: undefined,
+                                        all_routes: undefined,
+                                        all_tasks: this.userTasks
+                                    }
+                                );
+                                return;
+                            }
                             this.buildAllRoutesWithSegments(possibleRoutes)//alex
                             .then(allRoutesWithSegments => {
+                                if(allRoutesWithSegments.length === 0){
+                                    resolve(
+                                        {
+                                            recommended_route: undefined,
+                                            all_routes: undefined,
+                                            all_tasks: this.userTasks
+                                        }
+                                    );
+                                    return;
+                                }
                                 this.getAllDirectionForRoutesWithSegments(allRoutesWithSegments)//alex
                             
                                 .then(directionsForRoutesWithSegments => {
+                                    if(directionsForRoutesWithSegments.length === 0){
+                                        resolve(
+                                            {
+                                                recommended_route: undefined,
+                                                all_routes: undefined,
+                                                all_tasks: this.userTasks
+                                            }
+                                        );
+                                        return;
+                                    }
                                     this.directionsForRoutesWithSegments = directionsForRoutesWithSegments
 
                                     this.chooseRecommendedRoute(directionsForRoutesWithSegments)
                                     .then((recommendedRoute) => {
+                                        if(recommendedRoute.length === 0){
+                                            resolve(
+                                                {
+                                                    recommended_route: undefined,
+                                                    all_routes: undefined,
+                                                    all_tasks: this.userTasks
+                                                }
+                                            );
+                                            return;
+                                        }
                                         resolve(
                                             {
-                                                // recommended_route: recommendedRoute,
-                                                recommended_route: directionsForRoutesWithSegments,
+                                                recommended_route: recommendedRoute,
+                                                // recommended_route: directionsForRoutesWithSegments,
                                                 all_routes: directionsForRoutesWithSegments,
                                                 all_tasks: this.userTasks
                                             }
@@ -289,11 +338,7 @@ module.exports = class {
                         timeout += 25 ;
                     }
                 }else{
-                    console.log("tasks[i].task_place.place_type.name: ", tasks[i].task_place.place_type.name);
-                    console.log("tasks[i].task_place.place_type.formated_name: ", tasks[i].task_place.place_type.formated_name);
-                    
-                    let query = `${tasks[i].task_place.place_type.formated_name}  ${tasks[i].task_place.place_company.formated_name} ${tasks[i].location.address}`;
-                    console.log("query", query);
+                    let query = `${tasks[i].location.address} ${tasks[i].task_place.place_type.formated_name}  ${tasks[i].task_place.place_company.formated_name}`;
                     promises.push( googleApiMdl.googleGetPlacesByQuery(i, query));
                 }
             }
@@ -304,6 +349,7 @@ module.exports = class {
                 // wait for all responses from googleGetPaceData
                 Promise.all(allData.map( (dataArr) => {
                     return dataArr.response.map((data) => {
+                    
                         return googleApiMdl.googleGetPlaceData(dataArr.taskIndex, data.place_id);
                     });
                     // rerange object schem
@@ -332,73 +378,30 @@ module.exports = class {
         });
     }
 
-    getAllDirectionForRoutesWithSegmentsLL(allRoutesWithSegments){
-        return new Promise((resolve, reject)=>{
-            let sumOfRequers = 0;
-            let promises = [];
-            let allRoutesWithSegmentsWithSums = [];
-            let timeout = 0;
-            for (let i = 0; i < allRoutesWithSegments.length; i++) {
-                for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
-                    sumOfRequers++;
-                    promises.push(googleApiMdl.googleGetDirection(
-                        allRoutesWithSegments[i][k].startPoint.place_id,
-                        allRoutesWithSegments[i][k].endPoint.place_id,
-                        this.travelMode,
-                        timeout
-                    ));
-                    timeout+=25
-                }
-            }
-             let apiHandler = new ApiHandler()
-             apiHandler.handleRequst(promises)
-            .then((allData) => {
-                let promisesIndex = 0;
-                while(promisesIndex < promises.length){
-                    for (let i = 0; i < allRoutesWithSegments.length; i++) {
-                        let sumOfDuration = 0;
-                        let sumOfDistance = 0;
-                        for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
-                            allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
-                            allRoutesWithSegments[i][k].distance = allData[promisesIndex].routes[0].legs[0].distance.value;
-                            // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
-                            allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
-                            allRoutesWithSegments[i][k].travel_mode = allData[promisesIndex].routes[0].legs[0].distance.value;
-                            sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
+   
 
-                            sumOfDistance = sumOfDistance + allRoutesWithSegments[i][k].distance;
+    //need
+    saveRoute(){
 
-                            promisesIndex++;
-                        }
-                        allRoutesWithSegmentsWithSums.push(
-                            {
-                                segments: allRoutesWithSegments[i],
-                                num_of_segments: allRoutesWithSegments[i].length,
-                                sum_of_durations: sumOfDuration,
-                                sum_of_distance: sumOfDistance
-                            }
-                        );
-                    }
-                }
-                resolve(allRoutesWithSegmentsWithSums);
-            })
-            .catch(error => {
-                console.log(error)
-            })
-        });
     }
 
-
-    
-
-    chooseRecommendedRouteLL(directionsForRoutesWithSegments){
+    chooseRecommendedRoute(directionsForRoutesWithSegments){
         return new Promise((resolve, reject)=>{
-            let recommendedRoute = directionsForRoutesWithSegments[0];
-            for (let i = 1; i < directionsForRoutesWithSegments.length; i++) {
+
+            let recommendedRoute;
+
+            for (let i = 0; i < directionsForRoutesWithSegments.length; i++) {
+                
+                recommendedRoute || (recommendedRoute = directionsForRoutesWithSegments[i]);
+
                 if(
-                    recommendedRoute.num_of_segments < directionsForRoutesWithSegments[i].num_of_segments ||
-                    recommendedRoute.num_of_segments === directionsForRoutesWithSegments[i].num_of_segments &&
-                    recommendedRoute.sum_of_durations > directionsForRoutesWithSegments[i].sum_of_durations
+                    recommendedRoute.route_tasks_number < directionsForRoutesWithSegments[i].route_tasks_number
+                    ||
+                    recommendedRoute.route_tasks_number === 
+                    directionsForRoutesWithSegments[i].route_tasks_number 
+                    &&
+                    recommendedRoute.route_duration / recommendedRoute.route_tasks_number >
+                    directionsForRoutesWithSegments[i].route_duration / directionsForRoutesWithSegments[i].route_tasks_number
                 ){
                     recommendedRoute = directionsForRoutesWithSegments[i];
                 }
@@ -407,16 +410,18 @@ module.exports = class {
             recommendedRoute.tasks = [];
             for(let i = 0; i < recommendedRoute.segments.length; i++ ){
                 let poliline = [];
-
-                for(let k = 0; k < recommendedRoute.segments[i].polylines.length - 1; k++){
+                let  polilineArr = Polyline.decode(recommendedRoute.segments[i].polilines);
+                
+                for(let k = 0; k < polilineArr.length - 1; k++){
+                   
                     poliline.push({
                         start: {
-                            lat: recommendedRoute.segments[i].polylines[k][0],
-                            lng: recommendedRoute.segments[i].polylines[k][1]
+                            lat: polilineArr[k][0],
+                            lng: polilineArr[k][1]
                         },
                         end: {
-                            lat: recommendedRoute.segments[i].polylines[k + 1][0],
-                            lng: recommendedRoute.segments[i].polylines[k + 1][1]
+                            lat: polilineArr[k + 1][0],
+                            lng: polilineArr[k + 1][1]
                         }
                     });
                 }
@@ -424,7 +429,6 @@ module.exports = class {
                 
                 recommendedRoute.tasks.push({
                     name : recommendedRoute.segments[i].startPoint.task_identifier.name,
-                    duration : Math.random()*10%15, // need to change
                     place : {
                         location : {
                             lat :  recommendedRoute.segments[i].startPoint.geometry.location.lat,
@@ -440,7 +444,6 @@ module.exports = class {
                 if(i === recommendedRoute.segments.length - 1){
                     recommendedRoute.tasks.push({
                         name : recommendedRoute.segments[i].endPoint.task_identifier.name,
-                        duration : Math.random()*10%15, // need to change
                         place : {
                             location : {
                                 lat :  recommendedRoute.segments[i].endPoint.geometry.location.lat,
@@ -455,81 +458,6 @@ module.exports = class {
             }
 
             resolve(recommendedRoute);
-        });
-    }
-
-    //need
-    saveRoute(){
-
-    }
-
-    //********************new functions***************************//
-    chooseRecommendedRoute(directionsForRoutesWithSegments){
-        return new Promise((resolve, reject)=>{
-            let recommendedRoute;
-
-            // for (let i = 1; i < directionsForRoutesWithSegments.length; i++) {
-            //     recommendedRoute || (recommendedRoute);
-            //     if(
-            //         recommendedRoute.num_of_segments < directionsForRoutesWithSegments[i].num_of_segments ||
-            //         recommendedRoute.num_of_segments === directionsForRoutesWithSegments[i].num_of_segments &&
-            //         recommendedRoute.sum_of_durations > directionsForRoutesWithSegments[i].sum_of_durations
-            //     ){
-            //         recommendedRoute = directionsForRoutesWithSegments[i];
-            //     }
-            // }
-
-            // recommendedRoute.tasks = [];
-            // for(let i = 0; i < recommendedRoute.segments.length; i++ ){
-            //     let poliline = [];
-
-            //     for(let k = 0; k < recommendedRoute.segments[i].polylines.length - 1; k++){
-            //         poliline.push({
-            //             start: {
-            //                 lat: recommendedRoute.segments[i].polylines[k][0],
-            //                 lng: recommendedRoute.segments[i].polylines[k][1]
-            //             },
-            //             end: {
-            //                 lat: recommendedRoute.segments[i].polylines[k + 1][0],
-            //                 lng: recommendedRoute.segments[i].polylines[k + 1][1]
-            //             }
-            //         });
-            //     }
-            //     recommendedRoute.segments[i].polylines = poliline;
-                
-            //     recommendedRoute.tasks.push({
-            //         name : recommendedRoute.segments[i].startPoint.task_identifier.name,
-            //         duration : Math.random()*10%15, // need to change
-            //         place : {
-            //             location : {
-            //                 lat :  recommendedRoute.segments[i].startPoint.geometry.location.lat,
-            //                 lng : recommendedRoute.segments[i].startPoint.geometry.location.lng
-            //             },
-            //             name : recommendedRoute.segments[i].startPoint.name,
-            //             id : recommendedRoute.segments[i].startPoint.place_id,
-            //             address : recommendedRoute.segments[i].startPoint.vicinity || recommendedRoute.segments[i].startPoint.address
-            //         }
-            //     });
-
-
-            //     if(i === recommendedRoute.segments.length - 1){
-            //         recommendedRoute.tasks.push({
-            //             name : recommendedRoute.segments[i].endPoint.task_identifier.name,
-            //             duration : Math.random()*10%15, // need to change
-            //             place : {
-            //                 location : {
-            //                     lat :  recommendedRoute.segments[i].endPoint.geometry.location.lat,
-            //                     lng : recommendedRoute.segments[i].endPoint.geometry.location.lng
-            //                 },
-            //                 name : recommendedRoute.segments[i].endPoint.name,
-            //                 id : recommendedRoute.segments[i].endPoint.place_id,
-            //                 address : recommendedRoute.segments[i].endPoint.vicinity || recommendedRoute.segments[i].endPoint.address
-            //             }
-            //         });
-            //     }
-            // }
-
-            resolve(directionsForRoutesWithSegments);
         });
     }
 
@@ -569,14 +497,11 @@ module.exports = class {
                 if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
                 ){
                     let waitTime = this.calcWaitTimeToOpenBeforeStart(routeWithSegments[i].startPoint, route.route_current_time);
-                    // console.log("---------------------------", waitTime);
                     if(waitTime === undefined){
-                        route.status = false;
-                        resolve(route);
+                        resolve(undefined);
                         return;
                     }
-                   
-                    
+                      
                     route.route_wait_time += waitTime;
                     route.route_current_time += waitTime;
                     routeWithSegments[i].waitTime = waitTime;
@@ -595,8 +520,8 @@ module.exports = class {
                 route.route_duration += routeWithSegments[i].waitTime;
                 route.route_current_time += routeWithSegments[i].duration;
                 route.route_current_time += routeWithSegments[i].waitTime;
+
                 let direction;
-                // console.log("=================================", route.route_current_time);
                 try{
                     direction = await googleApiMdl.googleGetDirection(
                         routeWithSegments[i].startPoint.place_id,
@@ -609,9 +534,8 @@ module.exports = class {
                 } catch(error){
                     console.log(error);
                 }
-                // console.log("direction: ", JSON.stringify(direction.routes[0]));
+
                 routeWithSegments[i].duration_in_road = Math.round(direction.routes[0].legs[0].duration.value / 60);
-                // console.log("++++++++++++++++++++++++++++", routeWithSegments[i].duration_in_road);
                 routeWithSegments[i].distance = direction.routes[0].legs[0].distance.value;
                 routeWithSegments[i].polilines = direction.routes[0].overview_polyline.points;
 
@@ -629,66 +553,145 @@ module.exports = class {
     }
 
     getAllDirectionForRoutesWithSegments(allRoutesWithSegments){
-        return new Promise((resolve, reject) => {
+        return new Promise( (resolve, reject) => {
             Promise.all(
                 allRoutesWithSegments.map(i => this.buildRouteWithSegmentsAndDerection(i))
             ).then((allData) => {
-                resolve(allData);
+                let routesWithSegmentsAndDirections = [];
+                for(let i = 0; i < allData.length; i++){
+                    if(allData[i] !== undefined){
+                        routesWithSegmentsAndDirections.push(allData[i]);
+                    }
+                }
+                resolve(routesWithSegmentsAndDirections);
             })
-
-            // send route to build the and check the route
-
-            // let sumOfRequers = 0;
-            // let promises = [];
-            // let allRoutesWithSegmentsWithSums = [];
-            // let timeout = 0;
-            // for (let i = 0; i < allRoutesWithSegments.length; i++) {
-            //     for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
-            //         sumOfRequers++;
-            //         promises.push(googleApiMdl.googleGetDirection(
-            //             allRoutesWithSegments[i][k].startPoint.place_id,
-            //             allRoutesWithSegments[i][k].endPoint.place_id,
-            //             this.travelMode,
-            //             timeout
-            //         ));
-            //         timeout+=25
-            //     }
-            // }
-            //  let apiHandler = new ApiHandler()
-            //  apiHandler.handleRequst(promises)
-            // .then((allData) => {
-            //     let promisesIndex = 0;
-            //     while(promisesIndex < promises.length){
-            //         for (let i = 0; i < allRoutesWithSegments.length; i++) {
-            //             let sumOfDuration = 0;
-            //             let sumOfDistance = 0;
-            //             for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
-            //                 allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
-            //                 allRoutesWithSegments[i][k].distance = allData[promisesIndex].routes[0].legs[0].distance.value;
-            //                 // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
-            //                 allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
-            //                 allRoutesWithSegments[i][k].travel_mode = allData[promisesIndex].routes[0].legs[0].distance.value;
-            //                 sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
-
-            //                 sumOfDistance = sumOfDistance + allRoutesWithSegments[i][k].distance;
-
-            //                 promisesIndex++;
-            //             }
-            //             allRoutesWithSegmentsWithSums.push(
-            //                 {
-            //                     segments: allRoutesWithSegments[i],
-            //                     num_of_segments: allRoutesWithSegments[i].length,
-            //                     sum_of_durations: sumOfDuration,
-            //                     sum_of_distance: sumOfDistance
-            //                 }
-            //             );
-            //         }
-            //     }
-
             .catch(error => {
                 console.log(error)
             })
         });
     }
+
+
+       // chooseRecommendedRouteLL(directionsForRoutesWithSegments){
+    //     return new Promise((resolve, reject)=>{
+    //         let recommendedRoute = directionsForRoutesWithSegments[0];
+    //         for (let i = 1; i < directionsForRoutesWithSegments.length; i++) {
+    //             if(
+    //                 recommendedRoute.num_of_segments < directionsForRoutesWithSegments[i].num_of_segments ||
+    //                 recommendedRoute.num_of_segments === directionsForRoutesWithSegments[i].num_of_segments &&
+    //                 recommendedRoute.sum_of_durations > directionsForRoutesWithSegments[i].sum_of_durations
+    //             ){
+    //                 recommendedRoute = directionsForRoutesWithSegments[i];
+    //             }
+    //         }
+
+    //         recommendedRoute.tasks = [];
+    //         for(let i = 0; i < recommendedRoute.segments.length; i++ ){
+    //             let poliline = [];
+
+    //             for(let k = 0; k < recommendedRoute.segments[i].polylines.length - 1; k++){
+    //                 poliline.push({
+    //                     start: {
+    //                         lat: recommendedRoute.segments[i].polylines[k][0],
+    //                         lng: recommendedRoute.segments[i].polylines[k][1]
+    //                     },
+    //                     end: {
+    //                         lat: recommendedRoute.segments[i].polylines[k + 1][0],
+    //                         lng: recommendedRoute.segments[i].polylines[k + 1][1]
+    //                     }
+    //                 });
+    //             }
+    //             recommendedRoute.segments[i].polylines = poliline;
+                
+    //             recommendedRoute.tasks.push({
+    //                 name : recommendedRoute.segments[i].startPoint.task_identifier.name,
+    //                 duration : Math.random()*10%15, // need to change
+    //                 place : {
+    //                     location : {
+    //                         lat :  recommendedRoute.segments[i].startPoint.geometry.location.lat,
+    //                         lng : recommendedRoute.segments[i].startPoint.geometry.location.lng
+    //                     },
+    //                     name : recommendedRoute.segments[i].startPoint.name,
+    //                     id : recommendedRoute.segments[i].startPoint.place_id,
+    //                     address : recommendedRoute.segments[i].startPoint.vicinity || recommendedRoute.segments[i].startPoint.address
+    //                 }
+    //             });
+
+
+    //             if(i === recommendedRoute.segments.length - 1){
+    //                 recommendedRoute.tasks.push({
+    //                     name : recommendedRoute.segments[i].endPoint.task_identifier.name,
+    //                     duration : Math.random()*10%15, // need to change
+    //                     place : {
+    //                         location : {
+    //                             lat :  recommendedRoute.segments[i].endPoint.geometry.location.lat,
+    //                             lng : recommendedRoute.segments[i].endPoint.geometry.location.lng
+    //                         },
+    //                         name : recommendedRoute.segments[i].endPoint.name,
+    //                         id : recommendedRoute.segments[i].endPoint.place_id,
+    //                         address : recommendedRoute.segments[i].endPoint.vicinity || recommendedRoute.segments[i].endPoint.address
+    //                     }
+    //                 });
+    //             }
+    //         }
+
+    //         resolve(recommendedRoute);
+    //     });
+    // }
+ // getAllDirectionForRoutesWithSegmentsLL(allRoutesWithSegments){
+    //     return new Promise((resolve, reject)=>{
+    //         let sumOfRequers = 0;
+    //         let promises = [];
+    //         let allRoutesWithSegmentsWithSums = [];
+    //         let timeout = 0;
+    //         for (let i = 0; i < allRoutesWithSegments.length; i++) {
+    //             for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
+    //                 sumOfRequers++;
+    //                 promises.push(googleApiMdl.googleGetDirection(
+    //                     allRoutesWithSegments[i][k].startPoint.place_id,
+    //                     allRoutesWithSegments[i][k].endPoint.place_id,
+    //                     this.travelMode,
+    //                     timeout
+    //                 ));
+    //                 timeout+=25
+    //             }
+    //         }
+    //          let apiHandler = new ApiHandler()
+    //          apiHandler.handleRequst(promises)
+    //         .then((allData) => {
+    //             let promisesIndex = 0;
+    //             while(promisesIndex < promises.length){
+    //                 for (let i = 0; i < allRoutesWithSegments.length; i++) {
+    //                     let sumOfDuration = 0;
+    //                     let sumOfDistance = 0;
+    //                     for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
+    //                         allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
+    //                         allRoutesWithSegments[i][k].distance = allData[promisesIndex].routes[0].legs[0].distance.value;
+    //                         // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
+    //                         allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
+    //                         allRoutesWithSegments[i][k].travel_mode = allData[promisesIndex].routes[0].legs[0].distance.value;
+    //                         sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
+
+    //                         sumOfDistance = sumOfDistance + allRoutesWithSegments[i][k].distance;
+
+    //                         promisesIndex++;
+    //                     }
+    //                     allRoutesWithSegmentsWithSums.push(
+    //                         {
+    //                             segments: allRoutesWithSegments[i],
+    //                             num_of_segments: allRoutesWithSegments[i].length,
+    //                             sum_of_durations: sumOfDuration,
+    //                             sum_of_distance: sumOfDistance
+    //                         }
+    //                     );
+    //                 }
+    //             }
+    //             resolve(allRoutesWithSegmentsWithSums);
+    //         })
+    //         .catch(error => {
+    //             console.log(error)
+    //         })
+    //     });
+    // }
 
 }
