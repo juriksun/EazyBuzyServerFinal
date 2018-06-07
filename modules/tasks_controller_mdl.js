@@ -32,6 +32,24 @@ module.exports = class{
         })
     }
 
+    getTasks(user, tasks){
+        return new Promise((resolve, reject) => {
+            this.userController.getUserWithId(user)
+            .then(userData => {
+                TaskMod.find({_id: {$in: tasks}, user_token_id: userData._id})
+                .then( allTasks => {
+                    resolve(allTasks);
+                })
+                .catch( error => {
+                        reject("Error, can't find tasks");
+                })
+            })
+            .catch( error => {
+                reject("Error, can't find user");
+            });
+        });
+    }
+
     createTask(user, task){
         return new Promise((resolve, reject) => {
             this.userController.getUserWithId(user)
@@ -179,10 +197,7 @@ module.exports = class{
         }) 
     }
 
-                    
-
-
-
+                
     getTypes(){
         return new Promise((resolve, reject) => {
             Type.find({})

@@ -16,9 +16,11 @@ module.exports = class{
             this.routeCreator.setEndPoint(routeInitData.location.end_point);
 
             this.routeCreator.setTravelMode(routeInitData.mode);
-            this.routeCreator.setUser(user)
-            .then((resultSetUser) => {
+            this.routeCreator.setTasks
 
+            this.routeCreator.setUser(user);
+            this.routeCreator.setTasks(routeInitData.tasks)
+            .then((resultSetTasks) => {
                 this.routeCreator.dispatch()
                 .then((data) => {
                     this.seveRoute(data)

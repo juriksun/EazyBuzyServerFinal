@@ -72,16 +72,30 @@ module.exports = class {
         this.day = DateTime.convertDateToDay(this.date);
     }
 
+    //set data of user
     setUser(user){
-        return new Promise((resolve, reject)=>{
-            //get all data with tasks from db
-            this.user = user;
-            this.tasksController.getAllTasks(user)
-            .then( allTasks => {
-                // this.userTasks = db.tasks; // local DB
-                this.userTasks = allTasks;
-                resolve(true);
-            })
+        this.user = user;
+    }
+
+    // Set tasks for route. It can be all tasks or selected tasks
+    setTasks(tasks){
+        // mast return promise because getAllTasks connet to DB
+        return new Promise((resolve, reject) => {
+            // if user send empty arr of tasks we will get all tasks
+            if(tasks.legs === 0){
+                this.tasksController.getAllTasks(this.user)
+                .then( allTasks => {
+                    this.userTasks = allTasks;
+                    resolve(true);
+                });
+            } else {
+                this.tasksController.getTasks(this.user, tasks)
+                .then( userTasks => {
+
+                    this.userTasks = userTasks;
+                    resolve(true);
+                });
+            }
         });
     }
 
@@ -587,128 +601,4 @@ module.exports = class {
             })
         });
     }
-
-
-       // chooseRecommendedRouteLL(directionsForRoutesWithSegments){
-    //     return new Promise((resolve, reject)=>{
-    //         let recommendedRoute = directionsForRoutesWithSegments[0];
-    //         for (let i = 1; i < directionsForRoutesWithSegments.length; i++) {
-    //             if(
-    //                 recommendedRoute.num_of_segments < directionsForRoutesWithSegments[i].num_of_segments ||
-    //                 recommendedRoute.num_of_segments === directionsForRoutesWithSegments[i].num_of_segments &&
-    //                 recommendedRoute.sum_of_durations > directionsForRoutesWithSegments[i].sum_of_durations
-    //             ){
-    //                 recommendedRoute = directionsForRoutesWithSegments[i];
-    //             }
-    //         }
-
-    //         recommendedRoute.tasks = [];
-    //         for(let i = 0; i < recommendedRoute.segments.length; i++ ){
-    //             let poliline = [];
-
-    //             for(let k = 0; k < recommendedRoute.segments[i].polylines.length - 1; k++){
-    //                 poliline.push({
-    //                     start: {
-    //                         lat: recommendedRoute.segments[i].polylines[k][0],
-    //                         lng: recommendedRoute.segments[i].polylines[k][1]
-    //                     },
-    //                     end: {
-    //                         lat: recommendedRoute.segments[i].polylines[k + 1][0],
-    //                         lng: recommendedRoute.segments[i].polylines[k + 1][1]
-    //                     }
-    //                 });
-    //             }
-    //             recommendedRoute.segments[i].polylines = poliline;
-                
-    //             recommendedRoute.tasks.push({
-    //                 name : recommendedRoute.segments[i].startPoint.task_identifier.name,
-    //                 duration : Math.random()*10%15, // need to change
-    //                 place : {
-    //                     location : {
-    //                         lat :  recommendedRoute.segments[i].startPoint.geometry.location.lat,
-    //                         lng : recommendedRoute.segments[i].startPoint.geometry.location.lng
-    //                     },
-    //                     name : recommendedRoute.segments[i].startPoint.name,
-    //                     id : recommendedRoute.segments[i].startPoint.place_id,
-    //                     address : recommendedRoute.segments[i].startPoint.vicinity || recommendedRoute.segments[i].startPoint.address
-    //                 }
-    //             });
-
-
-    //             if(i === recommendedRoute.segments.length - 1){
-    //                 recommendedRoute.tasks.push({
-    //                     name : recommendedRoute.segments[i].endPoint.task_identifier.name,
-    //                     duration : Math.random()*10%15, // need to change
-    //                     place : {
-    //                         location : {
-    //                             lat :  recommendedRoute.segments[i].endPoint.geometry.location.lat,
-    //                             lng : recommendedRoute.segments[i].endPoint.geometry.location.lng
-    //                         },
-    //                         name : recommendedRoute.segments[i].endPoint.name,
-    //                         id : recommendedRoute.segments[i].endPoint.place_id,
-    //                         address : recommendedRoute.segments[i].endPoint.vicinity || recommendedRoute.segments[i].endPoint.address
-    //                     }
-    //                 });
-    //             }
-    //         }
-
-    //         resolve(recommendedRoute);
-    //     });
-    // }
- // getAllDirectionForRoutesWithSegmentsLL(allRoutesWithSegments){
-    //     return new Promise((resolve, reject)=>{
-    //         let sumOfRequers = 0;
-    //         let promises = [];
-    //         let allRoutesWithSegmentsWithSums = [];
-    //         let timeout = 0;
-    //         for (let i = 0; i < allRoutesWithSegments.length; i++) {
-    //             for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
-    //                 sumOfRequers++;
-    //                 promises.push(googleApiMdl.googleGetDirection(
-    //                     allRoutesWithSegments[i][k].startPoint.place_id,
-    //                     allRoutesWithSegments[i][k].endPoint.place_id,
-    //                     this.travelMode,
-    //                     timeout
-    //                 ));
-    //                 timeout+=25
-    //             }
-    //         }
-    //          let apiHandler = new ApiHandler()
-    //          apiHandler.handleRequst(promises)
-    //         .then((allData) => {
-    //             let promisesIndex = 0;
-    //             while(promisesIndex < promises.length){
-    //                 for (let i = 0; i < allRoutesWithSegments.length; i++) {
-    //                     let sumOfDuration = 0;
-    //                     let sumOfDistance = 0;
-    //                     for (let k = 0; k < allRoutesWithSegments[i].length; k++) {
-    //                         allRoutesWithSegments[i][k].duration = allData[promisesIndex].routes[0].legs[0].duration.value;
-    //                         allRoutesWithSegments[i][k].distance = allData[promisesIndex].routes[0].legs[0].distance.value;
-    //                         // allRoutesWithSegments[i][k].steps = allData[promisesIndex].routes[0].legs[0].steps;
-    //                         allRoutesWithSegments[i][k].polylines = Polyline.decode(allData[promisesIndex].routes[0].overview_polyline.points);
-    //                         allRoutesWithSegments[i][k].travel_mode = allData[promisesIndex].routes[0].legs[0].distance.value;
-    //                         sumOfDuration = sumOfDuration + allRoutesWithSegments[i][k].duration;
-
-    //                         sumOfDistance = sumOfDistance + allRoutesWithSegments[i][k].distance;
-
-    //                         promisesIndex++;
-    //                     }
-    //                     allRoutesWithSegmentsWithSums.push(
-    //                         {
-    //                             segments: allRoutesWithSegments[i],
-    //                             num_of_segments: allRoutesWithSegments[i].length,
-    //                             sum_of_durations: sumOfDuration,
-    //                             sum_of_distance: sumOfDistance
-    //                         }
-    //                     );
-    //                 }
-    //             }
-    //             resolve(allRoutesWithSegmentsWithSums);
-    //         })
-    //         .catch(error => {
-    //             console.log(error)
-    //         })
-    //     });
-    // }
-
 }
