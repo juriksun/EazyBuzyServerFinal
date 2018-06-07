@@ -3,11 +3,13 @@ const       db              = require('../data_base'),
             Combinatorics   = require('./combinatorics_mdl'),
             TasksController = require('./tasks_controller_mdl'),
             Polyline        = require('@mapbox/polyline'),
-            DateTime        = require('./date_time_mdl');
+            DateTime        = require('./date_time_mdl'),
+            GoogleAPIs      = googleApiMdl.GoogleAPIs;
 
 
 class ApiHandler{
     constructor(){
+        
         this.temp = 0;
     }
 
@@ -57,6 +59,7 @@ module.exports = class {
     //no now
     constructor(){
         this.tasksController = new TasksController()
+        this.googleAPIs = new GoogleAPIs();
     }
 
     // determine all time sets of route
@@ -172,11 +175,16 @@ module.exports = class {
                             location: suiteblePlaces[i].location
                         };
                         let task = [];
-                        for (let k = 0; k < suiteblePlaces[i].places.length && k < 2; k++) {
+                        for (let k = 0; k < suiteblePlaces[i].places.length && k < 4; k++) {
                             let place = suiteblePlaces[i].places[k];
                             place.task_identifier = task_identifier;
                             task.push(place);
                         }
+                        // for (let k = 0; k < suiteblePlaces[i].places.length; k++) {
+                        //     let place = suiteblePlaces[i].places[k];
+                        //     place.task_identifier = task_identifier;
+                        //     task.push(place);
+                        // }
                         tasksForPermutation.push(task);
                     }
                 }
@@ -325,6 +333,7 @@ module.exports = class {
     //get suteble places for all tasks
     getSuiteblePlaces(polygonPoints, tasks){
         return new Promise((resolve, reject)=>{
+
             let promises = [];
             let timeout = 0;
 
@@ -349,7 +358,7 @@ module.exports = class {
                 // wait for all responses from googleGetPaceData
                 Promise.all(allData.map( (dataArr) => {
                     return dataArr.response.map((data) => {
-                    
+
                         return googleApiMdl.googleGetPlaceData(dataArr.taskIndex, data.place_id);
                     });
                     // rerange object schem
@@ -358,7 +367,11 @@ module.exports = class {
                 }))
                 .then((allFullDadaPlace) => {
                     allFullDadaPlace = this.filterPlacesByTimeWindow(allFullDadaPlace, tasks);
-                    
+                    if(allFullDadaPlace.length === 0){
+                        resolve({
+                            tasks: [],
+                        });
+                    }
                     // match all responses from googleGetPlaceData to proper task 
                     for (let i = 0; i < allFullDadaPlace.length; i++) {
                         (tasks[allFullDadaPlace[i].taskIndex].places) ?
@@ -463,15 +476,17 @@ module.exports = class {
 
     calcWaitTimeToOpenBeforeStart(point, routeCurrentTime){
         if(point.task_identifier.time.start_time !== "" ){
+            
             return DateTime.compareHour(
-                    routeCurrentTime,
-                    point.task_identifier.time.start_time
-                ) > 0 ?
+                    point.task_identifier.time.start_time,
+                    routeCurrentTime
+                ) < 0 ?
                     undefined : DateTime.compareHour(
-                        routeCurrentTime,
-                        point.task_identifier.time.start_time
+                        point.task_identifier.time.start_time,
+                        routeCurrentTime
                     );
         }
+        
         return DateTime.getNearestOpeningTime(
             routeCurrentTime, this.day, point.opening_hours,
             point.task_identifier.time.duration
@@ -496,7 +511,9 @@ module.exports = class {
                 routeWithSegments[i].arriveTime = route.route_current_time;
                 if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
                 ){
+
                     let waitTime = this.calcWaitTimeToOpenBeforeStart(routeWithSegments[i].startPoint, route.route_current_time);
+                   
                     if(waitTime === undefined){
                         resolve(undefined);
                         return;
@@ -510,7 +527,7 @@ module.exports = class {
                             (routeWithSegments[i].startPoint.task_identifier.time.duration === "")?
                             "00:15": routeWithSegments[i].startPoint.task_identifier.time.duration
                         );
-                    
+                   
                 } else {
                     routeWithSegments[i].duration = 0;
                     routeWithSegments[i].waitTime = 0;
@@ -520,10 +537,11 @@ module.exports = class {
                 route.route_duration += routeWithSegments[i].waitTime;
                 route.route_current_time += routeWithSegments[i].duration;
                 route.route_current_time += routeWithSegments[i].waitTime;
+                
 
                 let direction;
                 try{
-                    direction = await googleApiMdl.googleGetDirection(
+                    direction = await this.googleAPIs.googleGetDirection(
                         routeWithSegments[i].startPoint.place_id,
                         routeWithSegments[i].endPoint.place_id,
                         this.travelMode, DateTime.convertDateHourToMilliseconds(
@@ -534,14 +552,13 @@ module.exports = class {
                 } catch(error){
                     console.log(error);
                 }
-
                 routeWithSegments[i].duration_in_road = Math.round(direction.routes[0].legs[0].duration.value / 60);
                 routeWithSegments[i].distance = direction.routes[0].legs[0].distance.value;
                 routeWithSegments[i].polilines = direction.routes[0].overview_polyline.points;
 
                 route.route_duration += routeWithSegments[i].duration_in_road;
                 route.route_current_time += routeWithSegments[i].duration_in_road;
-
+                
                 route.route_duration_in_road += routeWithSegments[i].duration_in_road;
                 route.route_distance += routeWithSegments[i].distance;
 
