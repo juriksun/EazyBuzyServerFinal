@@ -82,17 +82,18 @@ module.exports = class {
         // mast return promise because getAllTasks connet to DB
         return new Promise((resolve, reject) => {
             // if user send empty arr of tasks we will get all tasks
-            if(tasks.legs === 0){
+            if(tasks.length === 0){
                 this.tasksController.getAllTasks(this.user)
                 .then( allTasks => {
                     this.userTasks = allTasks;
+                    this.setAllTasksRouteStatus(this.userTasks, "places false");
                     resolve(true);
                 });
             } else {
                 this.tasksController.getTasks(this.user, tasks)
                 .then( userTasks => {
-
                     this.userTasks = userTasks;
+                    this.setAllTasksRouteStatus(this.userTasks, "places false");
                     resolve(true);
                 });
             }
@@ -157,16 +158,10 @@ module.exports = class {
                 && DateTime.compareDate(userTasks[i].time.date, this.date)
                 === 0
             ){
-                // for debuging
-                // console.log("In time window");
-                // console.log(JSON.stringify(userTasks[i]));
-
                 sutebleTasks.push(userTasks[i]);
             }
-            //for debuging
-             else {
-                // console.log("Not in time window");
-                // console.log(JSON.stringify(userTasks[i]));
+            else {
+                this.setTasksRouteStatus(userTasks[i]._id, "time false");
             }
         }
         return sutebleTasks;
@@ -181,6 +176,7 @@ module.exports = class {
                 for (let i = 0; i < suiteblePlaces.length; i++) {
                     if(suiteblePlaces[i].places){
                         let task_identifier = {
+                            id: suiteblePlaces[i]._id,
                             name: suiteblePlaces[i].name,
                             status: suiteblePlaces[i].status,
                             time: suiteblePlaces[i].time,
@@ -194,11 +190,6 @@ module.exports = class {
                             place.task_identifier = task_identifier;
                             task.push(place);
                         }
-                        // for (let k = 0; k < suiteblePlaces[i].places.length; k++) {
-                        //     let place = suiteblePlaces[i].places[k];
-                        //     place.task_identifier = task_identifier;
-                        //     task.push(place);
-                        // }
                         tasksForPermutation.push(task);
                     }
                 }
@@ -297,7 +288,7 @@ module.exports = class {
                                         return;
                                     }
                                     this.directionsForRoutesWithSegments = directionsForRoutesWithSegments
-
+                                    this.setAllTasksRouteStatusInRoutes(this.directionsForRoutesWithSegments, "route false");
                                     this.chooseRecommendedRoute(directionsForRoutesWithSegments)
                                     .then((recommendedRoute) => {
                                         if(recommendedRoute.length === 0){
@@ -310,6 +301,7 @@ module.exports = class {
                                             );
                                             return;
                                         }
+                                        this.setAllTasksRouteStatusInRoutes([recommendedRoute], "route true");
                                         resolve(
                                             {
                                                 recommended_route: recommendedRoute,
@@ -406,7 +398,6 @@ module.exports = class {
     }
 
    
-
     //need
     saveRoute(){
 
@@ -600,5 +591,34 @@ module.exports = class {
                 console.log(error)
             })
         });
+    }
+
+    setAllTasksRouteStatusInRoutes(route, status){
+        for(let i = 0; i < route.length; i++){
+            for(let k = 0; k < route[i].segments.length; k++){
+                if(route[i].segments[k].endPoint.task_identifier 
+                && route[i].segments[k].endPoint.task_identifier.id){
+                    this.setTasksRouteStatus(
+                        route[i].segments[k].endPoint.task_identifier.id,
+                        status
+                    );
+                }
+            }
+        }
+    }
+
+    setAllTasksRouteStatus(tasks, status){
+        for(let i = 0; i < tasks.length; i++){
+            tasks[i].route_status = status;
+        }
+    }
+
+    setTasksRouteStatus(taskId, status){
+        for(let i = 0; i < this.userTasks.length; i++){
+            if(this.userTasks[i]._id == taskId){
+                this.userTasks[i].route_status = status;
+                return;
+            }
+        }
     }
 }
