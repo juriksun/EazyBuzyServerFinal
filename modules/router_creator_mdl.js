@@ -240,7 +240,8 @@ module.exports = class {
                 .then((polygon) => {
                 this.getSuiteblePlaces(polygon, this.filterTasksByTimeWindow(this.userTasks))// get all suitebale
                     .then((suiteblePlaces) => {
-                        if(suiteblePlaces.length === 0){
+                        console.log(suiteblePlaces);
+                        if(suiteblePlaces.tasks.length === 0){
                             resolve(
                                 {
                                     recommended_route: undefined,
