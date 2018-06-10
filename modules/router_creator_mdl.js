@@ -240,7 +240,7 @@ module.exports = class {
                 .then((polygon) => {
                 this.getSuiteblePlaces(polygon, this.filterTasksByTimeWindow(this.userTasks))// get all suitebale
                     .then((suiteblePlaces) => {
-                        console.log(suiteblePlaces);
+                        
                         if(suiteblePlaces.tasks.length === 0){
                             resolve(
                                 {
@@ -526,7 +526,7 @@ module.exports = class {
                     }
                       
                     route.route_wait_time += waitTime;
-                    route.route_current_time += waitTime;
+
                     routeWithSegments[i].waitTime = waitTime;
                     routeWithSegments[i].duration = 
                         DateTime.convertTimeToMinutes(
