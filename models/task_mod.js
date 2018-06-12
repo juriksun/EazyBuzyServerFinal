@@ -31,14 +31,17 @@ let    ShareSchema = new Schema({
         place_type : TypeSchema,
         place_company : CompanySchema
     }),
-    CoordinateSchema = new Schema({
+    GeometryLocationSchema = new Schema({
         lat : { type : Number , required : true },
-        long : { type : Number , required : true }
+        lng : { type : Number , required : true }
+    }),
+    GeometrySchema = new Schema({
+        location : GeometryLocationSchema
     }),
     LocationSchema = new Schema({
         address : { type : String , required : true },
         place_id : { type : String , required : true },
-        coordinate : CoordinateSchema
+        geometry : GeometrySchema
     });
 
     let TaskSchema = new Schema({

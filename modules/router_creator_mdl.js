@@ -132,6 +132,11 @@ module.exports = class {
             ){
                 // for debuging
                 // console.log("In time window");
+                // console.log("time: ", DateTime.checkPlaceInTimeWindow(
+                //     this.startTime, this.endTime, this.day,
+                //     allFullDadaPlace[i].response.opening_hours,
+                //     tasks[allFullDadaPlace[i].taskIndex].time.duration
+                // ));
                 // console.log(JSON.stringify(allFullDadaPlace[i]));
 
                 suteblePlaces.push(allFullDadaPlace[i]);
@@ -139,6 +144,11 @@ module.exports = class {
             //for debuging
              else {
                 // console.log("Not in time window");
+                // console.log("time: ", DateTime.checkPlaceInTimeWindow(
+                //     this.startTime, this.endTime, this.day,
+                //     allFullDadaPlace[i].response.opening_hours,
+                //     tasks[allFullDadaPlace[i].taskIndex].time.duration
+                // ));
                 // console.log(JSON.stringify(allFullDadaPlace[i]));
             }
         }
@@ -170,7 +180,6 @@ module.exports = class {
     //
     calcPossibleRoutes(suiteblePlaces, startPoint, endPoint) {
         return new Promise((resolve, reject) => {
-
                 let tasksForPermutation = [];
 
                 for (let i = 0; i < suiteblePlaces.length; i++) {
@@ -185,7 +194,12 @@ module.exports = class {
                             location: suiteblePlaces[i].location
                         };
                         let task = [];
-                        for (let k = 0; k < suiteblePlaces[i].places.length && k < 4; k++) {
+                        // for (let k = 0; k < suiteblePlaces[i].places.length && k < 4; k++) {
+                        //     let place = suiteblePlaces[i].places[k];
+                        //     place.task_identifier = task_identifier;
+                        //     task.push(place);
+                        // }
+                        for (let k = 0; k < suiteblePlaces[i].places.length; k++) {
                             let place = suiteblePlaces[i].places[k];
                             place.task_identifier = task_identifier;
                             task.push(place);
@@ -207,8 +221,6 @@ module.exports = class {
                     allPermutationAndCombinationOfAllWays[i].unshift(startPoint);
                     allPermutationAndCombinationOfAllWays[i].push(endPoint);
                 }
-
-                
             resolve(allPermutationAndCombinationOfAllWays);
         });
     }
@@ -328,9 +340,40 @@ module.exports = class {
 
     calcPolygon() {      
         return new Promise((resolve, reject)=>{
-            resolve([this.startPoint.geometry.location]);
+            let poligonDots = [];
+
+            poligonDots.push(this.startPoint.geometry.location);
+            poligonDots.push(this.endPoint.geometry.location);
+            
+            for(let i = 0; i < this.userTasks.length; i++){
+
+                if(this.userTasks[i].location.geometry){
+                    this.checkAndSetPuligonDot(poligonDots, this.userTasks[i].location.geometry.location);
+                }
+                
+            }
+            // console.log(JSON.stringify(poligonDots))
+            resolve(poligonDots);
         });
-        
+    }
+
+    checkAndSetPuligonDot(poligonDots, dot){
+        let i = 0;
+        // console.log("dot.lat: ", dot.lat);
+        // console.log("dot.lng: ", dot.lng);
+        if(dot.lat === 0 || dot.lng === 0){
+            return;
+        }
+        for(; i < poligonDots.length; i++){
+            if(poligonDots[0].lat === dot.lat && poligonDots[0].lng === dot.lng){
+                break;
+            }
+        }
+        // console.log("i: ", i);
+        // console.log("poligonDots.length: ", poligonDots.length);
+        if(i === poligonDots.length){
+            poligonDots.push(dot);
+        }
     }
 
     getFullData(data){  
@@ -350,6 +393,7 @@ module.exports = class {
 
                     //if the place without adress the plase is note concrete and must get all suteble plases for task in all poligon points
                     for(let k = 0 ; k < polygonPoints.length ; k ++){
+                        
                         promises.push( googleApiMdl.googleGetPlacesByRadius(i, tasks[i], polygonPoints[k], 1500,timeout));
                         timeout += 25 ;
                     }
@@ -365,7 +409,6 @@ module.exports = class {
                 // wait for all responses from googleGetPaceData
                 Promise.all(allData.map( (dataArr) => {
                     return dataArr.response.map((data) => {
-
                         return googleApiMdl.googleGetPlaceData(dataArr.taskIndex, data.place_id);
                     });
                     // rerange object schem
@@ -373,7 +416,11 @@ module.exports = class {
                     return accumulator.concat(currentValue);
                 }))
                 .then((allFullDadaPlace) => {
-                    allFullDadaPlace = this.filterPlacesByTimeWindow(allFullDadaPlace, tasks);
+                    // console.log("------------------------------->");
+                    // console.log(JSON.stringify(allFullDadaPlace));
+                    // allFullDadaPlace = this.filterPlacesByTimeWindow(allFullDadaPlace, tasks);
+                    // console.log("------------------------------->");
+                    // console.log(JSON.stringify(allFullDadaPlace));
                     if(allFullDadaPlace.length === 0){
                         resolve({
                             tasks: [],
@@ -381,10 +428,25 @@ module.exports = class {
                     }
                     // match all responses from googleGetPlaceData to proper task 
                     for (let i = 0; i < allFullDadaPlace.length; i++) {
-                        (tasks[allFullDadaPlace[i].taskIndex].places) ?
-                            tasks[allFullDadaPlace[i].taskIndex].places.push(allFullDadaPlace[i].response)
-                            :tasks[allFullDadaPlace[i].taskIndex].places = [allFullDadaPlace[i].response];
+                        if(tasks[allFullDadaPlace[i].taskIndex].places){
+                            let k = 0; 
+                            for( ; k < tasks[allFullDadaPlace[i].taskIndex].places.length; k++){
+                                if(
+                                    tasks[allFullDadaPlace[i].taskIndex].places[k].place_id ===
+                                    allFullDadaPlace[i].response.place_id
+                                ){
+                                    break;
+                                }
+                            }
+                            if(k === tasks[allFullDadaPlace[i].taskIndex].places.length){
+                                tasks[allFullDadaPlace[i].taskIndex].places.push(allFullDadaPlace[i].response);
+                            }
+                        } else {
+                            tasks[allFullDadaPlace[i].taskIndex].places = [allFullDadaPlace[i].response];
+                        }
                     }
+                    // console.log("------------------------------->");
+                    // console.log(JSON.stringify(tasks));
                     resolve({
                         tasks: tasks,
                     });
@@ -492,7 +554,14 @@ module.exports = class {
                         routeCurrentTime
                     );
         }
-        
+        // console.log("------------------>");
+        // console.log("time: ",
+        //     DateTime.getNearestOpeningTime(
+        //     routeCurrentTime, this.day, point.opening_hours,
+        //     point.task_identifier.time.duration)
+        // );
+        // console.log(JSON.stringify(point));
+
         return DateTime.getNearestOpeningTime(
             routeCurrentTime, this.day, point.opening_hours,
             point.task_identifier.time.duration
@@ -513,6 +582,8 @@ module.exports = class {
                 segments: []
             };
 
+            // console.log("--->>>>>>>>>>>>>>>>>>>>>>>>>>");
+            // console.log(JSON.stringify(routeWithSegments));
             for(let i = 0; i < routeWithSegments.length; i++){
                 routeWithSegments[i].arriveTime = route.route_current_time;
                 if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
@@ -621,5 +692,16 @@ module.exports = class {
                 return;
             }
         }
+    }
+
+    createVariantsOfRoutes(){
+        let variantsOfHours = [];
+        let startHour = this.startTime;
+
+        while(startHour < this.endTime){
+            variantsOfHours.push(startHour += 30);
+        }
+
+        return variantsOfHours;
     }
 }
