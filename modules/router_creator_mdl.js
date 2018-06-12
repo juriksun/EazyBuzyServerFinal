@@ -568,17 +568,17 @@ module.exports = class {
         );
     }
 
-    buildRouteWithSegmentsAndDerection(routeWithSegments){
+    buildRouteWithSegmentsAndDerection(routeWithSegments, startHour){
         return new Promise(async (resolve, reject) => {
             let route = {
                 route_tasks_number: routeWithSegments.length - 1,
-                route_start_time: DateTime.convertTimeToMinutes(this.startTime),
+                route_start_time: startHour,
                 route_end_time: DateTime.convertTimeToMinutes(this.endTime),
                 route_distance: 0,
                 route_duration: 0,
                 route_wait_time: 0,
                 route_duration_in_road: 0,
-                route_current_time: DateTime.convertTimeToMinutes(this.startTime),
+                route_current_time: startHour,
                 segments: []
             };
 
@@ -648,9 +648,24 @@ module.exports = class {
 
     getAllDirectionForRoutesWithSegments(allRoutesWithSegments){
         return new Promise( (resolve, reject) => {
+            let poromises = [];
+            for(let i = 0; i < allRoutesWithSegments.length; i++){
+                let startHour = DateTime.convertTimeToMinutes(this.startTime);
+                // console.log("startHour: ", startHour);
+                while(startHour < DateTime.convertTimeToMinutes(this.endTime)){
+                    let route = JSON.parse(JSON.stringify(allRoutesWithSegments[i]));
+                    // console.log(route);
+                    poromises.push(this.buildRouteWithSegmentsAndDerection(
+                        route, startHour
+                    ));
+                    startHour += 60;
+                }
+            }
             Promise.all(
-                allRoutesWithSegments.map(i => this.buildRouteWithSegmentsAndDerection(i))
+                poromises
+                // allRoutesWithSegments.map(i => this.buildRouteWithSegmentsAndDerection(i))
             ).then((allData) => {
+                // console.log(JSON.stringify(allData));
                 let routesWithSegmentsAndDirections = [];
                 for(let i = 0; i < allData.length; i++){
                     if(allData[i] !== undefined){
