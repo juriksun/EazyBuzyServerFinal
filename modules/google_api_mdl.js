@@ -20,12 +20,32 @@ module.exports.GoogleAPIs = class{
 
         this.numOfPlaceData = 0;
         this.placeDataDB = low(new FileSync('google_cache/places_data.json'));
+
+        this.apiKeyArrIndex = 0;
     }
     
+    getApiKey(){
+
+        switch(this.apiKeyArrIndex){
+            case 0: {
+                this.apiKeyArrIndex++;
+                return consts.GOOGLE_API_NIR;
+            }
+            case 1: {
+                this.apiKeyArrIndex++;
+                return consts.GOOGLE_API_ALEX;
+            }
+            default: {
+                this.apiKeyArrIndex++;
+                return consts.GOOGLE_API_SHAMIR;
+            }
+        }
+    }
+
     googleGetDirection(startPoint, endPoint, mode, departureTime ){
         return new Promise(async (resolve, reject) => {
 
-            const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_ALEX}&departure_time=${departureTime}&language=en`;
+            const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${this.getApiKey()}&departure_time=${departureTime}&language=en`;
 
             const key = `${startPoint}${endPoint}${mode}${DateTime.getDayAndHour(departureTime)}`;
 
