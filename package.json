@@ -21,6 +21,7 @@
     "@mapbox/polyline": "^1.0.0",
     "axios": "^0.16.2",
     "express": "^4.16.2",
+    "lowdb": "^1.0.0",
     "mongoose": "^5.0.14",
     "request": "^2.81.0"
   },

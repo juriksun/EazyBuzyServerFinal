@@ -60,6 +60,7 @@ module.exports = class {
     constructor(){
         this.tasksController = new TasksController()
         this.googleAPIs = new GoogleAPIs();
+        this.MaxNumOfSegments = 0;
     }
 
     // determine all time sets of route
@@ -308,7 +309,7 @@ module.exports = class {
                                             resolve(
                                                 {
                                                     recommended_route: undefined,
-                                                    all_routes: undefined,
+                                                    // all_routes: undefined,
                                                     all_tasks: this.userTasks
                                                 }
                                             );
@@ -319,7 +320,7 @@ module.exports = class {
                                             {
                                                 recommended_route: recommendedRoute,
                                                 // recommended_route: directionsForRoutesWithSegments,
-                                                all_routes: directionsForRoutesWithSegments,
+                                                // all_routes: directionsForRoutesWithSegments,
                                                 all_tasks: this.userTasks
                                             }
                                         );
@@ -377,7 +378,7 @@ module.exports = class {
     }
 
     getFullData(data){  
-      return googleApiMdl.googleGetPlaceData(data.taskIndex,data.place_id);
+      return this.googleAPIs.googleGetPlaceData(data.taskIndex, data.place_id);
     }
 
     //get suteble places for all tasks
@@ -394,12 +395,12 @@ module.exports = class {
                     //if the place without adress the plase is note concrete and must get all suteble plases for task in all poligon points
                     for(let k = 0 ; k < polygonPoints.length ; k ++){
                         
-                        promises.push( googleApiMdl.googleGetPlacesByRadius(i, tasks[i], polygonPoints[k], 1500,timeout));
+                        promises.push( this.googleAPIs.googleGetPlacesByRadius(i, tasks[i], polygonPoints[k], 1500));
                         timeout += 25 ;
                     }
                 }else{
                     let query = `${tasks[i].location.address} ${tasks[i].task_place.place_type.formated_name}  ${tasks[i].task_place.place_company.formated_name}`;
-                    promises.push( googleApiMdl.googleGetPlacesByQuery(i, query));
+                    promises.push( this.googleAPIs.googleGetPlacesByQuery(i, query));
                 }
             }
 
@@ -409,7 +410,7 @@ module.exports = class {
                 // wait for all responses from googleGetPaceData
                 Promise.all(allData.map( (dataArr) => {
                     return dataArr.response.map((data) => {
-                        return googleApiMdl.googleGetPlaceData(dataArr.taskIndex, data.place_id);
+                        return this.googleAPIs.googleGetPlaceData(dataArr.taskIndex, data.place_id);
                     });
                     // rerange object schem
                 }).reduce((accumulator, currentValue) => {
@@ -639,9 +640,13 @@ module.exports = class {
                 route.route_duration_in_road += routeWithSegments[i].duration_in_road;
                 route.route_distance += routeWithSegments[i].distance;
 
-
+                if(route.route_current_time > DateTime.convertTimeToMinutes(this.endTime)){
+                    resolve(undefined);
+                    return;
+                }
                 route.segments.push(routeWithSegments[i]);
             }
+            this.MaxNumOfSegments = routeWithSegments.length;
             resolve(route);
         });
     }
@@ -649,16 +654,18 @@ module.exports = class {
     getAllDirectionForRoutesWithSegments(allRoutesWithSegments){
         return new Promise( (resolve, reject) => {
             let poromises = [];
-            for(let i = 0; i < allRoutesWithSegments.length; i++){
+            for(let i = allRoutesWithSegments.length - 1; 0 <= i; i--){
                 let startHour = DateTime.convertTimeToMinutes(this.startTime);
                 // console.log("startHour: ", startHour);
-                while(startHour < DateTime.convertTimeToMinutes(this.endTime)){
-                    let route = JSON.parse(JSON.stringify(allRoutesWithSegments[i]));
-                    // console.log(route);
-                    poromises.push(this.buildRouteWithSegmentsAndDerection(
-                        route, startHour
-                    ));
-                    startHour += 60;
+                if(this.MaxNumOfSegments === undefined || this.MaxNumOfSegments <= allRoutesWithSegments[i].length){
+                    while(startHour < DateTime.convertTimeToMinutes(this.endTime)){
+                        let route = JSON.parse(JSON.stringify(allRoutesWithSegments[i]));
+                        // console.log(route);
+                        poromises.push(this.buildRouteWithSegmentsAndDerection(
+                            route, startHour
+                        ));
+                        startHour += 60;
+                    }
                 }
             }
             Promise.all(
@@ -707,16 +714,5 @@ module.exports = class {
                 return;
             }
         }
-    }
-
-    createVariantsOfRoutes(){
-        let variantsOfHours = [];
-        let startHour = this.startTime;
-
-        while(startHour < this.endTime){
-            variantsOfHours.push(startHour += 30);
-        }
-
-        return variantsOfHours;
     }
 }

@@ -1,0 +1,49 @@
+{
+  "Chaim Levanon St 67, Tel Aviv-Yafo, Israel Post Office  ": [
+    {
+      "formatted_address": "Chaim Levanon St 67, Tel Aviv-Yafo, Israel",
+      "geometry": {
+        "location": {
+          "lat": 32.113999,
+          "lng": 34.801108
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.11535682989272,
+            "lng": 34.80256517989272
+          },
+          "southwest": {
+            "lat": 32.11265717010728,
+            "lng": 34.79986552010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
+      "id": "6731b74d1d6aeeddd2c9b6eb8e6e73e41eb810d4",
+      "name": "Israel Post",
+      "opening_hours": {
+        "open_now": false,
+        "weekday_text": []
+      },
+      "photos": [
+        {
+          "height": 3480,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100475323868156145690/photos\">Dan Komsky</a>"
+          ],
+          "photo_reference": "CmRaAAAA3jFRKoc-njjmanaLkwMvj872n1GwHt8BZU6vumnMm2nFpUFp0npFVdwPimoEgAayQvWl7YOTydVCtmFJ8fiRMkVSfPlARY4pYvwlw49nogIO1oeJLGhbe6SqpIUWgGicEhAn-rsSydLPFUb_bx042HGnGhRJkM1RUDLPXQIM7wNybZxiqwFd1A",
+          "width": 4640
+        }
+      ],
+      "place_id": "ChIJFx20D2ZJHRURExR15T9fAnE",
+      "rating": 3.4,
+      "reference": "CmRbAAAA9gBbQZMPEfNVoU0il-_NUjW27f843wAVNSNdEyYXa-gmjsZIrrFpxo3bZnN2tIrXd3ggebeEr89t8XbVwFVZseSN-JIyqPYSbypT0TCY01_Cg92SvcI_qMn3PjEihVsYEhBqguep7zDLBL0ZxSVl3GgwGhSQzZfnyWLWH_DeMdu9Q07hXkuSww",
+      "types": [
+        "post_office",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 'use strict';
+global.requestMapOfDirections = new Map();
 require('./server');
 require('./database');
 

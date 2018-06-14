@@ -11,7 +11,10 @@ class DateTime{
     static convertDayToMinutes(day1){
         return day1 * 1440;
     }
-
+    static getDayAndHour(time){
+        let date = new Date(time);
+        return `${date.getDay()}${date.getHours()}`;
+    }
     static convertTimeToMinutes(time){
         if(typeof time === "number"){
             return time;
