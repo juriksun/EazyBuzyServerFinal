@@ -6,11 +6,7 @@ const axios         = require("axios"),
 const   low         = require('lowdb'),
         FileSync    = require('lowdb/adapters/FileSync');
 
-// const   adapter    = new FileSync('directions_db.json'),
-//       db          = low(adapter);
-
 module.exports.GoogleAPIs = class{
-
 
     constructor(){
         this.numOfDirectionRequest = 0;
@@ -35,14 +31,11 @@ module.exports.GoogleAPIs = class{
 
             if(this.directionsDB.get(key).value()){
                 resolve(this.directionsDB.get(key).value());
-                console.log('has1');
             } else {
             setTimeout(()=>{
                 if(this.directionsDB.get(key).value()){
                     resolve(this.directionsDB.get(key).value());
-                    console.log('has2');
                 } else {
-                    console.log('not have')
                 axios
                 .get(url)
                 .then(response => {
@@ -183,104 +176,3 @@ module.exports.GoogleAPIs = class{
         });        
     };
 }
-      
-module.exports.googleGetPlacesByRadius = (taskIndex, task, polygonPoint, radius, timeout) => {
-    
-    if(!timeout) timeout = 0;
-    return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&radius=${radius}&type=${task.task_place.place_type.name}&keyword=${task.task_place.place_company.name}&key=${consts.GOOGLE_API_ALEX}&language=en`;
-        setTimeout(()=>{
-            axios
-            .get(url)
-            .then(response => {
-                resolve(
-                    {
-                        'taskIndex':  taskIndex,
-                        response: response.data.results
-                    }
-                );
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        },timeout)
-    });
-};
-
-module.exports.googleGetPlacesByQuery = (taskIndex, query , timeout = 0) => {
-    return new Promise((resolve, reject) => {
-        // query = query.replace(/\s+/g,'%20')
-        // console.log("query: ", query);
-        const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${consts.GOOGLE_API_NIR}&language=en`;
-        // setTimeout(()=>{
-            axios
-            .get(url)
-            .then(response => {
-                resolve(
-                    {
-                        'taskIndex':  taskIndex,
-                        response: response.data.results
-                    }
-                );
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        // },timeout)
-    });
-};
-
-module.exports.googleGetPlaceData = (taskIndex, palaceId, timeout = 0) => {
-    
-    return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${palaceId}&key=${consts.GOOGLE_API_ALEX}&language=en`;
-
-        // setTimeout(()=>{
-            axios
-            .get(url)
-            .then(response => {
-                resolve(
-                    {
-                        taskIndex: taskIndex,
-                        response: response.data.result
-                    }
-                );
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        // },timeout)
-    });
-};
-
-module.exports.googleGetDirectionNN = (startPoint, endPoint, mode, timeout) => {
-    if(!timeout) timeout = 0;
-    return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_ALEX}&language=en`;
-        setTimeout(()=>{
-            axios
-            .get(url)
-            .then(response => {
-                resolve(response.data);
-            })
-            .catch(error => {
-                reject({error:error})
-            });
-        },timeout)
-    });
-};
-
-module.exports.googleGetDirection = (startPoint, endPoint, mode, departureTime ) => {
-    return new Promise((resolve, reject) => {
-        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${consts.GOOGLE_API_ALEX}&departure_time=${departureTime}&language=en`;
-       
-        axios
-        .get(url)
-        .then(response => {
-            resolve(response.data);
-        })
-        .catch(error => {
-            reject({error:error})
-        });
-    });
-};
