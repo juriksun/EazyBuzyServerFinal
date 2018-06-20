@@ -25,7 +25,6 @@ module.exports.GoogleAPIs = class{
     }
     
     getApiKey(){
-
         switch(this.apiKeyArrIndex){
             case 0: {
                 this.apiKeyArrIndex++;
@@ -45,8 +44,6 @@ module.exports.GoogleAPIs = class{
     googleGetDirection(startPoint, endPoint, mode, departureTime ){
         return new Promise(async (resolve, reject) => {
 
-            const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${this.getApiKey()}&departure_time=${departureTime}&language=en`;
-
             const key = `${startPoint}${endPoint}${mode}${DateTime.getDayAndHour(departureTime)}`;
 
             if(this.directionsDB.get(key).value()){
@@ -56,6 +53,7 @@ module.exports.GoogleAPIs = class{
                 if(this.directionsDB.get(key).value()){
                     resolve(this.directionsDB.get(key).value());
                 } else {
+                const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${this.getApiKey()}&departure_time=${departureTime}&language=en`;
                 axios
                 .get(url)
                 .then(response => {

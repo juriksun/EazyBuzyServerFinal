@@ -234,6 +234,415 @@
           ],
           "vicinity": "Bareli Street 18, Tel Aviv-Yafo"
         }
+      ],
+      "7955689000000351500pharmacyclalit": [
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.0928921,
+              "lng": 34.7861294
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.09428327989273,
+                "lng": 34.78748582989273
+              },
+              "southwest": {
+                "lat": 32.09158362010729,
+                "lng": 34.78478617010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "2a7bc18cb0e294b6f188c796d128556929eb9e54",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "place_id": "ChIJwVkHk-1LHRURvS6a89VRBOA",
+          "rating": 3.5,
+          "reference": "CmRbAAAAqOPnloDwry4RIxrDSCnfb5tcJE_yS8QjnyVhHHyY4ar3jFufGYw0vrVCESoGdliDXHErwKBkrcXdZWPAbbxXudsYEz-Uv1nod_4t9f93VDPSo38RACfpnaW3bUa-FruOEhCSlyRqKb6rG6PlbRKIVN5RGhQaM2r47deq2czqgMOM9puXxkM3VQ",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "אריסטובולוס 2, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1080921,
+              "lng": 34.7979351
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.10933287989272,
+                "lng": 34.79945537989272
+              },
+              "southwest": {
+                "lat": 32.10663322010727,
+                "lng": 34.79675572010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+          "id": "923d2363fd4e883f048722a1ad44246503c8e133",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 2988,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/110716281354254320593/photos\">Tzahi Caspi</a>"
+              ],
+              "photo_reference": "CmRaAAAAWKSHr4VJZkFH6FwkJy0wFEe2Ln1E0D-DYVFghrlFDRPj6vMyqoTh5cVcUD77PVJN3nf9a2hK6kAtfkLTas_uZcXGl2bCYGngP9NLZX-zp1RwjWOa076eUexqH7pOj1XbEhDWafCwmhpfiMiJe_7T8r6SGhSv-bYfCTAbpu9QoIsWRhlQ_GDt5A",
+              "width": 5312
+            }
+          ],
+          "place_id": "ChIJD0NxWmBJHRURTCe7Y9aTngk",
+          "rating": 3.8,
+          "reference": "CmRbAAAA9oWxmoyay9mL0RGg4VJf8tnpiUIhO02XN5km0wtcgsH_9DjzIOE7qP4FxNuiUKR3SznQCW_gmdHJ9g2i3MbGWmoAk_cCyIfypI_ptJFF6OV1ZFF4FPJuWGvbvkliFoGWEhBKu-MTtcMzrsYHYoKfBwbsGhSi7-Nij4KLF-iX-kqdckVLbE7JAA",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "ברודצקי 19, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1190231,
+              "lng": 34.8008654
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.12029927989272,
+                "lng": 34.80220037989272
+              },
+              "southwest": {
+                "lat": 32.11759962010728,
+                "lng": 34.79950072010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "f998a0cdf39af88c7f1b2410c618ce7f6db3484f",
+          "name": "כללית - בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 1080,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+              ],
+              "photo_reference": "CmRaAAAAwtWozXffWB7sfuUWyQTBORuQIgUez7-YWMUyzhiEXh2imY_t9M9zsKhtTrszz2WAXCNJzGPBvNZy6n2Tn_Sy4hnMDQMmuO8YC1E1m-LXBIMTqBRojYcjzePsy9dju0HVEhAkXku7BP-vKuFBu0lugM8WGhSTjF6CF9z8M7aUPVGorM7NQlZYIw",
+              "width": 1920
+            }
+          ],
+          "place_id": "ChIJv71EQWlJHRUR9t8XLknlU0s",
+          "rating": 4,
+          "reference": "CmRbAAAAocFxZ1fLYAdAvxwmh7D7J9qriY8zV5rSu23PrC-87mysR8fB37jIRl7h21pN-Cwwlpx3_Gwfk9QkmEhCMmCwPzKkqVLUcjDzyrokg1wq-m8eOMlm79ZqS4nUYUAtYSwJEhA8qXy_BdQGV_JRCAgfk6G7GhRwv2L8RuYzlBC2NGICrMObmmG4Uw",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "גייגר 7, תל אביב יפו"
+        }
+      ]
+    },
+    "11331734": {
+      "801371000000021500bankdiscount ": [
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1251088,
+              "lng": 34.8032901
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.12624902989272,
+                "lng": 34.80458017989272
+              },
+              "southwest": {
+                "lat": 32.12354937010728,
+                "lng": 34.80188052010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+          "id": "0ee7c312d01ea33a7d1e0c433b45d93dfa49d16f",
+          "name": "דיסקונט",
+          "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 3024,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/103064228010411263215/photos\">סידי שחר</a>"
+              ],
+              "photo_reference": "CmRaAAAAJSnW5bVaJ8vgVviLrHn3VSHWC-DFfoZlvSGGLB-aMGlsGdvahuOnmxq9xDTYjS-pmVghf0EcX8zUNlb7L6TVcTSERILeuJiVzTrnN7Zbv0_McBKbq1LrLgMrxl8SPX41EhDzKh2urF-olFBNRL4lwoEHGhS5izTeUnVvEM14pWZ6lwO5Ha5mcw",
+              "width": 4032
+            }
+          ],
+          "place_id": "ChIJAyUqPxNJHRURoEvSvwF8cwY",
+          "rating": 2.7,
+          "reference": "CmRbAAAA8jcw6BR-KRyWngOFkIpVSOFWDE79oMcY_0b57B3ZcPv_A8SVipYCKBaR9EGWraS3L6LuxfZBjBVMwiMczCqG_kFibOIdHM9ZOtTw9yo2M_8ga0-PqffLMzKWygu1hj8eEhCPsLWvTzYEDwA-OUBTC2XMGhQzOq2zi3TqRb4sRSw2kNKgz2b3Wg",
+          "scope": "GOOGLE",
+          "types": [
+            "bank",
+            "finance",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "אבא אחימאיר 25, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1191499,
+              "lng": 34.7954171
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.12049762989272,
+                "lng": 34.79678517989272
+              },
+              "southwest": {
+                "lat": 32.11779797010728,
+                "lng": 34.79408552010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+          "id": "496d151382af88edf2d2cf4b8a87eb629d097133",
+          "name": "דיסקונט",
+          "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 3096,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+              ],
+              "photo_reference": "CmRaAAAA_Tov1zLmCPYMvkiLxijPd12LFzK-PKEC_i5eGmpWj677rqXpfnbS9XLgHdk8aePjm5_6AEJwrGDtDK3gk0gGLUWGG8JLHFh23DHzsyVdF1aIZyeplpiurtAW3GIOk_DWEhC6ScbLC0shAJGpPBGBxr5BGhTThS0RlSPD29XAr4xAJQvCGt7nwg",
+              "width": 4128
+            }
+          ],
+          "place_id": "ChIJKajcYkJJHRUR0F-BTVb76vI",
+          "rating": 3.9,
+          "reference": "CmRbAAAA4PM-fc_X94stL4PuQSpb0GB8yFMGiR9h4O9BsteSW0WW1tyqE5iTLW4H86QpGcogMT4SU9cZ6o0YxtjJuX1k1IbtceR9D1iR9FBG3fX9wUGhCOdKYUg6DZNea56tLOf9EhDEu10ag81jMeFOFPIiE9xCGhS5VhmwrDPzrDNPV9JAaFVVI2AS6w",
+          "scope": "GOOGLE",
+          "types": [
+            "bank",
+            "finance",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "יהודה הנשיא 34, תל אביב יפו"
+        }
+      ],
+      "801371000000021500pharmacyclalit": [
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1250383,
+              "lng": 34.7984045
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.12638812989272,
+                "lng": 34.79975432989273
+              },
+              "southwest": {
+                "lat": 32.12368847010728,
+                "lng": 34.79705467010729
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "683ae14eb64d46e5c3d767733d820fa1a09d0135",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+          },
+          "place_id": "ChIJF1WdfQc0HRURcgHNvasjbNM",
+          "rating": 3.6,
+          "reference": "CmRbAAAAXt_kJYaK6t-_2l5zgkM_xb2OiWD0wJQUFfU_lYtX4Q0WA2IfxtKG7moh4km0OYc8AEhPkCWdow6AFcHSTTdjTBwKVcCtESUWumA0n7rX4y3GWIA39cAY3MIzaoZnBBUkEhAWqtivxqf1Mxp798baufwtGhSApmqlnYEE2sza4ejIfnXOVue3rA",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "שמאי 1, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1186941,
+              "lng": 34.8167651
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.12002847989272,
+                "lng": 34.81811322989272
+              },
+              "southwest": {
+                "lat": 32.11732882010728,
+                "lng": 34.81541357010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "e10a9b2542a889a439443ee8fbb177018f2ca59d",
+          "name": "כללית - בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 1080,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/111616471000466631019/photos\">Ido Mosseri</a>"
+              ],
+              "photo_reference": "CmRaAAAA9EgjEqMFn_plV0X836uKxbUeMcPQY-xyKMmnimNWI9ASaTpc-ZlNCqs170hPDUGpDRmIoTD0O-hVeHl5da2bMpgpEsB9Cj9DLgYFmc4OQ-rPlv5Vfn4oA1KwEq7lR2DmEhDH08tIyosskzMGpJ-Q9jR9GhRLrbG5vSIyAYPD7QlrmfmFi2EwEQ",
+              "width": 1920
+            }
+          ],
+          "place_id": "ChIJH2EvEhVKHRUR4P0cjFL75VA",
+          "rating": 3.7,
+          "reference": "CmRbAAAA69NdoVNs_kkAHJgsyuSf7OrUiyKhUFHOYyW7Aj3UZeqPL34I1Mai7FC3PwpAz6ZlMBABMgYbBwftIhfJ3F-2amalKgvsjFCzTgtMXGVN6_bw0ZyegGKUSsG2oObVjVJ7EhCvjeKfA72QmQJtuXxsS2DvGhQg-FbWtyN6wxVsxLx78gS3-wlAUQ",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "שדרות קרן קימת לישראל 134, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1080921,
+              "lng": 34.7979351
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.10933287989272,
+                "lng": 34.79945537989272
+              },
+              "southwest": {
+                "lat": 32.10663322010727,
+                "lng": 34.79675572010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+          "id": "923d2363fd4e883f048722a1ad44246503c8e133",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 2988,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/110716281354254320593/photos\">Tzahi Caspi</a>"
+              ],
+              "photo_reference": "CmRaAAAAqEb0JexzKxQ5pwJRR6y0RZDBy1ce4RpY0NiDpTrtvlw5b-tQv93dZPvNpbABnTtWxpfusuSdrK0BJ4-o3rv0MtjAQQEyyrk5slYSBktv5rj1m3NjT7SIrsf-x_tyOCf-EhA5lg-bp58mIcjLVr794v3_GhRXtMgJBJPn4GsZidC99Q1Tu7JwrA",
+              "width": 5312
+            }
+          ],
+          "place_id": "ChIJD0NxWmBJHRURTCe7Y9aTngk",
+          "rating": 3.8,
+          "reference": "CmRbAAAAoms08N1Ilwz7Sqm8Mrklr8VqBbvJ2a6rjn_t7L5bRm5TconiPtuvCVM32e1pPHUZlpx19xCNxAAbIlrs7m8_WS7F_7zTr7ROb0P1NBDcOEIyQZYIO_8Wj78ZCBfb3vFIEhA1rK-7tX7XFjw_iZYRJTs3GhSD2N55o6OQAVMhHUS4aSknFLdfZQ",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "ברודצקי 19, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1190231,
+              "lng": 34.8008654
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.12029927989272,
+                "lng": 34.80220037989272
+              },
+              "southwest": {
+                "lat": 32.11759962010728,
+                "lng": 34.79950072010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "f998a0cdf39af88c7f1b2410c618ce7f6db3484f",
+          "name": "כללית - בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 1080,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+              ],
+              "photo_reference": "CmRaAAAAyy4EnTFknaA3ZYBQN8xvIY5I-Hr7cur6yC5Szt2xeNFXHy-ByhQUQwDGxL5UxNH44j1D5H-UlkoUpb8tAXBUgrQ3QWCuPh_M6L8yRDRAf7NKJkzaDSWdU7lWbBzahMYqEhChVbCsj8QTxNT5ewWCUsGUGhQo9ebAYzeRYJaqfJ8mjQ3lzKC7YA",
+              "width": 1920
+            }
+          ],
+          "place_id": "ChIJv71EQWlJHRUR9t8XLknlU0s",
+          "rating": 4,
+          "reference": "CmRbAAAAuS_jupGfTzwx2kgq2G-ufkS-cE_CCnndOSxWLEUELhooCJyNvBTb1Vdn4oha1ZC0bAvi6DC6bHrHY1xZREr_2quU7xJH4ojlH-551DyeLV4syGxNanQjr5EbGUsI5DIWEhC81uq4kx7qIwFEiECbMRYaGhQwZzPGmFkZw_FAE6XwwidcWHtj0Q",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "גייגר 7, תל אביב יפו"
+        }
       ]
     },
     "114139834": {
@@ -534,6 +943,186 @@
             "establishment"
           ],
           "vicinity": "Bareli Street 18, Tel Aviv-Yafo"
+        }
+      ],
+      "801225700000031500pharmacyclalit": [
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1250383,
+              "lng": 34.7984045
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.12638812989272,
+                "lng": 34.79975432989273
+              },
+              "southwest": {
+                "lat": 32.12368847010728,
+                "lng": 34.79705467010729
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "683ae14eb64d46e5c3d767733d820fa1a09d0135",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+          },
+          "place_id": "ChIJF1WdfQc0HRURcgHNvasjbNM",
+          "rating": 3.6,
+          "reference": "CmRbAAAAbFyIyJwbCPo75iitbHDIu4svaXFfFN7VpkBNpZwDEHwyPvWmg-lgF9sC2smHT7gU3XX0hLEC8arpPX0leFkOuo9Erck2XZyZ_GklzLCaJG_t7JeeHvnJHrpC9zTWcofpEhDLdd-gK89vU7Pi65lLB-NpGhRevElM3aK5rjOv609JDlG4cHRv9g",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "שמאי 1, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1186941,
+              "lng": 34.8167651
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.12002847989272,
+                "lng": 34.81811322989272
+              },
+              "southwest": {
+                "lat": 32.11732882010728,
+                "lng": 34.81541357010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "e10a9b2542a889a439443ee8fbb177018f2ca59d",
+          "name": "כללית - בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 1080,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/111616471000466631019/photos\">Ido Mosseri</a>"
+              ],
+              "photo_reference": "CmRaAAAAj01f0MC60KemTsRfNpVeZWjXWFz10Od95jOsAH-qP1dttsz6ywF6enLqQkzeWF9IpQ8IVACc4RF3FchWfjjvyqnyeMxRW3Njws9RBO3xN6tVM-__BQn1A4kCkGa78G5iEhCSeIpu9QuIwgRWX5OVHjnwGhTl5AvsjuMkxb-t_9-ygwjqNnwX6w",
+              "width": 1920
+            }
+          ],
+          "place_id": "ChIJH2EvEhVKHRUR4P0cjFL75VA",
+          "rating": 3.7,
+          "reference": "CmRbAAAATot1OG9s63xSsACUk1F3N0dg9fhG-qVl-M48nn-iFUwpaZfngi9Xnk9w50ZrOB28f5-LTecBrBscXPc8m_FfjxSkPHx3Jn8dycvIHIKSY4UzQY37XJQEKEJMF1npwwWbEhBklIYQXpyyObU8Ho8DUuXgGhQi0Gtrhrrk68iLuOw1uZenV7BKSg",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "שדרות קרן קימת לישראל 134, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1080921,
+              "lng": 34.7979351
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.10933287989272,
+                "lng": 34.79945537989272
+              },
+              "southwest": {
+                "lat": 32.10663322010727,
+                "lng": 34.79675572010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+          "id": "923d2363fd4e883f048722a1ad44246503c8e133",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 2988,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/110716281354254320593/photos\">Tzahi Caspi</a>"
+              ],
+              "photo_reference": "CmRaAAAAqntJSDTzd4V7g9srBRtTQqVhMVbC8oKocwFKcXBAGbME54QTLkp__srYpOlLdyUzxfPoiIuVL7ogV_FWHwlMDUQEFT-whA-GoujfwZMMgcRvjyCgK7e1AJsTT_2p3eUjEhA6Sco2gIVBOIOxu8Kn9RGUGhQfCYyrbcf--u5HVXYOYiDZx1Jfiw",
+              "width": 5312
+            }
+          ],
+          "place_id": "ChIJD0NxWmBJHRURTCe7Y9aTngk",
+          "rating": 3.8,
+          "reference": "CmRbAAAASQj1Cz04P5-cEG4A9yXoP35Ygc8PTbgcG55qWJ8fEGsPheJeXIh6EVTsKp6VyFm2Pcm3CRXxlGNJxTRofVMP2ybuOyYavIFriqwr2Mo8y8L2z0vFKzPi74qy0WfbHPT5EhB6Omf4TlF9_NKD1wQ8thSMGhSwUVbB5JIjz_u6RIDpBXfEZVx8Dg",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "ברודצקי 19, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.1190231,
+              "lng": 34.8008654
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.12029927989272,
+                "lng": 34.80220037989272
+              },
+              "southwest": {
+                "lat": 32.11759962010728,
+                "lng": 34.79950072010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "f998a0cdf39af88c7f1b2410c618ce7f6db3484f",
+          "name": "כללית - בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 1080,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+              ],
+              "photo_reference": "CmRaAAAAEwc92qRCW8OaiuL1WLIPyaM2nk08Dmc4HMvica2Cj7LBD6uzP3rYPu0mnsKA8_FUraqVGHywx06bU8OPR23094yWtUMvxaoUM3UDmkPTw_Y0tEMQRaDACWaIEj4zSBHDEhA84BCihf-h9SN-8wj2x2M5GhSm6CKv4IJKFuzYm8sgIrBcMvlEyg",
+              "width": 1920
+            }
+          ],
+          "place_id": "ChIJv71EQWlJHRUR9t8XLknlU0s",
+          "rating": 4,
+          "reference": "CmRbAAAAjd0fMlCLl3E6GZc2rIxhhSNYzBPC-69rfEqjG4N6QMADCGPCH18A8vkwtdogllHF17FDBXmBPneGWi6rku9UFpy6d8TM3WqV7O6B16AtD4AJrL6ev_xiVOUYqB5xWFgvEhAMvXHU251ex1jbrb0AH8wJGhTvVfhlKjl2rd-BEc4EeoyHAukXlQ",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "גייגר 7, תל אביב יפו"
         }
       ]
     },
@@ -1070,6 +1659,176 @@
             "establishment"
           ],
           "vicinity": "Nissim Aloni Street 10, Tel Aviv-Yafo"
+        }
+      ],
+      "8035691000000041500pharmacyclalit": [
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.0826983,
+              "lng": 34.8163183
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.08399092989272,
+                "lng": 34.81757047989272
+              },
+              "southwest": {
+                "lat": 32.08129127010728,
+                "lng": 34.81487082010727
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "d8c4c3213134b8f1c3ab088e7b4540280e04d12b",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 4032,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/113493769504654375823/photos\">Gennady Maron</a>"
+              ],
+              "photo_reference": "CmRaAAAALG4BDpDkjpP4DgS1pdbQwU7bJRezossTat2AK2Dq6zm6yfw3ywCXDtgIFgm70pylkRhB00DFyayTNqT4AhkPOyvPqc_DiZEdURjKOBU5jvne8U9SOqrgp_u15go6flO6EhAfe04F-XJAwyotRqVGG65yGhTJ3pbna32rKftRQ7vV4Id9IHT8NA",
+              "width": 3024
+            }
+          ],
+          "place_id": "ChIJi1wv48pLHRURnzRW8Trj-IA",
+          "rating": 4,
+          "reference": "CmRbAAAA7wqMuNPVtnwBN3k1Ws-tizwHsN_Vib9TGidFiz6b3WtCB7quNw-8ieD32WQPbQJ8WpnC493B2dp7okry3F0EncFq-TVeFO0oOBynE1hS2kAeKlursSeMUBbA6Vh5ChYSEhCgMjpNeHAThBrOwwHPDPK_GhSS952p8sobrx-xBNBxwl8ps4eksw",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "הרצל 34, רמת גן"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.0769126,
+              "lng": 34.8077947
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.07831417989272,
+                "lng": 34.80929492989272
+              },
+              "southwest": {
+                "lat": 32.07561452010728,
+                "lng": 34.80659527010727
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "22efbe8402ca593822587815aa0932fef396bcbc",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "place_id": "ChIJQYZTefzIHRURNAzAjCoC8ic",
+          "rating": 2.7,
+          "reference": "CmRbAAAAcGZD1IcTznqBSbU0kWpQA1Fu2JelyhdtdfY3d_RH8t0qtaLWhopRD4n5noqJpkp1G20nMKNbyeaaFFi3I4K7FMzBYdQ27vZtPQDD1z-nw33rPdernYKmk1ptT2pxrooxEhBD9k4L8Ubnu2lE21lePF8pGhSbqwzVByWP0mnpW9YB0XJARjZFLA",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "המעורר 24, גבעתיים"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.0928921,
+              "lng": 34.7861294
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.09428327989273,
+                "lng": 34.78748582989273
+              },
+              "southwest": {
+                "lat": 32.09158362010729,
+                "lng": 34.78478617010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "2a7bc18cb0e294b6f188c796d128556929eb9e54",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "place_id": "ChIJwVkHk-1LHRURvS6a89VRBOA",
+          "rating": 3.5,
+          "reference": "CmRbAAAAo2tx6gpK1ztT0BOqKd6COhanAeqPYg_Z1FqUCQL6nl5Hj4TPHZT4UIC0hOjFlet9wdt5zrSQ20_oUnwzZ1LpBSgTMjOO55TqCGEGUD7Azq2A5M3p34GvoLVHKArEVaEcEhCsl90Z2yeJdgJDoM78C-WzGhTQZAP7Q2ez2JYCDLCJPbVECfTxsg",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "אריסטובולוס 2, תל אביב יפו"
+        },
+        {
+          "geometry": {
+            "location": {
+              "lat": 32.08065000000001,
+              "lng": 34.8209712
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 32.08201342989272,
+                "lng": 34.82224487989272
+              },
+              "southwest": {
+                "lat": 32.07931377010728,
+                "lng": 34.81954522010727
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+          "id": "548e571078cfe950879397bb4299be464b77d5ae",
+          "name": "כללית בית מרקחת",
+          "opening_hours": {
+            "open_now": false,
+            "weekday_text": []
+          },
+          "photos": [
+            {
+              "height": 3264,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/117161548173784551575/photos\">Oran Kenan</a>"
+              ],
+              "photo_reference": "CmRaAAAAWWynxyjLxiMVajfjV5Y3ivGF4ej2cspcdXwDjyorqkVbudy8wnx7BC9vKgtpD7W2a1JMgtm6id2qeK1d30P4goz7A5Hg8PzjXmzoNWkBm4MDfCXZiIUZ6d-33YaafFwAEhD215MIYQdMd90hIiTKXnxgGhTG0l-d3i78tdSIRPKxA6QMtQvK4w",
+              "width": 1836
+            }
+          ],
+          "place_id": "ChIJvT5KBjVKHRURUQplpePHTNk",
+          "rating": 3,
+          "reference": "CmRbAAAAeqpqgw8WmgIbVkzUllv0hsdPcX3ZeRBBWhI6b-MLWy4m_6RfUAAWeKIV0ccPtPwhbOM5Ppx-UbFnFL6phOEshGIYh_GMmxuQCFYtQ1o9DghlAuLj8i0SoqSha4FZitOMEhCbiQ-c9gvQn0YHNuOUKfaAGhSEjPlM-kBCr3DBwNsAdp6zoWAj_Q",
+          "scope": "GOOGLE",
+          "types": [
+            "pharmacy",
+            "store",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ],
+          "vicinity": "המיתר 25, רמת גן"
         }
       ]
     },

@@ -195,16 +195,16 @@ module.exports = class {
                             location: suiteblePlaces[i].location
                         };
                         let task = [];
-                        // for (let k = 0; k < suiteblePlaces[i].places.length && k < 4; k++) {
-                        //     let place = suiteblePlaces[i].places[k];
-                        //     place.task_identifier = task_identifier;
-                        //     task.push(place);
-                        // }
-                        for (let k = 0; k < suiteblePlaces[i].places.length; k++) {
+                        for (let k = 0; k < suiteblePlaces[i].places.length && k < 10; k++) {
                             let place = suiteblePlaces[i].places[k];
                             place.task_identifier = task_identifier;
                             task.push(place);
                         }
+                        // for (let k = 0; k < suiteblePlaces[i].places.length; k++) {
+                        //     let place = suiteblePlaces[i].places[k];
+                        //     place.task_identifier = task_identifier;
+                        //     task.push(place);
+                        // }
                         tasksForPermutation.push(task);
                     }
                 }
@@ -396,7 +396,6 @@ module.exports = class {
                     for(let k = 0 ; k < polygonPoints.length ; k ++){
                         
                         promises.push( this.googleAPIs.googleGetPlacesByRadius(i, tasks[i], polygonPoints[k], 1500));
-                        timeout += 25 ;
                     }
                 }else{
                     let query = `${tasks[i].location.address} ${tasks[i].task_place.place_type.formated_name}  ${tasks[i].task_place.place_company.formated_name}`;

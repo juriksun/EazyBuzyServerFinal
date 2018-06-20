@@ -7324,5 +7324,1873 @@
     "url": "https://maps.google.com/?cid=10595479822325543024",
     "utc_offset": 180,
     "vicinity": "Tel Aviv-Yafo"
+  },
+  "ChIJi1wv48pLHRURnzRW8Trj-IA": {
+    "address_components": [
+      {
+        "long_name": "34",
+        "short_name": "34",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Herzl Street",
+        "short_name": "Herzl St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Ramat Gan",
+        "short_name": "ר\"ג",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv District",
+        "short_name": "Tel Aviv District",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Israel",
+        "short_name": "IL",
+        "types": [
+          "country",
+          "political"
+        ]
+      }
+    ],
+    "adr_address": "<span class=\"street-address\">Herzl St 34</span>, <span class=\"locality\">Ramat Gan</span>, <span class=\"country-name\">Israel</span>",
+    "formatted_address": "Herzl St 34, Ramat Gan, Israel",
+    "formatted_phone_number": "03-675-2810",
+    "geometry": {
+      "location": {
+        "lat": 32.0826983,
+        "lng": 34.81631830000001
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 32.0839900802915,
+          "lng": 34.8175696302915
+        },
+        "southwest": {
+          "lat": 32.0812921197085,
+          "lng": 34.8148716697085
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+    "id": "d8c4c3213134b8f1c3ab088e7b4540280e04d12b",
+    "international_phone_number": "+972 3-675-2810",
+    "name": "Clalit Pharmacy",
+    "opening_hours": {
+      "open_now": false,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1330"
+          },
+          "open": {
+            "day": 0,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "1900"
+          },
+          "open": {
+            "day": 0,
+            "time": "1530"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1500"
+          },
+          "open": {
+            "day": 1,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1330"
+          },
+          "open": {
+            "day": 2,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1900"
+          },
+          "open": {
+            "day": 2,
+            "time": "1530"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1330"
+          },
+          "open": {
+            "day": 3,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1500"
+          },
+          "open": {
+            "day": 4,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "1200"
+          },
+          "open": {
+            "day": 5,
+            "time": "0800"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 7:30 AM – 3:00 PM",
+        "Tuesday: 7:30 AM – 1:30 PM, 3:30 – 7:00 PM",
+        "Wednesday: 7:30 AM – 1:30 PM",
+        "Thursday: 7:30 AM – 3:00 PM",
+        "Friday: 8:00 AM – 12:00 PM",
+        "Saturday: Closed",
+        "Sunday: 7:30 AM – 1:30 PM, 3:30 – 7:00 PM"
+      ]
+    },
+    "photos": [
+      {
+        "height": 4032,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/113493769504654375823/photos\">Gennady Maron</a>"
+        ],
+        "photo_reference": "CmRaAAAA_0Z4sL_gnqYDjv21XCb1QDVz00l40z342iCc9QQ59dYL_A0cm0MQLHU7ECdFIIOhxlGmIXW4X8NuGq6TGkUJxUHhr-xT_n8WdSxGYWUa_1BniSkVNbfOWFo96MbxQ3iNEhAxIKaOwa83n91-vyoOXSMaGhRmJ4RQppFV3R91Nmkmu_oprduQ4Q",
+        "width": 3024
+      }
+    ],
+    "place_id": "ChIJi1wv48pLHRURnzRW8Trj-IA",
+    "rating": 4,
+    "reference": "CmRSAAAA89bcjLISn7let2rIW3yIq0so0TGcEb0xrjKuGMEHgfKhWVp6YRPYidDLephQWWt719KpDT6YbR7zKOZOo7f76-2r70wiOCu-5xA87m_6pzZD--9mZ2o8TVp1wv9-9_9EEhDoOaRuZRzl6UK3sJ8E68s8GhT9d8JV93ub-WilYF_shajnuKcQkg",
+    "reviews": [
+      {
+        "author_name": "Ariel T",
+        "author_url": "https://www.google.com/maps/contrib/107165136897353026538/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh4.googleusercontent.com/-G_wQ56qW5qs/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq03nyMP530uqWbLrWCrJ-fS5ZQvvg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "5 months ago",
+        "text": "Fine",
+        "time": 1513888828
+      },
+      {
+        "author_name": "Alexander Frenkel",
+        "author_url": "https://www.google.com/maps/contrib/103884454559062193395/reviews",
+        "language": "ru",
+        "profile_photo_url": "https://lh3.googleusercontent.com/-DQxwrlmth7A/AAAAAAAAAAI/AAAAAAAAAB8/yHOUCyMtIh0/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+        "rating": 3,
+        "relative_time_description": "6 months ago",
+        "text": "Заказал очередь на определённое время, торопился, чтобы не опоздать. Сижу уже час. Русская уборщица кидается на клиентов, как собака.",
+        "time": 1511951270
+      },
+      {
+        "author_name": "Boris Iofis",
+        "author_url": "https://www.google.com/maps/contrib/102124847703556685715/reviews",
+        "language": "ru",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-8f8BIV5N-SU/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq24D4NoZSo_2gAeOyUizKD3LbBqlA/s128-c0x00000000-cc-rp-mo/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "a year ago",
+        "text": "Минус - Достаточно большие очереди.\nПлюсы - Удобные часы работы,  рядом муниципальная стоянка.",
+        "time": 1477884204
+      },
+      {
+        "author_name": "דוד טחובר",
+        "author_url": "https://www.google.com/maps/contrib/115215313105445124035/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-fefalDMKGPI/AAAAAAAAAAI/AAAAAAAAAnQ/QzGoqYXqbXs/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "9 months ago",
+        "text": "מרפאה גדולה מאד",
+        "time": 1503906610
+      },
+      {
+        "author_name": "Rotem Gross",
+        "author_url": "https://www.google.com/maps/contrib/106623690126934719069/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh6.googleusercontent.com/-wODDzlaw3hk/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq0AqDxWavcV2owdocFx6DSmjkCGQA/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "a year ago",
+        "text": "תורים",
+        "time": 1488318948
+      }
+    ],
+    "scope": "GOOGLE",
+    "types": [
+      "pharmacy",
+      "store",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=9293427673375585439",
+    "utc_offset": 180,
+    "vicinity": "Herzl Street 34, Ramat Gan",
+    "website": "http://clalit.co.il/"
+  },
+  "ChIJQYZTefzIHRURNAzAjCoC8ic": {
+    "address_components": [
+      {
+        "long_name": "24",
+        "short_name": "24",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Ha-Me'orer Street",
+        "short_name": "Ha-Me'orer St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Giv'atayim",
+        "short_name": "Giv'atayim",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv District",
+        "short_name": "Tel Aviv District",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Israel",
+        "short_name": "IL",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "52234",
+        "short_name": "52234",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "adr_address": "<span class=\"street-address\">Ha-Me&#39;orer St 24</span>, <span class=\"locality\">Giv&#39;atayim</span>, <span class=\"postal-code\">52234</span>, <span class=\"country-name\">Israel</span>",
+    "formatted_address": "Ha-Me'orer St 24, Giv'atayim, 52234, Israel",
+    "formatted_phone_number": "03-679-0200",
+    "geometry": {
+      "location": {
+        "lat": 32.0769126,
+        "lng": 34.80779469999999
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 32.0783133302915,
+          "lng": 34.80929408029149
+        },
+        "southwest": {
+          "lat": 32.0756153697085,
+          "lng": 34.80659611970849
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+    "id": "22efbe8402ca593822587815aa0932fef396bcbc",
+    "international_phone_number": "+972 3-679-0200",
+    "name": "Clalit Pharmacy",
+    "opening_hours": {
+      "open_now": false,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1230"
+          },
+          "open": {
+            "day": 0,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "1900"
+          },
+          "open": {
+            "day": 0,
+            "time": "1545"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1430"
+          },
+          "open": {
+            "day": 1,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1230"
+          },
+          "open": {
+            "day": 2,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1900"
+          },
+          "open": {
+            "day": 2,
+            "time": "1545"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1430"
+          },
+          "open": {
+            "day": 3,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "0030"
+          },
+          "open": {
+            "day": 4,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "2330"
+          },
+          "open": {
+            "day": 5,
+            "time": "0730"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 7:30 AM – 2:30 PM",
+        "Tuesday: 7:30 AM – 12:30 PM, 3:45 – 7:00 PM",
+        "Wednesday: 7:30 AM – 2:30 PM",
+        "Thursday: 7:30 AM – 12:30 AM",
+        "Friday: 7:30 AM – 11:30 PM",
+        "Saturday: Closed",
+        "Sunday: 7:30 AM – 12:30 PM, 3:45 – 7:00 PM"
+      ]
+    },
+    "place_id": "ChIJQYZTefzIHRURNAzAjCoC8ic",
+    "rating": 2.7,
+    "reference": "CmRRAAAAoU2xTvMEufTXf3LsgJRqAbRCf8Z4k3qYCNZOpAPwoE766fGpzMXsx6OTqjZDxeauqLshvx09BKdqsR_M2gvPrPWDvJbJUEkOIb2UbhapyXGkBdh2UDeKZAqlSOkZSeIEEhCuzXq_ipu7uXlcRrBWqNP7GhSwKrjKD9PBrPQxeGuAKUkwwjJLOg",
+    "reviews": [
+      {
+        "author_name": "Kali shmuel",
+        "author_url": "https://www.google.com/maps/contrib/108983172520251562161/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-8ztb8qR_YdM/AAAAAAAAAAI/AAAAAAAAk3A/4ZvWHoHiFAk/s128-c0x00000000-cc-rp-mo/photo.jpg",
+        "rating": 1,
+        "relative_time_description": "a year ago",
+        "text": "היה רשום באתר ובשלט בחוץ שפתוח עד 13:00 בפועל מ 12:30 לא נתנו לאנשים להכנס",
+        "time": 1487795293
+      },
+      {
+        "author_name": "Sahar Caspi",
+        "author_url": "https://www.google.com/maps/contrib/112449604570157422731/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-hwXazmXabQ4/AAAAAAAAAAI/AAAAAAAABC0/rg9WEIe-U5Q/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+        "rating": 3,
+        "relative_time_description": "a year ago",
+        "text": "תורים ארוכים כל היום",
+        "time": 1491759651
+      },
+      {
+        "author_name": "gilad f",
+        "author_url": "https://www.google.com/maps/contrib/116180467855920417034/reviews",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-nREQaWca2Pk/AAAAAAAAAAI/AAAAAAAAr0A/looFEjx7UzY/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "a year ago",
+        "text": "",
+        "time": 1494823736
+      }
+    ],
+    "scope": "GOOGLE",
+    "types": [
+      "pharmacy",
+      "store",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=2878365493616446516",
+    "utc_offset": 180,
+    "vicinity": "Ha-Me'orer Street 24, Giv'atayim",
+    "website": "http://www.clalit.co.il/he/sefersherut/pages/clinicdetails.aspx#k=(ddeptcode%3D41201)"
+  },
+  "ChIJwVkHk-1LHRURvS6a89VRBOA": {
+    "address_components": [
+      {
+        "long_name": "2",
+        "short_name": "2",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Aristobulos Street",
+        "short_name": "Aristobulos St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv-Yafo",
+        "short_name": "Tel Aviv-Yafo",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv District",
+        "short_name": "Tel Aviv District",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Israel",
+        "short_name": "IL",
+        "types": [
+          "country",
+          "political"
+        ]
+      }
+    ],
+    "adr_address": "<span class=\"street-address\">Aristobulos St 2</span>, <span class=\"locality\">Tel Aviv-Yafo</span>, <span class=\"country-name\">Israel</span>",
+    "formatted_address": "Aristobulos St 2, Tel Aviv-Yafo, Israel",
+    "formatted_phone_number": "03-601-2100",
+    "geometry": {
+      "location": {
+        "lat": 32.0928921,
+        "lng": 34.7861294
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 32.09428243029151,
+          "lng": 34.7874849802915
+        },
+        "southwest": {
+          "lat": 32.09158446970851,
+          "lng": 34.7847870197085
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+    "id": "2a7bc18cb0e294b6f188c796d128556929eb9e54",
+    "international_phone_number": "+972 3-601-2100",
+    "name": "Clalit Pharmacy",
+    "opening_hours": {
+      "open_now": false,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1300"
+          },
+          "open": {
+            "day": 0,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "1900"
+          },
+          "open": {
+            "day": 0,
+            "time": "1530"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1600"
+          },
+          "open": {
+            "day": 1,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1300"
+          },
+          "open": {
+            "day": 2,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1900"
+          },
+          "open": {
+            "day": 2,
+            "time": "1530"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1330"
+          },
+          "open": {
+            "day": 3,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1300"
+          },
+          "open": {
+            "day": 4,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1500"
+          },
+          "open": {
+            "day": 4,
+            "time": "1400"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 7:30 AM – 4:00 PM",
+        "Tuesday: 7:30 AM – 1:00 PM, 3:30 – 7:00 PM",
+        "Wednesday: 7:30 AM – 1:30 PM",
+        "Thursday: 7:30 AM – 1:00 PM, 2:00 – 3:00 PM",
+        "Friday: Closed",
+        "Saturday: Closed",
+        "Sunday: 7:30 AM – 1:00 PM, 3:30 – 7:00 PM"
+      ]
+    },
+    "place_id": "ChIJwVkHk-1LHRURvS6a89VRBOA",
+    "rating": 3.5,
+    "reference": "CmRSAAAAnmuoXVl7dCerGyV8ltvP0KvbyiG5Kd3ANs9sJpb4MsKLriPBqaD_64LzinGq6c0ld7r-wHHrbFRSM1c3bzZi5VXcURSS04xh0gfU6Qov-wXD-p0orfKaG7KJDUHSydVOEhDkSd3ygnzGjgd7IZemBuk2GhSOkuqJsfehvpscdKaMYqVcsST42A",
+    "reviews": [
+      {
+        "author_name": "Matthew Baer",
+        "author_url": "https://www.google.com/maps/contrib/105467523460388545619/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-xA0IL7LUG6Y/AAAAAAAAAAI/AAAAAAAAAJ8/pq1HcCrZUYE/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 3,
+        "relative_time_description": "a year ago",
+        "text": "Professional. Long lines sometimes. Go to the pharmacy in the middle of the day if you can",
+        "time": 1496651316
+      },
+      {
+        "author_name": "Eran Dromy",
+        "author_url": "https://www.google.com/maps/contrib/112881117875837566873/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh4.googleusercontent.com/-V6RmGW14_nU/AAAAAAAAAAI/AAAAAAAACIE/l6wFldl2vtI/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "6 months ago",
+        "text": "מרפאה \"שכונתית\" טובה. יש רופא משפחה וניתן לעשות בדיקת אחות (דם, שתן, משטחי גרון וכו'). במקרה הצורך יש גם בית מרקחת.\nיש מענה טלפוני, והבנות בדלפק בכניסה נחמדות ומסייעות.",
+        "time": 1511647074
+      },
+      {
+        "author_name": "Ilan Wishkovski",
+        "author_url": "https://www.google.com/maps/contrib/113893836351695442657/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-kJ07az1buiY/AAAAAAAAAAI/AAAAAAAAAA4/Uya5RP03BqQ/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "10 months ago",
+        "text": "שרות טוב .. תורים ",
+        "time": 1502918668
+      },
+      {
+        "author_name": "Or Harel",
+        "author_url": "https://www.google.com/maps/contrib/103286220398278954103/reviews",
+        "profile_photo_url": "https://lh3.googleusercontent.com/-Y0JZ7OVJJX0/AAAAAAAAAAI/AAAAAAAABhI/TRWP46pyJKU/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+        "rating": 2,
+        "relative_time_description": "a year ago",
+        "text": "",
+        "time": 1481296367
+      },
+      {
+        "author_name": "shlomo garti",
+        "author_url": "https://www.google.com/maps/contrib/110565156696532660895/reviews",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-CDJkkXSNCXc/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq10cCr0sINQdQGk3ezjxavHYY8f8g/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "2 months ago",
+        "text": "",
+        "time": 1523165046
+      }
+    ],
+    "scope": "GOOGLE",
+    "types": [
+      "pharmacy",
+      "store",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=16142116943759552189",
+    "utc_offset": 180,
+    "vicinity": "Aristobulos Street 2, Tel Aviv-Yafo",
+    "website": "http://clalit.co.il/"
+  },
+  "ChIJvT5KBjVKHRURUQplpePHTNk": {
+    "address_components": [
+      {
+        "long_name": "25",
+        "short_name": "25",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "HaMeitar Street",
+        "short_name": "HaMeitar St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Ramat Gan",
+        "short_name": "ר\"ג",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv District",
+        "short_name": "Tel Aviv District",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Israel",
+        "short_name": "IL",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "52395",
+        "short_name": "52395",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "adr_address": "<span class=\"street-address\">HaMeitar St 25</span>, <span class=\"locality\">Ramat Gan</span>, <span class=\"postal-code\">52395</span>, <span class=\"country-name\">Israel</span>",
+    "formatted_address": "HaMeitar St 25, Ramat Gan, 52395, Israel",
+    "formatted_phone_number": "*2700",
+    "geometry": {
+      "location": {
+        "lat": 32.08065000000001,
+        "lng": 34.8209712
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 32.0820125802915,
+          "lng": 34.8222440302915
+        },
+        "southwest": {
+          "lat": 32.0793146197085,
+          "lng": 34.8195460697085
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+    "id": "548e571078cfe950879397bb4299be464b77d5ae",
+    "international_phone_number": "+972 *2700",
+    "name": "Clalit Pharmacy",
+    "opening_hours": {
+      "open_now": false,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1230"
+          },
+          "open": {
+            "day": 0,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "1930"
+          },
+          "open": {
+            "day": 0,
+            "time": "1600"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1430"
+          },
+          "open": {
+            "day": 1,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1230"
+          },
+          "open": {
+            "day": 2,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1930"
+          },
+          "open": {
+            "day": 2,
+            "time": "1600"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1300"
+          },
+          "open": {
+            "day": 3,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1430"
+          },
+          "open": {
+            "day": 4,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "1200"
+          },
+          "open": {
+            "day": 5,
+            "time": "0730"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 7:30 AM – 2:30 PM",
+        "Tuesday: 7:30 AM – 12:30 PM, 4:00 – 7:30 PM",
+        "Wednesday: 7:30 AM – 1:00 PM",
+        "Thursday: 7:30 AM – 2:30 PM",
+        "Friday: 7:30 AM – 12:00 PM",
+        "Saturday: Closed",
+        "Sunday: 7:30 AM – 12:30 PM, 4:00 – 7:30 PM"
+      ]
+    },
+    "photos": [
+      {
+        "height": 3264,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/117161548173784551575/photos\">Oran Kenan</a>"
+        ],
+        "photo_reference": "CmRaAAAAW04ipCqL3oGYpZI-_oB_CX3nnR3OqIkGTiA8cTPKVuuBiG4lT6D4ldeJc8r3izGXdOVKa09QMlTHUm5IGQL35qkQb0Ssr32EEba_OE0dtCIa0xvfbOxS10TUAOPvtmjuEhDUFEXv1JVHVDg5tIgHe1MUGhSMqt5tDnFevaJ4eFbFRErls5pgPg",
+        "width": 1836
+      }
+    ],
+    "place_id": "ChIJvT5KBjVKHRURUQplpePHTNk",
+    "rating": 3,
+    "reference": "CmRSAAAAL9PnWEurSBjCPI3x0v_u_iRQmwVPQaU7VMx8OmXAACIGrH6KPClIaTKW6-BOeaoB6VyVkCmv4A0-cw65pg8Q6V7iwXbJwBic1QMBwchSUh7oT6grloymkDrYXvRvXhbbEhDtFwqxEaM-SA102AhVAKN9GhSa9LD6QU5ihgIzx1OO0TZoAEIA2w",
+    "reviews": [
+      {
+        "author_name": "Ariel T",
+        "author_url": "https://www.google.com/maps/contrib/107165136897353026538/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh4.googleusercontent.com/-G_wQ56qW5qs/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq03nyMP530uqWbLrWCrJ-fS5ZQvvg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 3,
+        "relative_time_description": "4 months ago",
+        "text": "Normal",
+        "time": 1517347872
+      },
+      {
+        "author_name": "Guy Weissgarten",
+        "author_url": "https://www.google.com/maps/contrib/106720245872029688277/reviews",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-Ub9xkJiiTLA/AAAAAAAAAAI/AAAAAAAAvhU/Qb-FzlvE6G4/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+        "rating": 3,
+        "relative_time_description": "2 months ago",
+        "text": "",
+        "time": 1523000554
+      }
+    ],
+    "scope": "GOOGLE",
+    "types": [
+      "pharmacy",
+      "store",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=15658109785006738001",
+    "utc_offset": 180,
+    "vicinity": "HaMeitar Street 25, Ramat Gan",
+    "website": "http://www.clalit.co.il/he/Pages/default.aspx"
+  },
+  "ChIJD0NxWmBJHRURTCe7Y9aTngk": {
+    "address_components": [
+      {
+        "long_name": "19",
+        "short_name": "19",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Brodetski Street",
+        "short_name": "Brodetski St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv-Yafo",
+        "short_name": "Tel Aviv-Yafo",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv District",
+        "short_name": "Tel Aviv District",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Israel",
+        "short_name": "IL",
+        "types": [
+          "country",
+          "political"
+        ]
+      }
+    ],
+    "adr_address": "<span class=\"street-address\">Brodetski St 19</span>, <span class=\"locality\">Tel Aviv-Yafo</span>, <span class=\"country-name\">Israel</span>",
+    "formatted_address": "Brodetski St 19, Tel Aviv-Yafo, Israel",
+    "formatted_phone_number": "03-745-6500",
+    "geometry": {
+      "location": {
+        "lat": 32.1080921,
+        "lng": 34.7979351
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 32.10933203029149,
+          "lng": 34.7994545302915
+        },
+        "southwest": {
+          "lat": 32.1066340697085,
+          "lng": 34.7967565697085
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+    "id": "923d2363fd4e883f048722a1ad44246503c8e133",
+    "international_phone_number": "+972 3-745-6500",
+    "name": "Clalit",
+    "opening_hours": {
+      "open_now": false,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1300"
+          },
+          "open": {
+            "day": 0,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "1900"
+          },
+          "open": {
+            "day": 0,
+            "time": "1530"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1500"
+          },
+          "open": {
+            "day": 1,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1300"
+          },
+          "open": {
+            "day": 2,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1900"
+          },
+          "open": {
+            "day": 2,
+            "time": "1530"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1430"
+          },
+          "open": {
+            "day": 3,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1300"
+          },
+          "open": {
+            "day": 4,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1500"
+          },
+          "open": {
+            "day": 4,
+            "time": "1400"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "1200"
+          },
+          "open": {
+            "day": 5,
+            "time": "0800"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 7:30 AM – 3:00 PM",
+        "Tuesday: 7:30 AM – 1:00 PM, 3:30 – 7:00 PM",
+        "Wednesday: 7:30 AM – 2:30 PM",
+        "Thursday: 7:30 AM – 1:00 PM, 2:00 – 3:00 PM",
+        "Friday: 8:00 AM – 12:00 PM",
+        "Saturday: Closed",
+        "Sunday: 7:30 AM – 1:00 PM, 3:30 – 7:00 PM"
+      ]
+    },
+    "photos": [
+      {
+        "height": 2988,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/110716281354254320593/photos\">Tzahi Caspi</a>"
+        ],
+        "photo_reference": "CmRaAAAA39NU3yz5ADjEAKtHNvO4ggXDxSECJbW4j_aE27t8tZP0XqnddmDwzDXHVdyyv4Pjp8kxT9iQ3189L5V3Ocf_lSDTNOxImbC8y509N2TLwlYh_cS4u-1pT2dU18pUjX3IEhA3Qi-iQtija3iT2GHjD7QkGhR-TKwlzkMtijzM-3rXizRADfpCXQ",
+        "width": 5312
+      },
+      {
+        "height": 3096,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+        ],
+        "photo_reference": "CmRaAAAA5yEb57q6URLaFQ6OqCe7_p9_IaaFLxaVLaPqule9VTHBRxEvxcPilq2EYZ7AjektaUOFdtQXeGcGqqsrfQW7NrEkKICDR9m2T0B0H5mNaqHPxUPMqyf-N13RPwqe7ItjEhBxAGsxE3aMLoqrQEIgRoC3GhRLIeVxOH2ZU_1X5AUViaNGkaO_CA",
+        "width": 4128
+      }
+    ],
+    "place_id": "ChIJD0NxWmBJHRURTCe7Y9aTngk",
+    "rating": 3.8,
+    "reference": "CmRRAAAA2YPxMaIqx94INs3vdqcBATMqD5nbAQwG8isZhLEgLp1-Uqy-yOTk15AG3AJBDpR_aWFGApFvP8yy7zujXMiwm-d2pG_1OSt_uWXw26D86oLBAOEJIbjj9_mvsTow_jscEhCgkZ7O4Jy2xNT3UgplA0QCGhRh9V98SaN5E_2XWicLbAPxJ90BMg",
+    "reviews": [
+      {
+        "author_name": "Roberto Lima",
+        "author_url": "https://www.google.com/maps/contrib/115499213362061806018/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh6.googleusercontent.com/-e9vJTdqs_Jc/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq0v7IptGkREgubW8lcFO4cA0oSDfg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "4 months ago",
+        "text": "Its good if you have a health insurance",
+        "time": 1517320279
+      },
+      {
+        "author_name": "Stan Barabanov",
+        "author_url": "https://www.google.com/maps/contrib/108489988086121666868/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh6.googleusercontent.com/-zrMLDdUhlss/AAAAAAAAAAI/AAAAAAAAANs/u71-k-dosQ8/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "a year ago",
+        "text": "Advantages: Staff is decent. \nDisadvantages: Schedule isn't too good.  Waiting room is pretty small. ",
+        "time": 1485730305
+      },
+      {
+        "author_name": "Tete M",
+        "author_url": "https://www.google.com/maps/contrib/111668915577533667098/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh6.googleusercontent.com/-VreA40x3ix0/AAAAAAAAAAI/AAAAAAAAAfM/Of8SAUR5VOc/s128-c0x00000000-cc-rp-mo-ba2/photo.jpg",
+        "rating": 3,
+        "relative_time_description": "6 months ago",
+        "text": "Good staff, a bit chaotic sometimes w waiting lines",
+        "time": 1512486007
+      },
+      {
+        "author_name": "Lior Vardi",
+        "author_url": "https://www.google.com/maps/contrib/114322274190494011592/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-2tbT7JzJeyI/AAAAAAAAAAI/AAAAAAAAAOk/zLx16FOAiAY/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "אין על משה סיימון רופא המשפחה המצוין והמזכירה האחות ",
+        "time": 1483121781
+      },
+      {
+        "author_name": "Dean Bursztyn",
+        "author_url": "https://www.google.com/maps/contrib/117479038527964903571/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-Von_tuBtJtk/AAAAAAAAAAI/AAAAAAAAAOQ/hqi6rgHtgC0/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+        "rating": 3,
+        "relative_time_description": "a year ago",
+        "text": "תמיד יש בלאגן",
+        "time": 1484809363
+      }
+    ],
+    "scope": "GOOGLE",
+    "types": [
+      "pharmacy",
+      "store",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=693153941667129164",
+    "utc_offset": 180,
+    "vicinity": "Brodetski Street 19, Tel Aviv-Yafo",
+    "website": "http://clalit.co.il/"
+  },
+  "ChIJv71EQWlJHRUR9t8XLknlU0s": {
+    "address_components": [
+      {
+        "long_name": "7",
+        "short_name": "7",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Geiger Street",
+        "short_name": "Geiger St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv-Yafo",
+        "short_name": "Tel Aviv-Yafo",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv District",
+        "short_name": "Tel Aviv District",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Israel",
+        "short_name": "IL",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "69341",
+        "short_name": "69341",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "adr_address": "<span class=\"street-address\">Geiger St 7</span>, <span class=\"locality\">Tel Aviv-Yafo</span>, <span class=\"postal-code\">69341</span>, <span class=\"country-name\">Israel</span>",
+    "formatted_address": "Geiger St 7, Tel Aviv-Yafo, 69341, Israel",
+    "formatted_phone_number": "*2700",
+    "geometry": {
+      "location": {
+        "lat": 32.1190231,
+        "lng": 34.8008654
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 32.1202984302915,
+          "lng": 34.8021995302915
+        },
+        "southwest": {
+          "lat": 32.1176004697085,
+          "lng": 34.7995015697085
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+    "id": "f998a0cdf39af88c7f1b2410c618ce7f6db3484f",
+    "international_phone_number": "+972 *2700",
+    "name": "כללית - בית מרקחת",
+    "opening_hours": {
+      "open_now": false,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1300"
+          },
+          "open": {
+            "day": 0,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1500"
+          },
+          "open": {
+            "day": 1,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1300"
+          },
+          "open": {
+            "day": 2,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1900"
+          },
+          "open": {
+            "day": 2,
+            "time": "1530"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1330"
+          },
+          "open": {
+            "day": 3,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1600"
+          },
+          "open": {
+            "day": 4,
+            "time": "0730"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 7:30 AM – 3:00 PM",
+        "Tuesday: 7:30 AM – 1:00 PM, 3:30 – 7:00 PM",
+        "Wednesday: 7:30 AM – 1:30 PM",
+        "Thursday: 7:30 AM – 4:00 PM",
+        "Friday: Closed",
+        "Saturday: Closed",
+        "Sunday: 7:30 AM – 1:00 PM"
+      ]
+    },
+    "photos": [
+      {
+        "height": 1080,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+        ],
+        "photo_reference": "CmRaAAAAlGbHuG_UFtB8qe4Qn3fGfZf7zei-kEeWfEJrzZRCT60SICNwJCJMF_1AaHDyT1IDCplt_SKdRqw0NJYcVIUYg0jqZNhk30QoG3E8tW48pSKOra2gGw8CBiISl4kyTOowEhA41QrWF6veYLrpiV8NZ4PHGhRuxXzySnETN8672OYyAv5OPNlPBQ",
+        "width": 1920
+      },
+      {
+        "height": 1920,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/101672398367756940505/photos\">Itzik levy</a>"
+        ],
+        "photo_reference": "CmRaAAAAvWwk97gR1SOIj7-7RGqdWjP1BfMUzvNDFzWzYhx8KTYn7PlJZhrh3H5iOpGAXowLe1ybcTJ3gWzK72nzXH7orclks5HThMrb-QF_j_ZIZ5s25eAgEYoZoRgx5TrPOd96EhCjUahZCf1Wyo3pTBUMppbaGhSUQI3UyI3oBFMBI4ngMjUHS05GXA",
+        "width": 1080
+      },
+      {
+        "height": 2160,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/101507716577893191553/photos\">Marianna Lyande</a>"
+        ],
+        "photo_reference": "CmRaAAAAmCjYxRnGbejoILVmFwU5RLXTU7NdvdIGw53WNOX2j-oLIke8GpA-QQyLDlk_PjUDPNhoPdtXIPQ7uoGoHiEG9M0-fhgvyA40zQVqpFmmspDS6Yv75T3F_6Ywm6qpN9yuEhBfJ_Ukijr5xbdtMK0HhBemGhR2HN9GKms9QzbNu-NfDWNbx058_A",
+        "width": 3840
+      },
+      {
+        "height": 2160,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/101507716577893191553/photos\">Marianna Lyande</a>"
+        ],
+        "photo_reference": "CmRaAAAAEaF2D-JQwy63E-AUNF4E8iXGDTcl7Whn3tYaUiOzftRmoc7uAmoDRXrnGAl_Nc9D32M5Vyt_UseLlLoFGPGuPKd7LqcPVNV0hfGNOIGH5cNpJJhnUu3YtiJ-hvhNsNBZEhCjHeP9As2o440z9BWqbj8hGhR0xkXNdoJiBgmQ5ooz0R8MAielxQ",
+        "width": 3840
+      }
+    ],
+    "place_id": "ChIJv71EQWlJHRUR9t8XLknlU0s",
+    "rating": 4,
+    "reference": "CmRRAAAAwnRcLO3n5rHNV7DSizBiIHsT59yL8S3LmWzHOgBBpwjldsPDwy9s5wtY2oFyKPBTi49Sa5aRluGNIeQIgmbf13QTx6u35OFZEEGBSQs_NCGxbnYNTLMworlqn6_RZc2jEhDqpXVHxXrvfJhTbqztg3fyGhSF8M6yNJKP2rNR0VlhujSktHPALA",
+    "reviews": [
+      {
+        "author_name": "Kristina Rosenblatt",
+        "author_url": "https://www.google.com/maps/contrib/111343768271109129869/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh6.googleusercontent.com/-7ouumoL2WiM/AAAAAAAAAAI/AAAAAAAAFpQ/7ffs97RozDg/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "10 months ago",
+        "text": "Good dervice thought it usually takes time",
+        "time": 1503123444
+      },
+      {
+        "author_name": "Yotam Kadishay",
+        "author_url": "https://www.google.com/maps/contrib/113006083662698661009/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/-fbo-6T4zK64/AAAAAAAAAAI/AAAAAAABagg/0rRPNQzzCYQ/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+        "rating": 1,
+        "relative_time_description": "2 years ago",
+        "text": "One of the worst - old place, and every time I came for a 5 minutes chat with the Doctor took an hour of waiting.",
+        "time": 1451030205
+      },
+      {
+        "author_name": "Matan Vered",
+        "author_url": "https://www.google.com/maps/contrib/117861424511611601930/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh6.googleusercontent.com/-8PamUvDpky8/AAAAAAAAAAI/AAAAAAAAAEk/ooRlILfAdyI/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "3 months ago",
+        "text": "אין כמעט המתנה לתורים. קיבלו אותי במהירות ובאדיבות במקרה לא צפוי. צוות סבלני ונעים.",
+        "time": 1519849863
+      },
+      {
+        "author_name": "Itzik levy",
+        "author_url": "https://www.google.com/maps/contrib/101672398367756940505/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-ggWly8_3Oaw/AAAAAAAAAAI/AAAAAAAA9Tg/qqNFgBO4gVo/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "5 months ago",
+        "text": "שרות נוח\nמסודר ויעיל",
+        "time": 1516185187
+      },
+      {
+        "author_name": "Ram Tzuberi",
+        "author_url": "https://www.google.com/maps/contrib/118089887670086021636/reviews",
+        "profile_photo_url": "https://lh3.googleusercontent.com/-sPL4kwEgv9s/AAAAAAAAAAI/AAAAAAAAEQ0/5f-oqTKv3zA/s128-c0x00000000-cc-rp-mo-ba2/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "10 months ago",
+        "text": "",
+        "time": 1501783162
+      }
+    ],
+    "scope": "GOOGLE",
+    "types": [
+      "pharmacy",
+      "store",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=5427934078380269558",
+    "utc_offset": 180,
+    "vicinity": "Geiger Street 7, Tel Aviv-Yafo",
+    "website": "http://clalit.co.il/"
+  },
+  "ChIJF1WdfQc0HRURcgHNvasjbNM": {
+    "address_components": [
+      {
+        "long_name": "1",
+        "short_name": "1",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "שמאי",
+        "short_name": "שמאי",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "תל אביב יפו",
+        "short_name": "תל אביב יפו",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "מחוז תל אביב",
+        "short_name": "מחוז תל אביב",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Israel",
+        "short_name": "IL",
+        "types": [
+          "country",
+          "political"
+        ]
+      }
+    ],
+    "adr_address": "<span class=\"street-address\">שמאי 1</span>, <span class=\"locality\">תל אביב יפו</span>, <span class=\"country-name\">Israel</span>",
+    "formatted_address": "שמאי 1, תל אביב יפו, Israel",
+    "formatted_phone_number": "03-937-3300",
+    "geometry": {
+      "location": {
+        "lat": 32.1250383,
+        "lng": 34.7984045
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 32.1263872802915,
+          "lng": 34.79975348029151
+        },
+        "southwest": {
+          "lat": 32.1236893197085,
+          "lng": 34.79705551970851
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+    "id": "683ae14eb64d46e5c3d767733d820fa1a09d0135",
+    "international_phone_number": "+972 3-937-3300",
+    "name": "Clalit Pharmacy",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1230"
+          },
+          "open": {
+            "day": 0,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "2000"
+          },
+          "open": {
+            "day": 0,
+            "time": "1600"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1230"
+          },
+          "open": {
+            "day": 1,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "2000"
+          },
+          "open": {
+            "day": 1,
+            "time": "1600"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1230"
+          },
+          "open": {
+            "day": 2,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "2000"
+          },
+          "open": {
+            "day": 2,
+            "time": "1600"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1230"
+          },
+          "open": {
+            "day": 3,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "2000"
+          },
+          "open": {
+            "day": 3,
+            "time": "1600"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1230"
+          },
+          "open": {
+            "day": 4,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "2000"
+          },
+          "open": {
+            "day": 4,
+            "time": "1600"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "1200"
+          },
+          "open": {
+            "day": 5,
+            "time": "0800"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 8:00 AM – 12:30 PM, 4:00 – 8:00 PM",
+        "Tuesday: 8:00 AM – 12:30 PM, 4:00 – 8:00 PM",
+        "Wednesday: 8:00 AM – 12:30 PM, 4:00 – 8:00 PM",
+        "Thursday: 8:00 AM – 12:30 PM, 4:00 – 8:00 PM",
+        "Friday: 8:00 AM – 12:00 PM",
+        "Saturday: Closed",
+        "Sunday: 8:00 AM – 12:30 PM, 4:00 – 8:00 PM"
+      ]
+    },
+    "place_id": "ChIJF1WdfQc0HRURcgHNvasjbNM",
+    "rating": 3.6,
+    "reference": "CmRSAAAAOgr1ba8CZfPADAh9vsVu7L1aENwHS_iigEIcdF8aHk4Enn2J-j4xhfjCMqoYiGDgiIs3lWLhIa6_pZBaCGC17Aw6iNJg4MUqZQ-cLPxmGKFYletFKPZV3bgxx34U-q9KEhB6nTY_kZn0e94FfddamCcVGhTnAWyxqpav7ec5Mhru8T5Cd4PTzA",
+    "reviews": [
+      {
+        "author_name": "jonathan waiman",
+        "author_url": "https://www.google.com/maps/contrib/113191000151958084998/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/-0wiuuz2Qjcg/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2VWbK6x4YR4pZAa00_KiQ0jl75OA/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 1,
+        "relative_time_description": "5 months ago",
+        "text": "Doesn’t exist",
+        "time": 1516194279
+      },
+      {
+        "author_name": "David Peres",
+        "author_url": "https://www.google.com/maps/contrib/109201380518358075845/reviews",
+        "profile_photo_url": "https://lh4.googleusercontent.com/-5yYWf9N0rUw/AAAAAAAAAAI/AAAAAAAAHBo/VabLHNcr9XM/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "a year ago",
+        "text": "",
+        "time": 1476780129
+      },
+      {
+        "author_name": "shaybutbul",
+        "author_url": "https://www.google.com/maps/contrib/112203389359003680022/reviews",
+        "profile_photo_url": "https://lh5.googleusercontent.com/-Odj0IoXFtL0/AAAAAAAAAAI/AAAAAAAACVU/ptsthke7wqo/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "2 months ago",
+        "text": "",
+        "time": 1521908268
+      },
+      {
+        "author_name": "jerry kohen",
+        "author_url": "https://www.google.com/maps/contrib/114008237909739492166/reviews",
+        "profile_photo_url": "https://lh3.googleusercontent.com/-cIN0PCBk-c8/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq1XVGq1tdR76Qahdvz3a3iE-YND9w/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+        "rating": 4,
+        "relative_time_description": "8 months ago",
+        "text": "",
+        "time": 1507207358
+      },
+      {
+        "author_name": "Ran Shitirit",
+        "author_url": "https://www.google.com/maps/contrib/101419369581400593087/reviews",
+        "profile_photo_url": "https://lh4.googleusercontent.com/-jd-ihqWD1AE/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2zFq4ZPkFQTVV5br69G6QMhZp6wg/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "",
+        "time": 1467304054
+      }
+    ],
+    "scope": "GOOGLE",
+    "types": [
+      "pharmacy",
+      "store",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=15234590860018254194",
+    "utc_offset": 180,
+    "vicinity": "שמאי 1, תל אביב יפו",
+    "website": "http://clalit.co.il/"
+  },
+  "ChIJH2EvEhVKHRUR4P0cjFL75VA": {
+    "address_components": [
+      {
+        "long_name": "134",
+        "short_name": "134",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Keren Kayemet Le'Israel Boulevard",
+        "short_name": "Keren Kayemet Le'Israel Blvd",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv-Yafo",
+        "short_name": "Tel Aviv-Yafo",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Tel Aviv District",
+        "short_name": "Tel Aviv District",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Israel",
+        "short_name": "IL",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "69013",
+        "short_name": "69013",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "adr_address": "<span class=\"street-address\">Keren Kayemet Le&#39;Israel Blvd 134</span>, <span class=\"locality\">Tel Aviv-Yafo</span>, <span class=\"postal-code\">69013</span>, <span class=\"country-name\">Israel</span>",
+    "formatted_address": "Keren Kayemet Le'Israel Blvd 134, Tel Aviv-Yafo, 69013, Israel",
+    "formatted_phone_number": "03-671-8210",
+    "geometry": {
+      "location": {
+        "lat": 32.1186941,
+        "lng": 34.81676509999999
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 32.1200276302915,
+          "lng": 34.8181123802915
+        },
+        "southwest": {
+          "lat": 32.1173296697085,
+          "lng": 34.8154144197085
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+    "id": "e10a9b2542a889a439443ee8fbb177018f2ca59d",
+    "international_phone_number": "+972 3-671-8210",
+    "name": "Clalit Pharmacy",
+    "opening_hours": {
+      "open_now": false,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1230"
+          },
+          "open": {
+            "day": 0,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "1900"
+          },
+          "open": {
+            "day": 0,
+            "time": "1530"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1300"
+          },
+          "open": {
+            "day": 1,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1600"
+          },
+          "open": {
+            "day": 1,
+            "time": "1400"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1230"
+          },
+          "open": {
+            "day": 2,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1900"
+          },
+          "open": {
+            "day": 2,
+            "time": "1530"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1300"
+          },
+          "open": {
+            "day": 3,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1600"
+          },
+          "open": {
+            "day": 4,
+            "time": "0730"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "1200"
+          },
+          "open": {
+            "day": 5,
+            "time": "0800"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 7:30 AM – 1:00 PM, 2:00 – 4:00 PM",
+        "Tuesday: 7:30 AM – 12:30 PM, 3:30 – 7:00 PM",
+        "Wednesday: 7:30 AM – 1:00 PM",
+        "Thursday: 7:30 AM – 4:00 PM",
+        "Friday: 8:00 AM – 12:00 PM",
+        "Saturday: Closed",
+        "Sunday: 7:30 AM – 12:30 PM, 3:30 – 7:00 PM"
+      ]
+    },
+    "photos": [
+      {
+        "height": 1080,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/111616471000466631019/photos\">Ido Mosseri</a>"
+        ],
+        "photo_reference": "CmRaAAAAE3jn_cGt5ohxG8wLVKlVddrRvzXYcCdhgY5nzJi8baVNjNSVyUWTgILmy-_IAgMYxEN0qzMN0baot9XDChIV9EfK17aFt-WPvDkCYCnMOEXjEKM20PCndsZ0kQJ_5cIhEhBusQPV1fOirwXnjioMQWyqGhQfmFfUy96I4H9l4AmfCoqBU02Ocg",
+        "width": 1920
+      }
+    ],
+    "place_id": "ChIJH2EvEhVKHRUR4P0cjFL75VA",
+    "rating": 3.7,
+    "reference": "CmRRAAAA5NL0UFLc1zIoX0II9CskkFdKGRMSdwAcw-qvv_jBwqjY7GCrQa7TWL8wqmDq4faG8HTc8ZNLQAspgnfKH5Q_BC9B2JZ6BC_Ng1uLwOVbTAoqzN3OsqJaWc9ORkwePuHUEhB4ChMTygCeuEFwuyxvd0mFGhSk1ov5CLct8ABovs_hLBaZgJWFaA",
+    "reviews": [
+      {
+        "author_name": "Ido Mosseri",
+        "author_url": "https://www.google.com/maps/contrib/111616471000466631019/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh4.googleusercontent.com/-12tY1sO5nxY/AAAAAAAAAAI/AAAAAAAAJvQ/nBZPgTF-qSM/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "שירות טוב ותור מהיר,\nמה שכן לא מבין למה הכללית מחזיקה מבנה כזה יקר בשביל בית מרקחת?",
+        "time": 1479326512
+      },
+      {
+        "author_name": "Lior Mor",
+        "author_url": "https://www.google.com/maps/contrib/117151958811146459842/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh3.googleusercontent.com/-rX3X-HXKW9U/AAAAAAAAAAI/AAAAAAAACJ8/jHSi_vc4dkM/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+        "rating": 5,
+        "relative_time_description": "2 years ago",
+        "text": "שירות מקצועי",
+        "time": 1453109852
+      },
+      {
+        "author_name": "Shaike Sharon",
+        "author_url": "https://www.google.com/maps/contrib/118191657489966798707/reviews",
+        "profile_photo_url": "https://lh3.googleusercontent.com/-CmEsp6aNcKE/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq3CDWKsx4cW7OeEqdCpqBNgrIsJCQ/s128-c0x00000000-cc-rp-mo/photo.jpg",
+        "rating": 1,
+        "relative_time_description": "a year ago",
+        "text": "",
+        "time": 1484573938
+      }
+    ],
+    "scope": "GOOGLE",
+    "types": [
+      "pharmacy",
+      "store",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=5829341624657575392",
+    "utc_offset": 180,
+    "vicinity": "Keren Kayemet Le'Israel Boulevard 134, Tel Aviv-Yafo",
+    "website": "http://clalit.co.il/"
   }
 }
