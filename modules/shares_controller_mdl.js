@@ -25,7 +25,8 @@ module.exports = class{
                         let newShare = new Share({
                             username_from : username_from,
                             username_to : username_to,
-                            task_id : task_id
+                            task_id : task_id,
+                            status_new : true
                         });
                         newShare.save((err, doc) => {
                             if(err){
@@ -51,13 +52,64 @@ module.exports = class{
    
    getShareTask(task_id){
        return new Promise( (resolve,reject) => {
-            Share.findOne({task_id : task_id})
-            .then(share => {
-                if(share) resolve(share)
+            Task.findOne({ _id : task_id})
+            .then(task => {
+                if(task) resolve(task)
                 else reject(false)
             })
        })
     
+   }
+
+   viewShareTask(task_id){
+        let conditions  = { task_id: task_id } ,
+        update      = { $set:  { status_new : false } },
+        opts = { new: true, upsert: true };
+
+        Share.findOneAndUpdate(conditions, update, opts)
+        .then( result => {
+            console.log("View task ",task_id,result);
+        })
+        .catch( error => {
+            console.error("Error view task ",error);
+        });
+   }
+
+   getAllShareTasks(username){
+       return new Promise( (resolve,reject) => {
+           let objRespons = {}
+            Share.find({username_to : username})
+            .then(result => {
+                if(result.length > 0){
+                    objRespons.newShare = result.some( x => x.status_new === true );
+                    Promise.all( result.map( i => this.getShareTask(i.task_id)))
+                    .then( resultGetShareTasks => {
+                        resolve({
+                            status_new : objRespons.newShare,
+                            tasks : resultGetShareTasks
+                        })
+                    })
+                    .catch( err => {
+                        console.error("Error promise all getShareTask,\n",err);
+                        reject(err)
+                    })
+                    result.map( i => {
+                        if(i.status_new)
+                            this.viewShareTask(i.task_id);
+                    })
+                }
+                else{
+                    resolve({
+                        status_new : false,
+                        tasks : []
+                    })
+                }
+            })
+            .catch(err => {
+                console.error("Error find Share Tasks,\n",err);
+                reject(err);
+            })
+       })
    }
    getNotificationUpdate(user_id,taskIdArray){
        return new Promise( (resolve,reject) => {

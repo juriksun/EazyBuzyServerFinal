@@ -3,7 +3,8 @@ let mongoose = require('mongoose'),
     ShareSchema = new Schema({
         username_from: { type : String , required : true },
         username_to: { type : String , required : true },
-        task_id: { type : String , required : true , unique : true }
+        task_id: { type : String , required : true , unique : true },
+        status_new : Boolean
     },
     {   strict: true    },
     {   collection: 'shares' });
