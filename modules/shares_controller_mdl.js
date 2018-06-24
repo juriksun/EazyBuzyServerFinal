@@ -111,6 +111,44 @@ module.exports = class{
             })
        })
    }
+
+
+   getSubscribeShareTasks(username,tasks_id_array){
+       return new Promise( (resolve , reject) => {
+           let objResponse = {}
+            Share.find({username_to : username})
+            .then( shareTasks => {
+                objResponse.status_new = shareTasks.some( x => x.status_new );
+                
+                objResponse.new_tasks = shareTasks.filter( share => share.status_new ).map(i => i.task_id);
+
+                let tasks_ids_db = [];
+                shareTasks.map( i => {
+                    if(i.status_new)
+                        this.viewShareTask(i.task_id);
+                    tasks_ids_db.push(i.task_id)    
+                })
+                objResponse.removed_tasks = tasks_id_array ? tasks_id_array.filter( task_id_old => !tasks_ids_db.includes(task_id_old)) : [];
+
+                this.tasksController.getTasksInfoByTasksId(objResponse.new_tasks)
+                .then( result => {
+                    console.log("result",result);
+                    objResponse.new_tasks = result;
+                    resolve(objResponse);
+                })
+                .catch(err => {
+                    console.error("Error get new tasks,\n",err);
+                    reject(err);
+                })
+                
+            })
+            .catch(err => {
+                console.error("Error getSubscribeShareTasks find Share,\n",err);
+                reject(err);
+            })
+       })
+   }
+
    getNotificationUpdate(user_id,taskIdArray){
        return new Promise( (resolve,reject) => {
             Share.find({username_to : user_id})

@@ -56,3 +56,29 @@ exports.getAllShareTasks = (req , res) => {
         );
     }
 }
+
+exports.getSubscribeShareTasks = (req , res) => {
+    console.log("Get All Share Tasks");
+    if(req.body.username !== undefined){
+        sharesController.getSubscribeShareTasks(req.body.username)
+        .then(message => {
+            res.status(200).json({
+                status: true,
+                response : message
+            })
+        })
+        .catch(error => {
+            res.status(200).json({
+                status: false,
+                message : "Error, can't get share tasks, try again later...",
+                error: error
+            })
+        })
+    } else {
+        res.status(200).json(
+            {
+                massage: 'undefined'
+            }
+        );
+    }
+}

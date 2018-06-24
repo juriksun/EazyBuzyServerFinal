@@ -36,7 +36,7 @@ module.exports = class{
         return new Promise((resolve, reject) => {
             this.userController.getUserWithId(user)
             .then(userData => {
-                TaskMod.find({_id: {$in: tasks}, user_token_id: userData._id}).lean().exec()
+                TaskMod.find({$in, user_token_id: userData._id}).lean().exec()
                 .then( allTasks => {
                     resolve(allTasks);
                 })
@@ -110,6 +110,21 @@ module.exports = class{
             })
             .catch( error => {
 
+            })
+        })
+    }
+
+    getTasksInfoByTasksId(tasks_id){
+        return new Promise( (resolve,reject) => {
+            console.log(tasks_id)
+            TaskMod.find({_id: {$in : tasks_id }})
+            .then( tasks => {
+                if(tasks) resolve(tasks)
+                else reject("Error getting tasks info")
+            })
+            .catch(err => {
+                console.error("Error getTasksInfobyTasksId TaskMod find,\n",err);
+                reject(err);
             })
         })
     }
