@@ -53,7 +53,7 @@ let    ShareSchema = new Schema({
         type: { type : String},
         status : { type : String},
         priority : { type : String},
-        share : ShareSchema,
+        share : {type : String},
         edit_time : EditTimeSchema,
         time : TimeSchema,
         task_place : TaskPlaceSchema,

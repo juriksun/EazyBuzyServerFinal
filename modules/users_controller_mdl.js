@@ -32,9 +32,10 @@ module.exports = class{
         });
     }
 
-    userExist(user){
+    userExist(username){
         return new Promise((resolve, reject) => {
-            User.findOne({$or : [{ username : user.username }, { email : user.email }]},["-_id","-password"])
+            console.log(username)
+            User.findOne({ username : username })
             .then(user => {
                 if(user) resolve(true);
                 else reject(false)

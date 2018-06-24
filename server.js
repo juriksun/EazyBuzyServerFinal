@@ -7,8 +7,10 @@ const   express     = require('express'),
 
 const   get_info_ctrl       = require('./controllers/get_info_ctrl'),
         tasks_crtl          = require('./controllers/tasks_crtl'),
-        users_ctrl           = require('./controllers/users_ctrl'),
-        routes_ctrl           = require('./controllers/routes_ctrl');
+        users_ctrl          = require('./controllers/users_ctrl'),
+        routes_ctrl         = require('./controllers/routes_ctrl'),
+        shares_ctrl         = require('./controllers/shares_ctrl');
+
 
 app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
@@ -42,6 +44,9 @@ app.use('/update_task', tasks_crtl.updateTask);
 app.use('/get_types', tasks_crtl.getTypes);
 app.use('/get_companies/:type', tasks_crtl.getCompanies);
 app.use('/add_or_update_task', tasks_crtl.addOrUpdateTask);
+
+//Shares
+app.use('/set_new_share_requst', shares_ctrl.setTaskForShare);
 
 //response friendly 404 Page
 app.all('*', (req, res) => {
