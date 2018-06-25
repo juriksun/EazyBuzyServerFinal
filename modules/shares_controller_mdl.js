@@ -126,28 +126,48 @@ module.exports = class{
            let objResponse = {}
             Share.find({username_to : username})
             .then( shareTasks => {
-                objResponse.status_new = shareTasks.some( x => x.status_new );
-                
-                objResponse.new_tasks = shareTasks.filter( share => share.status_new ).map(i => i.task_id);
-
-                let tasks_ids_db = [];
-                shareTasks.map( i => {
-                    if(i.status_new)
-                        this.viewShareTask(i.task_id);
-                    tasks_ids_db.push(i.task_id)    
-                })
-                objResponse.removed_tasks = tasks_id_array ? tasks_id_array.filter( task_id_old => !tasks_ids_db.includes(task_id_old)) : [];
-
-                this.tasksController.getTasksInfoByTasksId(objResponse.new_tasks)
-                .then( result => {
-                    console.log("result",result);
-                    objResponse.new_tasks = result;
+                if(shareTasks.length > 0){
+                    console.log(shareTasks)
+                    objResponse.status_new = shareTasks.some( x => x.status_new );
+                    if( objResponse.status_new ){
+                        this.getAllShareTasks(username)
+                        .then(tasks => {
+                            objResponse.tasks = tasks;
+                            resolve(objResponse);
+                            return;
+                        })
+                        .catch(err => {
+                            console.error("Error can't fetch data (getAllShareTasks),\n",err);
+                            reject(err);
+                        })
+                    }
+                    //objResponse.new_tasks = shareTasks.filter( share => share.status_new ).map(i => i.task_id);
+    
+                    let tasks_ids_db = shareTasks.map( i => i.task_id);
+                    let removed_tasks = tasks_id_array ? tasks_id_array.filter( task_id_old => !tasks_ids_db.includes(task_id_old)) : [];
+                    if(removed_tasks.length > 0){
+                        this.getAllShareTasks(username)
+                        .then(tasks => {
+                            objResponse.tasks = tasks;
+                            resolve(objResponse);
+                            return;
+                        })
+                        .catch(err => {
+                            console.error("Error can't fetch data (getAllShareTasks),\n",err);
+                            reject(err);
+                        })
+                    }
+                    console.log(removed_tasks.length === 0 && objResponse.status_new,removed_tasks.length === 0 , objResponse.status_new)
+                    if(removed_tasks.length === 0 && !objResponse.status_new){
+                        resolve(objResponse);
+                    }
+                }
+                else{
+                    objResponse.status_new = false;
+                    objResponse.tasks = [];
                     resolve(objResponse);
-                })
-                .catch(err => {
-                    console.error("Error get new tasks,\n",err);
-                    reject(err);
-                })
+                }
+                
                 
             })
             .catch(err => {
