@@ -58,8 +58,34 @@ exports.getAllShareTasks = (req , res) => {
 }
 
 exports.getSubscribeShareTasks = (req , res) => {
-    console.log("Get All Share Tasks");
-    if(req.body.username !== undefined){
+    console.log("Get Subscribe Share Tasks");
+    if(req.body.username !== undefined && req.body.tasks_id != undefined){
+        sharesController.getSubscribeShareTasks(req.body.username , JSON.parse(req.body.tasks_id))
+        .then(message => {
+            res.status(200).json({
+                status: true,
+                response : message
+            })
+        })
+        .catch(error => {
+            res.status(200).json({
+                status: false,
+                message : "Error, can't get share tasks, try again later...\n"+error,
+                error: error
+            })
+        })
+    } else {
+        res.status(200).json(
+            {
+                massage: 'undefined'
+            }
+        );
+    }
+}
+
+exports.deleteShareRequest = (req , res) => {
+    console.log("Delete Share Request");
+    if(req.body.username_from !== undefined && req.body.task_id){
         sharesController.getSubscribeShareTasks(req.body.username)
         .then(message => {
             res.status(200).json({

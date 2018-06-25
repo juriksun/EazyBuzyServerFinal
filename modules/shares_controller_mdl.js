@@ -128,7 +128,7 @@ module.exports = class{
             .then( shareTasks => {
                 if(shareTasks.length > 0){
                     console.log(shareTasks)
-                    objResponse.status_new = shareTasks.some( x => x.status_new );
+                    objResponse.status_new = shareTasks.some( x => x.status_new ) ? 1 : 0;
                     if( objResponse.status_new ){
                         this.getAllShareTasks(username)
                         .then(tasks => {
@@ -148,7 +148,7 @@ module.exports = class{
                     if(removed_tasks.length > 0){
                         this.getAllShareTasks(username)
                         .then(tasks => {
-                            objResponse.tasks = tasks;
+                            if(task) objResponse.status_new = -1;
                             resolve(objResponse);
                             return;
                         })
@@ -159,11 +159,14 @@ module.exports = class{
                     }
                     console.log(removed_tasks.length === 0 && objResponse.status_new,removed_tasks.length === 0 , objResponse.status_new)
                     if(removed_tasks.length === 0 && !objResponse.status_new){
+                        objResponse.tasks = [];
                         resolve(objResponse);
                     }
                 }
                 else{
-                    objResponse.status_new = false;
+                    if(tasks_id_array.length > 0)
+                        objResponse.status_new = -1;
+                    else objResponse.status_new = 0;
                     objResponse.tasks = [];
                     resolve(objResponse);
                 }
@@ -177,20 +180,4 @@ module.exports = class{
        })
    }
 
-   getNotificationUpdate(user_id,taskIdArray){
-       return new Promise( (resolve,reject) => {
-            Share.find({username_to : user_id})
-            .then( shares => {
-                if(shares){
-                   let tasksId = shares.map( i => i.task_id);
-                   let newTasksToShare = taskIdArray.filter( i => !tasksId.includes(i) ); 
-                   resolve(newTasksToShare.map( i => shares.find( x => x===i)));
-                }
-                else{
-                    reject("No new task to share")
-                }
-            })
-       })
-        
-   }
 } 
