@@ -50,6 +50,7 @@ app.use('/set_new_share_request', shares_ctrl.setTaskForShare);
 app.use('/get_all_share_tasks', shares_ctrl.getAllShareTasks);
 app.use('/get_subscribe_share_tasks', shares_ctrl.getSubscribeShareTasks);
 app.use('/delete_share_request', shares_ctrl.deleteShareRequest);
+app.use('/cancel_share_request', shares_ctrl.cancelShareRequest);
 
 //response friendly 404 Page
 app.all('*', (req, res) => {

@@ -96,7 +96,33 @@ exports.deleteShareRequest = (req , res) => {
         .catch(error => {
             res.status(200).json({
                 status: false,
-                message : "Error, can't delete share tasks, try again later... " + error,
+                message : "Error, can't delete share tasks, try again later... ",
+                error: error
+            })
+        })
+    } else {
+        res.status(200).json(
+            {
+                massage: 'undefined'
+            }
+        );
+    }
+}
+
+exports.cancelShareRequest = (req , res) => {
+    console.log("Cancel Share Request");
+    if(req.body.username_to !== undefined && req.body.task_id != undefined){
+        sharesController.deleteShareRequest(req.body.username_to , req.body.task_id)
+        .then(message => {
+            res.status(200).json({
+                status: true,
+                response : message
+            })
+        })
+        .catch(error => {
+            res.status(200).json({
+                status: false,
+                message : "Error, can't remove share tasks, try again later...",
                 error: error
             })
         })
