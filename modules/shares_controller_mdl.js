@@ -232,4 +232,34 @@ module.exports = class{
     })
    }
 
+   ApplyShareRequest(username,password,task_id){
+        return new Promise((resolve,reject) => {
+            this.usersController.getUserWithId({password:password,username:usernmae})
+            .then( resultUser => {
+                if(resultUser){
+                    this.CancelShareRequest(username,task_id)
+                    .then(result => {
+                        this.tasksController.updateUserTokenToTask(resultUser.user_token_id,task_id)
+                        .then( resultUpdateTask => {
+                            resolve("Task added to your list");
+                        })
+                        .catch(err => {
+                            console.error("Can't update task,\n",err);
+                            reject(err);
+                        })
+                    })
+                    .catch( err => {
+                        reject(err);
+                    })
+                }else{
+                    reject("Can't find user");
+                }
+            })
+            .catch(err => {
+                console.error("Error, can't apply share task... please try again later");
+                reject(err);
+            })
+        })
+   }
+
 } 

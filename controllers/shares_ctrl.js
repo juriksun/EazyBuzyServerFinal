@@ -134,3 +134,29 @@ exports.cancelShareRequest = (req , res) => {
         );
     }
 }
+
+exports.applyShareRequest = (req , res) => {
+    console.log("Cancel Share Request");
+    if(req.body.username_to !== undefined && req.body.password !== undefined && req.body.task_id != undefined){
+        sharesController.CancelShareRequest(req.body.username_to, req.body.password , req.body.task_id)
+        .then(message => {
+            res.status(200).json({
+                status: true,
+                response : message
+            })
+        })
+        .catch(error => {
+            res.status(200).json({
+                status: false,
+                message : "Error, can't remove share tasks, try again later...",
+                error: error
+            })
+        })
+    } else {
+        res.status(200).json(
+            {
+                massage: 'undefined'
+            }
+        );
+    }
+}

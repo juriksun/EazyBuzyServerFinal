@@ -229,7 +229,25 @@ module.exports = class{
                 reject(false);
             });
         })
-    }            
+    }  
+    
+    updateUserTokenToTask(userToken,task_id){
+        return new Promise((resolve,reject) => {
+            let conditions  = { _id: task_id } ,
+            update      = { $set:  { user_token_id : userToken } },
+            opts = { new: true, upsert: true };
+
+            TaskMod.findOneAndUpdate(conditions, update, opts)
+            .then( result => {
+                console.log(result);
+                resolve(true);
+            })
+            .catch( error => {
+                console.error(error);
+                reject(false);
+            });
+        })
+    }
     getTypes(){
         return new Promise((resolve, reject) => {
             Type.find({})
