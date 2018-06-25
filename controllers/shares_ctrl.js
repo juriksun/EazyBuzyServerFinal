@@ -85,8 +85,8 @@ exports.getSubscribeShareTasks = (req , res) => {
 
 exports.deleteShareRequest = (req , res) => {
     console.log("Delete Share Request");
-    if(req.body.username_from !== undefined && req.body.task_id){
-        sharesController.getSubscribeShareTasks(req.body.username)
+    if(req.body.username_from !== undefined && req.body.task_id != undefined){
+        sharesController.deleteShareRequest(req.body.username_from , req.body.task_id)
         .then(message => {
             res.status(200).json({
                 status: true,
@@ -96,7 +96,7 @@ exports.deleteShareRequest = (req , res) => {
         .catch(error => {
             res.status(200).json({
                 status: false,
-                message : "Error, can't get share tasks, try again later...",
+                message : "Error, can't delete share tasks, try again later... " + error,
                 error: error
             })
         })

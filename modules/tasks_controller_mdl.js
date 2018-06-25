@@ -116,7 +116,6 @@ module.exports = class{
 
     getTasksInfoByTasksId(tasks_id){
         return new Promise( (resolve,reject) => {
-            console.log(tasks_id)
             TaskMod.find({_id: {$in : tasks_id }})
             .then( tasks => {
                 if(tasks) resolve(tasks)

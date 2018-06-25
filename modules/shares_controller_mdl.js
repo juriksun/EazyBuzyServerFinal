@@ -180,4 +180,29 @@ module.exports = class{
        })
    }
 
+   deleteShareRequest(username,task_id){
+       return new Promise( (resolve,reject) => {
+            
+                Share.deleteOne({$and:[{task_id : task_id } , {username_from : username}]})
+                .then(result => {
+                    if(result.n){
+                        console.log("result------------------\n",result)
+                        resolve("Task has been deleted");
+                        this.tasksController.setShareTask("",task_id)
+                        .catch(err => {
+                            console.error("Error can't delete Task from Task collection,\n",err);
+                            reject(err)
+                        })
+                    }else{
+                        reject("Can't find Share task")
+                    }
+                })
+                .catch(err => {
+                    console.error("Error can't delete Task from Share collection,\n",err);
+                    reject(err)
+                })
+            
+       })
+   }
+
 } 
