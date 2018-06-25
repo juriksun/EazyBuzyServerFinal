@@ -8,8 +8,10 @@ module.exports = class{
 
     getUserWithId(user){
         return new Promise((resolve, reject) => {
+            console.log(user)
             User.findOne({$and :[ {password: user.password } , {$or : [{ username : user.key_entry }, { email : user.key_entry }] }]})
             .then(user => {
+                console.log(user)
                 if(user) resolve(user);
                 else reject("user not found")
             } )

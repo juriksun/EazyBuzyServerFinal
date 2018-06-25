@@ -132,7 +132,6 @@ module.exports = class{
             Share.find({username_to : username})
             .then( shareTasks => {
                 if(shareTasks.length > 0){
-                    console.log(shareTasks)
                     objResponse.status_new = shareTasks.some( x => x.status_new ) ? 1 : 0;
                     if( objResponse.status_new ){
                         this.getAllShareTasks(username)
@@ -162,7 +161,6 @@ module.exports = class{
                             reject(err);
                         })
                     }
-                    console.log(removed_tasks.length === 0 && objResponse.status_new,removed_tasks.length === 0 , objResponse.status_new)
                     if(removed_tasks.length === 0 && !objResponse.status_new){
                         objResponse.tasks = [];
                         resolve(objResponse);
@@ -210,7 +208,6 @@ module.exports = class{
 
    CancelShareRequest(username,task_id){
         return new Promise( (resolve,reject) => {
-            console.log(username,task_id)    
             Share.deleteOne({$and:[{task_id : task_id } , {username_to : username}]})
             .then(result => {
                 if(result.n){
@@ -234,12 +231,12 @@ module.exports = class{
 
    ApplyShareRequest(username,password,task_id){
         return new Promise((resolve,reject) => {
-            this.usersController.getUserWithId({password:password,username:usernmae})
+            this.usersController.getUserWithId({password:password,key_entry:username})
             .then( resultUser => {
                 if(resultUser){
                     this.CancelShareRequest(username,task_id)
                     .then(result => {
-                        this.tasksController.updateUserTokenToTask(resultUser.user_token_id,task_id)
+                        this.tasksController.updateUserTokenToTask(resultUser._id,task_id)
                         .then( resultUpdateTask => {
                             resolve("Task added to your list");
                         })
