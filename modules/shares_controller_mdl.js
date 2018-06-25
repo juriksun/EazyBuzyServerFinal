@@ -56,11 +56,13 @@ module.exports = class{
         })
    }
    
-   getShareTask(task_id){
+   getShareTask(task_id , username){
        return new Promise( (resolve,reject) => {
             Task.findOne({ _id : task_id})
             .then(task => {
-                if(task) resolve(task)
+                let taskReturnObject = Object.assign({share_from : username} , task._doc);
+                console.log(task)
+                if(task) resolve(taskReturnObject)
                 else reject(false)
             })
        })
@@ -88,7 +90,7 @@ module.exports = class{
             .then(result => {
                 if(result.length > 0){
                     objRespons.newShare = result.some( x => x.status_new === true );
-                    Promise.all( result.map( i => this.getShareTask(i.task_id)))
+                    Promise.all( result.map( i => this.getShareTask(i.task_id , i.username_from)))
                     .then( resultGetShareTasks => {
                         resolve({
                             status_new : objRespons.newShare,
