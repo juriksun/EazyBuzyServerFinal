@@ -13,47 +13,52 @@ module.exports = class{
 
    setNewShareNotifictation(username_from,username_to,task_id){
         return new Promise( (resolve , reject) => {
-            Share.find({task_id:task_id})
-            .then( resultGetShareTask => {
-                if(resultGetShareTask.length > 0){
-                    reject("Task already sent to share")
-                }
-                else{
-                    this.usersController.userExist(username_to)
-                    .then( userExistResult => {
-                        this.tasksController.setShareTask(username_to,task_id)
-                        .then( result => {
-                            let newShare = new Share({
-                                username_from : username_from,
-                                username_to : username_to,
-                                task_id : task_id,
-                                status_new : true
-                            });
-                            newShare.save((err, doc) => {
-                                if(err){
-                                    reject('problem with sharing task\n',err);
-                                } else {
-                                    resolve(`Task as been send to ${username_to} and waiting to his apply`);
-                                }
-                            });
+            if(username_from !== username_to){
+                Share.find({task_id:task_id})
+                .then( resultGetShareTask => {
+                    if(resultGetShareTask.length > 0){
+                        reject("Task already sent to share")
+                    }
+                    else{
+                        this.usersController.userExist(username_to)
+                        .then( userExistResult => {
+                            this.tasksController.setShareTask(username_to,task_id)
+                            .then( result => {
+                                let newShare = new Share({
+                                    username_from : username_from,
+                                    username_to : username_to,
+                                    task_id : task_id,
+                                    status_new : true
+                                });
+                                newShare.save((err, doc) => {
+                                    if(err){
+                                        reject('problem with sharing task\n',err);
+                                    } else {
+                                        resolve(`Task as been send to ${username_to} and waiting to his apply`);
+                                    }
+                                });
+                            })
+                            .catch( error => {
+                                console.log("setShareTask error,\n", error);
+                                reject(error);
+                            })
                         })
-                        .catch( error => {
-                            console.log("setShareTask error,\n", error);
+                        .catch(error => {
+                            console.log("userExist error,\n", error);
                             reject(error);
                         })
-                    })
-                    .catch(error => {
-                        console.log("userExist error,\n", error);
-                        reject(error);
-                    })
-                }
-            })
-            .catch( err => {
-                console.error("Error can't fetch data from share\n",err);
-                reject(err);
-            })
+                    }
+                })
+                .catch( err => {
+                    console.error("Error can't fetch data from share\n",err);
+                    reject(err);
+                })
+                
             
-        })
+            }else{
+                reject("Error, can't share to yourself!");
+            }
+        }) 
    }
    
    getShareTask(task_id , username){
@@ -203,9 +208,9 @@ module.exports = class{
        })
    }
 
-   CancelShareRequest(usernametask_id){
+   CancelShareRequest(username,task_id){
         return new Promise( (resolve,reject) => {
-                
+            console.log(username,task_id)    
             Share.deleteOne({$and:[{task_id : task_id } , {username_to : username}]})
             .then(result => {
                 if(result.n){

@@ -112,7 +112,7 @@ exports.deleteShareRequest = (req , res) => {
 exports.cancelShareRequest = (req , res) => {
     console.log("Cancel Share Request");
     if(req.body.username_to !== undefined && req.body.task_id != undefined){
-        sharesController.deleteShareRequest(req.body.username_to , req.body.task_id)
+        sharesController.CancelShareRequest(req.body.username_to , req.body.task_id)
         .then(message => {
             res.status(200).json({
                 status: true,
