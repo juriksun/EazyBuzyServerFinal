@@ -56,7 +56,7 @@ module.exports = class{
                 
             
             }else{
-                reject("Error, can't share to yourself!");
+                reject("Error, can't share with yourself!");
             }
         }) 
    }
