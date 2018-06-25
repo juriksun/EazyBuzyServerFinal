@@ -11,6 +11,7 @@ module.exports = class{
         this.tasksController = new TasksController();
     }
 
+    // setting new request to another user to share a task
    setNewShareNotifictation(username_from,username_to,task_id){
         return new Promise( (resolve , reject) => {
             if(username_from !== username_to){
@@ -61,6 +62,7 @@ module.exports = class{
         }) 
    }
    
+
    getShareTask(task_id , username){
        return new Promise( (resolve,reject) => {
             Task.findOne({ _id : task_id})
@@ -74,6 +76,7 @@ module.exports = class{
     
    }
 
+   // change status to false of "status_new" in case document form collection "share" is true
    viewShareTask(task_id){
         let conditions  = { task_id: task_id } ,
         update      = { $set:  { status_new : false } },
@@ -88,6 +91,7 @@ module.exports = class{
         });
    }
 
+   // get all user share task 
    getAllShareTasks(username){
        return new Promise( (resolve,reject) => {
            let objRespons = {}
@@ -125,7 +129,7 @@ module.exports = class{
        })
    }
 
-
+// method to subscribe (get notification) regarding new or deleted "share task"
    getSubscribeShareTasks(username,tasks_id_array){
        return new Promise( (resolve , reject) => {
            let objResponse = {}
@@ -145,7 +149,6 @@ module.exports = class{
                             reject(err);
                         })
                     }
-                    //objResponse.new_tasks = shareTasks.filter( share => share.status_new ).map(i => i.task_id);
     
                     let tasks_ids_db = shareTasks.map( i => i.task_id);
                     let removed_tasks = tasks_id_array ? tasks_id_array.filter( task_id_old => !tasks_ids_db.includes(task_id_old)) : [];
@@ -183,6 +186,8 @@ module.exports = class{
        })
    }
 
+   // User which asked to share a task will "end" the request and the other will user his notification will be removed
+   // after the method end the task will be open again for sharing
    deleteShareRequest(username,task_id){
        return new Promise( (resolve,reject) => {
                 Share.deleteOne({$and:[{task_id : task_id } , {username_from : username}]})
@@ -206,6 +211,8 @@ module.exports = class{
        })
    }
 
+   // User who asked for "share task" will cacnel the request
+   // User which asked to share the task could now share it with some one else 
    CancelShareRequest(username,task_id){
         return new Promise( (resolve,reject) => {
             Share.deleteOne({$and:[{task_id : task_id } , {username_to : username}]})
@@ -229,6 +236,7 @@ module.exports = class{
     })
    }
 
+   // This method will approve the transfer of the task to the user who approved
    ApplyShareRequest(username,password,task_id){
         return new Promise((resolve,reject) => {
             this.usersController.getUserWithId({password:password,key_entry:username})
