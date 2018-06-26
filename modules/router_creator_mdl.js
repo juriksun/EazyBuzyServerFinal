@@ -388,6 +388,13 @@ module.exports = class {
             let promises = [];
             let timeout = 0;
 
+            if(tasks.length === 0){
+                resolve({
+                    tasks: [],
+                });
+                return;
+            }
+
             for(let i = 0 ; i < tasks.length ; i++){
                 //separating to place with addres and without
                 if(tasks[i].location.address === ''){
@@ -425,6 +432,7 @@ module.exports = class {
                         resolve({
                             tasks: [],
                         });
+                        return;
                     }
                     // match all responses from googleGetPlaceData to proper task 
                     for (let i = 0; i < allFullDadaPlace.length; i++) {
