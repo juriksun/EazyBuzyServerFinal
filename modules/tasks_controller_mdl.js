@@ -36,7 +36,7 @@ module.exports = class{
         return new Promise((resolve, reject) => {
             this.userController.getUserWithId(user)
             .then(userData => {
-                TaskMod.find({$in, user_token_id: userData._id}).lean().exec()
+                TaskMod.find({_id: {$in: tasks}, user_token_id: userData._id}).lean().exec()
                 .then( allTasks => {
                     resolve(allTasks);
                 })
