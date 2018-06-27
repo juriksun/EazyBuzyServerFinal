@@ -139,8 +139,8 @@ module.exports = class{
                     objResponse.status_new = shareTasks.some( x => x.status_new ) ? 1 : 0;
                     if( objResponse.status_new ){
                         this.getAllShareTasks(username)
-                        .then(tasks => {
-                            objResponse.tasks = tasks;
+                        .then(getAllShareTasksResopnse => {
+                            objResponse.tasks = getAllShareTasksResopnse.tasks;
                             resolve(objResponse);
                             return;
                         })
@@ -154,8 +154,11 @@ module.exports = class{
                     let removed_tasks = tasks_id_array ? tasks_id_array.filter( task_id_old => !tasks_ids_db.includes(task_id_old)) : [];
                     if(removed_tasks.length > 0){
                         this.getAllShareTasks(username)
-                        .then(tasks => {
-                            if(task) objResponse.status_new = -1;
+                        .then(getAllShareTasksResopnse => {
+                            if(getAllShareTasksResopnse) {
+                                objResponse.status_new = -1;
+                                objResponse.tasks = getAllShareTasksResopnse.tasks
+                            }
                             resolve(objResponse);
                             return;
                         })
