@@ -2247,5 +2247,711 @@
       ],
       "vicinity": "יהודה הנשיא 34, תל אביב יפו"
     }
+  ],
+  "pharmacysuperpharm32105365347955689000000351500": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1162252,
+          "lng": 34.7972027
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.11762237989272,
+            "lng": 34.79816972989272
+          },
+          "southwest": {
+            "lat": 32.11492272010727,
+            "lng": 34.79547007010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "e9f4e29667b6c54471f49e93c8801ce93ce8a737",
+      "name": "סופר-פארם",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAOPkM-vjU1Ed14_c_NcbKeP7WvoccIQyPRCleZPoDT-UMcWjchHXOb5IhJSkDukG2YY352zPTiPZq_34y6WSFjeHdz424P2ZZSn3AdajswzNI8d2djIodOMXg61L6B2vUEhBmP45afVAWioYBjPd9oXl-GhTlF6k5J0rItVwYNlg1a1q218_Rnw",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJmT0LYF1JHRURq3yhV4Bz29M",
+      "plus_code": {
+        "compound_code": "4Q8W+FV תל אביב יפו",
+        "global_code": "8G4P4Q8W+FV"
+      },
+      "rating": 3.6,
+      "reference": "CmRbAAAAatvPhuoNjGZiE6jZJ4qtoPbpDX7KiNdM1rO7w7cofwJaWGmUA20zfBNS7PTdLpU1FM2sTmsUcW6BZNLsXFjrHGBzirhaw0zMh-fBrc36RhH67HRyyzp7JvfXEYwU9wEkEhBVavcFsIWvq_FLWwt_tbfUGhRZsQTrZ6U8WnBhrx_AXJAw_BIFDQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "רחוב רבינדרנת טאגור 32, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1122621,
+          "lng": 34.7945882
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.11361192989272,
+            "lng": 34.79593802989272
+          },
+          "southwest": {
+            "lat": 32.11091227010728,
+            "lng": 34.79323837010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "52a50873413dde8abc7fba0a51d4788ae1935edd",
+      "name": "סופר פארם רמת אביב",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101347695240737471426/photos\">Omri Roth</a>"
+          ],
+          "photo_reference": "CmRaAAAAjCqyAbe0eKnYyw9apxW6hz8VfU2brBH-T-w1PpwQSajwvVEIf6oVeqwaLz1S908CZEd6bfAXTLDTQyuKukt0sbsqmYFLiIaaIxn8ZlJOKQhx6MwvRNLvdZ204Q4FCp5YEhC3yLOY2FeZd_z5Z3z9hMbRGhQkY-f6ygJc0_IXb_XVy-Vb9FjLAw",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJQ3Pk811JHRURGrt6cIgCNdE",
+      "plus_code": {
+        "compound_code": "4Q6V+WR תל אביב יפו",
+        "global_code": "8G4P4Q6V+WR"
+      },
+      "rating": 3.9,
+      "reference": "CmRbAAAAUzgLfhqbTVzVbe5GFVYFl7wTGAq7vd_s4M2UP2VexN4rlxzfvMC11PJnBqnIxtO_uLfGKoZultlvcZiHtJP2l0oqxvtUYHWebUFqT8it1f3azK1x6huXTFqdtZAGQ3bTEhD2COCrt1dwMBG5ErOjfKW6GhQLD9L6qSkvU9rwsGzJOiiJ9yemWg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "איינשטיין 40, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1123057,
+          "lng": 34.7872605
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.11362132989272,
+            "lng": 34.78861487989271
+          },
+          "southwest": {
+            "lat": 32.11092167010728,
+            "lng": 34.78591522010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "f41b676bee76061a2427e93d8b6e75fd260d97aa",
+      "name": "סופר-פארם",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
+          ],
+          "photo_reference": "CmRaAAAAQZBt5PEb0E67alvQ94tjb3ulR7kJqxOLrW_f1EC5LbG_quxomDK-5gCN-psPreyvHZIMMlYjKRr8vZflX3y0Wnri3nZKCUtLTp8-YNxYynVPjZUpGtf3LEquhyGoupzcEhCVDNHaOkau1GT6w2t8qUQ4GhQJgatOgv3_CNFodRH-jAB8hv4j_Q",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJQ7Mgu1lJHRURg-4dJBtfBeQ",
+      "plus_code": {
+        "compound_code": "4Q6P+WW תל אביב יפו",
+        "global_code": "8G4P4Q6P+WW"
+      },
+      "rating": 4,
+      "reference": "CmRbAAAArj4NfL9EfdJMnQCcoV0yY9xGDoTEzmNeG3Lfj2Sdga2Sk_jGNOLuZLTR_lWz25BQRPHowx94z4BMPxph8t8nZRQ1ef9oSxeGzjUUE_J1A9U9oQ2zdBw7SSjnCK4GDES9EhBt5FqIhpWaK5XJaFjomtMRGhSSuYNqGB7MS_r_zfrGOGAkz0TzSw",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "איינשטיין 7, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0910601,
+          "lng": 34.7824333
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.09238177989272,
+            "lng": 34.78397622989272
+          },
+          "southwest": {
+            "lat": 32.08968212010728,
+            "lng": 34.78127657010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "21a5d7042ad84fc6bccd2bf92033279b4cd19768",
+      "name": "סופר-פארם קסטל",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109192228265409645025/photos\">Yaron Dalal</a>"
+          ],
+          "photo_reference": "CmRaAAAAOE1-5Ckxd9RN7-csHL6n0IXixj1qROgyokrprCpfUaaVXPhhA6Gzcn8dIkuGbZd0Ml6mEhFLsmD7cNfsPokMLUjQFBEECv1YiBdq5F-B0sBG1T3E7MXbMpx4r1pmbCgSEhBQzLenLiBVoo1co1AYnhmXGhQbNLCegMJwYcvb0a2kmSJBmuHqQA",
+          "width": 4048
+        }
+      ],
+      "place_id": "ChIJRUDv0PJLHRUR6b1uMTsZGrc",
+      "plus_code": {
+        "compound_code": "3QRJ+CX תל אביב יפו",
+        "global_code": "8G4P3QRJ+CX"
+      },
+      "rating": 4.2,
+      "reference": "CmRbAAAA6jzUWabjMV3MuSoMGPrE4zKrVZvcCWNKz4F8Ur4BUrCzgSt9EBsKj7jwX6vmfdrONa4q7jOjbHMiuIa8dYNJMnBs3ZT7DGfDKozNDQAQO9N1xBHOQGg4V9j0jhZykHcTEhBMpOnFXjXaOrw5s6MBCHD2GhQocye619Xhq2UkBiM4mN1yVd5gcQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "שלמה אבן גבירול 153, תל אביב יפו"
+    }
+  ],
+  "pharmacysuperpharm320900601348035691000000041500": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0839976,
+          "lng": 34.8145385
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08512667989272,
+            "lng": 34.81599557989272
+          },
+          "southwest": {
+            "lat": 32.08242702010727,
+            "lng": 34.81329592010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d47876b418747cf36a4c5950ee16cb59d473520b",
+      "name": "סופר-פארם אורדע",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 5312,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106459198434143388080/photos\">פיני כהן</a>"
+          ],
+          "photo_reference": "CmRaAAAAA-qEcS_FF3PYnGtZ7_gdVKe2_1HvuC9KVpCKccTaePAdmuy2vKaRHNe_SoHUAqhiepLChfs5NUrqTDFyiBXjOFERCMxqvUPGylDdFRn_fOLgk61XhqwjL0yKez3X3_wBEhBeOtWTPRDlocW48BYY5FylGhSJvJPYIRQgIHqJeIGJa7Q15P_3bg",
+          "width": 2988
+        }
+      ],
+      "place_id": "ChIJEz3icqRLHRURvTh7F8xejMo",
+      "plus_code": {
+        "compound_code": "3RM7+HR רמת גן",
+        "global_code": "8G4P3RM7+HR"
+      },
+      "rating": 3.8,
+      "reference": "CmRbAAAAvFkrwxgDDN0C3f2f6gP30odpyGy79D7DCvxzck80uUWjxqjDLBgVsxLEKWxCeJVXws0kr4fLk_eb95W-I-6Tze_gQVgA2NIImP4lAYDnbD-QwiQiM_G4OfHiHDWcrNVdEhC82BMC7dfH6lzDizQ5w5YNGhS81H1lDbhrK6SB2NyFcghN-h7cvQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "כיכר רמב\"ם 3, רמת גן"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0815042,
+          "lng": 34.7895223
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08285402989272,
+            "lng": 34.79087212989272
+          },
+          "southwest": {
+            "lat": 32.08015437010727,
+            "lng": 34.78817247010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "4081fb5a65ba345dd13a14894d47e06dc2b31751",
+      "name": "סופר-פארם איכילוב",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100960092079788350086/photos\">michael behar</a>"
+          ],
+          "photo_reference": "CmRaAAAAKsN39PNUvRFAcPxpRbQz0djnaaAwUKW5X77ELSFH8jOUqA72zI4fjRgilQk1Ipj3hK-fzdKLSzGAgpbx9Y1EuCmbUFhjBwVBH8W0PfqqxuUgHK1I4a7wCSYdEdNRtBMBEhAxyZoQPTIEphWKMjvdNgF2GhTV3ftAI2mVoPNexNdcKiVXneFHFg",
+          "width": 3984
+        }
+      ],
+      "place_id": "ChIJTVxcZ7BLHRUROZGJ53TbUiM",
+      "plus_code": {
+        "compound_code": "3QJQ+JR תל אביב יפו",
+        "global_code": "8G4P3QJQ+JR"
+      },
+      "rating": 4,
+      "reference": "CmRbAAAA_SSUFJ6Jngh5intO4FvQOsyatjFsjM3JalV-fQsxHYexWkiKiujuxhI_BF2hFBecu0kkX7Ln1EQN8JFjiqHGkrsowoeWn1bFE-a2bhi962GLj6fhL2a9K9EnB55tKkQSEhAqRAIXHo3KKVM-r3O3luAuGhTN9O6qbHKvNS2To9DA3a_Fhlp9zQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "ויצמן 14, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.07941450000001,
+          "lng": 34.815057
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08076477989272,
+            "lng": 34.81631727989272
+          },
+          "southwest": {
+            "lat": 32.07806512010728,
+            "lng": 34.81361762010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "536d0704689edaeac72dcd3a5df8ef4c0d9ccf86",
+      "name": "סופר-פארם כופר היישוב",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1927,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115111579584706518649/photos\">alexander kutsenko</a>"
+          ],
+          "photo_reference": "CmRaAAAAI_mDOPyddhbaQcnR-JEdmbpq1RskXSK2q4l0KJ7CIrh-LtcrVfGgtQiCv4Wcoki7dlh3a_FbhUgPAyVUKDGYAuKGD7s0qSUShlX9TZVEdEsOEmxhoC4m3oa7in0fDEhTEhAje-1EYIenIY2wnnwURmp6GhSWnorGIMsz6wsLINQkzEsWaKBvxg",
+          "width": 2443
+        }
+      ],
+      "place_id": "ChIJoTVzmLVLHRURQVg7qxZ17nk",
+      "plus_code": {
+        "compound_code": "3RH8+Q2 רמת גן",
+        "global_code": "8G4P3RH8+Q2"
+      },
+      "rating": 4,
+      "reference": "CmRbAAAAkwR5fIShB05vDmVhyQlLNbb-ieue6NJ9pyGky7WVbhgCq72E-KWeCIc5c3l97DMAqYmAOzsglO5J1_VKPi2CmBOfMIHkf5CF9yosVhUNkaHqQ_kUAUttd2ehElJfiZqTEhDDdCdnoSbVh3-7VZLik_unGhQ6kg5i7lcQJVELK8fo8SLeVdzuvA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "ביאליק 10, רמת גן"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0889726,
+          "lng": 34.7975096
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.09032242989272,
+            "lng": 34.79885942989272
+          },
+          "southwest": {
+            "lat": 32.08762277010727,
+            "lng": 34.79615977010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d60f7e9d15f5e3dbdfa32a59941950f5962188ae",
+      "name": "סופר פארם",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100371675813743476309/photos\">Raphael Perez</a>"
+          ],
+          "photo_reference": "CmRZAAAAdeeTPzWhGpElqF4WOmoOqSSpxxg7FkEP6pe5cHKYei61y2BaJ63w3MAe3VGCkq6oDGl_bbBT_gyT721Pg4CmBjGo0r0pV___KAX4LnXCQV-utal9310Vi8LgWI5fQyUbEhA-RkAYZT9ZyBOtF_BQIDvIGhT9yzxaKERZ6--ca9kJdkycAXieMQ",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJjWsxyMFLHRUR2HW6bK2_zXc",
+      "plus_code": {
+        "compound_code": "3QQX+H2 תל אביב יפו",
+        "global_code": "8G4P3QQX+H2"
+      },
+      "rating": 4.4,
+      "reference": "CmRbAAAAjFsLxfhhA8eVhVn-imbgvolAEK7Naa28L3BpPYpEmSOemH5mHAzGwYJefU_DX4cV9PaMrS3XMZrSmmsQFBYuo0SVOF0ODw_ISyqJLZFTl9YJ_YORgNLmwbNBRuQdQSAREhDm85L4Z7iOUaHvpMRxN4IuGhQP-MHrTC6JuFhbBWYss6KT58pBag",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "ניסים אלוני 10, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0744089,
+          "lng": 34.8187477
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.07577397989272,
+            "lng": 34.81999382989272
+          },
+          "southwest": {
+            "lat": 32.07307432010727,
+            "lng": 34.81729417010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "ab3e3946e7bd9ecd3aaace1ba9c4d4b6ac656f41",
+      "name": "סופר-פארם בן גוריון",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103200079788105700345/photos\">Ziv Rotner</a>"
+          ],
+          "photo_reference": "CmRaAAAA6Qhbqq49Vw230bHNpb8wxgZ4wFDX0jt-18VtgOPke2Ys9B1-pK_g60VFE3OXIuSG-6TVW8CoYWsgNIQbEoa1puLYYDS5DlCMMwIPisuZAwnL2PYpW_C_XRbuHVV3fI6-EhBS_RswCRDNVmCXYs1wCkYSGhTp1sViGBlGOkjNuooI6MNlSZtEOg",
+          "width": 3120
+        }
+      ],
+      "place_id": "ChIJx1jaVUtKHRURJBJH2QNqymg",
+      "plus_code": {
+        "compound_code": "3RF9+QF רמת גן",
+        "global_code": "8G4P3RF9+QF"
+      },
+      "rating": 4,
+      "reference": "CmRbAAAAY4eudGbSP_94byVUM56bWZv3RUiVLToJKN2aLb7FaYdSMt51mlINwYluZT-dhB9ZKu68NEq0gpxWdVdCNxyh5bRnqUVe-ZuniXxFBtD6yp9lTyQl9r9DR9MexvpOXmCPEhB_pHJWU5vb9qRA6yNl6nHZGhQyapNzuqa00Or-Bw93W6PFZ199pQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "דרך בן גוריון 183, רמת גן"
+    }
+  ],
+  "pharmacysuperpharm32114139834801225700000031500": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1162252,
+          "lng": 34.7972027
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.11762237989272,
+            "lng": 34.79816972989272
+          },
+          "southwest": {
+            "lat": 32.11492272010727,
+            "lng": 34.79547007010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "e9f4e29667b6c54471f49e93c8801ce93ce8a737",
+      "name": "סופר-פארם",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAW5niuUI5tKF110cgOMDyYMGijMDKD33Vyg9hGPQOaGJVJ64N_Sxrvb2nOzBXm-MsSP2zPIspa8ylGI9NvcGG2TqlIGFq9b7G5QK03lu8dKdIMgAkwz3bO8t_Fa2YrJFKEhB_6qpbrQUoRxhpFBbSNjrbGhQ6lj5o6MEEyYQHdJN6TrgNlMTQHQ",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJmT0LYF1JHRURq3yhV4Bz29M",
+      "plus_code": {
+        "compound_code": "4Q8W+FV תל אביב יפו",
+        "global_code": "8G4P4Q8W+FV"
+      },
+      "rating": 3.6,
+      "reference": "CmRbAAAA4Qi61z0grplKvXQBS_4yJraVLF9aXVVU066gFPQviE4I2MMqYdqr8nuIBK1-pS-GAGomIIxRwhb_lazlgyk6RSCcT5MkFR60241QYYBtZ4ME3PwJEWHQu7m5hzLKrrwCEhAfxeEzp_CuXVOLT60Jkx_dGhRmEAW4fVwYGNnuxJAM4VObMpQqRg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "רחוב רבינדרנת טאגור 32, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1122621,
+          "lng": 34.7945882
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.11361192989272,
+            "lng": 34.79593802989272
+          },
+          "southwest": {
+            "lat": 32.11091227010728,
+            "lng": 34.79323837010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "52a50873413dde8abc7fba0a51d4788ae1935edd",
+      "name": "סופר פארם רמת אביב",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101347695240737471426/photos\">Omri Roth</a>"
+          ],
+          "photo_reference": "CmRaAAAAmN47IPrj55qwj01jbXvRhQkRiIB9oZ8_7tqKwMIa4O9nxPr5uLgS2bsGS1DS4TEzJic4TdLRNcMBMhF4MbpJo8e3P_7fpKXYIvzi0dMz9AOqoCpjJgQD8GjeIUoCct2oEhBcJJCubCJ7uAw7tk_Ry2pEGhRJdKebcbIlL5oGVvAPBbUZdKdllQ",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJQ3Pk811JHRURGrt6cIgCNdE",
+      "plus_code": {
+        "compound_code": "4Q6V+WR תל אביב יפו",
+        "global_code": "8G4P4Q6V+WR"
+      },
+      "rating": 3.9,
+      "reference": "CmRbAAAATpCcoH7wK-O1xq-PFeHq40T1vZ8EJvEFtABJAyjmhLpQGfrrtZOKdkFH6evRcJipWIYOfNOC_cYeeYvEQDhgOgPY84Lb5QZVV4oHtWBKwTfzoL7uf1d3R5GOOP5jKjXQEhBEK7FWyIAoHqeHtleVoN0XGhRPcvfWCokM0oGPVICABbHrIb6GrA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "איינשטיין 40, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.125284,
+          "lng": 34.798358
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.12663382989273,
+            "lng": 34.79970782989273
+          },
+          "southwest": {
+            "lat": 32.12393417010728,
+            "lng": 34.79700817010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "8d062a2ab0356100c0db6224c41de065c47fd932",
+      "name": "סופר-פארם רמת אביב ג'",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAI43JFIToXYDDYJaJ8oHNPxzSq156v1GSc4uu3eEOlAqqUqQZsPTVks8-pDF8LIhgjYF8AwNtY_pcPs9XyeOuNhjauGY3jze0jDGvuelmEwzJSFViq5wLVAGM_LdjylGeEhC49_COZngwoD1yO93_XPJPGhSoDeuw7IwZ2h6clmXmFe12Ja9zKg",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJSwQn0mpJHRUR75Ug3TjyjOE",
+      "plus_code": {
+        "compound_code": "4QGX+48 תל אביב יפו",
+        "global_code": "8G4P4QGX+48"
+      },
+      "rating": 4.1,
+      "reference": "CmRbAAAArMxCO2K0RJ76dWVWpseidxwtxnUROP6Lj3f9VNCYKpBdObecjQkLoAvTUzQTCqHNOleFjHTzOjTynhOSR-m716tjSg1FWAQrBqlm66m1SEjGDCG_oZrvBEKU2czXJhPOEhDUU5rPkB-ix9KvE6MCnaJ6GhRHvrl7ILe-9IJ9VOaJyDwrEVB-_w",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "אחימאיר 1, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1123057,
+          "lng": 34.7872605
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.11362132989272,
+            "lng": 34.78861487989271
+          },
+          "southwest": {
+            "lat": 32.11092167010728,
+            "lng": 34.78591522010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "f41b676bee76061a2427e93d8b6e75fd260d97aa",
+      "name": "סופר-פארם",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
+          ],
+          "photo_reference": "CmRaAAAAAxA_IJ063N80puV0EO7syINbT1_UB62A5E5OWuXBq8DsXbQAXEYq14qXWna1BT6_ozePqRnxUiJCceZwmHYKaSYe--Zo23pIuXnFpKwp2H1Idl-EWuUtKK79rQkN_oOuEhB5H9cJGWriryfIl3EbX7lUGhT4i0PIMURNV6XybjrPz0PTx019Mg",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJQ7Mgu1lJHRURg-4dJBtfBeQ",
+      "plus_code": {
+        "compound_code": "4Q6P+WW תל אביב יפו",
+        "global_code": "8G4P4Q6P+WW"
+      },
+      "rating": 4,
+      "reference": "CmRbAAAAekLvVkfCmOGMfE2qPnw0k5mG4B5bSBZqmxBoygDrcTtfOYq61M5x_PDI4-A7MQg_u4gokT7EBdtLmI02D_AGLu3CCtHvGfCfbuh4HwDX1iLWsMjmJVBjNWzhFgwuP_6DEhB3l8V4PC-XiimmShBwBy8gGhTeX3tf3LD3QK8U-lq1MVHrcjDh2A",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "איינשטיין 7, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.12425450000001,
+          "lng": 34.80418160000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.12568667989272,
+            "lng": 34.80555242989273
+          },
+          "southwest": {
+            "lat": 32.12298702010728,
+            "lng": 34.80285277010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "2df965f84f0cde23faa824efd96841469b6066c8",
+      "name": "סופר-פארם אחימאיר ת\"א",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAAJMpxXD942_meNch2qIyB2n9xePdFtPl9E7xZd-s2_bCH_PbpBU-4U_YEDsHxQN0uUHH3kq2-4AtTPipqZwIVwXmjWScPVYtOoYfCbGEhKTuONFj49jfOKY_C6QuwHS9EhDhvPtofoDY-0rLe5ElpqUwGhTwfkeKt3LmUkFxKSsR8_tfdX7lDQ",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJ2_5RLxNJHRURSN2G0E7HuFE",
+      "plus_code": {
+        "compound_code": "4RF3+PM תל אביב יפו",
+        "global_code": "8G4P4RF3+PM"
+      },
+      "rating": 5,
+      "reference": "CmRbAAAAiFJzYkDJhXw8Q5324GEVUWwEodfPXipH9YaVbHKHLGpdd4iS_nmE1cubRl0XTkpnedvP0Jk8TRkR34CmswGaeOC8oDYsBZj4a5gCw-cXss1kYYQ609D2WZFp9kNlwgtREhAkCfiKKhRPVuh-XU20TzOpGhQPfo-iTvoZ1dpnA-Om5TcLM4mgqg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "אבא אחימאיר 28, תל אביב יפו"
+    }
   ]
 }
