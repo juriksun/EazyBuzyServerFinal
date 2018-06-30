@@ -497,6 +497,7 @@ module.exports = class {
             }
 
             recommendedRoute.tasks = [];
+            recommendedRoute.date = this.date;
             for(let i = 0; i < recommendedRoute.segments.length; i++ ){
                 let poliline = [];
                 let  polilineArr = Polyline.decode(recommendedRoute.segments[i].polilines);

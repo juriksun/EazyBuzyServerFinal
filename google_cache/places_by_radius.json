@@ -1,3039 +1,2251 @@
 {
-  "32": {
-    "10536534": {
-      "7955689000000351500bankdiscount ": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0949429,
-              "lng": 34.7982043
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.09629272989273,
-                "lng": 34.79955412989273
-              },
-              "southwest": {
-                "lat": 32.09359307010728,
-                "lng": 34.79685447010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "58c4082fb2c8d65daafdf146979c81a73a02b3b4",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/118370500818761638840/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAO_NSAu9zVT2aD2Px-LwsPID-zFOpN191eKffpccxDz3eadyP1IGGcBPFMSCfRi2CoIrJTSJ2CtZZUOIK94h0SmYNtFnZ3YVFkZJah0q6c_LG0SmW8ln4h2F5eLtlyQyjEhDpP9lvLD73yLfeJEE-G4zLGhQtf6AWhEJEkMVYekVLyDBge9mXPA",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ1xBZLN1LHRURt9JkR6nF7SI",
-          "rating": 2,
-          "reference": "CmRbAAAAjJaSaIvxFuEGUu55_OqDiDH0A3etwGt41PBMftLYaEPv15At1hpjS7BCJQRZ-pdSvsikb0OEFiK-5bTNj_CBqX-m2ZyMsZq6F9SpLn4CP83lS2Oh0MwWyvUfFqCL_rxKEhBcZjRAOelmbAE3SyEXsWoCGhTnbO2jl0ObxHY0CFqO9qSGbCpR-A",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרב הרצוג 24, תל אביב יפו"
+  "pharmacy32105365347955689000000351500": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0937942,
+          "lng": 34.7915513
         },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1191499,
-              "lng": 34.7954171
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12049762989272,
-                "lng": 34.79678517989272
-              },
-              "southwest": {
-                "lat": 32.11779797010728,
-                "lng": 34.79408552010728
-              }
-            }
+        "viewport": {
+          "northeast": {
+            "lat": 32.0951431802915,
+            "lng": 34.7929002802915
           },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "496d151382af88edf2d2cf4b8a87eb629d097133",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3096,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
-              ],
-              "photo_reference": "CmRaAAAAvR8Vsmmv-DMudCIRYWEe_fDotPYMjia7Z85diaUwzmgZmdo9xcSJ-vW3ziCTlG8bgiX1dAfEGXkVHHcfsJwCXt6OWyCBKdoOK-pQRs016Pdu7kMpb4imUbK4BD3WIQZtEhBkFsfD3YOK2xdAORAdrCShGhQVrYOW-9vBOOtqm_fPUCuSQS2hig",
-              "width": 4128
-            }
-          ],
-          "place_id": "ChIJKajcYkJJHRUR0F-BTVb76vI",
-          "rating": 3.9,
-          "reference": "CmRbAAAAaQLwnUe_gxZyLAIw27Fag4x4aLz8WZeawZqNSg05XOKWlbL9pvFirUoA-31ENyc726kxVWwd-xTXUidNDv7JJOnteNMOlw3LbGbaWgYksC3WfNm8SUzSZ-nr1487i2sTEhBtkvECFsqH62BQWNPhMwVTGhRomm3oqDNvOhbb8TF8uuJcl8o7Xw",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "יהודה הנשיא 34, תל אביב יפו"
+          "southwest": {
+            "lat": 32.0924452197085,
+            "lng": 34.7902023197085
+          }
         }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "efdc609c37b7bb652852026a2bf5ba5004832548",
+      "name": "פריים פארם יהודה המכבי",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJUS3kRelLHRURwPDVhEgvEGA",
+      "plus_code": {
+        "compound_code": "3QVR+GJ Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QVR+GJ"
+      },
+      "rating": 4,
+      "reference": "CmRRAAAAuzzVp8ILi0rmJ1yOidudB5aNPgnVpOZufdsgo1_PkSw4xmbmcCaO_XRdCvEdBhAPflTMDJzFkGPUWcHwY5J_qHSj7vPP7EQh3HdScCD7yDWzu3RvsG-foz39vyO0bIbmEhD2EWwJTB24zQ01mO8fj4nLGhShZuRxY224Yev2-ie-nOt9oLnYzg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
       ],
-      "7955689000000351500post_office": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0965731,
-              "lng": 34.7967602
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0979068302915,
-                "lng": 34.79811283029149
-              },
-              "southwest": {
-                "lat": 32.0952088697085,
-                "lng": 34.7954148697085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "320b40e77301c7af4a50613285f9db2b74c966b0",
-          "name": "יחידת דואר שכון בבלי",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
-              ],
-              "photo_reference": "CmRaAAAAULccQAXumiWMwWM9PVS3ZH4Lr6hrH4MCPZkrVvaqGgSLmpEl1QLPrVLqIN_WDuKVRUK2ocRe6pWtxkzJf7cPbAXB8f6VacsWlJ57EdpeAfZ3pR93Qyeo3fx1y-ZkNNUKEhDO_4PZ6tuPnRwuY9Y2ZCLEGhRMBzi82v7zMGMrDaUFxjgLNrIiiw",
-              "width": 5312
-            }
-          ],
-          "place_id": "ChIJ8T--Ud1LHRURyalm1zNGRdU",
-          "rating": 3,
-          "reference": "CmRSAAAAzo6cJDoM6K5mnnEsdMJXcbLGhvb7h1rZUjd22c6ez69gvf6yzgvlb5aolkS1DVQSZnvc90yn8MQT8fa0WJLieD46HJF3QTvPIGikr2ZVd5QCAIVbOW28EhGkiGhoK4WAEhDP8ARQlVQEgsmfmkTlAIUyGhRcifzgRQD5Ja-8zPymKe88FVULNA",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Ben Sira Street 16, Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.11399899999999,
-              "lng": 34.801108
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.1153559802915,
-                "lng": 34.8025643302915
-              },
-              "southwest": {
-                "lat": 32.1126580197085,
-                "lng": 34.7998663697085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "6731b74d1d6aeeddd2c9b6eb8e6e73e41eb810d4",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3480,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/100475323868156145690/photos\">Dan Komsky</a>"
-              ],
-              "photo_reference": "CmRaAAAAwFNEx3WPlVHXn4W7uwM6jnLF8WAp-Y8PAezrXN_-96ly7r_943w6C0a5_hvWJXe1lQj7nH7rOvhoZm9xgqyeH5SYTaim641cCYbfDGV2emErqr5uWqlzptuyJJWvAGTiEhC6sH1jUKkoz7vN6B2PmRmpGhS8AYx5x3RJ7mN1g4UqgsxKoVPyyw",
-              "width": 4640
-            }
-          ],
-          "place_id": "ChIJFx20D2ZJHRURExR15T9fAnE",
-          "rating": 3.4,
-          "reference": "CmRRAAAAfEo-WN-ur-PXeD5VvBvQnRHZhVg4fTsLD1xZafbGrgUFcz3kGRN6-BE2Me5zemqoMPLzTxNuICn7c4lEYBwl6oAzB6IsJU9_TWRXQpB2Lzirsi9o7Cls0TJYa9Q9XyqkEhCa9m3ZTBFcT1WMK9GSP5GQGhR-1W0-FYfuHAEFTj1vlduZpKRDzA",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Chaim Levanon Street 67, Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1040753,
-              "lng": 34.7917217
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.1054126302915,
-                "lng": 34.79295148029149
-              },
-              "southwest": {
-                "lat": 32.1027146697085,
-                "lng": 34.79025351970849
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "51e0fd95bd6237f872f5d2db99bfd40934934928",
-          "name": "Israel Post Post Office",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
-              ],
-              "photo_reference": "CmRaAAAAiC3nlNi9NBXh3fSotPYyPH9qL3G0Sd5a0E8XGHLDDAm4zHe2lTfZKxyvlfXVPx9IAIKOL8PAeEnwQZQG3znuKBMwRhQEd8etaayhr5Zl63Rb-b1uzkRW8pWjtjuK4v0ZEhBzSdhDKI19Z1dzwStvKemNGhSGn1sS1nRKrSZpE3sY0Tv_qnJsGg",
-              "width": 5312
-            }
-          ],
-          "place_id": "ChIJtx4jauFLHRUR3BEspk_xZpA",
-          "rating": 4.4,
-          "reference": "CmRSAAAALZi-sKTYtmB7mC8m7PE-hlo4oWSCNQyD3DqSNcO813NkBD2KPqGhNwYWSsYqHYczMN2PQzBgbhJfFKUnepS9Dv81YKsbag45m6NBvUgRC1-bBmx56bbRlVYhGSdEnaR7EhAQjLR2DN1ANp3VTp3coGZAGhSMCeShe8m0pZpOMPBcTsagH5wBww",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Bareli Street 18, Tel Aviv-Yafo"
-        }
-      ],
-      "7955689000000351500pharmacyclalit": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0928921,
-              "lng": 34.7861294
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.09428327989273,
-                "lng": 34.78748582989273
-              },
-              "southwest": {
-                "lat": 32.09158362010729,
-                "lng": 34.78478617010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "2a7bc18cb0e294b6f188c796d128556929eb9e54",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "place_id": "ChIJwVkHk-1LHRURvS6a89VRBOA",
-          "rating": 3.5,
-          "reference": "CmRbAAAAqOPnloDwry4RIxrDSCnfb5tcJE_yS8QjnyVhHHyY4ar3jFufGYw0vrVCESoGdliDXHErwKBkrcXdZWPAbbxXudsYEz-Uv1nod_4t9f93VDPSo38RACfpnaW3bUa-FruOEhCSlyRqKb6rG6PlbRKIVN5RGhQaM2r47deq2czqgMOM9puXxkM3VQ",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "אריסטובולוס 2, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1080921,
-              "lng": 34.7979351
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.10933287989272,
-                "lng": 34.79945537989272
-              },
-              "southwest": {
-                "lat": 32.10663322010727,
-                "lng": 34.79675572010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-          "id": "923d2363fd4e883f048722a1ad44246503c8e133",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/110716281354254320593/photos\">Tzahi Caspi</a>"
-              ],
-              "photo_reference": "CmRaAAAAWKSHr4VJZkFH6FwkJy0wFEe2Ln1E0D-DYVFghrlFDRPj6vMyqoTh5cVcUD77PVJN3nf9a2hK6kAtfkLTas_uZcXGl2bCYGngP9NLZX-zp1RwjWOa076eUexqH7pOj1XbEhDWafCwmhpfiMiJe_7T8r6SGhSv-bYfCTAbpu9QoIsWRhlQ_GDt5A",
-              "width": 5312
-            }
-          ],
-          "place_id": "ChIJD0NxWmBJHRURTCe7Y9aTngk",
-          "rating": 3.8,
-          "reference": "CmRbAAAA9oWxmoyay9mL0RGg4VJf8tnpiUIhO02XN5km0wtcgsH_9DjzIOE7qP4FxNuiUKR3SznQCW_gmdHJ9g2i3MbGWmoAk_cCyIfypI_ptJFF6OV1ZFF4FPJuWGvbvkliFoGWEhBKu-MTtcMzrsYHYoKfBwbsGhSi7-Nij4KLF-iX-kqdckVLbE7JAA",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "ברודצקי 19, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1190231,
-              "lng": 34.8008654
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12029927989272,
-                "lng": 34.80220037989272
-              },
-              "southwest": {
-                "lat": 32.11759962010728,
-                "lng": 34.79950072010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "f998a0cdf39af88c7f1b2410c618ce7f6db3484f",
-          "name": "כללית - בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 1080,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
-              ],
-              "photo_reference": "CmRaAAAAwtWozXffWB7sfuUWyQTBORuQIgUez7-YWMUyzhiEXh2imY_t9M9zsKhtTrszz2WAXCNJzGPBvNZy6n2Tn_Sy4hnMDQMmuO8YC1E1m-LXBIMTqBRojYcjzePsy9dju0HVEhAkXku7BP-vKuFBu0lugM8WGhSTjF6CF9z8M7aUPVGorM7NQlZYIw",
-              "width": 1920
-            }
-          ],
-          "place_id": "ChIJv71EQWlJHRUR9t8XLknlU0s",
-          "rating": 4,
-          "reference": "CmRbAAAAocFxZ1fLYAdAvxwmh7D7J9qriY8zV5rSu23PrC-87mysR8fB37jIRl7h21pN-Cwwlpx3_Gwfk9QkmEhCMmCwPzKkqVLUcjDzyrokg1wq-m8eOMlm79ZqS4nUYUAtYSwJEhA8qXy_BdQGV_JRCAgfk6G7GhRwv2L8RuYzlBC2NGICrMObmmG4Uw",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "גייגר 7, תל אביב יפו"
-        }
-      ]
+      "vicinity": "Yehuda HaMaccabi Street 42, Tel Aviv-Yafo"
     },
-    "11331734": {
-      "801371000000021500bankdiscount ": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1251088,
-              "lng": 34.8032901
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12624902989272,
-                "lng": 34.80458017989272
-              },
-              "southwest": {
-                "lat": 32.12354937010728,
-                "lng": 34.80188052010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "0ee7c312d01ea33a7d1e0c433b45d93dfa49d16f",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": true,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3024,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/103064228010411263215/photos\">סידי שחר</a>"
-              ],
-              "photo_reference": "CmRaAAAAJSnW5bVaJ8vgVviLrHn3VSHWC-DFfoZlvSGGLB-aMGlsGdvahuOnmxq9xDTYjS-pmVghf0EcX8zUNlb7L6TVcTSERILeuJiVzTrnN7Zbv0_McBKbq1LrLgMrxl8SPX41EhDzKh2urF-olFBNRL4lwoEHGhS5izTeUnVvEM14pWZ6lwO5Ha5mcw",
-              "width": 4032
-            }
-          ],
-          "place_id": "ChIJAyUqPxNJHRURoEvSvwF8cwY",
-          "rating": 2.7,
-          "reference": "CmRbAAAA8jcw6BR-KRyWngOFkIpVSOFWDE79oMcY_0b57B3ZcPv_A8SVipYCKBaR9EGWraS3L6LuxfZBjBVMwiMczCqG_kFibOIdHM9ZOtTw9yo2M_8ga0-PqffLMzKWygu1hj8eEhCPsLWvTzYEDwA-OUBTC2XMGhQzOq2zi3TqRb4sRSw2kNKgz2b3Wg",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "אבא אחימאיר 25, תל אביב יפו"
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1080921,
+          "lng": 34.7979351
         },
+        "viewport": {
+          "northeast": {
+            "lat": 32.10933203029149,
+            "lng": 34.7994545302915
+          },
+          "southwest": {
+            "lat": 32.1066340697085,
+            "lng": 34.7967565697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "923d2363fd4e883f048722a1ad44246503c8e133",
+      "name": "Clalit",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
         {
-          "geometry": {
-            "location": {
-              "lat": 32.1191499,
-              "lng": 34.7954171
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12049762989272,
-                "lng": 34.79678517989272
-              },
-              "southwest": {
-                "lat": 32.11779797010728,
-                "lng": 34.79408552010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "496d151382af88edf2d2cf4b8a87eb629d097133",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": true,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3096,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
-              ],
-              "photo_reference": "CmRaAAAA_Tov1zLmCPYMvkiLxijPd12LFzK-PKEC_i5eGmpWj677rqXpfnbS9XLgHdk8aePjm5_6AEJwrGDtDK3gk0gGLUWGG8JLHFh23DHzsyVdF1aIZyeplpiurtAW3GIOk_DWEhC6ScbLC0shAJGpPBGBxr5BGhTThS0RlSPD29XAr4xAJQvCGt7nwg",
-              "width": 4128
-            }
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110716281354254320593/photos\">Tzahi Caspi</a>"
           ],
-          "place_id": "ChIJKajcYkJJHRUR0F-BTVb76vI",
-          "rating": 3.9,
-          "reference": "CmRbAAAA4PM-fc_X94stL4PuQSpb0GB8yFMGiR9h4O9BsteSW0WW1tyqE5iTLW4H86QpGcogMT4SU9cZ6o0YxtjJuX1k1IbtceR9D1iR9FBG3fX9wUGhCOdKYUg6DZNea56tLOf9EhDEu10ag81jMeFOFPIiE9xCGhS5VhmwrDPzrDNPV9JAaFVVI2AS6w",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "יהודה הנשיא 34, תל אביב יפו"
+          "photo_reference": "CmRaAAAAEu4dSW9gFj7eagDyxaoOkcWR1c0__R9Q-aXpZWbeTaBe6S6Ca3RQzIxvqWK6hA1tGS12eqsmBv1duRIeF3yxWwzPIGmmdmM0NJL1VqhVqj3-Hg3BKMTyjbfruGuzv-ytEhDNQaxR_uAIlqY2u4SXp1I5GhTjjrL_9k5PJzDY4wyTQ6eg3uwV_g",
+          "width": 5312
         }
       ],
-      "801371000000021500pharmacyclalit": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1250383,
-              "lng": 34.7984045
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12638812989272,
-                "lng": 34.79975432989273
-              },
-              "southwest": {
-                "lat": 32.12368847010728,
-                "lng": 34.79705467010729
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "683ae14eb64d46e5c3d767733d820fa1a09d0135",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": true,
-            "weekday_text": []
-          },
-          "place_id": "ChIJF1WdfQc0HRURcgHNvasjbNM",
-          "rating": 3.6,
-          "reference": "CmRbAAAAXt_kJYaK6t-_2l5zgkM_xb2OiWD0wJQUFfU_lYtX4Q0WA2IfxtKG7moh4km0OYc8AEhPkCWdow6AFcHSTTdjTBwKVcCtESUWumA0n7rX4y3GWIA39cAY3MIzaoZnBBUkEhAWqtivxqf1Mxp798baufwtGhSApmqlnYEE2sza4ejIfnXOVue3rA",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "שמאי 1, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1186941,
-              "lng": 34.8167651
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12002847989272,
-                "lng": 34.81811322989272
-              },
-              "southwest": {
-                "lat": 32.11732882010728,
-                "lng": 34.81541357010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "e10a9b2542a889a439443ee8fbb177018f2ca59d",
-          "name": "כללית - בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 1080,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/111616471000466631019/photos\">Ido Mosseri</a>"
-              ],
-              "photo_reference": "CmRaAAAA9EgjEqMFn_plV0X836uKxbUeMcPQY-xyKMmnimNWI9ASaTpc-ZlNCqs170hPDUGpDRmIoTD0O-hVeHl5da2bMpgpEsB9Cj9DLgYFmc4OQ-rPlv5Vfn4oA1KwEq7lR2DmEhDH08tIyosskzMGpJ-Q9jR9GhRLrbG5vSIyAYPD7QlrmfmFi2EwEQ",
-              "width": 1920
-            }
-          ],
-          "place_id": "ChIJH2EvEhVKHRUR4P0cjFL75VA",
-          "rating": 3.7,
-          "reference": "CmRbAAAA69NdoVNs_kkAHJgsyuSf7OrUiyKhUFHOYyW7Aj3UZeqPL34I1Mai7FC3PwpAz6ZlMBABMgYbBwftIhfJ3F-2amalKgvsjFCzTgtMXGVN6_bw0ZyegGKUSsG2oObVjVJ7EhCvjeKfA72QmQJtuXxsS2DvGhQg-FbWtyN6wxVsxLx78gS3-wlAUQ",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "שדרות קרן קימת לישראל 134, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1080921,
-              "lng": 34.7979351
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.10933287989272,
-                "lng": 34.79945537989272
-              },
-              "southwest": {
-                "lat": 32.10663322010727,
-                "lng": 34.79675572010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-          "id": "923d2363fd4e883f048722a1ad44246503c8e133",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/110716281354254320593/photos\">Tzahi Caspi</a>"
-              ],
-              "photo_reference": "CmRaAAAAqEb0JexzKxQ5pwJRR6y0RZDBy1ce4RpY0NiDpTrtvlw5b-tQv93dZPvNpbABnTtWxpfusuSdrK0BJ4-o3rv0MtjAQQEyyrk5slYSBktv5rj1m3NjT7SIrsf-x_tyOCf-EhA5lg-bp58mIcjLVr794v3_GhRXtMgJBJPn4GsZidC99Q1Tu7JwrA",
-              "width": 5312
-            }
-          ],
-          "place_id": "ChIJD0NxWmBJHRURTCe7Y9aTngk",
-          "rating": 3.8,
-          "reference": "CmRbAAAAoms08N1Ilwz7Sqm8Mrklr8VqBbvJ2a6rjn_t7L5bRm5TconiPtuvCVM32e1pPHUZlpx19xCNxAAbIlrs7m8_WS7F_7zTr7ROb0P1NBDcOEIyQZYIO_8Wj78ZCBfb3vFIEhA1rK-7tX7XFjw_iZYRJTs3GhSD2N55o6OQAVMhHUS4aSknFLdfZQ",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "ברודצקי 19, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1190231,
-              "lng": 34.8008654
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12029927989272,
-                "lng": 34.80220037989272
-              },
-              "southwest": {
-                "lat": 32.11759962010728,
-                "lng": 34.79950072010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "f998a0cdf39af88c7f1b2410c618ce7f6db3484f",
-          "name": "כללית - בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 1080,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
-              ],
-              "photo_reference": "CmRaAAAAyy4EnTFknaA3ZYBQN8xvIY5I-Hr7cur6yC5Szt2xeNFXHy-ByhQUQwDGxL5UxNH44j1D5H-UlkoUpb8tAXBUgrQ3QWCuPh_M6L8yRDRAf7NKJkzaDSWdU7lWbBzahMYqEhChVbCsj8QTxNT5ewWCUsGUGhQo9ebAYzeRYJaqfJ8mjQ3lzKC7YA",
-              "width": 1920
-            }
-          ],
-          "place_id": "ChIJv71EQWlJHRUR9t8XLknlU0s",
-          "rating": 4,
-          "reference": "CmRbAAAAuS_jupGfTzwx2kgq2G-ufkS-cE_CCnndOSxWLEUELhooCJyNvBTb1Vdn4oha1ZC0bAvi6DC6bHrHY1xZREr_2quU7xJH4ojlH-551DyeLV4syGxNanQjr5EbGUsI5DIWEhC81uq4kx7qIwFEiECbMRYaGhQwZzPGmFkZw_FAE6XwwidcWHtj0Q",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "גייגר 7, תל אביב יפו"
-        }
-      ]
+      "place_id": "ChIJD0NxWmBJHRURTCe7Y9aTngk",
+      "plus_code": {
+        "compound_code": "4Q5X+65 Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q5X+65"
+      },
+      "rating": 3.8,
+      "reference": "CmRRAAAAliowkOh87_Uz-eW8svMMRIcFGkmbproRRqJ-MQ1d5MLuTrFFeYMKRa8ReEomUydXvGuLUzQKPnZyJ0D-KLl-Bw2OdkcZaFcJnRcKl_dObLP6u-NXxcp-9P80_qty9QGIEhDsH3Tw7MD2iYABDhF9TWLWGhRUSpw2NOOzdzyk2g3DY1WJ4BoO9w",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Brodetski Street 19, Tel Aviv-Yafo"
     },
-    "114139834": {
-      "801225700000031500bankdiscount ": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1251088,
-              "lng": 34.8032901
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12624902989272,
-                "lng": 34.80458017989272
-              },
-              "southwest": {
-                "lat": 32.12354937010728,
-                "lng": 34.80188052010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "0ee7c312d01ea33a7d1e0c433b45d93dfa49d16f",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3024,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/103064228010411263215/photos\">סידי שחר</a>"
-              ],
-              "photo_reference": "CmRaAAAA4bVwdkWAzS6833DTwSwwJKoGREXqRtjcA8YCg53B0xnHdlLK6lIlS8MW7vAVIr7rL7JVgE-BoyK0GQzawIBTo8410EinjzXQUNJy4NSMT_MjZAvw95SbNfYcBrhlvh61EhADj4JMjWVqg58ptNceISH8GhS8bQs7Est7Mm9X61ztNcbS9Dqlqw",
-              "width": 4032
-            }
-          ],
-          "place_id": "ChIJAyUqPxNJHRURoEvSvwF8cwY",
-          "rating": 2.7,
-          "reference": "CmRbAAAA5SU-mKetb19pQK3Ok56zjqgn3MkWUFEes-PjldqfMqBw3NsCjIUMOUreI-XPh6skIRHkBiPqAysFOE9ykbWLOLvpca-rBZ7YHslJ3fSv7enpK0eZjbGCTmNzx9CwC4PHEhDOJni7LbBscLUiy9tpxu77GhRWENuKmSMGIn1kfUqlnQGl0eLVcA",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "אבא אחימאיר 25, תל אביב יפו"
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.104203,
+          "lng": 34.79166800000001
         },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1055404302915,
+            "lng": 34.7929148302915
+          },
+          "southwest": {
+            "lat": 32.1028424697085,
+            "lng": 34.79021686970851
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "7f8f2367c038590da1b5546bb90ccfa2cf518591",
+      "name": "Lamed Pharmacy",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
         {
-          "geometry": {
-            "location": {
-              "lat": 32.1191499,
-              "lng": 34.7954171
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12049762989272,
-                "lng": 34.79678517989272
-              },
-              "southwest": {
-                "lat": 32.11779797010728,
-                "lng": 34.79408552010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "496d151382af88edf2d2cf4b8a87eb629d097133",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3096,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
-              ],
-              "photo_reference": "CmRaAAAAFyvSzaMRcncpqW89WwekR-PMlTWe_sEdvFHK_MPjqS1-R_-8F0vuWkjF5VhTRdSXuM3iGGRbOUjQpWpeKC0SX98jwrYBSANd6b3dpjvzdMUArPoAr-0kwc3l1TFi407JEhBKUDJOi6h_jbsFOfN9gbDIGhSx7dlfglNacxcrCAYzFwLHtpsr0A",
-              "width": 4128
-            }
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
           ],
-          "place_id": "ChIJKajcYkJJHRUR0F-BTVb76vI",
-          "rating": 3.9,
-          "reference": "CmRbAAAAg3Ilh8nskStXYXPdlYDmGjyxTKt29l-jnUHfnsLasplioD7metFxc_OhHq0xTNJbDbxBnn0DR_QBZThasIrFL5loI6wqPtrxmzSC4k2BH6Rg31ujGSXmOt9EIxj-j8mrEhCOIMJmnPSB720EP_MMC1JYGhS5FuZgaOa4PAC8b8Hl2E2f2l-3gw",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "יהודה הנשיא 34, תל אביב יפו"
+          "photo_reference": "CmRaAAAAEY2G-PEaxZ5N9jQmXkqk_z8YL2QLkidSk5GNkTbEEzwZV-nokdlblaarQb_F8B_q40yiATdxHqI5GE9p_H4FTcIMWgSW-2IYYcUDmQvBI_eVGAtAPPMGeLJqYDuZMzS7EhC8fd-dK6Q6BAjQaLwFxf4ZGhSIMLtsWG_eSXYQomTwI_Uu3EdVuQ",
+          "width": 5312
         }
       ],
-      "801225700000031500post_office": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.124289,
-              "lng": 34.803839
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.1256379802915,
-                "lng": 34.8051879802915
-              },
-              "southwest": {
-                "lat": 32.1229400197085,
-                "lng": 34.8024900197085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-          "id": "33c679412ae225ecf04379abea08dfa441179902",
-          "name": "Akhime'ir",
-          "place_id": "ChIJXyckPxNJHRURixPWpdI30HY",
-          "rating": 5,
-          "reference": "CmRRAAAABZE1tvogDAZBO0RNlJUzhf1bPdUuyL16-nf2RmlgTq6Qa1wuG3e968UJbagF84VRKEk6HyFIkoptgAY5aZqm69ATcJGZAn1jxk1M3eTqFFe4o-Qwd3PvoKTiPXAurFYMEhCI2FoBQcg3OLGd6TAl2G24GhTl6i9kaT95ZjgyGti-bai1hU8HJw",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "parking",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Tel Aviv-Yafo"
+      "place_id": "ChIJ6T47aeFLHRURGruSvmFF70o",
+      "plus_code": {
+        "compound_code": "4Q3R+MM Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q3R+MM"
+      },
+      "rating": 4.6,
+      "reference": "CmRRAAAAjZPEp6d4P3OaDc3Wmxd_HveOUdHNNeudjyiNC48P2YYFZ1S83L0tE58KyJhO1wwG-9F1y4z5Qv1XjP6CsICPotHHpW1FQzGP58MBq2pQ8PKGTbCfYrSfmW67NoKwacZkEhCIWGP1YVbjhU2AaTrvWkEgGhQLH_zWg4oiovIA_kkQC_cCQjudVQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Bareli Street 18, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1122621,
+          "lng": 34.7945882
         },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1136110802915,
+            "lng": 34.7959371802915
+          },
+          "southwest": {
+            "lat": 32.1109131197085,
+            "lng": 34.7932392197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "52a50873413dde8abc7fba0a51d4788ae1935edd",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
         {
-          "geometry": {
-            "location": {
-              "lat": 32.11399899999999,
-              "lng": 34.801108
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.1153559802915,
-                "lng": 34.8025643302915
-              },
-              "southwest": {
-                "lat": 32.1126580197085,
-                "lng": 34.7998663697085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "6731b74d1d6aeeddd2c9b6eb8e6e73e41eb810d4",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3480,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/100475323868156145690/photos\">Dan Komsky</a>"
-              ],
-              "photo_reference": "CmRaAAAAbqDX2sUkBiMH_5FApuqkGCxRaITKTR9HF_iBhza7j7hDgugyHG3KYwlYNVjpIOFvkOK7O0_nl7e_B8dNRYmvFwnp_SnecenAqp6ELSQqVvYvhi4P6HmppB5PrU2vyjVtEhDX5gJQDg5r2lD7LWwECIK7GhQ5OQSJZEPRa7tMTNLcfVt_kpQpQA",
-              "width": 4640
-            }
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101347695240737471426/photos\">Omri Roth</a>"
           ],
-          "place_id": "ChIJFx20D2ZJHRURExR15T9fAnE",
-          "rating": 3.4,
-          "reference": "CmRRAAAAxyn85GgTvj9pcXD7WsgwFA0Lpriu-mVzPOxgzWSrR3UCDKJ2ZIif3558bZhHqLaqxO4SxWgFFqjpAHbeU3EhyjBV1nElWC89C65eed0Xki5N9LBCZZnUyzbgxhC0yIXMEhD9tJLd6lhVEEVZ4tL_NKzkGhTHySZI1XxyijclfZ8wv2sPbpcPIA",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Chaim Levanon Street 67, Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.125027,
-              "lng": 34.8041208
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.1261375302915,
-                "lng": 34.80541348029149
-              },
-              "southwest": {
-                "lat": 32.1234395697085,
-                "lng": 34.80271551970849
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "91487c5282e9c75334ba121e2e0601ea7a0c4027",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
-              ],
-              "photo_reference": "CmRaAAAAYTWOJr3Vf-Cl_33m0JjXvjo2L6dNfqwd3ax-vlvi9rYAU1UpG8E9XJNT0vuB61uK7bd1FbHAqrG35f_l0j3z1uF_LdyWZRMsr7hoBaG-PB12FS5lUCAk4BcldWL2n6WdEhBKFqWLL1ARHrtJmVQU-JPUGhSWuUOlUJ6B7BfrRDcTLOwgixbomw",
-              "width": 5312
-            }
-          ],
-          "place_id": "ChIJP7dhJhNJHRUR4Y4jLAwgsaE",
-          "rating": 3.3,
-          "reference": "CmRSAAAAIeOCroui3uOpf98wF_yn8YtjjY5aOwRCB-dMxqfX-dO-y28ftaRzwrignrKqu7M6cbZ4yUi_6eXrsJtz88pxnkEMgEYhrMHtu4Hm1DPAAhnGNXB8Jqd-RqtpHkCyi7HEEhAd1MU-TtHK3LzNlFGW6s8PGhQw-SJQlVxrYYLLj7cDzTInzhQrhw",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Aba Akhime'ir Street 33, Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1250082,
-              "lng": 34.804191
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12612208029149,
-                "lng": 34.8054844802915
-              },
-              "southwest": {
-                "lat": 32.1234241197085,
-                "lng": 34.8027865197085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "6226d81a96553754075fab2507d0acee8c74442b",
-          "name": "Post office Ahime'ir",
-          "place_id": "ChIJT1WFq2xJHRUR9i0zWQoKqp4",
-          "rating": 5,
-          "reference": "CmRSAAAAwKlTAgUgO2QXHodWLwgCmCuVW_gJqCR6REDofH3uJzSpqJgbSwzVSDYOof7KD2GH4Lcc2VpLQryzAbYgnLqzUNlziNPv9dD2F4Yo98RrFtVxYLgoLww9q-IGa7gi5PUREhDCaEyd12Npp-Cs7gkfa8XYGhRADZS7l3Yr08Cgvk-QQOO7ZWR67Q",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Aba Akhime'ir Street 16-22, Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1040753,
-              "lng": 34.7917217
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.1054126302915,
-                "lng": 34.79295148029149
-              },
-              "southwest": {
-                "lat": 32.1027146697085,
-                "lng": 34.79025351970849
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "51e0fd95bd6237f872f5d2db99bfd40934934928",
-          "name": "Israel Post Post Office",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
-              ],
-              "photo_reference": "CmRaAAAARR2wlp-JT2swuXkXkn1DoxfguYbpX--_i9R4M9kEhPhvMgEiNtr0YglVOP0HrawKH_SSmlBRc581DirPZqngiCBMuV-3pJgQunQojAk5rrJxfal62sZmz1v_7-EOQdPQEhA_bc0LJYZAzpM035kod1ZeGhSHAYtQ2snubCUO1Lam-A8smOn2dw",
-              "width": 5312
-            }
-          ],
-          "place_id": "ChIJtx4jauFLHRUR3BEspk_xZpA",
-          "rating": 4.4,
-          "reference": "CmRSAAAARdCsKJe2hYqndo63sPVEjoddc8OU8hhAj_gfJd1VFTHzvHAy_2UrVuY667SuFXpLfYl9TEzs4tfBAXk9zBC0rugO2LogD5lLtuZgWZSBY3192ouVQ6tfYkeQeG-T2EwGEhDyxvnIeJE1K0Gv7l1O-nuUGhTEYNdFN4ta10LlqlwzkvliHbxbNA",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Bareli Street 18, Tel Aviv-Yafo"
+          "photo_reference": "CmRaAAAASQ2-NGP7S1w5VmAXKBpcoWATD1xqHeNhRTVvL85QKRz9bhBlyg7hc-wM8-7Xkwh4uHoSW5Y2EZvbuwy7lJwbJFAUGgzckJWTx5AO6LCAYMhvw8_hBWI0IeDM-7LO--aFEhDAcfeCRaMidxnaLuOO4gkqGhRjm4hzaS-HUnwKzs9HISbSv5DyZA",
+          "width": 4032
         }
       ],
-      "801225700000031500pharmacyclalit": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1250383,
-              "lng": 34.7984045
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12638812989272,
-                "lng": 34.79975432989273
-              },
-              "southwest": {
-                "lat": 32.12368847010728,
-                "lng": 34.79705467010729
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "683ae14eb64d46e5c3d767733d820fa1a09d0135",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": true,
-            "weekday_text": []
-          },
-          "place_id": "ChIJF1WdfQc0HRURcgHNvasjbNM",
-          "rating": 3.6,
-          "reference": "CmRbAAAAbFyIyJwbCPo75iitbHDIu4svaXFfFN7VpkBNpZwDEHwyPvWmg-lgF9sC2smHT7gU3XX0hLEC8arpPX0leFkOuo9Erck2XZyZ_GklzLCaJG_t7JeeHvnJHrpC9zTWcofpEhDLdd-gK89vU7Pi65lLB-NpGhRevElM3aK5rjOv609JDlG4cHRv9g",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "שמאי 1, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1186941,
-              "lng": 34.8167651
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12002847989272,
-                "lng": 34.81811322989272
-              },
-              "southwest": {
-                "lat": 32.11732882010728,
-                "lng": 34.81541357010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "e10a9b2542a889a439443ee8fbb177018f2ca59d",
-          "name": "כללית - בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 1080,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/111616471000466631019/photos\">Ido Mosseri</a>"
-              ],
-              "photo_reference": "CmRaAAAAj01f0MC60KemTsRfNpVeZWjXWFz10Od95jOsAH-qP1dttsz6ywF6enLqQkzeWF9IpQ8IVACc4RF3FchWfjjvyqnyeMxRW3Njws9RBO3xN6tVM-__BQn1A4kCkGa78G5iEhCSeIpu9QuIwgRWX5OVHjnwGhTl5AvsjuMkxb-t_9-ygwjqNnwX6w",
-              "width": 1920
-            }
-          ],
-          "place_id": "ChIJH2EvEhVKHRUR4P0cjFL75VA",
-          "rating": 3.7,
-          "reference": "CmRbAAAATot1OG9s63xSsACUk1F3N0dg9fhG-qVl-M48nn-iFUwpaZfngi9Xnk9w50ZrOB28f5-LTecBrBscXPc8m_FfjxSkPHx3Jn8dycvIHIKSY4UzQY37XJQEKEJMF1npwwWbEhBklIYQXpyyObU8Ho8DUuXgGhQi0Gtrhrrk68iLuOw1uZenV7BKSg",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "שדרות קרן קימת לישראל 134, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1080921,
-              "lng": 34.7979351
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.10933287989272,
-                "lng": 34.79945537989272
-              },
-              "southwest": {
-                "lat": 32.10663322010727,
-                "lng": 34.79675572010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-          "id": "923d2363fd4e883f048722a1ad44246503c8e133",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/110716281354254320593/photos\">Tzahi Caspi</a>"
-              ],
-              "photo_reference": "CmRaAAAAqntJSDTzd4V7g9srBRtTQqVhMVbC8oKocwFKcXBAGbME54QTLkp__srYpOlLdyUzxfPoiIuVL7ogV_FWHwlMDUQEFT-whA-GoujfwZMMgcRvjyCgK7e1AJsTT_2p3eUjEhA6Sco2gIVBOIOxu8Kn9RGUGhQfCYyrbcf--u5HVXYOYiDZx1Jfiw",
-              "width": 5312
-            }
-          ],
-          "place_id": "ChIJD0NxWmBJHRURTCe7Y9aTngk",
-          "rating": 3.8,
-          "reference": "CmRbAAAASQj1Cz04P5-cEG4A9yXoP35Ygc8PTbgcG55qWJ8fEGsPheJeXIh6EVTsKp6VyFm2Pcm3CRXxlGNJxTRofVMP2ybuOyYavIFriqwr2Mo8y8L2z0vFKzPi74qy0WfbHPT5EhB6Omf4TlF9_NKD1wQ8thSMGhSwUVbB5JIjz_u6RIDpBXfEZVx8Dg",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "ברודצקי 19, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.1190231,
-              "lng": 34.8008654
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.12029927989272,
-                "lng": 34.80220037989272
-              },
-              "southwest": {
-                "lat": 32.11759962010728,
-                "lng": 34.79950072010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "f998a0cdf39af88c7f1b2410c618ce7f6db3484f",
-          "name": "כללית - בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 1080,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
-              ],
-              "photo_reference": "CmRaAAAAEwc92qRCW8OaiuL1WLIPyaM2nk08Dmc4HMvica2Cj7LBD6uzP3rYPu0mnsKA8_FUraqVGHywx06bU8OPR23094yWtUMvxaoUM3UDmkPTw_Y0tEMQRaDACWaIEj4zSBHDEhA84BCihf-h9SN-8wj2x2M5GhSm6CKv4IJKFuzYm8sgIrBcMvlEyg",
-              "width": 1920
-            }
-          ],
-          "place_id": "ChIJv71EQWlJHRUR9t8XLknlU0s",
-          "rating": 4,
-          "reference": "CmRbAAAAjd0fMlCLl3E6GZc2rIxhhSNYzBPC-69rfEqjG4N6QMADCGPCH18A8vkwtdogllHF17FDBXmBPneGWi6rku9UFpy6d8TM3WqV7O6B16AtD4AJrL6ev_xiVOUYqB5xWFgvEhAMvXHU251ex1jbrb0AH8wJGhTvVfhlKjl2rd-BEc4EeoyHAukXlQ",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "גייגר 7, תל אביב יפו"
-        }
-      ]
+      "place_id": "ChIJQ3Pk811JHRURGrt6cIgCNdE",
+      "plus_code": {
+        "compound_code": "4Q6V+WR Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q6V+WR"
+      },
+      "rating": 3.9,
+      "reference": "CmRSAAAAL5WpxprjLSjt2aqJVgOVkCWWZOaD8W_NZcWh4Z8tiYF2FPntdxbjNUTGxLfvmJgpzMdFQhfVXC0oZAeUOOJUsvq_-WYdPQztsejNhvzJfU4TFUTG9YenySj3RWGcaEHfEhDnYit1FgxAkcoCoJQTQhBCGhQBqkiKMt1f0ZcbmmApIVnYzl0mLw",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Einstein Street 40, Tel Aviv-Yafo"
     },
-    "090060134": {
-      "8035691000000041500bankdiscount ": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0949429,
-              "lng": 34.7982043
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.09629272989273,
-                "lng": 34.79955412989273
-              },
-              "southwest": {
-                "lat": 32.09359307010728,
-                "lng": 34.79685447010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "58c4082fb2c8d65daafdf146979c81a73a02b3b4",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/118370500818761638840/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAE6Q8NyDNCMJeRqNr7WZltqbCyQ1Nezgf6RhkOt4jCAVAuMU9unUAEY2jqzeBX5sYNKZadL4BMLD78L-YZUihAjyVQMQAK1OKo4BFFX-i3g2E0g9g2DVhjZbi6rSKOZS1EhBD3lOSrE1gkWY714r07SW0GhQVYWDhZFnTVVzx8rAnX2VnZMX7TA",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ1xBZLN1LHRURt9JkR6nF7SI",
-          "rating": 2,
-          "reference": "CmRbAAAAjus__RZ3CH0sz1lepl92EBgqRKKzorxqo-Xs9CelIVGu2DihBVKPUFbyO4uizuEKnQBxjoCiPFbG5lF-rsRTdeI8G-gCCsOvozie9oV0d1REFgkboDnO3Qb1THVDjtsXEhAdetLk8GkmXSR-gCpODuRnGhRAGMwkzKHwObFu7Himd1M6FBhx6g",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרב הרצוג 24, תל אביב יפו"
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1123057,
+          "lng": 34.78726049999999
         },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1136204802915,
+            "lng": 34.78861403029149
+          },
+          "southwest": {
+            "lat": 32.1109225197085,
+            "lng": 34.78591606970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "f41b676bee76061a2427e93d8b6e75fd260d97aa",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
         {
-          "geometry": {
-            "location": {
-              "lat": 32.0848479,
-              "lng": 34.8042303
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08626582989272,
-                "lng": 34.80546847989272
-              },
-              "southwest": {
-                "lat": 32.08356617010728,
-                "lng": 34.80276882010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "175292529c931106c2cc4fbf0cc2f492d4dd4e23",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/112734137294283246010/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAQwk0R_NwgRQUUXh1d32JO5dbSqCLSP1IvXnSULChdrIDych8U3i6wTtsPFyPi-HJjYsrG3QFw3NN54t3lDmYdY98Gthxy9IaTqawD58AOy3a2d0-0ENXT1zo4bF5FbOxEhBHBEDJuLAsegmQMJB1QIz3GhTumh9eJi0uAK70ukanR1PcZkbyHA",
-              "width": 250
-            }
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
           ],
-          "place_id": "ChIJgdk6dMdLHRURFCiOJ2n_SAg",
-          "reference": "CmRbAAAAGikOMeYyQOAh9THYHlVgx75_mFZ0Uq362-EiwV0vL6Ex82COw5ekwNCBIxBr6IlCLoKxS-RMJXX4l5-Tx8N3lFLTM-IbpZpuN2cEVxvC04CGMweef6LLpFko6RJMDBCkEhDi_ayUd2CLBl7ynzw94JFyGhQEIGHCcoJBIH9AhXLqc65zYthn8g",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "דרך אבא הלל 12, רמת גן"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0879509,
-              "lng": 34.7890145
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08924412989272,
-                "lng": 34.79040257989271
-              },
-              "southwest": {
-                "lat": 32.08654447010727,
-                "lng": 34.78770292010727
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "562ce2dc768a61101201855b15f8ebb691da64b6",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/112768287023676526187/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAUy2EUh2UN-m4Qu9SepQgUWHQRr6_YtyikXSGRyJet_Hx4vQ1K9mDz9B2kiyIM4ExLuiqE8SJgc7Ct_YezYy-p-NQnebEXdUgy2bZHg2bkk3SGZu6ZtsGP-F0WfQj4gZMEhBG7mJTUorgp5MmS3f4xxjqGhQAc6CCXdz7wk6DDQnbDvyDy5rhyg",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ5a6xupRLHRUR92PV-Aem5W4",
-          "rating": 5,
-          "reference": "CmRbAAAAikGUJ-wRM7grs0RRRsGLisEzspcQV1UlJRTDlrUvIgu76qvup6ODs1TnogSfYWNo8ouhaGMWnD7gv1CYzRfIH4Y2j2mLncbE-mY2CuLeFscGu2wr6wvT-FVdGk_Pg2tqEhB2QF7oGWPPP7EVS3XEdSGFGhRa-RU6Xfo5v1hLaDpRoiS0Y0rF-g",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "ה' באייר 66, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0834857,
-              "lng": 34.8015186
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08461817989272,
-                "lng": 34.80290212989273
-              },
-              "southwest": {
-                "lat": 32.08191852010727,
-                "lng": 34.80020247010729
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "b266913ad8967aeefb5c3c008ce8c0ed5864499e",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/113242140498931057856/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAA22uTqRybWEgyddNLKT-y4ptjdNPtu8VyzvgEiKpQyoiSd35nVD1ecYIXuji3PUxC1Xy99mzrgEXb-C0KiJka1bL5jr6SRtpFVEs6TjrzzimdgcXUkhmM0cglEed7ZRT_EhBJ--b95cVWMNXEkn__D3RHGhSVfziBT5LPCvYBfZ3x8pyz3YvOjA",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ-Tp-Sr9LHRUR2pMdvEktim0",
-          "rating": 5,
-          "reference": "CmRbAAAAx9W6oDiF7hJq00BJgl2im91Ti81_I6ztSQ6L3eqAhEG2a2glcONwGzLTB3BgfEnCCdt8ToCvhS4OgGUiPMiki2DJfxhTIxdNGFda31TaZev9mnV3fi3jUu5qGUy17ZKUEhDYrOR5GYXjqN5RgEYIL19VGhQZf8SYzxVlBFGWF4Gmq0tii1i1mA",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "רח' זאב ז'בוטינסקי 3, רמת גן"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0840807,
-              "lng": 34.8155222
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08542242989272,
-                "lng": 34.81681162989272
-              },
-              "southwest": {
-                "lat": 32.08272277010728,
-                "lng": 34.81411197010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "e0e5c11e87ccb789fe59852cb405e3f497a95458",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 1152,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/114247761343273627183/photos\">שימי שלמה</a>"
-              ],
-              "photo_reference": "CmRaAAAAzIyLVuCP9vyNraGsOlSaaZlJcD0WX65TAALc3D3KPYWHkY9M6JEOa5GkXTvtj5CiuGoUqx2w7XmmZILO-Fj2RqrZbD4CLVGRBDvkYsviVUNh8kh-JDwC7Rdqe70nKdMGEhBeZNtyzSISqHtpWxNw1-ECGhQ6Q8BkSmICNz57L156vrbh4c9WTg",
-              "width": 2048
-            }
-          ],
-          "place_id": "ChIJlyCxn8tLHRURnJ41mK02bK4",
-          "rating": 2,
-          "reference": "CmRbAAAAevq8MP8s8bLeFG9MmDKiEzQkbY2eqAAlT55T-qL4XZSzSXl-mAhgRhF9DI6p0DopYETTw8hBg_nfRSLy2XKiJ1DhtnG-2_yjwNtk-kE4gHiC9pb3y5IYQq__D1KirknxEhCVSGORy7zKGIY9k5bl-nD9GhT7rx6-ke8xZ4uuDiqwUxIHinVxTw",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרצל 50, 076-8051200רמת גן"
+          "photo_reference": "CmRaAAAA313Qgsc8vhYZZI9nADWsM2vhpS5C0Q4loJ0e-R5nahqJJS4ZHm4gKwoJoqp2kP4H6TdbRNsdYK508IUo2WIuNzWrTGAj-59R89Fhj7M4w69oVz6wUuJveldoGTkyKpzeEhAGvOiqEMTBecFPX0eHjlJIGhRoSvXppgEJlni5Y1m7I8HSo7ShDA",
+          "width": 5312
         }
       ],
-      "8035691000000041500post_office": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0879592,
-              "lng": 34.8144351
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0893824802915,
-                "lng": 34.81571913029151
-              },
-              "southwest": {
-                "lat": 32.0866845197085,
-                "lng": 34.81302116970851
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "6f803b8498ebc68e31ffacc94d055b2fe13e1c41",
-          "name": "Israel Post Oasis",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2448,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/105011068286051419090/photos\">Menashe Mishal</a>"
-              ],
-              "photo_reference": "CmRaAAAA4c7OlQMJ43o7jH4s7XzR3rja3-NgoTMIYmJnmsw1LBYaILBZ3xJ5--0HmyD1iJE3MFWLGVoOVSMCHBtWPpfAtGTGndCccDKRj71PfOQi0VVnuGHkzpj01giY3C4gwGHWEhBbME96fLsdyH1aVkFtlBlXGhSZ0QYp2WmUaZUGvMgGhx-c2OzKJA",
-              "width": 3264
-            }
-          ],
-          "place_id": "ChIJkRIZNsxLHRURXOKtcARsLwY",
-          "rating": 2.1,
-          "reference": "CmRRAAAAmwD-bAqP12X_XQRbHxLqbdfyKjPx-pYw0quw9ucfmUA3zalPXfSYbGKKFEwUFgAKBPzBwkrpBk80Aw3EznnmcoEkODHYCgitnhyALcnvgdfggm_Hb1_GoxizQ4-hQ8nnEhCQgR0A6MuYflQmkG039wlnGhQR1cXtoQoCbghk4Fwb0Vl_MRRhfQ",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Ze'ev Jabotinsky Street 86, Ramat Gan"
+      "place_id": "ChIJQ7Mgu1lJHRURg-4dJBtfBeQ",
+      "plus_code": {
+        "compound_code": "4Q6P+WW Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q6P+WW"
+      },
+      "rating": 4,
+      "reference": "CmRSAAAAzeChSm3VmCJgDcdpqzjm-6aO0ktLOtLA5-qUGRRioVlrm2QwtqZ8_aC8YDwIEKElMWn4Fbz4_lbFxZPsYHz4xUus0_VoU3XTAwC6bQ9rx1GdAC8BZHXTg3IbbwWjz1AAEhDS42Vt8YXs_jwGD2wwJBPHGhSi_5-xIA-7zIGvjMLh0rf77nINsA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Einstein Street 7, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.09533400000001,
+          "lng": 34.799351
         },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.089942,
-              "lng": 34.790778
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0913130802915,
-                "lng": 34.79199653029149
-              },
-              "southwest": {
-                "lat": 32.0886151197085,
-                "lng": 34.78929856970849
-              }
-            }
+        "viewport": {
+          "northeast": {
+            "lat": 32.0966829802915,
+            "lng": 34.8006999802915
           },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "d59366b82e016127a7383fccb38db92ad4a468c8",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 5312,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/107662868342892967600/photos\">Camille Urbah</a>"
-              ],
-              "photo_reference": "CmRaAAAAZDL61gHBRCcM4Z1Nxm96G3KYpOhkC2HBjPrs4E5Kt8NHJu7MtmxCASnIhE_6uQ8T59p8rn97C3IkyuvYJC9viWGTt-9hBOtVhV4Osh3SgmAnoXkJnpOpCawToJhLNhIKEhDtn5Xi6OKPKZTJZJOkRfS5GhRo5XKUTJ5aEz-MkYpz7imnNd9fCw",
-              "width": 2988
-            }
-          ],
-          "place_id": "ChIJYZzSYutLHRUR6iMmnRUrl8o",
-          "rating": 3.9,
-          "reference": "CmRSAAAAbny73XKbT1ZVhbExxeOPSwO7AqHKSbSnU3OETfvYW126OOyJ4oC00OE_4MoZs86RVyfNvLPx9itFb43dS_5i8p0FZ9QOmi7p91d-SPY4xtNakZCYcZxiDzz_gXkZPdxWEhBXWgh18qAHYP8fGO8O9YXCGhQ0juCNuqAn_oBLuIXyMht994dETA",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Weizmann Street 58, Tel Aviv-Yafo"
+          "southwest": {
+            "lat": 32.09398501970851,
+            "lng": 34.79800201970851
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d16ba58bf3e5f402136c182ed217ec7b1f49f80c",
+      "name": "Bavli",
+      "place_id": "ChIJhxwpUt1LHRURZ9Ci2qCs3Bg",
+      "plus_code": {
+        "compound_code": "3QWX+4P Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QWX+4P"
+      },
+      "reference": "CmRRAAAAn8EZzLuzqVGzvKvFi_zihQ2wqdul5O-E4xZ9NIrJ6rah8YwggdoICumOf3-X1rV5-5d2TrmMIw8ybPT6mR0lk15al8SO3HV2ez2MSDdVwCAhjKmidOWoAZXRRFSiRGdMEhDpeKAEjX5RKdt3RfJDLAs8GhS0SmL8EJTiyArwPAGW4-4_eJBmaA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1162252,
+          "lng": 34.7972027
         },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1176215302915,
+            "lng": 34.7981688802915
+          },
+          "southwest": {
+            "lat": 32.1149235697085,
+            "lng": 34.79547091970851
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "e9f4e29667b6c54471f49e93c8801ce93ce8a737",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
         {
-          "geometry": {
-            "location": {
-              "lat": 32.0845495,
-              "lng": 34.803097
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0858247802915,
-                "lng": 34.8046093302915
-              },
-              "southwest": {
-                "lat": 32.0831268197085,
-                "lng": 34.8019113697085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "2c228518947318a77aa6c2a5264fc06b0bc15083",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/105805634944964754433/photos\">Aleksey D</a>"
-              ],
-              "photo_reference": "CmRaAAAAMTNZ5_Mf96FnsfZbhf9Jjatbht_GGMTzFwTaDkBdTSJVX06bhIgHuuBjxU36rcVWazFo0dN77lPWnVp08wwyi2seuxRcUzYe2GG0advGzRyyfwgshzfHAd6tZJ8GAGzzEhAXJc7VQMTqhR-6vAuhhEROGhTq5pFZgbVugHtp49WR0DOz6cX71w",
-              "width": 5312
-            }
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
           ],
-          "place_id": "ChIJ6a0gYcdLHRURvdxVX6Znu00",
-          "rating": 2.5,
-          "reference": "CmRRAAAAgPDdOaztSpKQlz_ylYDsk-BPYJlVwHWJ09KJx7z_-buskh-CvnC5ypw84l17afcy61r3lkFUTRPp_c-cLkvJX6akjTdNcPePWS3rwmn6VNDgaLAOIWE9nNGkEq5vafFqEhBwhcjvUzL4gSyOdglxk4NFGhSMLQfRDf_-t506mCAMBq0FurDtaQ",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Abba Hillel Silver Road 7, Ramat Gan"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.08347690000001,
-              "lng": 34.8011714
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0845834802915,
-                "lng": 34.8026372302915
-              },
-              "southwest": {
-                "lat": 32.0818855197085,
-                "lng": 34.7999392697085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "5713cd7288e0c1047e76d9bd47682d3000ffe6cf",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "place_id": "ChIJX231x7hLHRURZ9Fv4krj-G4",
-          "rating": 3.7,
-          "reference": "CmRRAAAAnJFaiz-zW4JzgVRXSl7pPzBu4YlcW3gzZEIU-lQl82z_jtORmW27SXqOheSblBLeyaDuREoaCgDn5njF2qUz-1TOfNcGO9MlQMvBMdAMcvHJR8bQUcXMPOjAF_zZbgP3EhD2XW6ffdFaZOxcVbt7FIwwGhRaQ_6hhB7bfed4-3ZLA1oaR2YLag",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "בניין שמשון, רח' זאב ז'בוטינסקי 3, רמת גן"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0965731,
-              "lng": 34.7967602
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0979068302915,
-                "lng": 34.79811283029149
-              },
-              "southwest": {
-                "lat": 32.0952088697085,
-                "lng": 34.7954148697085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "320b40e77301c7af4a50613285f9db2b74c966b0",
-          "name": "יחידת דואר שכון בבלי",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
-              ],
-              "photo_reference": "CmRaAAAAfCyEAWs3mYVewmy8vEOc9EWL_mZAmVmDSDA1-UOCxV8ZDB2c1GCsRXOsSED1YicHGAhCDd3pnELkoclHPkg_kJzGa4UbIGKrKOszs_tlyAb1J1hWdW8E79xXzIxJ64IqEhDo3CUS8kJ7T5QTreoxLQndGhQKF6OxUsF4C8voniF_V0TtM_jcnQ",
-              "width": 5312
-            }
-          ],
-          "place_id": "ChIJ8T--Ud1LHRURyalm1zNGRdU",
-          "rating": 3,
-          "reference": "CmRSAAAAeJra8tyBre9iBQPw6WFCVekC1XuKMvxDcd000nUrfJkHLBO4vSM_i2mrdJpCTtN55nmc-3y-q7X34aV1_ddm2aKfEyTrVyJh_IaxZm_N2uysxvenY9Sshrze6GqcEc8bEhCmhExl1XBUPR9uVt-96gkpGhRfZGStiUnQyiYt6UXODtv9O3FTdw",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Ben Sira Street 16, Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0805474,
-              "lng": 34.8146949
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0818942302915,
-                "lng": 34.8161391302915
-              },
-              "southwest": {
-                "lat": 32.0791962697085,
-                "lng": 34.8134411697085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "bbd51f2ad7918786ed31cdfa929f59552ddb7b7d",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 4032,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/104509996238703671359/photos\">הרפז שלומית ודותן</a>"
-              ],
-              "photo_reference": "CmRaAAAAbv-fE39lwXNoHZq5tIqmbHs-b02jTOcmLhCcZM11hob7ZbVsv1Yi9UZAZlvhrN4KfXwcqFSJEs8pMQa6q7Qe55f4Farwdm9RYdik0Uv3kZ2veB3ir55is-U5VA8cNIFxEhCs46LALX1X4V-7tZz7dBRzGhTV-mEN2OmrGH4MxpBMB0mrOb1Ocg",
-              "width": 3024
-            }
-          ],
-          "place_id": "ChIJ5SQDiLVLHRUR_slA5q_M7Fk",
-          "rating": 4.2,
-          "reference": "CmRRAAAAB0fwm59m3xLNDX7_c8MGywWkRGF1DYrXs1fexeySocyvvWmWs1KX49FLO5wYF8AmggcCCYb5-d80WAWh6EvcXxuOOmi-66V07lLOrBNdR6q7spoguOytnoRb0wRnRRg2EhBzqy21zoLzzNiwmG1XBJhiGhSweV7J_nkW9ZkV65O1q_aWiXrWUQ",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Bialik Street 17, Ramat Gan"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0887128,
-              "lng": 34.7974535
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0900671302915,
-                "lng": 34.79851873029151
-              },
-              "southwest": {
-                "lat": 32.0873691697085,
-                "lng": 34.79582076970851
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "202ad5b311a87e43a1fca3f9ef67d71d8a13710d",
-          "name": "מרכז מסירת דואר",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "place_id": "ChIJO41AysFLHRUR7pb_gOuEKpU",
-          "reference": "CmRSAAAAOsWe8Yvh2o29NJ5QpihZAUAImr_VEu9vAcfw9Occ5FHdMaf8UkyLJkdMu3dSJiT_DQaa9A5Vq1XZ4qdgK5LrZ2jKDSVZ6t-f9Uu8OXd1qVoU0T549vXhud3G9tlhovNKEhCrKw8KV9Hb6zIqwaH4gKmNGhThiUcSAciFLD5k23BwCsyN5qF2JQ",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Nissim Aloni Street 10, Tel Aviv-Yafo"
+          "photo_reference": "CmRaAAAAWQ4mg64_0gyt_grzkA7qexkZHnODRSSzv_8wIH0_dyXPmgUh_E-HpIucyPQY4xGF0m1ZBSN--fmMsgalk7ANXrn_2uU2H5ZpqDkMwMvC3eN0OE8m_fOUS77tZgBvJ2yQEhCQ5B3juUkTY9x58TRnTWriGhSKsoqcu39npD0YamOhmSCQvmeVDw",
+          "width": 4128
         }
       ],
-      "8035691000000041500pharmacyclalit": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0826983,
-              "lng": 34.8163183
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08399092989272,
-                "lng": 34.81757047989272
-              },
-              "southwest": {
-                "lat": 32.08129127010728,
-                "lng": 34.81487082010727
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "d8c4c3213134b8f1c3ab088e7b4540280e04d12b",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 4032,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/113493769504654375823/photos\">Gennady Maron</a>"
-              ],
-              "photo_reference": "CmRaAAAALG4BDpDkjpP4DgS1pdbQwU7bJRezossTat2AK2Dq6zm6yfw3ywCXDtgIFgm70pylkRhB00DFyayTNqT4AhkPOyvPqc_DiZEdURjKOBU5jvne8U9SOqrgp_u15go6flO6EhAfe04F-XJAwyotRqVGG65yGhTJ3pbna32rKftRQ7vV4Id9IHT8NA",
-              "width": 3024
-            }
-          ],
-          "place_id": "ChIJi1wv48pLHRURnzRW8Trj-IA",
-          "rating": 4,
-          "reference": "CmRbAAAA7wqMuNPVtnwBN3k1Ws-tizwHsN_Vib9TGidFiz6b3WtCB7quNw-8ieD32WQPbQJ8WpnC493B2dp7okry3F0EncFq-TVeFO0oOBynE1hS2kAeKlursSeMUBbA6Vh5ChYSEhCgMjpNeHAThBrOwwHPDPK_GhSS952p8sobrx-xBNBxwl8ps4eksw",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרצל 34, רמת גן"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0769126,
-              "lng": 34.8077947
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.07831417989272,
-                "lng": 34.80929492989272
-              },
-              "southwest": {
-                "lat": 32.07561452010728,
-                "lng": 34.80659527010727
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "22efbe8402ca593822587815aa0932fef396bcbc",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "place_id": "ChIJQYZTefzIHRURNAzAjCoC8ic",
-          "rating": 2.7,
-          "reference": "CmRbAAAAcGZD1IcTznqBSbU0kWpQA1Fu2JelyhdtdfY3d_RH8t0qtaLWhopRD4n5noqJpkp1G20nMKNbyeaaFFi3I4K7FMzBYdQ27vZtPQDD1z-nw33rPdernYKmk1ptT2pxrooxEhBD9k4L8Ubnu2lE21lePF8pGhSbqwzVByWP0mnpW9YB0XJARjZFLA",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "המעורר 24, גבעתיים"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0928921,
-              "lng": 34.7861294
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.09428327989273,
-                "lng": 34.78748582989273
-              },
-              "southwest": {
-                "lat": 32.09158362010729,
-                "lng": 34.78478617010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "2a7bc18cb0e294b6f188c796d128556929eb9e54",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "place_id": "ChIJwVkHk-1LHRURvS6a89VRBOA",
-          "rating": 3.5,
-          "reference": "CmRbAAAAo2tx6gpK1ztT0BOqKd6COhanAeqPYg_Z1FqUCQL6nl5Hj4TPHZT4UIC0hOjFlet9wdt5zrSQ20_oUnwzZ1LpBSgTMjOO55TqCGEGUD7Azq2A5M3p34GvoLVHKArEVaEcEhCsl90Z2yeJdgJDoM78C-WzGhTQZAP7Q2ez2JYCDLCJPbVECfTxsg",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "אריסטובולוס 2, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.08065000000001,
-              "lng": 34.8209712
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08201342989272,
-                "lng": 34.82224487989272
-              },
-              "southwest": {
-                "lat": 32.07931377010728,
-                "lng": 34.81954522010727
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
-          "id": "548e571078cfe950879397bb4299be464b77d5ae",
-          "name": "כללית בית מרקחת",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3264,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/117161548173784551575/photos\">Oran Kenan</a>"
-              ],
-              "photo_reference": "CmRaAAAAWWynxyjLxiMVajfjV5Y3ivGF4ej2cspcdXwDjyorqkVbudy8wnx7BC9vKgtpD7W2a1JMgtm6id2qeK1d30P4goz7A5Hg8PzjXmzoNWkBm4MDfCXZiIUZ6d-33YaafFwAEhD215MIYQdMd90hIiTKXnxgGhTG0l-d3i78tdSIRPKxA6QMtQvK4w",
-              "width": 1836
-            }
-          ],
-          "place_id": "ChIJvT5KBjVKHRURUQplpePHTNk",
-          "rating": 3,
-          "reference": "CmRbAAAAeqpqgw8WmgIbVkzUllv0hsdPcX3ZeRBBWhI6b-MLWy4m_6RfUAAWeKIV0ccPtPwhbOM5Ppx-UbFnFL6phOEshGIYh_GMmxuQCFYtQ1o9DghlAuLj8i0SoqSha4FZitOMEhCbiQ-c9gvQn0YHNuOUKfaAGhSEjPlM-kBCr3DBwNsAdp6zoWAj_Q",
-          "scope": "GOOGLE",
-          "types": [
-            "pharmacy",
-            "store",
-            "health",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "המיתר 25, רמת גן"
-        }
-      ]
+      "place_id": "ChIJmT0LYF1JHRURq3yhV4Bz29M",
+      "plus_code": {
+        "compound_code": "4Q8W+FV Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q8W+FV"
+      },
+      "rating": 3.6,
+      "reference": "CmRSAAAAZqOcVXC5vehUV8iDAPJTre7kNgoFsxV4NahtUMH7A-YlFCm_1f-0VLfxp4tYHIJG_iSxUxR6MXipi_6QCA_Z0LtAqg3vhvYMf1FDWToDodkB61G5QujBj0L4OPi8Ga98EhBrPphcfrp3L3vmccUp4B8fGhTet8231OYRc6ZX0oTD9L2qyOFLpw",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Tagore Street 32, Tel Aviv-Yafo"
     },
-    "053483434": {
-      "759511500000031500bankdiscount ": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.04969430000001,
-              "lng": 34.7691412
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.05101667989273,
-                "lng": 34.77058152989272
-              },
-              "southwest": {
-                "lat": 32.04831702010728,
-                "lng": 34.76788187010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "353653b76469867328090a759fbdd6f31a0b3b56",
-          "name": "bank discount",
-          "place_id": "ChIJn6vGZbxNHRUR-wnSPOPpVNE",
-          "reference": "CmRbAAAArZJbM6aUBUCyArg3ONRV-rOFYkhMsF2iru-9ix0W58SQ4Zbt_qS8uymhvmrjvuIU_2g2rg0y1RjC6vTiQ8ZZmxTIZ3e8fd-mdM5dwUXxN4HQvI5EUxCAYwcCHSTjE2dSEhCtqulh_-aKFDveLuaSgCfGGhSWYE1CHK1yFubjGW-EwKUFvBRqMw",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרצל 160 תל אביב IL 6810122, הרצל 160, תל אביב יפו"
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0938936,
+          "lng": 34.7876895
         },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0546907,
-              "lng": 34.77235950000001
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.05610017989272,
-                "lng": 34.77370732989272
-              },
-              "southwest": {
-                "lat": 32.05340052010727,
-                "lng": 34.77100767010728
-              }
-            }
+        "viewport": {
+          "northeast": {
+            "lat": 32.0951802302915,
+            "lng": 34.78904078029149
           },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "0d2e4b2b1bde6e53289647c15a044793378d7461",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 4096,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/106738992547525792526/photos\">Vladimir Alexeenko</a>"
-              ],
-              "photo_reference": "CmRaAAAAved5EqT1xCG0Xjn7ZOn9stTgWuEMp5pgN3nMjxyN-UTDx1fc0Et2ynTa0Pc6LuhjUipA8HXGyFPQ6Z5zqLjVmXuYp-9mK-RdUSL2gxH2aLwvf6eq0M_V5wu3MSRH0FapEhB_G8nwt6VCkxK9PrLazrRhGhTW73gYszxgGPJv1Jz-XLub2Z3Esg",
-              "width": 3072
-            }
-          ],
-          "place_id": "ChIJJaNpkZ9MHRURc1FtW5Pyymw",
-          "rating": 3,
-          "reference": "CmRbAAAAAGj_eD9f4ksL_khCH87hoAiN9jLtFBIAK09PfhHGnt-FQYYz_nH2qAhrjXciQsWRHBPXV63sWFjvd9PJgHUbxHlD9H01lWv7vRdzrN7mPGdnfnWoX6dPji5Fwnvv1rM3EhBLUmg3p4m8EvTFCKXTV3FeGhSQqvvZjhxoaR8LDBDtPFnlQoClKg",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "דרך שלמה 74, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0616258,
-              "lng": 34.7717765
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.06300342989272,
-                "lng": 34.77312162989272
-              },
-              "southwest": {
-                "lat": 32.06030377010727,
-                "lng": 34.77042197010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "d652280f0fda8491fa635b0a711822996456922b",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/111507858631540381108/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAZ5owYzeq90EZAXpv_Mj8iqAtllhLUAM_WhoHseAR0BGngC3b8Jr4cgcSDTtUEGypXwsTB3DpJaP2Z3w8M_XSDSZU65RdMLrgMGTEByRMT6JEeCe9ApA7_8yn0jp26MypEhCYcO48-REw3wcvd2zI1zgsGhQwmV9yo7r6BpcZnQwTDkJ2_q5eeg",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJv5gMB51MHRURccctdFyOMsI",
-          "rating": 4,
-          "reference": "CmRbAAAAlHK1RU4TlIuK6cFIKWepIyRA2BAGljcGliu_hChLpr4BUNdxhDv1N7uJpky92o5ZlYYgvWbwsUff-JG5td4IEMv3BOVRu71Fe2_T_InIZO8tTVRLj9pag9x5IasINeoBEhCl-zHKNMWGNr5D7aiqVMm-GhS6VEnuVDmRU2kRv4JnXdLIrdRUkQ",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "יהודה הלוי 38, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.05393850000001,
-              "lng": 34.7598587
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.05530287989273,
-                "lng": 34.76105407989272
-              },
-              "southwest": {
-                "lat": 32.05260322010728,
-                "lng": 34.75835442010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "73d02d9640c832b241f1bb37b3267a3987b4a2c5",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3120,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/115852034727077420992/photos\">Georgy Goliev</a>"
-              ],
-              "photo_reference": "CmRZAAAAXNzVFAwKqEEeAD4YjZt3c8OjBrGMgAOXHBSsRb6Nx571UD0FRl1udIIwWZSNdClHKIlxcdsFu7SKxjcKgFkosGQNe_NmCO2MMKHZvPRbspjz4FyRGjJwjJyEfiMkoAaoEhAhCvSaPaynT70ABk9GDQJyGhRL5m1y_fT-s4aKU8jITycs5b4j5A",
-              "width": 4160
-            }
-          ],
-          "place_id": "ChIJl6J0W7xMHRURFSbPhj5VjI8",
-          "rating": 2.4,
-          "reference": "CmRbAAAADBWkJ_VJ0RQfo0gonfNQdBiNG-Clov-GrvA7h0IgRO92YjlemzpcOb3P_RAeGW_9vXU8zYkqpnngDgFFlcOJdHdSJCVo4PoEbaHpPjmVgVJQWbMrIAb2zbWD8iEe5dCiEhDapwRAqsvUuccKXzl7AzrbGhQWxsE48NgsWwzERkpugBHqS_n0bg",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "שדרות ירושלים 15, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0617758,
-              "lng": 34.7708381
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.06302562989272,
-                "lng": 34.77220487989273
-              },
-              "southwest": {
-                "lat": 32.06032597010728,
-                "lng": 34.76950522010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "3a3a6dd93e61b63bf4f3fd58795b06fb1cd67e08",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 874,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/100371675813743476309/photos\">Raphael Perez</a>"
-              ],
-              "photo_reference": "CmRZAAAAd-e-rv-WWzSGFelbPZF6EDHiG5AiqMA1Qe0FfGY1sCjcpGUUlX8l6kAHc9hCTXL-_YEcMpF_dwjPCRKIPeGBsqbcj3CrW3TZP-qAyu5aLyb44U0CnSLB0ZgzTxd9Q70zEhB58ZbrSwHoJmYzIlB9aIYGGhQjJEQGGewFGoIdKo-5SxetV8E1Ag",
-              "width": 600
-            }
-          ],
-          "place_id": "ChIJKZyxVpxMHRUR6AmQ_r5HbhU",
-          "rating": 4.1,
-          "reference": "CmRbAAAAhcnsz6Mt_eLlrgBU7IBY-GO5Js0298jJH0mPP5Qmryg5GZraNNSX6DAgVRQC8gINiD0LpeOu5wDMcTTmWNKd8BcSY9dQ1ZbI65ssYLDHhQ-5pA3xFBs4c8pYATpI7-OhEhAuqa9PTynLYC7ed6oGF-QJGhT2Ql-D9zZCucYU9KKRHqT5d1grvQ",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "יהודה הלוי 27, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0652011,
-              "lng": 34.7768557
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.06657567989271,
-                "lng": 34.77817517989272
-              },
-              "southwest": {
-                "lat": 32.06387602010727,
-                "lng": 34.77547552010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "1471fdc3b47b884786497884dbf64ef6c05462ee",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3024,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/106118738848448654659/photos\">All TheBest</a>"
-              ],
-              "photo_reference": "CmRaAAAANYe6roIblTkg3W1dGTVUAfQSK-E0gZYKXCWnZedw4pNhMDDuvszzn1fajYesMbKJJkUQ6pgd1wCtyg-B3ie_F6aXRpK_1Dy4dEu2s7LC2L67MUJPlzNZ3eQLuaJpmmHpEhAX8JIJgJfkojsyAe6AvsHbGhSkin4GuWm63kJThUOS2gLqSUdNnQ",
-              "width": 4032
-            }
-          ],
-          "place_id": "ChIJSy7FkZxMHRUR1i2hfLwmjNo",
-          "rating": 3.5,
-          "reference": "CmRbAAAAt-P2sgsLUZ9uUdSza70jgC4hfsoQINpU4Qfy5hGV1OGXWhlookeL2QIHyr7mSD1ewKCNqo63kaAtuYnHEXuZBhGBqVBtdm7afhhBulvmCjnk9aYINS1ry8wLa8ncEj7CEhC_VD8hyPS3GuiAWPTRfMeaGhQzCNvVyC7vOOHa_NwC0dHjmd4g_Q",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "שדרות רוטשילד 76, תל אביב יפו"
+          "southwest": {
+            "lat": 32.0924822697085,
+            "lng": 34.78634281970849
+          }
         }
-      ]
-    },
-    "090643334": {
-      "803473100000021500bankdiscount ": [
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "46fac16cc043949b43d7219a9ad9bbbec47e24aa",
+      "name": "North Pharmacy",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
         {
-          "geometry": {
-            "location": {
-              "lat": 32.0949429,
-              "lng": 34.7982043
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.09629272989273,
-                "lng": 34.79955412989273
-              },
-              "southwest": {
-                "lat": 32.09359307010728,
-                "lng": 34.79685447010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "58c4082fb2c8d65daafdf146979c81a73a02b3b4",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/118370500818761638840/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAZqUpERL0G9RDTw358glILVKPgB3QZa8UYmRtBsw4ZjYfjw20pVyho8-tfsTiouP6QfFLc8o2g9k1G7BTWovnTCQ__hnaur5e0Erfh6gKUc1gAS4YuqjW6PsKu5r3cRXSEhAWJ7xhel9LyItepGYx76AZGhTXKMaA0aJrNpEPwblRmS07KsVJCQ",
-              "width": 250
-            }
+          "height": 1920,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100317640438918593751/photos\">Joseph De Santa Clara</a>"
           ],
-          "place_id": "ChIJ1xBZLN1LHRURt9JkR6nF7SI",
-          "rating": 2,
-          "reference": "CmRbAAAAih2LaWA-obfhjbBMmu2BAneNgE6RYCp_Em6PcM0ooV3a5W8m0NjxShUFFn1OUbH8Pa_OJ3T74Y4468QwHR-n9DViBLqTkNV4I2dnn9esVwtvyLIeQD4jPAuBrV_8nSO8EhDOJ-BCY45QVgGry7dj3a6lGhQl8vbh04YsZaGeRjSIqsEcv2RYyw",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרב הרצוג 24, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0848479,
-              "lng": 34.8042303
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08626582989272,
-                "lng": 34.80546847989272
-              },
-              "southwest": {
-                "lat": 32.08356617010728,
-                "lng": 34.80276882010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "175292529c931106c2cc4fbf0cc2f492d4dd4e23",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/112734137294283246010/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAqCeoY3jXiyVGB87aBJaOq9JIhDANELPf8w69BMMKNmaFZpzvFBM0OzATDhiRCuW5s9XVCMnq8OiL-LlV-vQ7_QK2c5yJL5mOUS_eDl3FCoS5VWKS2LiKZCNdV7DwCKZaEhAAeJP4v-UDOauE5cnw28eiGhRIiTN95-ICfbVJ1SGIt5xqGO858A",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJgdk6dMdLHRURFCiOJ2n_SAg",
-          "reference": "CmRbAAAAUJsH1djYJWGRcyRXG70lc-o96Lkbjc-iEtrpoPGwFOUHHdIaZJsTcbRxn7UpmQW_sdHgieYf9c7nIAkKZCYAiXUq6YngBd6p7mGIHDuHoZjXFNs8VXjZfo8uIudZKZKFEhDFvDBb2X8t36nogCB2BEujGhREC9BDGaRp0rXu1GH1T99uKftRiA",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "דרך אבא הלל 12, רמת גן"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0879509,
-              "lng": 34.7890145
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08924412989272,
-                "lng": 34.79040257989271
-              },
-              "southwest": {
-                "lat": 32.08654447010727,
-                "lng": 34.78770292010727
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "562ce2dc768a61101201855b15f8ebb691da64b6",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/112768287023676526187/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAA29nWW4oP7EFR-_A1fgdIAtETdJ_-57NJy1JvSFut4C2S2xANYkmIm_8isOhiVykxTTeZhhhIFp8OjmdBL6U2d1YGKpaWXMy11OMrhK0m7bR7yVcXlVNbZCTAojtUfpcNEhDwzGnTtS7QOGdK-rUBYzumGhSCn-7sjpnENi9zPkZbWL_-Y761cg",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ5a6xupRLHRUR92PV-Aem5W4",
-          "rating": 5,
-          "reference": "CmRbAAAA8urrELsTAXxoxeFPN3LoJowy3kvTUwakluKqbv3ZWOBajVH7f-KpilKdaIVHw5e14hwlJR5UNH9vTR9-IGFo3rw41ClKiJBNnuLO1GSSaoYKRn7t1XN0bpfWQdnyNjCwEhBDNkqEKaqvO6nbdVrxbq-YGhTB1QgfhCIoxIp8UECvGGIkxitOnQ",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "ה' באייר 66, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0834857,
-              "lng": 34.8015186
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08461817989272,
-                "lng": 34.80290212989273
-              },
-              "southwest": {
-                "lat": 32.08191852010727,
-                "lng": 34.80020247010729
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "b266913ad8967aeefb5c3c008ce8c0ed5864499e",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/113242140498931057856/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAlJQ03EQoOz-nk-jpMSwojIMO3Qe7PLZQiaD3fIk6ZYmzW5bOFA7eQw55-OdKqz-TrT2YXBDIqryNRiPwpGfrzMKTo8K_4TJiXzorLHauSbI2NSDwg4vtzYx3OFszUp6MEhAf-fc61a3eXdtWRRDcOx32GhTDbNNZ9HF0omXPijA9ihokQw8C-A",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ-Tp-Sr9LHRUR2pMdvEktim0",
-          "rating": 5,
-          "reference": "CmRbAAAAKCTuSq3kz8Xv81D1Tl5_XXEBINwcg3DhnsSoN2O7ft3dX46HCi0bdC_ytRFqcsbqlH5graYdjrIO_YY1T8OE1z5US8uHDBHge4LkKo4a3wcJxsa9aOuzr8PdcLo4zdh1EhAXV1ydj0xBxf32r4T8BUGMGhR0M2-g4_431sdHmehF21NY-fNz4A",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "רח' זאב ז'בוטינסקי 3, רמת גן"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0840807,
-              "lng": 34.8155222
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08542242989272,
-                "lng": 34.81681162989272
-              },
-              "southwest": {
-                "lat": 32.08272277010728,
-                "lng": 34.81411197010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "e0e5c11e87ccb789fe59852cb405e3f497a95458",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 1152,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/114247761343273627183/photos\">שימי שלמה</a>"
-              ],
-              "photo_reference": "CmRaAAAAsLO4aBLY1RWeQeiZcyAUfCq4l-fLLvmW_vKrpn8tAHGSEh40Op1colT26x9k-PD9Uv9dRIZjhKq8viDBA5Ka2ukvU7FA-1vKrYnODonB7dU3kr-JMF8fdatXcwB5Y4CQEhC2HjdTZRCR4AcPk3ohuKi2GhTtrDrMq8X9VyLHSg2RwMkNcmor5g",
-              "width": 2048
-            }
-          ],
-          "place_id": "ChIJlyCxn8tLHRURnJ41mK02bK4",
-          "rating": 2,
-          "reference": "CmRbAAAAFiVYlB5s6TbyqUupNX1MST299cHTyMqFO_Q-jty4BmZqbWGyZHz_W5IXtwqja5yETTrrxG1nVImJIWpVLTnqtdV4olgblBJ7sGipg-4ad4Yt_A7R-91txWFAPKEaZgq0EhCBr67v5dLqFv6HtExgZ1fvGhQBETF-q_OGfBqpB0pSOGVQlBSWAA",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרצל 50, 076-8051200רמת גן"
-        }
-      ]
-    },
-    "082761334": {
-      "886004299999971500bankdiscount ": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.085213,
-              "lng": 34.8873944
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08662647989271,
-                "lng": 34.88873607989272
-              },
-              "southwest": {
-                "lat": 32.08392682010727,
-                "lng": 34.88603642010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "b7c5c37c3a6d179108b9ec6282ad445747402160",
-          "name": "Bank Discount",
-          "place_id": "ChIJMY_TqnM2HRUR6is__RRZOVs",
-          "reference": "CmRbAAAAeoeOXLV6sDTDSnyXNBWHm3SSy1uq8CNWfRQwUYZdjkZ-Wp_60deysIb2bVzheq_YtBX0SeqU9z_Lc-AXRW2Vp08elBJyb5YjiOuJo1LP_IcAyykKubHKnq6-HJ49Xe_cEhCNosjiUoCii88jV3t06-MLGhQ2nh34SAnSrLHHVGyP7iZC4eIzDQ",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרצל 26-34, פתח תקווה"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0893413,
-              "lng": 34.8840607
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.09073592989272,
-                "lng": 34.88537597989272
-              },
-              "southwest": {
-                "lat": 32.08803627010727,
-                "lng": 34.88267632010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "63d81dd9d85d0b5ad34bb77ba8e529c8c5229779",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/118010218655261899817/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAA2QemMlNyl9_MUaq8Xet2Ll9Q9gbaE-zA1DYCfrHoMXXW2wH0x9EXC5VF9iwx9uYgdglDNiz6CoeX22Yryt_JkoC1m_2v-IlZXDXSh7h0Mi1NX5cDZqFZvCjalcNL-jp_EhD_q9dHeP10RPBKM6mAMimsGhSBvDdpfvASDvG9b4NHzrPUlrJqbw",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ6w7qsRI2HRURORel-AlQwaw",
-          "rating": 2,
-          "reference": "CmRbAAAAEfWL_23DBrwBC8-oNXsZIIfKjsYowkbzGqevrqhQbv21aCnHsm5-cFzEDBBu7KejKt5JwYKmuYQoF_IMg_Fo5eNDQmUOk7ofiOyHadAShYegLXky0CEb7CNuNXInjBpiEhCVxET1k7venmfuliVPCQsaGhThkT6d-sU8l9W7SyIu74eYKhqW_Q",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "סלור 22, פתח תקווה"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0853003,
-              "lng": 34.887118
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08663462989272,
-                "lng": 34.88846982989272
-              },
-              "southwest": {
-                "lat": 32.08393497010728,
-                "lng": 34.88577017010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "a8f9a2302448f1112920d37aa25e26ffefd5ba7e",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2322,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/115017829742212868890/photos\">מיכאל אייזיק aizik micael</a>"
-              ],
-              "photo_reference": "CmRaAAAAuo9fNpsP6qVPn51DOBrePexruaeV3PeWPEkKQLmZKz1nX6pyP5aK27AyV5P3oMy21bMQL-peariGAwKWn0x9kYIIZrEf2-2bQgN9-7VeB5AjRK5wPudm_4z5EfR_X6OKEhARKt1cp-dJYL1mCo6qNgmyGhTKQ1RN2cHtVnPICB2GdqHMiUvfJw",
-              "width": 4128
-            }
-          ],
-          "place_id": "ChIJky8mAHM2HRURQAGqtKk5uuM",
-          "rating": 3.3,
-          "reference": "CmRbAAAAjL0bMaFAo_YFDmY3iJHmfPB-the8HDzc4442334YMcjfXvMpTQaxdr4gXezEVZl2Y89GgG_VWZ9oUzRn3lTAWct4oXccOu3gEDlxru_x56hukn7_LPNRbwDUFq5Y4iZiEhDxWQx7-QND6tBrRP6oxb6NGhTN7w4WRPVQoB01FgH67JhhJeRgKA",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרצל 30, פתח תקווה"
-        }
-      ]
-    },
-    "090944734": {
-      "783699599999981500bankdiscount ": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0949429,
-              "lng": 34.7982043
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.09629272989273,
-                "lng": 34.79955412989273
-              },
-              "southwest": {
-                "lat": 32.09359307010728,
-                "lng": 34.79685447010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "58c4082fb2c8d65daafdf146979c81a73a02b3b4",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/118370500818761638840/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAR1-HIjqnsF6tEf3RszcwU84jhMpmjZ_AOnTg8qU4EYW2sTPjryIZNhYO7cYarmNzY_RLexXrw7g_bY8-ClOZCfcLGpYiEs8PFnHZe2edt_xwbu_Gc7hazeGXOa52o7naEhB3IKdq462G-JiEYzO2qTpPGhTIKhXlj2eg1s45gzDUwsD2oadKeg",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ1xBZLN1LHRURt9JkR6nF7SI",
-          "rating": 2,
-          "reference": "CmRbAAAARZj4zqwfoIXk2agP5YciIykdL9UVA2H5hSl3xWLetgkAo4GLShS3DDohDYNN8VxrvZU7U3Bi9mbkLedWnwEeojlRJhjXB7kD31STSr7mm9HNVtXNIqFY3UDv9JPJpUMIEhC2IHHSIQiTMDtpLehhkPX0GhQSKoDj1knvsR7qHGqpcHFerHchFQ",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "הרב הרצוג 24, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0864486,
-              "lng": 34.7746824
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08778632989272,
-                "lng": 34.77609602989273
-              },
-              "southwest": {
-                "lat": 32.08508667010728,
-                "lng": 34.77339637010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "a09ecee9e8fefdacd11cbe15d9142fbe75524359",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3984,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/104762144889917914170/photos\">Din Duek</a>"
-              ],
-              "photo_reference": "CmRaAAAAbEhBFUsyLroIvle2Dr1VDENh4LLeQoF9Y7aNKKIrlBEKISpJuGpxM-5WVhpCjuGLduyykW9jhkHdA5A4U35u60uEpWwUBTIzL28-Np-IRB-HygRwQtezIheElIKhzE7gEhALA6yUuDg-Z---gK6WY6h_GhRE3JquRyUgoXDuUvK58aIZ_Y4QJA",
-              "width": 2988
-            }
-          ],
-          "place_id": "ChIJ0-WwxIlLHRURtYITs_Z4fvw",
-          "rating": 4,
-          "reference": "CmRbAAAAZ-Mtr3ydqg24d4i_HxmfYjgDUubE8ZBhxYFFCNDFa2aN-fVzo91eiLZ_ud5kx8f-vPc_bISF8t5BK3h4kdHG0KOvp5Vk3BiU3--M5ZIryPNTK2-jj8-mfd9bTa3PTOENEhAlTZ5nUVk2WDG5Q7OpWQqgGhQT_XRMOBgc9tP7PInyILc4AIFj3A",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "דיזנגוף 191, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0800599,
-              "lng": 34.7815681
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08140937989273,
-                "lng": 34.78281152989273
-              },
-              "southwest": {
-                "lat": 32.07870972010728,
-                "lng": 34.78011187010728
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "18136c785f30ef1337307143c72228c44507c983",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 1836,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/102657168779057945562/photos\">Yonir</a>"
-              ],
-              "photo_reference": "CmRaAAAAkfyD4P7lkL2kmw0VwUszfYvg8brSmvtoZGtgJ8vm9WmCtieF-naU3noUrbmv3m5eoJSN7IHLU7AFB--dJJoatH0TAI6bQUF8y_AEJbJVEC-L2BpvK526GeSiFGnQaak7EhA6wAery-G0ltPJZ-2oGKUoGhTt9UHsZUzcTx4sc6WaG8XEyIygdg",
-              "width": 3264
-            }
-          ],
-          "place_id": "ChIJvXjLkIVLHRURYucrxgxAze8",
-          "rating": 3,
-          "reference": "CmRbAAAA2JeXuaEHg4kAJLeEUKkZ3mTksdvfsZ8g45uCofVpyvPSZ3yryQ_jyu51TXD7klFDQ202lY04iM0gtUIQfccY9E0bfoEc2AV4RZTOEjrZa6jItwlY5-OzCjcutI8so-_3EhCxlYsqXxC4WeUs8YeqASYfGhQk28eD6SbbgcgcBkSxIhKlDaIJeQ",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "שלמה אבן גבירול 66/68, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0879509,
-              "lng": 34.7890145
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08924412989272,
-                "lng": 34.79040257989271
-              },
-              "southwest": {
-                "lat": 32.08654447010727,
-                "lng": 34.78770292010727
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "562ce2dc768a61101201855b15f8ebb691da64b6",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/112768287023676526187/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAA_-uCnH05J57tYFOtuYjiN2HG3g8NmNeaTDUzN8FTh4RX6vibwi4w7qZ481cZSiXI2ygOEvqys2PdBhCa5EqzU9O_qiULFPIHFFOACCeStql5-4_3bkWExcG44JI2KncbEhDrGwUIHh6OH363CJ2v6Re1GhSO8BS_SzzRhtd8foyMF3p2mJOxxg",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ5a6xupRLHRUR92PV-Aem5W4",
-          "rating": 5,
-          "reference": "CmRbAAAAXYUr_K_5SxdltAI9gfCfU1MVCRLCI270I77oqVuHERx62sGqAvBA7pZ8iFfNElfp2v9xeA8bKrUJgrsKb2jXAuO77EyceXsqpvXjtxi9eR5ul9gdPk1BdTKbrK8I8rNmEhD9mASlS3OjgWP7IenCpIHDGhT0Yn5aEWK7WNIsbDcNVdNi3NM-eg",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "ה' באייר 66, תל אביב יפו"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0834857,
-              "lng": 34.8015186
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08461817989272,
-                "lng": 34.80290212989273
-              },
-              "southwest": {
-                "lat": 32.08191852010727,
-                "lng": 34.80020247010729
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "b266913ad8967aeefb5c3c008ce8c0ed5864499e",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/113242140498931057856/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAAaZZjEE5_8H6Cp7buDn6fdBO1uLAoLiUtO5vD-v00GbPKW0LUHDdxbsTwrr9NhrswPdy_n68rccJkEbBySZFGx7yr_OeX_WeDoL7pcBb8gNIM2J9dZ2P84ZRgPSlau0I3EhBBlxEzrfXaKozrydzcbKhMGhT-oVsBsleGgAjkr9wtiloditLXKg",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ-Tp-Sr9LHRUR2pMdvEktim0",
-          "rating": 5,
-          "reference": "CmRbAAAA588lTRTiNt32aBZib6Wj53-lSBIlXowy1lV7lPp_1JG5oN9hyFj1wo81Z5orP-7Wv0cjj8vg-mT4TqObQCdDEW2nUYLfRS4KgFTNzT6dt7eT6HQ2-nrCS3-DuZlEjEAMEhCPlp-j3WhKkVVppxJXK-SQGhT_oQeRY990b84adEforks2V87LCw",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "רח' זאב ז'בוטינסקי 3, רמת גן"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0767622,
-              "lng": 34.7682174
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.07811602989273,
-                "lng": 34.76954282989271
-              },
-              "southwest": {
-                "lat": 32.07541637010728,
-                "lng": 34.76684317010727
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
-          "id": "c3492678bf60dae3c619e092188d2ab085989953",
-          "name": "דיסקונט",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 250,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/107561761980352470995/photos\">דיסקונט</a>"
-              ],
-              "photo_reference": "CmRaAAAA8Qy-vTSX5t27pd542--Eb0ua1KtgXQ5KAyNPvRAp5gU56EA-Baln1_kCjHIufohC7jhTD2dGmu_7LYxuMd9P_L4_BIS4hLZccjV7gc9e0hQ3nE1y9NA2Rb_gdBMXVLJuEhA9Kphz9bPW2wJ2rCu3PjKgGhQm_4zkEaVddz7lffN60vnkWIxA1Q",
-              "width": 250
-            }
-          ],
-          "place_id": "ChIJ1XBW2X1MHRURlW-FRsz9Eyg",
-          "rating": 1,
-          "reference": "CmRbAAAAGugs-Z9apORbwxqtZFhB88H1sH0UY9dUp_FXtnBspFUaJ02FH0rgFWcuG58ovUpzULyg29XXbSGpcDSgiKu6l0hZavj81W4Q9sTIUhdmhVVfspePGhIc2pjM8BV-DmfuEhC0YqRDZx1To-SBLzJ_YDHMGhSTujAFtWmbFqnpRoURvtjhkl8Bmg",
-          "scope": "GOOGLE",
-          "types": [
-            "bank",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "בן יהודה 29, תל אביב יפו"
+          "photo_reference": "CmRaAAAAVH9RKUA94BDE5NlDuE9Xf_VFNu9m3AOnG2QC0k-z0YfvdatPF4Wq6tqkMDAq88YBMIMq5TCN04Sw5SzTHzDUFJdmce2DKRnjenPxKkua7wEcE_zoZG2UAatOpWeJ9XJ-EhBZr_JuU-InXIehhO9sY-M-GhSw-nIJMjgPjPTLstTAXkxbiokeVQ",
+          "width": 1080
         }
       ],
-      "783699599999981500post_office": [
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.089942,
-              "lng": 34.790778
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0913130802915,
-                "lng": 34.79199653029149
-              },
-              "southwest": {
-                "lat": 32.0886151197085,
-                "lng": 34.78929856970849
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "d59366b82e016127a7383fccb38db92ad4a468c8",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 5312,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/107662868342892967600/photos\">Camille Urbah</a>"
-              ],
-              "photo_reference": "CmRaAAAA3QaDJVjo2gxmb5ez8fx1CVVpUtyWXMHUjp07D3QtOnmPeFHgzqrU9lDfjdOpusoyu8pETiF1vbCxXv9DI8qu7eVbPTd0x1yEfaH80gFM-E7kG8rvQdStAMrFe-MHNRRrEhAAa5IbB-MxCvhFbVKbX6UNGhTkWsqLmLUwm37hUrtrEXtEFKUOOg",
-              "width": 2988
-            }
-          ],
-          "place_id": "ChIJYZzSYutLHRUR6iMmnRUrl8o",
-          "rating": 3.9,
-          "reference": "CmRSAAAA0cXxd8j8gz3lUL3IKSio7fxrxBXFWDUYzU3eL_uEN7NRUU6Xl6YyClT_grQMZO9EKs01vJxNtG5xVD3TKSr_wAe02lyjlbM40ISDBoRig3ZApRUpfErsG3mZE0RrgVDjEhCZNRw52vMaL1nV1OOXzK7AGhR6XQWkwtsBe94NUfUaCfLgNUvQAA",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Weizmann Street 58, Tel Aviv-Yafo"
+      "place_id": "ChIJlQo31O1LHRURM9SnoeWl_as",
+      "plus_code": {
+        "compound_code": "3QVQ+H3 Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QVQ+H3"
+      },
+      "rating": 4.2,
+      "reference": "CmRSAAAAPz2pOxW8EcFFF-RFmVDe8BQ-HZHkEqCJ8CG4TajJ-AbVUZWrpNg0YGP2EXgO7VIb6vzLx0B08TT2rvSkE09zLMAq2E4XOblE8l9Tk-icRnvTys5rhbQ4zGWQ5m5EE2QIEhB9QE5HtZTuLW577FGESW9RGhSyn8jxGkMbt7hjhXoDnNDaIrlvBg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Yehuda HaMaccabi Street 33, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0939286,
+          "lng": 34.7877048
         },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0932881,
-              "lng": 34.7767658
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.09465668029149,
-                "lng": 34.77799273029149
-              },
-              "southwest": {
-                "lat": 32.0919587197085,
-                "lng": 34.7752947697085
-              }
-            }
+        "viewport": {
+          "northeast": {
+            "lat": 32.0951979302915,
+            "lng": 34.7890567302915
           },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "c130b6af041beae3bbe26138c3f1661afd6a683a",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 3024,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/101791248427801837341/photos\">Ilan Adler</a>"
-              ],
-              "photo_reference": "CmRaAAAAqF_TTFMMWZJbCNCCXD5ZULfrVg_p4C8geYuiYd8D2r3GUNmEFuhamimIsNLIZpcFiXQUn_XQCKQZ7iRdVa141cKnrQECrFb-2eZc1MrcqXTLvexqJiaP7slwcpqjD0sGEhDW09i11tX2tV8iRlz5ILykGhQp9iWeyBGi2naJgoOyu-NBPU3Zow",
-              "width": 4032
-            }
-          ],
-          "place_id": "ChIJm0nvH_VLHRURgBm17VwMPmw",
-          "rating": 3.6,
-          "reference": "CmRRAAAAO7s2RGfiSOb5lA2nqCs_-yqhImNBpoNKOBQ8lhRSxUXnqGP4N7jpksgvFq-xCoilx8j_EOOCTQci-_cWcLekULilmG9_ZeB_CMGCn_fhDna0xPxfvF_8nISk3eUHZP3KEhAf0fEmm_QowPKjpwdcP7drGhRhM219KSDxlF4XHeBeZpQuabyvCw",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Dizengoff Street 286, Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0840742,
-              "lng": 34.7817533
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08543548029149,
-                "lng": 34.78302193029149
-              },
-              "southwest": {
-                "lat": 32.08273751970849,
-                "lng": 34.7803239697085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "bb66db0ca737b7e51fcff760a160ec00ea718d62",
-          "name": "Israel Post",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 1836,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/102657168779057945562/photos\">Yonir R</a>"
-              ],
-              "photo_reference": "CmRaAAAA98kf_ctinbeOcbWcCO8oGd7dLfMp2S0UKyJxY47jO0Z5WUJDNQdgXHcBt_RNGI72as0iaMhngu5GhN8zFlOC2n40_jBdNWxAZNNcBjydvUnJyLXrQVDk4BW4eAx0Fr68EhCZHfbPT9o9RXyg91qgslj4GhTpn-VPlwhNYqF7mLyHIVi6aYbOLg",
-              "width": 3264
-            }
-          ],
-          "place_id": "ChIJy2EE7o5LHRURuK9DOKiyq5o",
-          "rating": 2.5,
-          "reference": "CmRSAAAAz1xaPZmREmRce3jYwEphuP398jjhwduxFgxJfIZu0Pbmy3QEbNZszk1Q5p1k0R-_IhIdhVFwb9f7nOa5ugLWG3cH2z7URXJ4RPRl3qN5HgAntyQDTJZowN312ABFDTcNEhD93rWU4OjNeUemihZzikXGGhRTJstF5kAywt34ZDgK2KnmVpTLuw",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Shlomo Ibn Gabirol Street 108, Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0965731,
-              "lng": 34.7967602
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0979068302915,
-                "lng": 34.79811283029149
-              },
-              "southwest": {
-                "lat": 32.0952088697085,
-                "lng": 34.7954148697085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "320b40e77301c7af4a50613285f9db2b74c966b0",
-          "name": "יחידת דואר שכון בבלי",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2988,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
-              ],
-              "photo_reference": "CmRaAAAA1-sNhews5y5wkaYO_L9WZWHR8OFumOAldWzvkv17W3o6unhpw5-84l8sbVGvW2lW4YYC-LpNp7vCrvzOtc05G7SnV8Dem23nGb-ukR_KQLTlPZ66WByTO6OnXuwv-PV5EhAS28Ml7UT7Ye1p64eoph2oGhQinUm7m8h_HsBeV61yimLvTEfe7w",
-              "width": 5312
-            }
-          ],
-          "place_id": "ChIJ8T--Ud1LHRURyalm1zNGRdU",
-          "rating": 3,
-          "reference": "CmRSAAAA078pSr_XQQxAzhkx2hf0E4RMWrTu_GZEd4cjlSpQEiD4EI1D3N-PBeHAMSTKHZspUhF71GwRDdW_X7oAuescgRR2QZH1Z-0zuNQVm2L4EYhNSOyCW5K06CPr_crCRx11EhBYi9XCRQaFe4QzieOefZ_5GhSDoZVDi2fM1K9UddQgmxpEp4GK9g",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Ben Sira Street 16, Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0857601,
-              "lng": 34.7838239
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0871090802915,
-                "lng": 34.7851728802915
-              },
-              "southwest": {
-                "lat": 32.08441111970851,
-                "lng": 34.78247491970851
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "9275d7b20559b7ed8041c4670057bb4de2010cb3",
-          "name": "סניף דואר ישראל - בניין ההסתדרות",
-          "place_id": "ChIJY--Y541LHRURj7bXXdH6QR8",
-          "reference": "CmRRAAAABOzYaaoAhdIAjfF5uvMN9_8pGDPaes4ZEu_AEx7xCmcKsVobCaXR6LctrKlbM-_RYSf8qR0B9zLBQ8ystkCokv0T9Tq_SRTYmETw6yn418ezjFsc-I25ck_Wm56OmhHbEhDcqqCrHbUcsOdP6Bt0YFGjGhTW07j4CE4vpZ7lE5GwUhT8Y-_Iww",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.085708,
-              "lng": 34.78418790000001
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.08705698029149,
-                "lng": 34.7855368802915
-              },
-              "southwest": {
-                "lat": 32.08435901970849,
-                "lng": 34.7828389197085
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-          "id": "ca015cd42326bd36fbc4bc90afe8d7b9224685c1",
-          "name": "House Committee of the Histadrut labor",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "photos": [
-            {
-              "height": 2322,
-              "html_attributions": [
-                "<a href=\"https://maps.google.com/maps/contrib/105011068286051419090/photos\">Menashe Mishal</a>"
-              ],
-              "photo_reference": "CmRaAAAA8rHaHusxSXlw0kwV0XkYwoEWs42XsEHV9rmWINhNOiLp-gOV9gujYNJEmxLxSn_7NLd3aUkHQGBzDAroJdL-yQdGUtRZGTw26n6F3YLzLtXWNnNfHoJK8ICckH7kQypdEhBrtxwSXJrmRJpmDpK-XU-AGhSz24k9BzqC7aR0x7FWASWznawE0g",
-              "width": 4128
-            }
-          ],
-          "place_id": "ChIJ05f6C45LHRURcHCI2sK0CpM",
-          "rating": 4.4,
-          "reference": "CmRSAAAAwSL5jAo8MNyL9g0guQsIxe2YUBjF1mH3l5i-CD7OVSyuSJ-O1dsRGWdNRkgq1wZ7y3h3L2A1_UzpL-L2DOS8q0YQ76f8WNhukWK2ngdJhzswjE1LIPhm2H_cBdpm1i5kEhDK_edTupA1a7ZHTdf69zOiGhQM-kJgFMhjWfGj6HeIKwivozhV-A",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Tel Aviv-Yafo"
-        },
-        {
-          "geometry": {
-            "location": {
-              "lat": 32.0887128,
-              "lng": 34.7974535
-            },
-            "viewport": {
-              "northeast": {
-                "lat": 32.0900671302915,
-                "lng": 34.79851873029151
-              },
-              "southwest": {
-                "lat": 32.0873691697085,
-                "lng": 34.79582076970851
-              }
-            }
-          },
-          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/post_office-71.png",
-          "id": "202ad5b311a87e43a1fca3f9ef67d71d8a13710d",
-          "name": "מרכז מסירת דואר",
-          "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-          },
-          "place_id": "ChIJO41AysFLHRUR7pb_gOuEKpU",
-          "reference": "CmRSAAAAG1pbVls72U5YFu4yXV80ABwBdL8v6FQ5aSphtCkQN69Eg5UChl0cYB12tcU_5mEBLCc1ZD9KrpEMxtyfMYrdjVLO1LdRE1QDY3YjeD5yQoP8OnfIpbviqpq07-Cn5GFnEhChBiIcx9wL8AnJDLBkBhWLGhSVATlKyRRXGHJNBalmwwf8DDDN7A",
-          "scope": "GOOGLE",
-          "types": [
-            "post_office",
-            "finance",
-            "point_of_interest",
-            "establishment"
-          ],
-          "vicinity": "Nissim Aloni Street 10, Tel Aviv-Yafo"
+          "southwest": {
+            "lat": 32.0924999697085,
+            "lng": 34.7863587697085
+          }
         }
-      ]
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "1e0709b54ad89b8cef21ee16389cbf12796124c9",
+      "name": "בית מרקחת צפון בע\"מ",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116552485848610241479/photos\">Omri Kedem</a>"
+          ],
+          "photo_reference": "CmRaAAAAYLu63wu9BPBU5dVVzYw-B49FkVn3qou2_RinQUqXQtZg31kwT_GrN6vgEAiU1POUQiM4Dq3caLxI9FSyfiFBVWlMlCJwoVZ_ggnnVIOAa3QmINt59tJCWIogBwuB9pcwEhDis8CCvE-XLXsaUwHg4MnQGhRLzKMugCLJo4QU3NY3Rxbmv1ATVA",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJSRoO1O1LHRUR5Fl_ln-mdg4",
+      "plus_code": {
+        "compound_code": "3QVQ+H3 Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QVQ+H3"
+      },
+      "rating": 4,
+      "reference": "CmRRAAAA6iJ_cO2G1kLmHzEbIinkiUo75jUjKovFM6DaC_XwjLFHaPPqKruq4B-qiSr8wR7ydE-AAAPJWQGT2PcxmVcin69NwlwPam-v6CbEH5MftPi3dA2oFxUcbPRsjZuK5mLdEhBcWYUnZXmYWdKG5SKwrtPqGhTe0W6kgTfmFXxWhY_8wtIzpNAm2w",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Yehuda HaMaccabi Street 33, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.113963,
+          "lng": 34.794773
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1152972802915,
+            "lng": 34.7962349802915
+          },
+          "southwest": {
+            "lat": 32.1125993197085,
+            "lng": 34.7935370197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "33d47f74c7bb8d2bd47f2c687f1c36bbfd166ac9",
+      "name": "המרפאה הוטרינרית רמת אביב- ד\"ר טלי אלוני",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAA4ERG3awjjNKL3sIk7qztLudPM1GRHmWksemx1Kc4Zs3mbP8IwT3Ahbs4f9wEMj7z2OITDA80TQnjIMpasivHQlnFecy5UtL9WuiJhsHpi4tCr0qHIIPryJcU-NiOOyFdEhDSEHHJaMDyVzGRJ7UDk8oGGhQXeOeDy3FHEG_i5oc3jRBumRwVjw",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJeeU_hGhJHRURvSTZIuBslOc",
+      "plus_code": {
+        "compound_code": "4Q7V+HW Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q7V+HW"
+      },
+      "rating": 5,
+      "reference": "CmRSAAAAw5H7EsBBKeNrWWDqLAZqK7oXGpOvT5G4aaSAipVlDIGEZ4Tx6lPQL8jli0hdFyos5jzcPtal3v-Zf3rQiorcWpDvLqakQj5b8_ICUiTJe1esTmLnihVS8r-TUD4vrC7DEhAWkUKtCNh9iXSWwBkzRDKbGhRg3FRpreNIBHQKi-75JhGmwn_fSA",
+      "scope": "GOOGLE",
+      "types": [
+        "pet_store",
+        "pharmacy",
+        "veterinary_care",
+        "store",
+        "health",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Bergson Street 6, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0937768,
+          "lng": 34.7914104
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.09517013029151,
+            "lng": 34.7927507802915
+          },
+          "southwest": {
+            "lat": 32.09247216970851,
+            "lng": 34.7900528197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "ac1670739e2f506c29ff3a8150f59988b0d10166",
+      "name": "פריים פארם-יהודה המכבי",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101275675761841187725/photos\">Shlomi Z</a>"
+          ],
+          "photo_reference": "CmRaAAAAwh8-yF5qm5U_f9SA1I_41bAVKvthrCsYS_xwiK0k1XUXVa39GcdyUQm8BOdGAjUuA0D7jvhZ2l1cAxVme7PBfDX37akXruQT7gDv2qAoldhuSU5F-xlI9XO7Y5oJ19heEhBhb7zMAJ8NPmVPv_Cpap9oGhRdcE7LCq2MewbSYHF0srg6Ks1lWQ",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJ67cRRulLHRURmaB0k2BaZ9k",
+      "plus_code": {
+        "compound_code": "3QVR+GH Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QVR+GH"
+      },
+      "rating": 4.3,
+      "reference": "CmRSAAAAwpph2gytb8j7yg5nKTQ1Ip98TwAus_XCcM4InazjTDOcaqdpZZa0fOnC_4jNUvMMHAeinJ_pvD9W-QDYchwJnB4bMEEIfynL22xVFlJNlA593BC1tY6ydIGULVPeQgiYEhC8ahtlBX9SuFhvnPLmGC7nGhRXm-M-OtExTX-uIc9Fd8poVxuZIQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Yehuda HaMaccabi Street 42, Tel Aviv-Yafo"
     }
-  }
+  ],
+  "pharmacy320900601348035691000000041500": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0937942,
+          "lng": 34.7915513
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0951431802915,
+            "lng": 34.7929002802915
+          },
+          "southwest": {
+            "lat": 32.0924452197085,
+            "lng": 34.7902023197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "efdc609c37b7bb652852026a2bf5ba5004832548",
+      "name": "פריים פארם יהודה המכבי",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJUS3kRelLHRURwPDVhEgvEGA",
+      "plus_code": {
+        "compound_code": "3QVR+GJ Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QVR+GJ"
+      },
+      "rating": 4,
+      "reference": "CmRRAAAAzE3alcCcChR6w0qqsNKphOqY5YlnRHfWBEljPVWnR-70ucLGWUErYIbg2b-wSQGLwucIYCpmJq8LxS2xW6Wd17UZBoWEKPVEBBpjhTDHP5vSY26egKIF0Q43X7K7EADSEhAepKLAEDrRFf0aFGAHZTM2GhSma2G0ciqUq2ROfuGDS2WwaOPwPg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Yehuda HaMaccabi Street 42, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.084293,
+          "lng": 34.81543
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0856419802915,
+            "lng": 34.8167789802915
+          },
+          "southwest": {
+            "lat": 32.0829440197085,
+            "lng": 34.8140810197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "13b290589d8c5c70705d5d774e128a09f45a3a97",
+      "name": "Hertsel",
+      "place_id": "ChIJwSU3nstLHRURblxA2ghJYZ8",
+      "plus_code": {
+        "compound_code": "3RM8+P5 Ramat Gan, Israel",
+        "global_code": "8G4P3RM8+P5"
+      },
+      "rating": 4.5,
+      "reference": "CmRSAAAAByW_h7Vtqf4Mmfq83ymCxdisFR0ic8eGt28GS346O4Qm9cv_f83Oq8axgJmIk0-_0KTLLKr1yLRfHYoZG1F0dOyS1ewEyQcN5yBO3sYy6aJAq_KUr9S7swNw7p3mr0yeEhAeuZTVbN1JdmK62a9k7nQxGhSD94eG7rXxAdEpovTDgySWU8m6UQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Ramat Gan"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0858946,
+          "lng": 34.8020103
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0872437802915,
+            "lng": 34.8034508302915
+          },
+          "southwest": {
+            "lat": 32.0845458197085,
+            "lng": 34.8007528697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "17966d10e153a8499fa161acced0218ee95c19ad",
+      "name": "Pharmacy Spinoza",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3120,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115852034727077420992/photos\">Georgy Goliev</a>"
+          ],
+          "photo_reference": "CmRZAAAAcxGmD_mR3occc81Xsong8gqHwzf2B2V_Kp0Acn3P_iJl-oevXOiH4aWpyC1mUK0X4cx69_oD9ke78p6ZcCHyqlxrTeLFoVFJtlSn8-GI5ceAZQcL1z-fLcukELcO3Rw6EhD6NZlIcpxFp4-IWkDthIqlGhTUkpaOdUINcJRrR4oUKvCgS6sgDA",
+          "width": 4160
+        }
+      ],
+      "place_id": "ChIJMxYWoHtc-hQR3m6fVW1qICo",
+      "plus_code": {
+        "compound_code": "3RP2+9R Ramat Gan, Israel",
+        "global_code": "8G4P3RP2+9R"
+      },
+      "rating": 3.2,
+      "reference": "CmRRAAAAex1GqkUGwDWtVUJaT0z6Nt4w312KuV41vFbe5QHvFMSxTM6qv3uBgD0SuR9uj9ZXweSWJdZNQ-n2cgLlwpCqJsGtMReGL9NMwSXztJhQNskO-HkEQOEEgTFVcNpAOg_tEhBqBD6Qll-Z089_V2wky-eYGhSwow9sBkcceaUPL90x49LykYT_1Q",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Ha-Yetsira Street 19, Ramat Gan"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0889726,
+          "lng": 34.79750959999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.09032158029149,
+            "lng": 34.79885858029149
+          },
+          "southwest": {
+            "lat": 32.08762361970849,
+            "lng": 34.79616061970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d60f7e9d15f5e3dbdfa32a59941950f5962188ae",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100371675813743476309/photos\">Raphael Perez Artist</a>"
+          ],
+          "photo_reference": "CmRZAAAAMe8lX8C19MEu4jD0nYXC1GLq6W3PZbwdUKMAbJ4tU22kmIk6CkddwLRXGVlXrzimxHgCzH5_jZuj7WGIVuD6sNdU-5hWy8Wuorq8foaVmgV3T-0qVy9BawJey3rxJJVIEhAqnoO3FUCNzY3E4lI43_7kGhRQ82FiG0F0oG3ysracighodoi_jw",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJjWsxyMFLHRUR2HW6bK2_zXc",
+      "plus_code": {
+        "compound_code": "3QQX+H2 Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QQX+H2"
+      },
+      "rating": 4.4,
+      "reference": "CmRRAAAA9ACuPYvbYTPY6MNgdFRWr-Lbjp3Qw8M3hio_2OGYEoK1SCSR7JrF_Wc9xJLL2ipXqKp5ij6QQZE0MsH7xUbK_fTsKzERHpPMf-7nUWEbSdjMJqZycYZ7il6xnVJUHv9cEhADNVJ3eFTcCxHQyANIysfSGhRLr4IKavAtf1sffGZiwWWZKPjQbA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Nissim Aloni Street 10, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.09058630000001,
+          "lng": 34.81059380000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.09183548029149,
+            "lng": 34.8120142302915
+          },
+          "southwest": {
+            "lat": 32.0891375197085,
+            "lng": 34.80931626970851
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "4c17b5b9288c06a1ac8e9e126a55447686322f6f",
+      "name": "בית מרקחת כללית",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJm88EOM5LHRURFawFz3cTmSg",
+      "plus_code": {
+        "compound_code": "3RR6+66 Ramat Gan, Israel",
+        "global_code": "8G4P3RR6+66"
+      },
+      "rating": 1,
+      "reference": "CmRRAAAAvwqpMpfq4tM4A4F7YcKkJ0U4FRZpnnPg6_PMOTa0NJBmdc5tmskxT_49xj0cUT2NMq501MbM1XTjQ0XQleasfhX4sCSNRxLAYA7QHXKivcls-KmnC5AUJD2j2389qxD_EhBeDgBUOMVhdxvOhAuu862LGhRH9sLrFvS38d8gfSJT8lpwxrsyJA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Abba Hillel Silver Road 77, Ramat Gan"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.09533400000001,
+          "lng": 34.799351
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0966829802915,
+            "lng": 34.8006999802915
+          },
+          "southwest": {
+            "lat": 32.09398501970851,
+            "lng": 34.79800201970851
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d16ba58bf3e5f402136c182ed217ec7b1f49f80c",
+      "name": "Bavli",
+      "place_id": "ChIJhxwpUt1LHRURZ9Ci2qCs3Bg",
+      "plus_code": {
+        "compound_code": "3QWX+4P Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QWX+4P"
+      },
+      "reference": "CmRRAAAAltJPHTKLhaCZHV0dL7kHN_SY66h25qib07VHj06BIumOPGWENQdWm5hZ3CePQRJJAIRFLwMZtS-52J2jIn1abhOt0o-9gFMblLEOC2Wr4Thw8RmkxQIT-XZ9V_irVF6sEhBctWCV6WA7u7K88IFRTLk6GhT96gSIB5t1C5PdX3lAVsWL3FhgTA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0815709,
+          "lng": 34.8096571
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08291318029151,
+            "lng": 34.8109961802915
+          },
+          "southwest": {
+            "lat": 32.08021521970851,
+            "lng": 34.8082982197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "44af99bd0194f86dbd2502a5f74da666e02c37ac",
+      "name": "ארלוזורוב - מרכז רפואי וטרינרי | ד\"ר תדהר קליין",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1276,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112530661697571862089/photos\">Colt Keren</a>"
+          ],
+          "photo_reference": "CmRaAAAAZrE9fc1AHxFuYoZhl_IYfR4iperC-pcEqK7eSzhKf-qagrVqGD8gja_MjzF1yuf6_tZmT0nDEC8fDeR0aQJ8R9tqsgozDfw1weHIz7PGcqGvbpjpK5cec4L6bhwaf6sXEhAi5ilhG6bZdEEM3ZYrWGilGhTt59AD-gb8kMZgU8LTe2HydS4IpQ",
+          "width": 1814
+        }
+      ],
+      "place_id": "ChIJ0TKKzbdLHRUR7-6mn0M_Pj8",
+      "plus_code": {
+        "compound_code": "3RJ5+JV Ramat Gan, Israel",
+        "global_code": "8G4P3RJ5+JV"
+      },
+      "rating": 4.8,
+      "reference": "CmRRAAAAsJNdzIoV9mYnGcyJLML9SZT9c42GXDDKPxr0SgyNtUKuC_zU43-94msBW5y2vezk5EXAMtQXVOtsW2kHzF7YEFdc6zA0mEOOR9EfdQeaPhilQdrj8Sild_crrJynxdlhEhA_pJk3iO0Pmn0T3DK3-XZEGhTDBGmWa9hdecBLcbme3bR6qLwT6w",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "veterinary_care",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Arlozorov Street 52, Ramat Gan"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0839976,
+          "lng": 34.8145385
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0851258302915,
+            "lng": 34.81599473029149
+          },
+          "southwest": {
+            "lat": 32.0824278697085,
+            "lng": 34.81329676970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d47876b418747cf36a4c5950ee16cb59d473520b",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 5312,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106459198434143388080/photos\">פיני כהן</a>"
+          ],
+          "photo_reference": "CmRaAAAAl5zW4kbMeQfG_epMaBMCVCZn_jlrCm6Lbl5q-rCWgAIt9Mb88weGm62gIrV00B4ljS-y1k7ONRAAazyaiL01FajTdgMrU1XmfV3WQgayNZPLZsyRN17kj0eMriSPYu6CEhA5Z_7pOXtHKYdw_p7eoTr9GhQSDRQ6z0GckAlOXArsr7iLylzyJA",
+          "width": 2988
+        }
+      ],
+      "place_id": "ChIJEz3icqRLHRURvTh7F8xejMo",
+      "plus_code": {
+        "compound_code": "3RM7+HR Ramat Gan, Israel",
+        "global_code": "8G4P3RM7+HR"
+      },
+      "rating": 3.8,
+      "reference": "CmRSAAAAU8DihPT1bIL-nx-CUMWVmXwjjW5-VBEOjXe1jDTe-5gGRGfxkpCtplZuRMSRwyOIsf73Jofk4P7Dw2Oy0Hz6r-d_tlwM_81kT22R16OkXU6zvLxXJj6FPvt-UrvysWekEhBr4s_aLI6x6F7jOPBJAWTPGhTetbsZBb17V8UdgGlyrADi6g5JPw",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Kikar Rambam 3, Ramat Gan"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0826983,
+          "lng": 34.81631830000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0839900802915,
+            "lng": 34.8175696302915
+          },
+          "southwest": {
+            "lat": 32.0812921197085,
+            "lng": 34.8148716697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d8c4c3213134b8f1c3ab088e7b4540280e04d12b",
+      "name": "Clalit Pharmacy",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113493769504654375823/photos\">Gennady Maron</a>"
+          ],
+          "photo_reference": "CmRaAAAAAYnOaTcB9dxeHck3C7sLFQ20JGsiWpbmoFy5RfJFpGAnJzeL4NLlFr2N3Iv3OXxdfUGbveaJP4ucT7L1llsgMOC-SLKB9gyBzlGcE787_XEoiBC5tvdLO2UjqIIsgMEIEhDVNTobGPS14thcEHK3luRUGhT2JzV3qIuo0d0FIUrYMpPVNdxatw",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJi1wv48pLHRURnzRW8Trj-IA",
+      "plus_code": {
+        "compound_code": "3RM8+3G Ramat Gan, Israel",
+        "global_code": "8G4P3RM8+3G"
+      },
+      "rating": 4.1,
+      "reference": "CmRSAAAAqj5rYTcnA2ZwR13tYxHU4BYEvyeazbhoTeQF8II_pA1PsVUJxOJpZHYhqWzk-966X2VPBlOnYiiThROR-S8LsFW8Oso1QMb2Jxhi4z_o4DX1jDIAq5Df3fovMJHnDytxEhBK4oHcVA_-vXc4pWBPUmmaGhTE--1it8ggvWwvxOIFs0BxJTwrSg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Herzl Street 34, Ramat Gan"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.07696889999999,
+          "lng": 34.8006009
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0783398302915,
+            "lng": 34.8018755302915
+          },
+          "southwest": {
+            "lat": 32.0756418697085,
+            "lng": 34.7991775697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "2a233714d947caaa7223f449038a793090ce2f13",
+      "name": "Rimona's pharmacy",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJAT2VjbxLHRURj_9osEkiKes",
+      "plus_code": {
+        "compound_code": "3RG2+Q6 Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3RG2+Q6"
+      },
+      "rating": 4.4,
+      "reference": "CmRSAAAADeH0zaQ3cN9zL4_d-zcF90wi6PLmrwbzKt51rdpc642NndTAsOofD7KBC-uOelzZvGtilQX15agI-kOzIFxhzpeCGelQNBdja-R_Jd9ZSB7YiBa3_NQTNzDf_ppiYfJLEhDjNjnEYoRW-KySe_4bYsrVGhSUhD019IRhLns-TTO36jI3OyGdHQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Yosef Ziman Street 16, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.083082,
+          "lng": 34.800631
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0844309802915,
+            "lng": 34.80197998029149
+          },
+          "southwest": {
+            "lat": 32.0817330197085,
+            "lng": 34.79928201970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "a0da7ed3f5e82d43516a4a8e98aafe7262083fe9",
+      "name": "Pharma Plus Demol",
+      "place_id": "ChIJ-0daI79LHRURKPWfMFcUuvg",
+      "plus_code": {
+        "compound_code": "3RM2+67 Ramat Gan, Israel",
+        "global_code": "8G4P3RM2+67"
+      },
+      "rating": 4,
+      "reference": "CmRSAAAAZ1N6R1PXbFBOfubFrntrLHjRwkOSD38cRyXtpv8wHWTz4QHFP8m5JF0zmd05M7Zl5_QFyjR2A8nFTKepUDiNNCPjTXZLD0DgGe4s5AygxK9cYgY5ahG-74P9QRyvEXjVEhDZxmejgux9ppwcKxg8DmMAGhTgPgpiScHHQR6zaLKp0TGR_SjOuA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Ramat Gan"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0879485,
+          "lng": 34.79452329999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0892961302915,
+            "lng": 34.79589988029149
+          },
+          "southwest": {
+            "lat": 32.0865981697085,
+            "lng": 34.79320191970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "8dbe51895acdbb2772094bd26767d87fafe02a99",
+      "name": "יואב",
+      "place_id": "ChIJJfxswepLHRURF1Y3P83WguQ",
+      "plus_code": {
+        "compound_code": "3QQV+5R Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QQV+5R"
+      },
+      "reference": "CmRSAAAAP4n3cQHbd_KE1jCS0M7sk2oRiFcM9qfmhTLWa2SlNlafwKZZqRKtilnqghzSRKDHnwWCnXI3Y8Wq3k_Bs6PbHsXc1dYOsRgA3urfJcfTb-7k-1bCP9mt-3gXpcs3Z4izEhARXVs5zymQDH6yoLhg163AGhRfcWejt0yE4vuj6acBOr5NQlfpXQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "9, Wissotsky Street 1, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.081567,
+          "lng": 34.8098385
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08288573029149,
+            "lng": 34.8111428302915
+          },
+          "southwest": {
+            "lat": 32.08018776970849,
+            "lng": 34.8084448697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "ff11ef275ec7c068670be83c478ec35cd881bcc6",
+      "name": "ארלוזורוב - מרכז רפואי וטרינרי | ד\"ר תדהר קליין",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1200,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105111518981367868409/photos\">ארלוזורוב - מרכז רפואי וטרינרי | ד&quot;ר תדהר קליין</a>"
+          ],
+          "photo_reference": "CmRaAAAA0gKLODxFx7JZ2QXE7ir1JMCPu99oc-29bRjUB-Jq4wUvcbIYDTZ6rzQXrONCMk_iNHjIKJwSewYVSBak1pXIytRmXooKS0YL_9hW-XKdu15AjtqLlUBGCUFa2jeRbd9sEhDFAX1j_8TGnKe54j6677n_GhRXZkL01Mo9VQ7Mr7t6dLAQYGEzVg",
+          "width": 1600
+        }
+      ],
+      "place_id": "ChIJKyKN0rdLHRURstJ9NzHn7Po",
+      "plus_code": {
+        "compound_code": "3RJ5+JW Ramat Gan, Israel",
+        "global_code": "8G4P3RJ5+JW"
+      },
+      "rating": 5,
+      "reference": "CmRSAAAA3ZJdw25l1A-mzWwN2nNjgy8-rYB3_uWkRBqanmR4HswIqa1y_i8_Z2eJeMyd1ex6sSjuuZqy3HoOZR8EDi0R-ATBYPknES75pMrvH2X0VnhjCgTw_QqQXkeDmcGb766BEhAnNS5w9GefVHgMO4xXGLYAGhSV-4pDg0I3TmSjfodQiKgZNctRZw",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "veterinary_care",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Arlozorov Street 52, Ramat Gan"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0937768,
+          "lng": 34.7914104
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.09517013029151,
+            "lng": 34.7927507802915
+          },
+          "southwest": {
+            "lat": 32.09247216970851,
+            "lng": 34.7900528197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "ac1670739e2f506c29ff3a8150f59988b0d10166",
+      "name": "פריים פארם-יהודה המכבי",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101275675761841187725/photos\">Shlomi Z</a>"
+          ],
+          "photo_reference": "CmRaAAAAMHjxHl3SMn1ysKIyhq-TrVAImye7c7fVwk5qz5FMW4fBzGRO8xe-V2XvUo51Pihb_s_7n2Aojz98-pUJHOTVzJHSkvjH1HooretHRvV_uOm8CVIzMg8Hx_JzJW809XqBEhCKswUWzVR1-xH1Ehg7dPYPGhRy07WJmDllSFCQoX8y0g1WWmKwEQ",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJ67cRRulLHRURmaB0k2BaZ9k",
+      "plus_code": {
+        "compound_code": "3QVR+GH Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P3QVR+GH"
+      },
+      "rating": 4.3,
+      "reference": "CmRSAAAAY0zBh5bZI_3N1dBkEtepgS0YMXhwCNYw3monDtx4k006yWzdoMvXAN1AwxkbEazj10GCELT_1FNWvzYmDbBySaQdosnkpfXE9furNYKncWT02U0TZ1mXedDn2-xMfHklEhD_VoYvHZnu7BWdm8tu5qlCGhTy0f4i4WuaTuplzB5gHFbtVeBTZw",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Yehuda HaMaccabi Street 42, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0803915,
+          "lng": 34.8125194
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08172013029149,
+            "lng": 34.8138400302915
+          },
+          "southwest": {
+            "lat": 32.07902216970849,
+            "lng": 34.81114206970851
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "21211add75a93100c441ae607e247be883c81e85",
+      "name": "איתן ספקים",
+      "place_id": "ChIJSc1vCbZLHRUR0pWxAPtNh3c",
+      "plus_code": {
+        "compound_code": "3RJ7+52 Ramat Gan, Israel",
+        "global_code": "8G4P3RJ7+52"
+      },
+      "reference": "CmRRAAAARIBEmdoaUUVDULEBMV9i4_h5dpCy-MZ0hBiBxLixzmoTWTessu5jOz7E4zW9XrEQFaKAzt7VNZEq-mE_Wxy7kstId1EIjAEcXJ7Vs_109t0ZSDaAPHkRnntPXjASInaGEhBThYmRLp-QZYtq2X_uJY6iGhQh4ZVpWQf8feQJdp3FgxuCORq6ug",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Arlozorov Street 27, Ramat Gan"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0827399,
+          "lng": 34.8159394
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.0840932802915,
+            "lng": 34.8172958802915
+          },
+          "southwest": {
+            "lat": 32.0813953197085,
+            "lng": 34.8145979197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "7610c6c8f94c82e1abc175a766ccfa435364d16f",
+      "name": "Герцль Рамат Ган",
+      "place_id": "ChIJPXxtAstLHRURmDxz41kMp9Y",
+      "plus_code": {
+        "compound_code": "3RM8+39 Ramat Gan, Israel",
+        "global_code": "8G4P3RM8+39"
+      },
+      "rating": 5,
+      "reference": "CmRSAAAASAJ96QkYXYcs3tyJsYs_u2n0N7VmjCvnv7FueNVuKvl0BY_4C3gkVj6LYjByTDIztc3TqAEsTLJH6bN1DYu045_QM1YUSuowVivUU-E4m0qPgdBG2Cqz23zGQVR5igHaEhDN53tqtcVMJfZi3yuFs3RUGhT4pfXDbWYWgTops7X4oyfF6MUOMQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Herzl Street 43, Ramat Gan"
+    }
+  ],
+  "pharmacy32114139834801225700000031500": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.124263,
+          "lng": 34.804147
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1256119802915,
+            "lng": 34.8054959802915
+          },
+          "southwest": {
+            "lat": 32.1229140197085,
+            "lng": 34.8027980197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "c5c8ea1edf17e036a898eaf61f9733090327056a",
+      "name": "Aviv Afeka",
+      "place_id": "ChIJW7TQKBNJHRURPqabPVq2_zw",
+      "plus_code": {
+        "compound_code": "4RF3+PM Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4RF3+PM"
+      },
+      "rating": 5,
+      "reference": "CmRRAAAA44ivdeFPOVCbIDqnRgpUkIn5tcEV08rP_u2JR6EFlJFDUoqqYdLEIHi0eVjfPwo0KL7pE4758AgG5m2e65JCJkvKLZN6QHVRTnPB-3GQlmyMDWt2JU_XiNIVRm0IgDF3EhA2HH0hTtTKIsSM_y2DH-B1GhSBhzrgM6IPMvHpKLj7NFj_KkKR4w",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1162252,
+          "lng": 34.7972027
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1176215302915,
+            "lng": 34.7981688802915
+          },
+          "southwest": {
+            "lat": 32.1149235697085,
+            "lng": 34.79547091970851
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "e9f4e29667b6c54471f49e93c8801ce93ce8a737",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAeKQAKr3Us4hh0qo9qfH_OEmc1wmBjeaDsMzNSA0MyI_UJKGo-5KBKxfZ39aqzVqt-mxqThShI96arzzDlZ7dxOGSJKhQHJzq6XFUW1s0imCVj7SDbTUTjMyF6xDB3i1SEhAckFBj4YEuyB3WMyowihB7GhQl11uOr7HOCYfekKE4atq5c5jHxA",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJmT0LYF1JHRURq3yhV4Bz29M",
+      "plus_code": {
+        "compound_code": "4Q8W+FV Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q8W+FV"
+      },
+      "rating": 3.6,
+      "reference": "CmRSAAAAK7nE3e8JKDWkOUaPG_PjFl1s9slCrvC_bzkbNj9J1AFswNbxyLL-SDxxXHV7HrRcjYdlMEdt-C2bO9pgWPOor_i_doAgpu41FZViVx4TjNfogFKM2FYRskwfNA43lloAEhBIsu8trw1Uzjm32T40A9wdGhRKX_CYdUBMSD9gIk5U0Utb6lsk6Q",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Tagore Street 32, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1190231,
+          "lng": 34.8008654
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1202984302915,
+            "lng": 34.8021995302915
+          },
+          "southwest": {
+            "lat": 32.1176004697085,
+            "lng": 34.7995015697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "f998a0cdf39af88c7f1b2410c618ce7f6db3484f",
+      "name": "כללית - בית מרקחת",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAKxh-dsTs6ANwhbPMFXmPuEch4HHkOtJx3YX7MN49LuGDW2BVAFw_NDJUb_JP3LQ6bvgr7jmQzfhybEjUtl1q4lcNeekWaUrLtBdoscvC1FNIwfYIrrujTPA93DcKXiF5EhCP2WHJ7qJCIoKzIpmEygvPGhSS8nLnsQusDdUcLOE-7x0-JhR_3Q",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJv71EQWlJHRUR9t8XLknlU0s",
+      "plus_code": {
+        "compound_code": "4R92+J8 Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4R92+J8"
+      },
+      "rating": 4,
+      "reference": "CmRRAAAA8bV4FXs8zjjRJ-nsfnkCZ6qYSO2yVQd-zwJ9BuqZsMJJ84FQIBZi8E4fEzZhhg31XPjcI_LHRj2_qLtfbzpqOWTRagLvMus419kkC7BDpIfSMqW7j-jfRoOADiI9uCdZEhBB-i-kWPKNrP_a3OlqF5gaGhTMqPRjDd89zHhhHzrP57zS6aWtKg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Geiger Street 7, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1122621,
+          "lng": 34.7945882
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1136110802915,
+            "lng": 34.7959371802915
+          },
+          "southwest": {
+            "lat": 32.1109131197085,
+            "lng": 34.7932392197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "52a50873413dde8abc7fba0a51d4788ae1935edd",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101347695240737471426/photos\">Omri Roth</a>"
+          ],
+          "photo_reference": "CmRaAAAAibg0ILojPFm9v7vgFwR6KaH8Xom7Cy4ZtJC8SaLwY1mOytuBKZznkaOtuAAtKry9BWFe-lGmI1jKJvRQIl4uBUwVvxlr9jhqlaCHbmYINRBqx83tNdMlQucNf-fpXE7oEhAkfrNQZQ8rPG9W96Otn-orGhRH4OmjzA5aUy2QZ88DmSdQNKIhWg",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJQ3Pk811JHRURGrt6cIgCNdE",
+      "plus_code": {
+        "compound_code": "4Q6V+WR Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q6V+WR"
+      },
+      "rating": 3.9,
+      "reference": "CmRSAAAAPrtH9b4e_pq5S_ZtgGEM0eMPwSh66JGKUDl668z0WhdFlmB4OMVLAN8Xt6lpq-gjZGVhVvlPfCFHP9Y45BaFFcGLBpgEgUdrmjKgqReszNQ7cem1_O1n56hpnpX2JbiuEhA4ze8GJYZuU4d6s8XeBz6lGhQy8K9tHrkq8BJDkrV-3V8v_xeHYA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Einstein Street 40, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1080921,
+          "lng": 34.7979351
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.10933203029149,
+            "lng": 34.7994545302915
+          },
+          "southwest": {
+            "lat": 32.1066340697085,
+            "lng": 34.7967565697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "923d2363fd4e883f048722a1ad44246503c8e133",
+      "name": "Clalit",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110716281354254320593/photos\">Tzahi Caspi</a>"
+          ],
+          "photo_reference": "CmRaAAAA-Jc5vqjQQr_mD5HzH3qeSN3bm9VgkHuTEf4qzNfFRuWfCZAeY09xEk4TcuKXpQOb_i_ElIbhrhW86wd8bnZLrtyjwR7lbrbhfA8x2XCL-50m-upEZk2I_RLdeZEKw0cEEhAtmSc4MdeHZl7YSwdG9utpGhTLR0eXror4amlgtNJOOm8MrhfKXg",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJD0NxWmBJHRURTCe7Y9aTngk",
+      "plus_code": {
+        "compound_code": "4Q5X+65 Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q5X+65"
+      },
+      "rating": 3.8,
+      "reference": "CmRRAAAAszIN9tnjK7R5qpFk9UU-U3qyESdSaDaRnSgqeEfYvu1empyIIMxXusMl0AkOcl78HCdNeMkV7DFrqe83G3BLqXRqsVSfp1TmX66S0G2VhF_P0u1ovQssZBQmrRB4fHnAEhA2faNSaAEEr9aVgEY5DpyCGhS53gFmNuMOtu2IvUpy9y3FBZIp-g",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Brodetski Street 19, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1250451,
+          "lng": 34.8013733
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1263019302915,
+            "lng": 34.8027175802915
+          },
+          "southwest": {
+            "lat": 32.1236039697085,
+            "lng": 34.8000196197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "5a608463fd0b64ea6bd0cd4c992bd5994af76afa",
+      "name": "Maccabi Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
+          ],
+          "photo_reference": "CmRaAAAAt6c9LRLy-J9Bceu-wwc5jiFKzPD4IKf0I1YlwG_G0Gt05kCG3LpacOU9PsyKCvVRDFXw5KxO-FJOVY-zsLkf5th5n5N5V2Ip987RuNnSPl9aot8orgPZRlkcE-Fj0JXKEhDb07B4agdX2X3DCiJJ-80HGhTme7RXjsQqSQdyR9sXVA3ENYl_Dg",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJewHlVhNJHRURW0JjSBv0_ro",
+      "plus_code": {
+        "compound_code": "4RG2+2G Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4RG2+2G"
+      },
+      "rating": 4.2,
+      "reference": "CmRSAAAAnhkaquWTvKPaN6XqgowWSkpMWmJK38SHoUBbvaH3m1aJRo9-akz4tGVpzWuS8KONKPY_bsm1HSOtUF2EjitX86l96MOtqz7ZwKxMfT_oNb8xgYi7sZLf2JuHjCIm1HswEhCccyStWEXmx1CWxhOluA4yGhSAcBORscYXGQZ7lDLkc_Z3OVXgpw",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Aba Akhime'ir Street 17, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.12528400000001,
+          "lng": 34.79835800000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.12663298029151,
+            "lng": 34.7997069802915
+          },
+          "southwest": {
+            "lat": 32.12393501970851,
+            "lng": 34.7970090197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "8d062a2ab0356100c0db6224c41de065c47fd932",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAnq2BzLv9r81QHgKGh8b9BhnnJl7XnoF6JUCsTV2eSs8_xNICsBZ9KdsTnH7x_E7RDN733bctfjlLHMkhF07rcgZ7Yu6PwAU5d-puFyxaq_MiV14Vw48Omi_H5OtWo9P8EhBhcg5X1UJ91dVJ0DoGVMyIGhQTblS08t9KHA1xCXjCR4S7nMj6cg",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJSwQn0mpJHRUR75Ug3TjyjOE",
+      "plus_code": {
+        "compound_code": "4QGX+48 Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4QGX+48"
+      },
+      "rating": 4.1,
+      "reference": "CmRSAAAAEOVtZGKkTGq-V9eBjklUPsf2UFpsahWiiaKfSuQvt0BKo7Vj2P2ZJTV33LTsFatcWyaUqFgN8cZUqs4GTYJ-DWAuidwidAUBlTAvLqTTQEt8FD6tbrdhMUkcuZG4h9xcEhB61JN-yPP5KicZyLSJy7KUGhSPthSFPnIu0ai_My3A1cHpVwjlkg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "אחימאיר 1, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1123057,
+          "lng": 34.78726049999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1136204802915,
+            "lng": 34.78861403029149
+          },
+          "southwest": {
+            "lat": 32.1109225197085,
+            "lng": 34.78591606970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "f41b676bee76061a2427e93d8b6e75fd260d97aa",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
+          ],
+          "photo_reference": "CmRaAAAAWMJcL24newIKc16xISKZ3yuTUrSH027cQGHouUCfoF83tluzWKS0vwIu9B6t84xeYpoSUawKncMdikZ756k7FrYLvzwi9L-dwUofXNxZeMjNwPk2Vsc_RVwkNXHbm4rVEhBalrtBlGQKfufXgHVTpq2sGhRR-oln9SC7McFDGoqQvivO2nJX-g",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJQ7Mgu1lJHRURg-4dJBtfBeQ",
+      "plus_code": {
+        "compound_code": "4Q6P+WW Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q6P+WW"
+      },
+      "rating": 4,
+      "reference": "CmRSAAAAR2aoW5NyKkrj0aq3g97s8zddFN0O7byfTB4cf22wdS33QPa2FX-73Fz0P0rzYslBvn5aXi4CWyI2UCTMsrPSR2Qat6fJDDSxyCWRb4EcTGlf2ILoFSCwqSsh4G7tDOKXEhDPQolJjtVmtTK1b3WQt3ENGhSWqyliRoDqTgWs8u5li3nuo3v4kQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Einstein Street 7, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.104203,
+          "lng": 34.79166800000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1055404302915,
+            "lng": 34.7929148302915
+          },
+          "southwest": {
+            "lat": 32.1028424697085,
+            "lng": 34.79021686970851
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "7f8f2367c038590da1b5546bb90ccfa2cf518591",
+      "name": "Lamed Pharmacy",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110805629662351455494/photos\">משה דולב</a>"
+          ],
+          "photo_reference": "CmRaAAAAyfOnoIohhl5iYqXVwuVm2Mt4Qjqhs4QHAywgIKx08zgV7RDs_NetFdrlBbyEBKt2dIw1PJnnZ0jq413dJVAaV78gSBLzzEPNgcLTfka_H9XimCezLW1t5XfN9pCf-9TTEhAej940hQH44a6JlRIJthcbGhQwvvcWn7fK12ZI1vgWHSIBdQpl0g",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJ6T47aeFLHRURGruSvmFF70o",
+      "plus_code": {
+        "compound_code": "4Q3R+MM Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q3R+MM"
+      },
+      "rating": 4.6,
+      "reference": "CmRRAAAA9okMhDYUoFysO2MBuCcxJL-vbdZx7patp71ONB-O2DfHDYpwRid8npC-kNvMnye0rzmoCGFKEZIcnhMfcEH6gKWeqtKIynOpnP6sbGHBE25XRRDNoED5yOqS4uMyBOmyEhAj5IXiCOv5qomMLInwsj2LGhQ78oxTOklKWgNA6xTFr2bpgJDgAA",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Bareli Street 18, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1247975,
+          "lng": 34.7922985
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.12616603029149,
+            "lng": 34.7934998802915
+          },
+          "southwest": {
+            "lat": 32.12346806970849,
+            "lng": 34.7908019197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "2136054fd324dfa7eacc00948bb980be48b88470",
+      "name": "New Pharm",
+      "place_id": "ChIJp0pD6kBJHRURJ9iKx-tM1zU",
+      "plus_code": {
+        "compound_code": "4QFR+WW Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4QFR+WW"
+      },
+      "rating": 5,
+      "reference": "CmRRAAAATgmuBfmax7BN-X4q74uJzzN87vR8dKazU8fhYebvX6AhPkhUvHMjzMPC1ZMymOg-w7cQuDLetypU7i3QiN32XBWtqNdiYwW2gm3p1aGI10obUG-hS8f5MsPYP0-rq19REhCpiBvMf1ZSOG9pGcT1aQgBGhQOeqYkD0cbblckifPbX-7f36etCQ",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Kdoshei ha-Sho'a Street, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.113963,
+          "lng": 34.794773
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1152972802915,
+            "lng": 34.7962349802915
+          },
+          "southwest": {
+            "lat": 32.1125993197085,
+            "lng": 34.7935370197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "33d47f74c7bb8d2bd47f2c687f1c36bbfd166ac9",
+      "name": "המרפאה הוטרינרית רמת אביב- ד\"ר טלי אלוני",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAArVbdHasIvdrLdUa4w9TVZEE5JYXqg2u81oiJqPn3YqDUN5h64miopgEbJwK7GoWgitIuAaUtgcdN5kw7w1kZCoZrJrr1TJOHcJABBEDASQh8E4v_7f6gg90kLJAqB5Q-EhBGiKQrqoehf4ykVw5qDwBOGhSqg8u05TtQdwtpYZxqbfyWzJXgHw",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJeeU_hGhJHRURvSTZIuBslOc",
+      "plus_code": {
+        "compound_code": "4Q7V+HW Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4Q7V+HW"
+      },
+      "rating": 5,
+      "reference": "CmRSAAAA82nIF_A6stC3tEW0OrogSvSqYasTyXvw3LZMgRqxVyvn4MN5tXb1A1Hd9GYgaHV1Z3rhRf3RcXNM87SFI463F32v2cv6ObWF85qKw-HHcP7sBHHRro-opdLFhZxZLM_4EhDO6xPqyTqxbCZ5EPqBGcAPGhQm6RltZw4wMS0T4Ge2rs7kRGdRMw",
+      "scope": "GOOGLE",
+      "types": [
+        "pet_store",
+        "pharmacy",
+        "veterinary_care",
+        "store",
+        "health",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Bergson Street 6, Tel Aviv-Yafo"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.12425450000001,
+          "lng": 34.80418160000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.1256858302915,
+            "lng": 34.8055515802915
+          },
+          "southwest": {
+            "lat": 32.1229878697085,
+            "lng": 34.80285361970851
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "2df965f84f0cde23faa824efd96841469b6066c8",
+      "name": "Super-Pharm",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAFlltR48MYSYmXWhEi82IOneHakGywVxvPUgF23Twl-8PPwgNcRXohqUDmL5wGYTE2gUQI5GSpluzptrho47A_m4Qtgv_9qh2CwBrEPW8czoEDdxnM39EjjpJbfEV-mkkEhB2nEmKm-4gIJeyzrULrqprGhSt5cuqo8imub0KLdOiM_6SRAwCkg",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJ2_5RLxNJHRURSN2G0E7HuFE",
+      "plus_code": {
+        "compound_code": "4RF3+PM Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4RF3+PM"
+      },
+      "rating": 5,
+      "reference": "CmRRAAAAEXLsd8LLaA4pme4qHbaJi4M6z9v2CjEnHoIxnWVgEUGDsNEwk0uZYkEzz0X7X9QKSw4cC2uyPf5iIOFYdBDwjOwa5KlbICbdTPA6CWmEPK281CMFmPa9R5_KK3KjEXK7EhCxAs1xIboUxEealankiAGYGhSF8yLvxQ3vp9PWNSd1JLWpr0B8cg",
+      "scope": "GOOGLE",
+      "types": [
+        "pharmacy",
+        "store",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Aba Akhime'ir Street 28, Tel Aviv-Yafo"
+    }
+  ],
+  "bankdiscount320900601348035691000000041500": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0834857,
+          "lng": 34.8015186
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08461817989272,
+            "lng": 34.80290212989273
+          },
+          "southwest": {
+            "lat": 32.08191852010727,
+            "lng": 34.80020247010729
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "b266913ad8967aeefb5c3c008ce8c0ed5864499e",
+      "name": "דיסקונט",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 250,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113242140498931057856/photos\">דיסקונט</a>"
+          ],
+          "photo_reference": "CmRaAAAA8EaRSXG3KbNR8dRaNK2gIf0q4EMskTJpqzQ7zEfUd2juyGHN3YkNObGh9JABA8hw8mzY3m0qaNLWtvOcncNaKIa-z7jW9Nsdmmq7KbOtZlFWa-iyIZR2nkEI8qM6dkWFEhAn2ifMv4ktetQqs9kcNOZ-GhSCQVm5ToplykBH8s5vb73k2VFaHw",
+          "width": 250
+        }
+      ],
+      "place_id": "ChIJ-Tp-Sr9LHRUR2pMdvEktim0",
+      "plus_code": {
+        "compound_code": "3RM2+9J רמת גן",
+        "global_code": "8G4P3RM2+9J"
+      },
+      "rating": 5,
+      "reference": "CmRbAAAA9DAGKOTvXxGBoFGOH2FGmWeCojzbzsMHfYAKUwK2GBpX9f8bkpzdnZwE4jXPC47kBT_KOl_0_ADoNLP9HnGH17dDMzIuk70YR_GGyv8noHyfcmodAcli3TArj7DRxqpwEhAeZ4L72-GWQgKVEyzhcNmlGhT7F3KRQBSWlZuAarchPHdPDKmnyg",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "רח' זאב ז'בוטינסקי 3, רמת גן"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0840807,
+          "lng": 34.8155222
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08542242989272,
+            "lng": 34.81681162989272
+          },
+          "southwest": {
+            "lat": 32.08272277010728,
+            "lng": 34.81411197010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "e0e5c11e87ccb789fe59852cb405e3f497a95458",
+      "name": "דיסקונט",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1152,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114247761343273627183/photos\">שימי שלמה</a>"
+          ],
+          "photo_reference": "CmRaAAAA6k5kDUm0TnDVOjPbJeVbCQHTDbq8yfL0lEH14kudq_wq5cknHw0wYSURC7scmKqxgSlr7d34FvoFyjMlJwoRosJ9L9f9s4xJx0PhQcVQXQ1DCP3rd_fwncdV6I-Cy2oQEhBNhHE9spZsX_nkFu3UdIggGhSqAPxtfxay5fphAcK-I4qfePLdfQ",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJlyCxn8tLHRURnJ41mK02bK4",
+      "plus_code": {
+        "compound_code": "3RM8+J6 רמת גן",
+        "global_code": "8G4P3RM8+J6"
+      },
+      "rating": 2,
+      "reference": "CmRbAAAA6K2TFjNJsPY7dy7e8Ty-Ly3Jj7VMTmsYnKwz70AfRxE80Evu49MU3f_IfZ9A6bZoG4GZJehOv_4Vj706iraKxvMcd6ZJXLCW-P9guLyAE779zH0amtDE950Ocz2YTRs8EhAnT3bsQDiErkOoerOjuJC2GhRgh9sVEm2vh1IapbGeCIBVKMXAbw",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "הרצל 50, 076-8051200רמת גן"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0879509,
+          "lng": 34.7890145
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08924412989272,
+            "lng": 34.79040257989271
+          },
+          "southwest": {
+            "lat": 32.08654447010727,
+            "lng": 34.78770292010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "562ce2dc768a61101201855b15f8ebb691da64b6",
+      "name": "דיסקונט",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 250,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112768287023676526187/photos\">דיסקונט</a>"
+          ],
+          "photo_reference": "CmRaAAAAxS2FTRug0lc0Iba927Z5gSqsiOM1Wpa13l5-lOqHcPsurIq73qVmIA15wHYjUsU_GmDuCQA3AOFHgQ-a199mGs3Fg65ox8zB7PCj5feYCFLT1Y3S0QlasG_SayAclqIrEhCESagML4NvI5qyr9YYgdeZGhQCHgs0mrSCy4HZZRUHvsb7EznuBA",
+          "width": 250
+        }
+      ],
+      "place_id": "ChIJ5a6xupRLHRUR92PV-Aem5W4",
+      "plus_code": {
+        "compound_code": "3QQQ+5J תל אביב יפו",
+        "global_code": "8G4P3QQQ+5J"
+      },
+      "rating": 5,
+      "reference": "CmRbAAAAjE4g6Ee00w8VDuRSHx6DinfPngw5ZQgz5zqCFeEoYSqyqkW8MMK_bpUu-3me9nZfB0OulBjlLti9cZNpNPn9TKdGZUyNE5mvotoVVjlj7fo-BqCV8ToZBcWmz5Uj6niFEhD4u4-7bdIy_R04T8GdHLXfGhSgXSHuxJ9Tz0aEwudSoSjDX0nFWg",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "ה' באייר 66, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0848479,
+          "lng": 34.8042303
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.08626582989272,
+            "lng": 34.80546847989272
+          },
+          "southwest": {
+            "lat": 32.08356617010728,
+            "lng": 34.80276882010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "175292529c931106c2cc4fbf0cc2f492d4dd4e23",
+      "name": "דיסקונט",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 250,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112734137294283246010/photos\">דיסקונט</a>"
+          ],
+          "photo_reference": "CmRaAAAAqgZlH8JyW0Q3KZ7rIKeZOFYLn7xQ1Zjdkrm30WvSFLAd9-qYKs0cN2xVr7h2BGBE7fI20-2rsLQxfvvVWk_rU_TvWmrA7Zr8busL9G5RgQFLculBtcIJMgN_R38mDnyeEhCbvUlt71e9Wu7X57jUMLsjGhQrsOt70LGIdQW5EkYPc50FmUwqNw",
+          "width": 250
+        }
+      ],
+      "place_id": "ChIJgdk6dMdLHRURFCiOJ2n_SAg",
+      "plus_code": {
+        "compound_code": "3RM3+WM רמת גן",
+        "global_code": "8G4P3RM3+WM"
+      },
+      "reference": "CmRbAAAATF1xg06vcV4F-5FXi7nGNi2L0UeAXlCGJzyLxeGSBEwrBkDPA5Pqn_yfjro0CE4mfyLYKCxVhiB17aj33UERaoz7pbvbBEMulFe5Etp5Os1xT6l7WykjF0KA8rqk4gvbEhCvFhuafmXmbfGSsB1nV8FpGhSYWxnAS429FLZ2y1tRKdHRcLC2Nw",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "דרך אבא הלל 12, רמת גן"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0949429,
+          "lng": 34.7982043
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.09629272989273,
+            "lng": 34.79955412989273
+          },
+          "southwest": {
+            "lat": 32.09359307010728,
+            "lng": 34.79685447010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "58c4082fb2c8d65daafdf146979c81a73a02b3b4",
+      "name": "דיסקונט",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAfD6BsDydAgxADjDjICyoffmE06NQMa7SJ0Mw20At9Q-OzdNO6lLpfx0VXvuAN46bnnWTNW7UiFv9RouhCppCEYT4m_myNbCufTN2MP3XHXWaPuYtP-ZaV6N4pwbdmLnLEhBXWijQQDYUGA9o0uE8QMnGGhQ9HmIwpL96w7ivJ4xEmVsf4tgVJA",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJ1xBZLN1LHRURt9JkR6nF7SI",
+      "plus_code": {
+        "compound_code": "3QVX+X7 תל אביב יפו",
+        "global_code": "8G4P3QVX+X7"
+      },
+      "rating": 2.7,
+      "reference": "CmRbAAAANRhmAHrya_fIhR6LqOMKz-XWMJMWdnG4gszqemaMQ-4NSYdNgVy5AkbI5HKb4hvYXh1zDhWJ18K1mTy6spaIfrlACcjKejUbDYTtAKJWyF1tHlGwC4RAX__FUQvepBdnEhBr66eRBQypbu5UPndY0RvrGhSEjaEvVcL5sncsn8Ee4EIdhmcnpw",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "הרב הרצוג 24, תל אביב יפו"
+    }
+  ],
+  "bankdiscount32105365347955689000000351500": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.0949429,
+          "lng": 34.7982043
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.09629272989273,
+            "lng": 34.79955412989273
+          },
+          "southwest": {
+            "lat": 32.09359307010728,
+            "lng": 34.79685447010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "58c4082fb2c8d65daafdf146979c81a73a02b3b4",
+      "name": "דיסקונט",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAA54EBfI-m-ibq4w27z7gTdwFJ5raqndrKZP47DpEfXgS3D2IOpZTskk0TeDKZWeKuXB6VblAXC-uZ7naGg1LFcaIjT3CQkMBRGABQSQ56tc2WHsE81wbnHzZ5FeFRl8pmEhDnbT9i2nNY-mTtr8P6EPHrGhQPXWrYt1iGt2LHS0LdkOLPraXv2g",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJ1xBZLN1LHRURt9JkR6nF7SI",
+      "plus_code": {
+        "compound_code": "3QVX+X7 תל אביב יפו",
+        "global_code": "8G4P3QVX+X7"
+      },
+      "rating": 2.7,
+      "reference": "CmRbAAAADo1aHiiwjna5E060M4x1pl8ughsfAx2fGQ7reaSbykmdYvCigMmbm5V6vl30Xy38lVtNBs6CxjXF395ZXueCPo26PtmgK5cwFCLk0OABDHg0Fn4Vr6sov46rHibTzmcAEhDQYoe6J1-soFHOl-kHVe-XGhTKVDTRY33iabuzSdq1qaNmmo63Ww",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "הרב הרצוג 24, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1191499,
+          "lng": 34.7954171
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.12049762989272,
+            "lng": 34.79678517989272
+          },
+          "southwest": {
+            "lat": 32.11779797010728,
+            "lng": 34.79408552010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "496d151382af88edf2d2cf4b8a87eb629d097133",
+      "name": "דיסקונט",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAu4V52Ho9mG3Auz6oIOnsfPrK6Gs123C31TV7Oa8dFbICXi85XxqwURdGkFb9XGKqeofOK-x0G1EhAr8K5Px7B18j_ZQ9lk5-CAG-fn7f3eBuR77LAIT9aDHoJFNGMyQAEhCpxmxUGnG3OBHPHz2af87TGhQcQulY7-p5AXUaZM9WuJQspoGmPA",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJKajcYkJJHRUR0F-BTVb76vI",
+      "plus_code": {
+        "compound_code": "4Q9W+M5 תל אביב יפו",
+        "global_code": "8G4P4Q9W+M5"
+      },
+      "rating": 3.9,
+      "reference": "CmRbAAAAPoepXc9n5ImtkNyeX2SNmmpRUvOz88limo1OqlMV_D7wRJ3ufYcE8APqe9WUH5lxVVvGvEmrdKIXKngXrx6co-X4JmOCm-RvQ0V7OvaA1tkw-3hv3YPyGT_1bvP8whRqEhCAUQmsG5qWK7KdBi8OAPrAGhRNfBkbClVhG_rn5lqZhEyMdiejcQ",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "יהודה הנשיא 34, תל אביב יפו"
+    }
+  ],
+  "bankdiscount32114139834801225700000031500": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1251088,
+          "lng": 34.8032901
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.12624902989272,
+            "lng": 34.80458017989272
+          },
+          "southwest": {
+            "lat": 32.12354937010728,
+            "lng": 34.80188052010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "0ee7c312d01ea33a7d1e0c433b45d93dfa49d16f",
+      "name": "דיסקונט",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103064228010411263215/photos\">סידי שחר</a>"
+          ],
+          "photo_reference": "CmRaAAAAmOeHFOLtFDK8vhu31gnJe3tn3cu2GRSZU8LpGeipaCPMMNSqT6q_gXaY5-RqFk2rvQDqBL_kZfp4-8Ky-2Lt0Tb7kBodjz_siNrEXrSGhH3r7uPZhy3lAqDGp_Ll5M9DEhBzFButO8MfdrSHkXca76d-GhR-doVQmXmEIr4P1sNcQhMI3X16wA",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJAyUqPxNJHRURoEvSvwF8cwY",
+      "plus_code": {
+        "compound_code": "4RG3+28 תל אביב יפו",
+        "global_code": "8G4P4RG3+28"
+      },
+      "rating": 2.7,
+      "reference": "CmRbAAAAf7tXFgyO757AekX2ApJBHUbLM_lM4xRJzz_G3BJQVbf1xLKjDB6vf9x83SkOaPN0GiZ4VKwzunh_O8hXeeUJ-N5OC0cmex1ZQmj5narJjjofEnWy6pO--CvgzHVW625kEhD6NcilK2Hkce8Rib5IdQHyGhQ4nfm6ejtEdTaBdzM3SM7UCf0Lvw",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "אבא אחימאיר 25, תל אביב יפו"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 32.1191499,
+          "lng": 34.7954171
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 32.12049762989272,
+            "lng": 34.79678517989272
+          },
+          "southwest": {
+            "lat": 32.11779797010728,
+            "lng": 34.79408552010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "496d151382af88edf2d2cf4b8a87eb629d097133",
+      "name": "דיסקונט",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100083845037615016870/photos\">Dmitry Ryzhkovich</a>"
+          ],
+          "photo_reference": "CmRaAAAAbg8yVPzmJnwdLNetlQV3xnJ9SlNaPzM3co33XpX2_5D_BiEIL1zE4gQ7fH5k3CkuI92D-0tdsy3JB8XuVAsOp9WXX2CuHsd1-y1MBi1B4n9MwffFCc_dmuFfZ5g6YDGUEhBUCx2Mvztu8fY7YrVJnregGhT6CWSQM_5f2eVjt-9zwwsOYrUknQ",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJKajcYkJJHRUR0F-BTVb76vI",
+      "plus_code": {
+        "compound_code": "4Q9W+M5 תל אביב יפו",
+        "global_code": "8G4P4Q9W+M5"
+      },
+      "rating": 3.9,
+      "reference": "CmRbAAAA_46nobvLVxHpWIT042Z6lIrtXNr-3JpubBN_sCCO2WZR0wXVA_6S4DshTkDcA0GTPErzmzz_2lLSXGI57U9SoSTP_qIHg7vIKQJYWExIBb3AG-OOiCRo-KOz-HxeGUD-EhDBHjLJNJVEIn5_55UROI08GhQ34Fqzf4bHFrCgNZY5dKCmtEkEXw",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "יהודה הנשיא 34, תל אביב יפו"
+    }
+  ]
 }

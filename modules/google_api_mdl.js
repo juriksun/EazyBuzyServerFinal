@@ -28,14 +28,16 @@ module.exports.GoogleAPIs = class{
         switch(this.apiKeyArrIndex){
             case 0: {
                 this.apiKeyArrIndex++;
-                return consts.GOOGLE_API_NIR;
+                this.apiKeyArrIndex = 0;
+                return "AIzaSyB6Ugs6Z7Zj1zj3XBksTgCZ63SuQrX0fc0";
+                //return consts.GOOGLE_API_NIR;
             }
             case 1: {
                 this.apiKeyArrIndex++;
                 return consts.GOOGLE_API_ALEX;
             }
             default: {
-                this.apiKeyArrIndex++;
+                this.apiKeyArrIndex = 0;
                 return consts.GOOGLE_API_SHAMIR;
             }
         }
@@ -44,8 +46,9 @@ module.exports.GoogleAPIs = class{
     googleGetDirection(startPoint, endPoint, mode, departureTime ){
         return new Promise(async (resolve, reject) => {
 
-            const key = `${startPoint}${endPoint}${mode}${DateTime.getDayAndHour(departureTime)}`;
-
+            let key = `${startPoint}${endPoint}${mode}${DateTime.getDayAndHour(departureTime)}`;
+            key = key.replace(/\s+/g,'');
+            key = key.replace(/\./g,'');
             if(this.directionsDB.get(key).value()){
                 resolve(this.directionsDB.get(key).value());
             } else {
@@ -58,8 +61,12 @@ module.exports.GoogleAPIs = class{
                 .get(url)
                 .then(response => {
                     this.numOfDirectionRequest--;
-                    this.directionsDB.set(key, response.data).write();
-                    resolve(response.data);
+                    if(response.data.routes[0]){
+                        this.directionsDB.set(key, response.data).write();
+                        resolve(response.data);
+                    } else {
+                        resolve(response.data);
+                    }
                 })
                 .catch(error => {
                     this.numOfDirectionRequest--;
@@ -75,9 +82,12 @@ module.exports.GoogleAPIs = class{
     googleGetPlacesByRadius(taskIndex, task, polygonPoint, radius){
         return new Promise((resolve, reject) => {
             const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&radius=${radius}&type=${task.task_place.place_type.name}&keyword=${task.task_place.place_company.name}&key=${consts.GOOGLE_API_ALEX}&language=en`;
-
-            const key = `${polygonPoint.lat}${polygonPoint.lng}${radius}${task.task_place.place_type.name}${task.task_place.place_company.name}`;
-
+            if(!task.task_place.place_company.name || task.task_place.place_company.name === ""){
+                task.task_place.place_company.name = ""
+            }
+            let key = task.task_place.place_type.name +task.task_place.place_company.name + polygonPoint.lat + polygonPoint.lng + radius;
+            key = key.replace(/\s+/g,'');
+            key = key.replace(/\./g,'');
             if(this.placesByRadiusDB.get(key).value()){
                 resolve({
                     'taskIndex':  taskIndex,
@@ -117,8 +127,9 @@ module.exports.GoogleAPIs = class{
 
             const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${consts.GOOGLE_API_NIR}&language=en`;
             
-            const key = `${query}`;
-
+            let key = `${query}`;
+            key = key.replace(/\s+/g,'');
+            key = key.replace(/\./g,'');
             if(this.placesByQueryDB.get(key).value()){
                 resolve({
                     'taskIndex':  taskIndex,

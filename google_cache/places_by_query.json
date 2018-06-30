@@ -1,5 +1,5 @@
 {
-  "Chaim Levanon St 67, Tel Aviv-Yafo, Israel Post Office  ": [
+  "ChaimLevanonSt67,TelAviv-Yafo,IsraelPostOffice": [
     {
       "formatted_address": "Chaim Levanon St 67, Tel Aviv-Yafo, Israel",
       "geometry": {
@@ -22,8 +22,7 @@
       "id": "6731b74d1d6aeeddd2c9b6eb8e6e73e41eb810d4",
       "name": "Israel Post",
       "opening_hours": {
-        "open_now": false,
-        "weekday_text": []
+        "open_now": false
       },
       "photos": [
         {
@@ -31,13 +30,17 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/100475323868156145690/photos\">Dan Komsky</a>"
           ],
-          "photo_reference": "CmRaAAAA3jFRKoc-njjmanaLkwMvj872n1GwHt8BZU6vumnMm2nFpUFp0npFVdwPimoEgAayQvWl7YOTydVCtmFJ8fiRMkVSfPlARY4pYvwlw49nogIO1oeJLGhbe6SqpIUWgGicEhAn-rsSydLPFUb_bx042HGnGhRJkM1RUDLPXQIM7wNybZxiqwFd1A",
+          "photo_reference": "CmRaAAAAcpf5KemLQL82Daz5JE4FLVv7z0ZVQ8qgdt90HhxwPtFDBe_ppQ2jpcjJ5XFkrWThhAmYziosmltoMlXQzJs4VbJCsBwtLQWp9MCsCLDYyA2eh-EsJ38uDej9By5uYk2TEhAVy2STveR68V88zKKMEVtPGhR6e1nBjm0rluJd7fF1zk4NQBQsRQ",
           "width": 4640
         }
       ],
       "place_id": "ChIJFx20D2ZJHRURExR15T9fAnE",
+      "plus_code": {
+        "compound_code": "4R72+HC Tel Aviv-Yafo, Israel",
+        "global_code": "8G4P4R72+HC"
+      },
       "rating": 3.4,
-      "reference": "CmRbAAAA9gBbQZMPEfNVoU0il-_NUjW27f843wAVNSNdEyYXa-gmjsZIrrFpxo3bZnN2tIrXd3ggebeEr89t8XbVwFVZseSN-JIyqPYSbypT0TCY01_Cg92SvcI_qMn3PjEihVsYEhBqguep7zDLBL0ZxSVl3GgwGhSQzZfnyWLWH_DeMdu9Q07hXkuSww",
+      "reference": "CmRbAAAA7LnQKO8G7MnR9W2fQRzrzZr3zrMmpGzIsxlKjX6cTE2zOqj8J-Lfz4X5hYInsEmDL2SpB2-LNZrGbC4USPaCOEpArYCBJddsz4hFwBeCsu24yJtiRPb1y5kComULZ16FEhAvW2vHWrijM3S4A6ociCQjGhSqadw0rFvcUAmWGFsDqFwfvHFn8Q",
       "types": [
         "post_office",
         "finance",

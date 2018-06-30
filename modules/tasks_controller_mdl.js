@@ -221,7 +221,7 @@ module.exports = class{
 
             TaskMod.findOneAndUpdate(conditions, update, opts)
             .then( result => {
-                console.log(result);
+                // console.log(result);
                 resolve(true);
             })
             .catch( error => {
@@ -239,7 +239,7 @@ module.exports = class{
 
             TaskMod.findOneAndUpdate(conditions, update, opts)
             .then( result => {
-                console.log(result);
+                // console.log(result);
                 resolve(true);
             })
             .catch( error => {

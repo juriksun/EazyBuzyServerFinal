@@ -68,7 +68,7 @@ module.exports = class{
             Task.findOne({ _id : task_id})
             .then(task => {
                 let taskReturnObject = Object.assign({share_from : username} , task._doc);
-                console.log(task)
+                //console.log(task)
                 if(task) resolve(taskReturnObject)
                 else reject(false)
             })
@@ -84,7 +84,7 @@ module.exports = class{
 
         Share.findOneAndUpdate(conditions, update, opts)
         .then( result => {
-            console.log("View task ",task_id,result);
+            // console.log("View task ",task_id,result);
         })
         .catch( error => {
             console.error("Error view task ",error);
