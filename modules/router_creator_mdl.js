@@ -7,60 +7,60 @@ const       db              = require('../data_base'),
             GoogleAPIs      = googleApiMdl.GoogleAPIs;
 
 
-class ApiHandler{
-    constructor(){
+// class ApiHandler{
+//     constructor(){
         
-        this.temp = 0;
-    }
+//         this.temp = 0;
+//     }
 
-    handleRequst(promisesList,requstTemp){
-        return new Promise( (resolve,reject) => {
-            Promise.all(promisesList)
-            .then( data => {
-                resolve(data);
-            })
-            .catch( error => {
-                if(this.temp < 3){
-                    this.temp++;
-                    this.handleRequst(promisesList)
-                }
-                else{
-                    this.temp = 0;
-                    reject({error : error})
-                }
-            })
-        })
-    }
-}
+//     handleRequst(promisesList,requstTemp){
+//         return new Promise( (resolve,reject) => {
+//             Promise.all(promisesList)
+//             .then( data => {
+//                 resolve(data);
+//             })
+//             .catch( error => {
+//                 if(this.temp < 3){
+//                     this.temp++;
+//                     this.handleRequst(promisesList)
+//                 }
+//                 else{
+//                     this.temp = 0;
+//                     reject({error : error})
+//                 }
+//             })
+//         })
+//     }
+// }
 
-let apiHandleRequst = (promisesList,requstTemp) => {
-    return new Promise( (resolve,reject) => {
+// let apiHandleRequst = (promisesList,requstTemp) => {
+//     return new Promise( (resolve,reject) => {
         
-        Promise.all(promisesList)
-        .then( data => {
-            resolve(data);
-        })
-        .catch( error => {
-            if(requstTemp === 2) reject( {error : error})
-            else  {
-                console.log(requstTemp+1)
-                apiHandleRequst(promisesList,requstTemp+1)
-                .then( dataTemp => {
-                    resolve(dataTemp)
-                })
-            }
-        })
+//         Promise.all(promisesList)
+//         .then( data => {
+//             resolve(data);
+//         })
+//         .catch( error => {
+//             if(requstTemp === 2) reject( {error : error})
+//             else  {
+//                 console.log(requstTemp+1)
+//                 apiHandleRequst(promisesList,requstTemp+1)
+//                 .then( dataTemp => {
+//                     resolve(dataTemp)
+//                 })
+//             }
+//         })
         
-    })
+//     })
     
-}
+// }
 
 module.exports = class {
-    //no now
     constructor(){
         this.tasksController = new TasksController()
         this.googleAPIs = new GoogleAPIs();
         this.MaxNumOfSegments = 0;
+        this.startProcess = Date.now();
     }
 
     // determine all time sets of route
@@ -131,26 +131,7 @@ module.exports = class {
                     tasks[allFullDadaPlace[i].taskIndex].time.duration
                 ) === 0
             ){
-                // for debuging
-                // console.log("In time window");
-                // console.log("time: ", DateTime.checkPlaceInTimeWindow(
-                //     this.startTime, this.endTime, this.day,
-                //     allFullDadaPlace[i].response.opening_hours,
-                //     tasks[allFullDadaPlace[i].taskIndex].time.duration
-                // ));
-                // console.log(JSON.stringify(allFullDadaPlace[i]));
-
                 suteblePlaces.push(allFullDadaPlace[i]);
-            }
-            //for debuging
-             else {
-                // console.log("Not in time window");
-                // console.log("time: ", DateTime.checkPlaceInTimeWindow(
-                //     this.startTime, this.endTime, this.day,
-                //     allFullDadaPlace[i].response.opening_hours,
-                //     tasks[allFullDadaPlace[i].taskIndex].time.duration
-                // ));
-                // console.log(JSON.stringify(allFullDadaPlace[i]));
             }
         }
         return suteblePlaces;
@@ -195,16 +176,18 @@ module.exports = class {
                             location: suiteblePlaces[i].location
                         };
                         let task = [];
-                        for (let k = 0; k < suiteblePlaces[i].places.length && k < 10; k++) {
-                            let place = suiteblePlaces[i].places[k];
+                        for (let k = 0; k < suiteblePlaces[i].places.length  && k < 5; k++) {
+                            let place = {
+                                "formatted_address": suiteblePlaces[i].places[k].formatted_address,
+                                "geometry": suiteblePlaces[i].places[k].geometry,
+                                "opening_hours": suiteblePlaces[i].places[k].opening_hours,
+                                "place_id": suiteblePlaces[i].places[k].place_id,
+                                "vicinity": suiteblePlaces[i].places[k].vicinity
+                            };
+
                             place.task_identifier = task_identifier;
                             task.push(place);
                         }
-                        // for (let k = 0; k < suiteblePlaces[i].places.length; k++) {
-                        //     let place = suiteblePlaces[i].places[k];
-                        //     place.task_identifier = task_identifier;
-                        //     task.push(place);
-                        // }
                         tasksForPermutation.push(task);
                     }
                 }
@@ -249,9 +232,9 @@ module.exports = class {
     //
     dispatch(){
         return new Promise((resolve, reject)=>{
-            this.calcPolygon()// need to develop
+            this.calcPolygon()
                 .then((polygon) => {
-                this.getSuiteblePlaces(polygon, this.filterTasksByTimeWindow(this.userTasks))// get all suitebale
+                this.getSuiteblePlaces(polygon, this.filterTasksByTimeWindow(this.userTasks))
                     .then((suiteblePlaces) => {
                         
                         if(suiteblePlaces.tasks.length === 0){
@@ -288,6 +271,9 @@ module.exports = class {
                                     );
                                     return;
                                 }
+
+                                allRoutesWithSegments = this.sortByAirDistanceNumOfSegments(allRoutesWithSegments);
+
                                 this.getAllDirectionForRoutesWithSegments(allRoutesWithSegments)//alex
                             
                                 .then(directionsForRoutesWithSegments => {
@@ -309,7 +295,6 @@ module.exports = class {
                                             resolve(
                                                 {
                                                     recommended_route: undefined,
-                                                    // all_routes: undefined,
                                                     all_tasks: this.userTasks
                                                 }
                                             );
@@ -319,8 +304,6 @@ module.exports = class {
                                         resolve(
                                             {
                                                 recommended_route: recommendedRoute,
-                                                // recommended_route: directionsForRoutesWithSegments,
-                                                // all_routes: directionsForRoutesWithSegments,
                                                 all_tasks: this.userTasks
                                             }
                                         );
@@ -353,15 +336,12 @@ module.exports = class {
                 }
                 
             }
-            // console.log(JSON.stringify(poligonDots))
             resolve(poligonDots);
         });
     }
 
     checkAndSetPuligonDot(poligonDots, dot){
         let i = 0;
-        // console.log("dot.lat: ", dot.lat);
-        // console.log("dot.lng: ", dot.lng);
         if(dot.lat === 0 || dot.lng === 0){
             return;
         }
@@ -370,8 +350,6 @@ module.exports = class {
                 break;
             }
         }
-        // console.log("i: ", i);
-        // console.log("poligonDots.length: ", poligonDots.length);
         if(i === poligonDots.length){
             poligonDots.push(dot);
         }
@@ -418,23 +396,17 @@ module.exports = class {
                     return dataArr.response.map((data) => {
                         return this.googleAPIs.googleGetPlaceData(dataArr.taskIndex, data.place_id);
                     });
-                    // rerange object schem
                 }).reduce((accumulator, currentValue) => {
                     return accumulator.concat(currentValue);
                 }))
                 .then((allFullDadaPlace) => {
-                    // console.log("------------------------------->");
-                    // console.log(JSON.stringify(allFullDadaPlace));
-                    // allFullDadaPlace = this.filterPlacesByTimeWindow(allFullDadaPlace, tasks);
-                    // console.log("------------------------------->");
-                    // console.log(JSON.stringify(allFullDadaPlace));
                     if(allFullDadaPlace.length === 0){
                         resolve({
                             tasks: [],
                         });
                         return;
                     }
-                    // match all responses from googleGetPlaceData to proper task 
+
                     for (let i = 0; i < allFullDadaPlace.length; i++) {
                         if(tasks[allFullDadaPlace[i].taskIndex].places){
                             let k = 0; 
@@ -453,8 +425,6 @@ module.exports = class {
                             tasks[allFullDadaPlace[i].taskIndex].places = [allFullDadaPlace[i].response];
                         }
                     }
-                    // console.log("------------------------------->");
-                    // console.log(JSON.stringify(tasks));
                     resolve({
                         tasks: tasks,
                     });
@@ -468,7 +438,6 @@ module.exports = class {
         });
     }
 
-   
     //need
     saveRoute(){
 
@@ -530,7 +499,6 @@ module.exports = class {
                     }
                 });
 
-
                 if(i === recommendedRoute.segments.length - 1){
                     recommendedRoute.tasks.push({
                         name : recommendedRoute.segments[i].endPoint.task_identifier.name,
@@ -563,13 +531,6 @@ module.exports = class {
                         routeCurrentTime
                     );
         }
-        // console.log("------------------>");
-        // console.log("time: ",
-        //     DateTime.getNearestOpeningTime(
-        //     routeCurrentTime, this.day, point.opening_hours,
-        //     point.task_identifier.time.duration)
-        // );
-        // console.log(JSON.stringify(point));
 
         return DateTime.getNearestOpeningTime(
             routeCurrentTime, this.day, point.opening_hours,
@@ -591,8 +552,6 @@ module.exports = class {
                 segments: []
             };
 
-            // console.log("--->>>>>>>>>>>>>>>>>>>>>>>>>>");
-            // console.log(JSON.stringify(routeWithSegments));
             for(let i = 0; i < routeWithSegments.length; i++){
                 routeWithSegments[i].arriveTime = route.route_current_time;
                 if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
@@ -652,35 +611,43 @@ module.exports = class {
                     resolve(undefined);
                     return;
                 }
+                if(this.BestDutarion !== undefined && this.BestDutarion <= route.route_duration){
+                    resolve(undefined);
+                    return;
+                }
                 route.segments.push(routeWithSegments[i]);
             }
+
             this.MaxNumOfSegments = routeWithSegments.length;
+
+            if(this.BestDutarion === undefined || this.BestDutarion >= route.route_duration){
+                this.BestDutarion = route.route_duration;
+            }
             resolve(route);
         });
     }
 
     getAllDirectionForRoutesWithSegments(allRoutesWithSegments){
-        return new Promise( (resolve, reject) => {
+        return new Promise( async (resolve, reject) => {   
             let poromises = [];
-            for(let i = allRoutesWithSegments.length - 1; 0 <= i; i--){
+            for(let i = allRoutesWithSegments.length - 1; 0 <= i && allRoutesWithSegments.length - i; i--){
                 let startHour = DateTime.convertTimeToMinutes(this.startTime);
-                // console.log("startHour: ", startHour);
                 if(this.MaxNumOfSegments === undefined || this.MaxNumOfSegments <= allRoutesWithSegments[i].length){
-                    while(startHour < DateTime.convertTimeToMinutes(this.endTime)){
+                    while(startHour < DateTime.convertTimeToMinutes(this.endTime) && Date.now() - this.startProcess < 25000){
+                        
                         let route = JSON.parse(JSON.stringify(allRoutesWithSegments[i]));
-                        // console.log(route);
-                        poromises.push(this.buildRouteWithSegmentsAndDerection(
+                        let routeWithDirections = await this.buildRouteWithSegmentsAndDerection(
                             route, startHour
-                        ));
-                        startHour += 60;
+                        );
+                        poromises.push(routeWithDirections);
+                        startHour += 120;
                     }
                 }
             }
+
             Promise.all(
                 poromises
-                // allRoutesWithSegments.map(i => this.buildRouteWithSegmentsAndDerection(i))
             ).then((allData) => {
-                // console.log(JSON.stringify(allData));
                 let routesWithSegmentsAndDirections = [];
                 for(let i = 0; i < allData.length; i++){
                     if(allData[i] !== undefined){
@@ -722,5 +689,75 @@ module.exports = class {
                 return;
             }
         }
+    }
+
+    sortByAirDistanceNumOfSegments(allRauteWithSegments){
+        const MAX_NUM_OF_REQUESTS = 100.0;
+
+        let sortByAirDistance = (route1, route2) => {
+            return (
+                calcSumOfAirDistance(route1) -
+                calcSumOfAirDistance(route2)
+            ); 
+        };
+
+        let calcSumOfAirDistance = (route) => {
+
+            let calcAirDistance = (point1, point2) => {
+                let radlat1     = Math.PI * point1.geometry.location.lat/180,
+                    radlat2     = Math.PI * point2.geometry.location.lat/180;
+                
+                let theta = point1.geometry.location.lng -
+                    point2.geometry.location.lng;
+    
+                let radtheta = Math.PI * theta/180;
+    
+                let dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+                if (dist > 1) {
+                    dist = 1;
+                }
+                dist = Math.acos(dist);
+                dist = dist * 180/Math.PI;
+                dist = dist * 60 * 1.1515;
+                dist = dist * 0.8684;
+
+                return dist;
+            };
+
+            let sumOfAirDistances = 0;
+            for(let i = 0; i < route.length; i++){
+                sumOfAirDistances += calcAirDistance(route[i].startPoint, route[i].endPoint);
+            }
+            return sumOfAirDistances;
+        };
+
+
+        let routesByNumOfSegments = [];
+
+        for(let i = 0; i < allRauteWithSegments.length; i++){
+            if(!routesByNumOfSegments[allRauteWithSegments[i].length - 2]){
+                routesByNumOfSegments[allRauteWithSegments[i].length - 2] =
+                    [allRauteWithSegments[i]];
+            } else {
+                routesByNumOfSegments[allRauteWithSegments[i].length - 2]
+                .push(allRauteWithSegments[i]);
+            }
+        }
+
+        let pieceOfNum = 0;
+
+        for(let i = 0; i < routesByNumOfSegments.length; i++){
+            routesByNumOfSegments[i] = routesByNumOfSegments[i].sort(sortByAirDistance);
+            pieceOfNum += Math.pow((i + 2), 3);
+            
+        }
+
+        pieceOfNum = MAX_NUM_OF_REQUESTS/pieceOfNum;
+        allRauteWithSegments = [];
+
+        for(let i = 0; i < routesByNumOfSegments.length; i++){
+            allRauteWithSegments = allRauteWithSegments.concat(routesByNumOfSegments[i].slice(0, ~~(pieceOfNum * Math.pow((i + 2), 3)) + 1).reverse());
+        }
+        return allRauteWithSegments;
     }
 }

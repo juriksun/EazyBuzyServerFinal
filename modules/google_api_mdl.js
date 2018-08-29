@@ -1,3 +1,17 @@
+/*
+* Shenkar - Engineering. Design. Art
+* Faculty Of Software Engineering
+* Final Progect 2017-2018 "EasyBusy"
+*
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Directive by:
+*       Dr. Michael Kuperberg
+*/
+
 'use strict';
 const axios         = require("axios"),
       consts        = require("../consts"),
@@ -5,7 +19,7 @@ const axios         = require("axios"),
 
 const   low         = require('lowdb'),
         FileSync    = require('lowdb/adapters/FileSync');
-
+ 
 module.exports.GoogleAPIs = class{
 
     constructor(){
@@ -28,9 +42,7 @@ module.exports.GoogleAPIs = class{
         switch(this.apiKeyArrIndex){
             case 0: {
                 this.apiKeyArrIndex++;
-                this.apiKeyArrIndex = 0;
-                return "AIzaSyB6Ugs6Z7Zj1zj3XBksTgCZ63SuQrX0fc0";
-                //return consts.GOOGLE_API_NIR;
+                return consts.GOOGLE_API_NIR;
             }
             case 1: {
                 this.apiKeyArrIndex++;
@@ -45,7 +57,6 @@ module.exports.GoogleAPIs = class{
 
     googleGetDirection(startPoint, endPoint, mode, departureTime ){
         return new Promise(async (resolve, reject) => {
-
             let key = `${startPoint}${endPoint}${mode}${DateTime.getDayAndHour(departureTime)}`;
             key = key.replace(/\s+/g,'');
             key = key.replace(/\./g,'');
@@ -56,59 +67,55 @@ module.exports.GoogleAPIs = class{
                 if(this.directionsDB.get(key).value()){
                     resolve(this.directionsDB.get(key).value());
                 } else {
-                const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${this.getApiKey()}&departure_time=${departureTime}&language=en`;
-                axios
-                .get(url)
-                .then(response => {
-                    this.numOfDirectionRequest--;
-                    if(response.data.routes[0]){
-                        this.directionsDB.set(key, response.data).write();
-                        resolve(response.data);
-                    } else {
-                        resolve(response.data);
-                    }
-                })
-                .catch(error => {
-                    this.numOfDirectionRequest--;
-                    reject({error:error})
-                });
-            }
+                    const url = `https://maps.googleapis.com/maps/api/directions/json?origin=place_id:${startPoint}&destination=place_id:${endPoint}&mode=${mode}&key=${this.getApiKey()}&departure_time=${departureTime}&language=en`;
+                    axios
+                    .get(url)
+                    .then(response => {
+                        this.numOfDirectionRequest--;
+                        if(response.data.routes[0]){
+                            this.directionsDB.set(key, response.data).write();
+                            resolve(response.data);
+                        } else {
+                            resolve(response.data);
+                        }
+                    })
+                    .catch(error => {
+                        this.numOfDirectionRequest--;
+                        reject({error:error})
+                    });
+                }
                 }, 50 * this.numOfDirectionRequest++);
             }
-            
         });
     };
 
     googleGetPlacesByRadius(taskIndex, task, polygonPoint, radius){
         return new Promise((resolve, reject) => {
-            const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&radius=${radius}&type=${task.task_place.place_type.name}&keyword=${task.task_place.place_company.name}&key=${consts.GOOGLE_API_ALEX}&language=en`;
+
+            const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${polygonPoint.lat},${polygonPoint.lng}&rankby=distance&type=${task.task_place.place_type.name}&keyword=${task.task_place.place_company.name}&key=${consts.GOOGLE_API_ALEX}&language=en`;
+            
             if(!task.task_place.place_company.name || task.task_place.place_company.name === ""){
                 task.task_place.place_company.name = ""
             }
+
             let key = task.task_place.place_type.name +task.task_place.place_company.name + polygonPoint.lat + polygonPoint.lng + radius;
             key = key.replace(/\s+/g,'');
             key = key.replace(/\./g,'');
+
             if(this.placesByRadiusDB.get(key).value()){
                 resolve({
                     'taskIndex':  taskIndex,
                     response: this.placesByRadiusDB.get(key).value()
                 });
             } else {
-            setTimeout(()=>{
-                if(this.placesByRadiusDB.get(key).value()){
-                    resolve({
-                        'taskIndex':  taskIndex,
-                        response: this.placesByRadiusDB.get(key).value()
-                    });
-                } else {
                 axios
                 .get(url)
                 .then(response => {
                     this.numOfPlacesByRadius--;
-                    this.placesByRadiusDB.set(key, response.data.results).write();
+                    this.placesByRadiusDB.set(key, response.data.results.slice(0, 4)).write();
                     resolve({
                         'taskIndex':  taskIndex,
-                        response: response.data.results
+                        response: response.data.results.slice(0, 4)
                     });
                 })
                 .catch(error => {
@@ -116,8 +123,6 @@ module.exports.GoogleAPIs = class{
                     reject({error:error});
                     console.log(error);
                 });
-            }
-                }, 50 * this.numOfPlacesByRadius++);
             }
         });
     };

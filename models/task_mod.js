@@ -1,5 +1,3 @@
-//import { Schema } from 'mongoose';
-
 let mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
@@ -45,9 +43,6 @@ let    ShareSchema = new Schema({
     });
 
     let TaskSchema = new Schema({
-        // ---------------- will use id from mlab on create ---------------- 
-        // id : { type : Number , required : true , unique : true },
-        // -----------------------------------------------------------------
         user_token_id : { type : String},
         name : { type : String},
         type: { type : String},

@@ -110,16 +110,22 @@ class DateTime{
     ){
         let nearestOpeningHours = undefined;
         durationTask = this.convertTimeToMinutes((durationTask === "") ? "00:15" : durationTask);
-        
+        // console.log(JSON.stringify(opening_hours));
         if(
             opening_hours == undefined
             || opening_hours.periods == undefined
             || opening_hours.periods.length === 0
         ){
+            
             return 0;
         }
 
         for(let i = 0; i < opening_hours.periods.length; i++){
+            if( opening_hours.periods[i].open 
+                && !opening_hours.periods[i].close
+            ){
+                return 0;
+            }
             if(
                 this.compareHour(
                     opening_hours.periods[i].open.time, currrentRouteTime,
