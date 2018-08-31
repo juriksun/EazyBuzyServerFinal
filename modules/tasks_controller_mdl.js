@@ -1,19 +1,32 @@
+/*
+* Shenkar College of Engineering and Design.
+* Department of Software Engineering
+* EazyBuzy - Software Engineering B.Sc. Final Project 2018
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Supervisor:
+*       Dr. Michael Kiperberg
+*/
 'use strict';
- let TaskMod        = require('../models/task_mod'),
-     UserMod        = require('../models/task_mod'),
-     Type           = require('../models/type_mod'),
-     Comany         = require('../models/companies_mod'),
+let TaskMod        = require('../models/task_mod'),
+    Type           = require('../models/type_mod'),
+    Comany         = require('../models/companies_mod'),
+    UserController = require('./users_controller_mdl'),
+    mongoose       = require('mongoose');
 
-     UserController = require('./users_controller_mdl'),
-
-     mongoose       = require('mongoose');
-
+/*
+* the main purpose of task controller class role is work with task data base
+*/
 module.exports = class{
 
     constructor(){
         this.userController = new UserController();
     }
 
+    // method for get all tasks of some user
     getAllTasks(user){
         return new Promise( (resolve,reject) => {
             this.userController.getUserWithId(user)
@@ -32,6 +45,7 @@ module.exports = class{
         })
     }
 
+    // get special tasks of user by array of tasks id
     getTasks(user, tasks){
         return new Promise((resolve, reject) => {
             this.userController.getUserWithId(user)
@@ -50,7 +64,7 @@ module.exports = class{
         });
     }
 
-    
+    // save new task
     createTask(user, task){
         return new Promise((resolve, reject) => {
             this.userController.getUserWithId(user)
@@ -76,6 +90,7 @@ module.exports = class{
         });
     }
 
+    // delete task
     deleteTask(user , taskId){
         return new Promise( (resolve,reject) => {
             this.getTask(user)
@@ -95,13 +110,13 @@ module.exports = class{
         }) 
     }
 
+    // get one task of some user
     getTask(user){
         return new Promise( (resolve,reject) => {
             this.userController.getUserWithId(user)
             .then(userData => {
                 TaskMod.findOne({user_token_id: userData._id})
                 .then( taskDasks => {
-                    // console.log(taskDasks);
                     resolve(taskDasks)
                 })
                 .catch( error => {
@@ -114,6 +129,7 @@ module.exports = class{
         })
     }
 
+    // get one task full information by task id
     getTasksInfoByTasksId(tasks_id){
         return new Promise( (resolve,reject) => {
             TaskMod.find({_id: {$in : tasks_id }})
@@ -128,6 +144,7 @@ module.exports = class{
         })
     }
 
+    // update some task data
     updateTask(user, taskId, taskUpdateData){
         return new Promise( (resolve,reject) => {
             this.getTask(user)
@@ -162,44 +179,31 @@ module.exports = class{
         }) 
     }
 
+    // add or update task.
     addOrUpdateTask(user, taskId, taskUpdateData, locationData){
         return new Promise( (resolve,reject) => {
-           
             this.userController.getUserWithId(user)
             .then(user => {
-                
                 if(user !== {} ){
-                    
                     let toUpDate = {};
-
                     toUpDate.user_token_id = user._id;
-
                     toUpDate.name = taskUpdateData.name;
-
                     toUpDate.type = taskUpdateData.type;
-
                     toUpDate.status = 'ready';
-
                     toUpDate.time = {
                         start_time: taskUpdateData.time_start,
                         date: taskUpdateData.time_date,
                         duration: taskUpdateData.time_duration
                     };
-
-
                     toUpDate.priority = taskUpdateData.priority;
-
                     toUpDate.task_place = taskUpdateData.task_place;
-                    
                     toUpDate.location = locationData;
-
                     let conditions = { _id: taskId || mongoose.Types.ObjectId()} ,
                         update      = { $set:  toUpDate },
                         opts = { new: true, upsert: true };
 
                     TaskMod.findOneAndUpdate(conditions, update, opts)
                     .then( result => {
-                        // console.log(result);
                         resolve(result)
                     })
                     .catch( error => {
@@ -212,8 +216,8 @@ module.exports = class{
         }) 
     }
 
+    // set stutus of the task to shares or not
     setShareTask(username,task_id){
-        
         return new Promise((resolve,reject) => {
             let conditions  = { _id: task_id } ,
             update      = { $set:  { share : username } },
@@ -221,7 +225,6 @@ module.exports = class{
 
             TaskMod.findOneAndUpdate(conditions, update, opts)
             .then( result => {
-                // console.log(result);
                 resolve(true);
             })
             .catch( error => {
@@ -231,6 +234,7 @@ module.exports = class{
         })
     }  
     
+    // associate the task to other user
     updateUserTokenToTask(userToken,task_id){
         return new Promise((resolve,reject) => {
             let conditions  = { _id: task_id } ,
@@ -239,7 +243,6 @@ module.exports = class{
 
             TaskMod.findOneAndUpdate(conditions, update, opts)
             .then( result => {
-                // console.log(result);
                 resolve(true);
             })
             .catch( error => {
@@ -248,6 +251,8 @@ module.exports = class{
             });
         })
     }
+
+    // get list of task types 
     getTypes(){
         return new Promise((resolve, reject) => {
             Type.find({})
@@ -260,6 +265,7 @@ module.exports = class{
         }) 
     }
 
+    // get list of companies belonging to types of task
     getCompanies(type){
         return new Promise((resolve, reject) => {
             Comany.findOne({name: type})

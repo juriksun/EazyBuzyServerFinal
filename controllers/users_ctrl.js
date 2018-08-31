@@ -1,8 +1,23 @@
+/*
+* Shenkar College of Engineering and Design.
+* Department of Software Engineering
+* EazyBuzy - Software Engineering B.Sc. Final Project 2018
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Supervisor:
+*       Dr. Michael Kiperberg
+*/
 'use strict';
-
+/*
+* methods for user controller
+*/
 let UserController = require('../modules/users_controller_mdl'),
     userController = new UserController();
 
+// method for get user
 exports.getUser = (req , res) => {
     console.log("get_user route executing");
     if(req.body.user !== undefined){
@@ -31,6 +46,7 @@ exports.getUser = (req , res) => {
     }
 }
 
+// method for create new user
 exports.setNewUser = (req , res) => {
     console.log("set_new_user route executing");
     if(req.body.user !== undefined){

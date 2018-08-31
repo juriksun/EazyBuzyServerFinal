@@ -1,7 +1,20 @@
+/*
+* Shenkar College of Engineering and Design.
+* Department of Software Engineering
+* EazyBuzy - Software Engineering B.Sc. Final Project 2018
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Supervisor:
+*       Dr. Michael Kiperberg
+*/
+/*
+* determining task schema
+*/
 let mongoose = require('mongoose'),
     Schema = mongoose.Schema;
-
-
 let    ShareSchema = new Schema({
         username: { type : String , required : true },
         share_status: { type : String , required : true }

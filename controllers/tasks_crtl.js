@@ -1,6 +1,23 @@
+/*
+* Shenkar College of Engineering and Design.
+* Department of Software Engineering
+* EazyBuzy - Software Engineering B.Sc. Final Project 2018
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Supervisor:
+*       Dr. Michael Kiperberg
+*/
 'use strict';
+/*
+* methods for tasks controller
+*/
 let TaskController = require('../modules/tasks_controller_mdl');
 let taskController = new TaskController();
+
+// method for create task
 exports.createTask = (req, res) => {
     console.log("create_new_task route executing");
     let user,
@@ -28,6 +45,7 @@ exports.createTask = (req, res) => {
     }
 };
 
+// method for get all tasks route
 exports.getAllTasks = (req, res) => {
     console.log("get_all_tasks route executing");
     
@@ -61,6 +79,7 @@ exports.getAllTasks = (req, res) => {
     }   
 };
 
+// mehtod for delete task
 exports.deleteTask = (req, res) => {
     console.log("delete_task route executing");
     
@@ -92,6 +111,7 @@ exports.deleteTask = (req, res) => {
     }   
 };
 
+// method for update task
 exports.updateTask = (req, res) => {
     console.log("update_task route executing");
     if(
@@ -130,6 +150,7 @@ exports.updateTask = (req, res) => {
     }   
 };
 
+// method for update or create new task
 exports.addOrUpdateTask = (req, res) => {
     console.log("add_or_update_task route executing");
 
@@ -137,11 +158,6 @@ exports.addOrUpdateTask = (req, res) => {
         req.body.user !== undefined &&
         req.body.task_update_data !== undefined
     ){
-        // console.log(req.body.user);
-        // console.log(req.body.task_id);
-        // console.log(req.body.task_update_data);
-        // console.log(req.body.task_location_data);
-
         taskController.addOrUpdateTask(
             JSON.parse(req.body.user),
             req.body.task_id,
@@ -174,6 +190,7 @@ exports.addOrUpdateTask = (req, res) => {
     }   
 };
 
+// method for get types of task
 exports.getTypes = (req, res) => {
     console.log("get_typs route executing");
     
@@ -196,6 +213,7 @@ exports.getTypes = (req, res) => {
     })
 };
 
+// method for get companies suitable for types of task
 exports.getCompanies = (req, res) => {
     console.log("get_companies route executing");
     if(req.params.type !== undefined){
@@ -216,7 +234,6 @@ exports.getCompanies = (req, res) => {
                 }
             );
         })
-
     } else {
         res.status(200).json(
             {

@@ -1,6 +1,22 @@
+/*
+* Shenkar College of Engineering and Design.
+* Department of Software Engineering
+* EazyBuzy - Software Engineering B.Sc. Final Project 2018
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Supervisor:
+*       Dr. Michael Kiperberg
+*/
 'use strict';
-
+/*
+* methods for routes controller
+*/
 let RouteController    = require('../modules/route_controller_mdl');
+
+// create route method
 exports.createRoute = (req, res) => {
     console.log("create_route route executing");
 
@@ -28,6 +44,7 @@ exports.createRoute = (req, res) => {
     }
 };
 
+// get route method
 exports.getRoute = (req, res) => {
     console.log("get_route route executing");
     res.status(200).json(

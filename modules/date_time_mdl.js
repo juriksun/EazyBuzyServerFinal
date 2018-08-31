@@ -1,6 +1,26 @@
+/*
+* Shenkar College of Engineering and Design.
+* Department of Software Engineering
+* EazyBuzy - Software Engineering B.Sc. Final Project 2018
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Supervisor:
+*       Dr. Michael Kiperberg
+*/
+
 'use strict';
+/*
+* this class allows us to work with all kinds of hour and date representions
+* for simple arithmetic functions with time
+* converting all representions for one kind 
+*/
 
 class DateTime{
+    
+    // compare the week hours
     static compareHour(hour1, hour2, day1, day2){
         day1 = day1 || 0;
         day2 = day2 || 0;
@@ -8,13 +28,18 @@ class DateTime{
             (this.convertTimeToMinutes(hour2) + this.convertDayToMinutes(day2));
     };
 
+    // convert the week day to minutes of week
     static convertDayToMinutes(day1){
         return day1 * 1440;
     }
+
+    // converting the full format of the time to day and hours
     static getDayAndHour(time){
         let date = new Date(time);
         return `${date.getDay()}${date.getHours()}`;
     }
+
+    // get the time format (HH:MM) and convert it to minutes
     static convertTimeToMinutes(time){
         if(typeof time === "number"){
             return time;
@@ -27,6 +52,7 @@ class DateTime{
         }
     }
 
+    // convert the date (dd.mm.yy) to day of the week
     static convertDateToDay(date){
         return this.normalizeDate(date).getDay();
     };
@@ -35,6 +61,7 @@ class DateTime{
         return new Date(date);
     };
     
+    // compare to full formats dates dates
     static compareDate(date1, date2){
         if(date1 === "" || date2 === ""){
             return 0;
@@ -44,13 +71,14 @@ class DateTime{
         }
     };
 
+    // convert the date and hour (date: mm.dd.yy/mm-dd-yy, time: HH:MM/minutes of week) to miliseconds
     static convertDateHourToMilliseconds(date, time){
         let splitedDate = date.split('-'),
             splitedTime = time.split(':');
-            // console.log(date + 'T' + time + ":00");
         return new Date(date + 'T' + time + ":00").getTime();
     }
 
+    // converting the minutes of the day to normal string time(HH:MM)
     static convertMinutesToTime(minutes){   
         let hoursNumber = ~~(minutes / 60),
             minutesNumber = minutes - hoursNumber * 60;
@@ -64,10 +92,9 @@ class DateTime{
         return stringHours + ":" + stringMinutes;
     }
 
+    // get the time window for new route and check if a task inside
     static checkTaskInTimeWindow(startWindowTime, endWindowTime, startTaskTime, durationTask){
-
         durationTask = (durationTask === "") ? "00:15" : durationTask;
-
         if(startTaskTime === ""){
             if(
                 this.convertTimeToMinutes(startWindowTime) +
@@ -81,7 +108,6 @@ class DateTime{
             }
             return 0;
         }
-
         if(
             this.convertTimeToMinutes(startWindowTime)
             > 
@@ -90,7 +116,6 @@ class DateTime{
             return this.convertTimeToMinutes(startWindowTime) - 
                 this.convertTimeToMinutes(startTaskTime);
         }
-
         if(
             this.convertTimeToMinutes(startTaskTime) +
             this.convertTimeToMinutes(durationTask)
@@ -101,16 +126,15 @@ class DateTime{
                 this.convertTimeToMinutes(durationTask) -
                 this.convertTimeToMinutes(endWindowTime);
         }
-
         return 0;
     }
 
+    // check how many time need for nearest open hour in array of opening hours
     static getNearestOpeningTime(currrentRouteTime, dayWindowTime,
         opening_hours, durationTask
     ){
         let nearestOpeningHours = undefined;
         durationTask = this.convertTimeToMinutes((durationTask === "") ? "00:15" : durationTask);
-        // console.log(JSON.stringify(opening_hours));
         if(
             opening_hours == undefined
             || opening_hours.periods == undefined
@@ -139,7 +163,6 @@ class DateTime{
                 ) - durationTask
                 >= 0
             ){
-                // console.log("in");
                 return 0;
             } else {
                 let newNearestOpeningHours = this.compareHour(
@@ -169,11 +192,11 @@ class DateTime{
         return nearestOpeningHours;
     }
 
+    // compare the time window for new route with the opening hours of the place
     static checkPlaceInTimeWindow(startWindowTime, endWindowTime,
         dayWindowTime, opening_hours, durationTask
     ){
         durationTask = this.convertTimeToMinutes((durationTask === "") ? "00:15" : durationTask);
-        // console.log("<<<<<<<<<<<<<<<<<<<<<<");
         if(
             opening_hours == undefined
             || opening_hours.periods == undefined
@@ -182,32 +205,6 @@ class DateTime{
             return 0;
         }
         for(let i = 0; i < opening_hours.periods.length; i++){
-            // console.log("---------------: " , opening_hours);
-            // console.log("startWindowTime: ", startWindowTime);
-            // console.log("endWindowTime: ", endWindowTime);
-            // console.log("dayWindowTime", dayWindowTime);
-            // console.log("durationTask", durationTask);
-            // console.log("opening_hours.periods[i].open.time : ", opening_hours.periods[i].open.time);
-            // console.log("opening_hours.periods[i].open.day :", opening_hours.periods[i].open.day);
-            // console.log("opening_hours.periods[i].close.time :", opening_hours.periods[i].close.time);
-            // console.log("opening_hours.periods[i].close.day", opening_hours.periods[i].close.day);
-            // console.log("Compare (Start - Open Hour): " + this.compareHour(
-            //     startWindowTime, opening_hours.periods[i].open.time,
-            //     dayWindowTime, opening_hours.periods[i].open.day
-            // ));
-            // console.log("Compare (End - (Open Hour - duration)): " + (this.compareHour(
-            //     endWindowTime, opening_hours.periods[i].open.time,
-            //     dayWindowTime, opening_hours.periods[i].open.day
-            // ) - durationTask));
-
-            // console.log("Compare (Start - Close Hour + duration): " + (this.compareHour(
-            //     startWindowTime, opening_hours.periods[i].close.time,
-            //     dayWindowTime, opening_hours.periods[i].close.day
-            // ) + durationTask));
-            // console.log("Compare (End - Close Hour): " + this.compareHour(
-            //     endWindowTime, opening_hours.periods[i].close.time,
-            //     dayWindowTime, opening_hours.periods[i].close.day
-            // ));
             if(
                 this.compareHour(
                     startWindowTime, opening_hours.periods[i].open.time,
@@ -249,14 +246,10 @@ class DateTime{
                 )
                 <= 0
             ){
-                //console.log("-----------------------------------In time");
                 return 0;
-            } else {
-                //console.log("-----------------------------------Not in time");
             }
         }
         return -1;
     }
 }
-
 module.exports = DateTime;

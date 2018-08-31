@@ -1,60 +1,19 @@
-const       db              = require('../data_base'),
-            googleApiMdl    = require('./google_api_mdl'),
+const       googleApiMdl    = require('./google_api_mdl'),
+            // packege for combinatoric manipulations
             Combinatorics   = require('./combinatorics_mdl'),
             TasksController = require('./tasks_controller_mdl'),
+            // packege for decoding polylines 
             Polyline        = require('@mapbox/polyline'),
+            // static class for all necessary action with times formats
             DateTime        = require('./date_time_mdl'),
             GoogleAPIs      = googleApiMdl.GoogleAPIs;
 
 
-// class ApiHandler{
-//     constructor(){
-        
-//         this.temp = 0;
-//     }
-
-//     handleRequst(promisesList,requstTemp){
-//         return new Promise( (resolve,reject) => {
-//             Promise.all(promisesList)
-//             .then( data => {
-//                 resolve(data);
-//             })
-//             .catch( error => {
-//                 if(this.temp < 3){
-//                     this.temp++;
-//                     this.handleRequst(promisesList)
-//                 }
-//                 else{
-//                     this.temp = 0;
-//                     reject({error : error})
-//                 }
-//             })
-//         })
-//     }
-// }
-
-// let apiHandleRequst = (promisesList,requstTemp) => {
-//     return new Promise( (resolve,reject) => {
-        
-//         Promise.all(promisesList)
-//         .then( data => {
-//             resolve(data);
-//         })
-//         .catch( error => {
-//             if(requstTemp === 2) reject( {error : error})
-//             else  {
-//                 console.log(requstTemp+1)
-//                 apiHandleRequst(promisesList,requstTemp+1)
-//                 .then( dataTemp => {
-//                     resolve(dataTemp)
-//                 })
-//             }
-//         })
-        
-//     })
-    
-// }
-
+/*
+* This is a main class for calculating the new route.
+* The main function of this class is a dispatch(). 
+* It contain all steps of algorithm for create new route.
+*/
 module.exports = class {
     constructor(){
         this.tasksController = new TasksController()
@@ -65,11 +24,9 @@ module.exports = class {
 
     // determine all time sets of route
     setTimeWindow(time){
-
         this.startTime = time.start_time;
         this.endTime = time.end_time;
         this.date = time.date;
-        // console.log(this.date);
         this.day = DateTime.convertDateToDay(this.date);
     }
 
@@ -80,9 +37,9 @@ module.exports = class {
 
     // Set tasks for route. It can be all tasks or selected tasks
     setTasks(tasks){
-        // mast return promise because getAllTasks connet to DB
+        // must return promise because getAllTasks connet to DB
         return new Promise((resolve, reject) => {
-            // if user send empty arr of tasks we will get all tasks
+            // if user send empty array of tasks we will get all tasks
             if(tasks.length === 0){
                 this.tasksController.getAllTasks(this.user)
                 .then( allTasks => {
@@ -101,26 +58,30 @@ module.exports = class {
         });
     }
 
-    //
+    // set start point of new route
     setStartPoint(startPoint){
         this.startPoint = startPoint;
         this.startPoint.task_identifier = { name : "Start" };
     }
+
+    // set travel made of new route
     setTravelMode(travelMode){
         this.travelMode = travelMode;
     }
-    //
+
+    // set end point of new route
     setEndPoint(endPoint){
         this.endPoint = endPoint;
         this.endPoint.task_identifier = { name : "End" };
     }
 
-    //
+    // set array of tasks for new route
     setTaskForSearchPath(allTasksForSearch){
         this.allTasksForSearch = allTasksForSearch
     }
 
-    // filter places with open hour
+    // filter places by opening hours.
+    // get all places and check the compapatibility with time window of the new route.
     filterPlacesByTimeWindow(allFullDadaPlace, tasks){
         let suteblePlaces = [];
         for(let i = 0; i < allFullDadaPlace.length; i++){
@@ -159,11 +120,12 @@ module.exports = class {
         return sutebleTasks;
     }
 
-    //
+    // generating all possible routes with combinatoric packege
     calcPossibleRoutes(suiteblePlaces, startPoint, endPoint) {
         return new Promise((resolve, reject) => {
                 let tasksForPermutation = [];
 
+                // entering task id to places
                 for (let i = 0; i < suiteblePlaces.length; i++) {
                     if(suiteblePlaces[i].places){
                         let task_identifier = {
@@ -192,6 +154,8 @@ module.exports = class {
                     }
                 }
 
+
+                // generate all passible routes
                 let allPermutationAndCombianationOfTasks = Combinatorics.permutationCombination(tasksForPermutation).toArray();
                 
                 let allPermutationAndCombinationOfAllWays = [];
@@ -201,6 +165,7 @@ module.exports = class {
                     );
                 }
 
+                // add all routes the start and end points
                 for (let i = 0; i < allPermutationAndCombinationOfAllWays.length; i++) {
                     allPermutationAndCombinationOfAllWays[i].unshift(startPoint);
                     allPermutationAndCombinationOfAllWays[i].push(endPoint);
@@ -209,6 +174,7 @@ module.exports = class {
         });
     }
 
+    // separating all tasks in all routes to segments (start point and end point of path for one task)
     buildAllRoutesWithSegments(possibleRoutes){
         return new Promise((resolve, reject) => {
             let allRoutsWithSegments = [];
@@ -219,7 +185,6 @@ module.exports = class {
                             startPoint: possibleRoutes[i][k],
                             endPoint: possibleRoutes[i][k + 1]
                         }
-
                         segments.push(segment);
                     }
                     allRoutsWithSegments.push(segments);
@@ -228,16 +193,29 @@ module.exports = class {
         });
     }
 
-    
-    //
+    // main function. contain of all steps for new route algorithm
     dispatch(){
         return new Promise((resolve, reject)=>{
+            // creating anchor points for looking suitable places
             this.calcPolygon()
-                .then((polygon) => {
+            .then((polygon) => {
+                // get suitable places for executing tasks
                 this.getSuiteblePlaces(polygon, this.filterTasksByTimeWindow(this.userTasks))
-                    .then((suiteblePlaces) => {
-                        
-                        if(suiteblePlaces.tasks.length === 0){
+                .then((suiteblePlaces) => {
+                    if(suiteblePlaces.tasks.length === 0){
+                        resolve(
+                            {
+                                recommended_route: undefined,
+                                all_routes: undefined,
+                                all_tasks: this.userTasks
+                            }
+                        );
+                        return;
+                    }
+                    // calculating all possible routes
+                    this.calcPossibleRoutes(suiteblePlaces.tasks, this.startPoint, this.endPoint)
+                    .then(possibleRoutes => {
+                        if(possibleRoutes.length === 0){
                             resolve(
                                 {
                                     recommended_route: undefined,
@@ -247,9 +225,10 @@ module.exports = class {
                             );
                             return;
                         }
-                        this.calcPossibleRoutes(suiteblePlaces.tasks,this.startPoint, this.endPoint)//alex
-                        .then(possibleRoutes => {
-                            if(possibleRoutes.length === 0){
+                        // separating all tasks in all routes to segments
+                        this.buildAllRoutesWithSegments(possibleRoutes)
+                        .then(allRoutesWithSegments => {
+                            if(allRoutesWithSegments.length === 0){
                                 resolve(
                                     {
                                         recommended_route: undefined,
@@ -259,9 +238,11 @@ module.exports = class {
                                 );
                                 return;
                             }
-                            this.buildAllRoutesWithSegments(possibleRoutes)//alex
-                            .then(allRoutesWithSegments => {
-                                if(allRoutesWithSegments.length === 0){
+                            allRoutesWithSegments = this.sortByAirDistanceNumOfSegments(allRoutesWithSegments);
+                            // add for all segments direction from google direction API 
+                            this.getAllDirectionForRoutesWithSegments(allRoutesWithSegments)
+                            .then(directionsForRoutesWithSegments => {
+                                if(directionsForRoutesWithSegments.length === 0){
                                     resolve(
                                         {
                                             recommended_route: undefined,
@@ -269,59 +250,45 @@ module.exports = class {
                                             all_tasks: this.userTasks
                                         }
                                     );
-                                    return;
+                                     return;
                                 }
-
-                                allRoutesWithSegments = this.sortByAirDistanceNumOfSegments(allRoutesWithSegments);
-
-                                this.getAllDirectionForRoutesWithSegments(allRoutesWithSegments)//alex
-                            
-                                .then(directionsForRoutesWithSegments => {
-                                    if(directionsForRoutesWithSegments.length === 0){
+                                this.directionsForRoutesWithSegments = directionsForRoutesWithSegments
+                                this.setAllTasksRouteStatusInRoutes(this.directionsForRoutesWithSegments, "route false");
+                                // choose recomendet route
+                                this.chooseRecommendedRoute(directionsForRoutesWithSegments)
+                                .then((recommendedRoute) => {
+                                    if(recommendedRoute.length === 0){
                                         resolve(
                                             {
                                                 recommended_route: undefined,
-                                                all_routes: undefined,
                                                 all_tasks: this.userTasks
                                             }
                                         );
                                         return;
                                     }
-                                    this.directionsForRoutesWithSegments = directionsForRoutesWithSegments
-                                    this.setAllTasksRouteStatusInRoutes(this.directionsForRoutesWithSegments, "route false");
-                                    this.chooseRecommendedRoute(directionsForRoutesWithSegments)
-                                    .then((recommendedRoute) => {
-                                        if(recommendedRoute.length === 0){
-                                            resolve(
-                                                {
-                                                    recommended_route: undefined,
-                                                    all_tasks: this.userTasks
-                                                }
-                                            );
-                                            return;
+                                    this.setAllTasksRouteStatusInRoutes([recommendedRoute], "route true");
+                                    resolve(
+                                        {
+                                            recommended_route: recommendedRoute,
+                                            all_tasks: this.userTasks
                                         }
-                                        this.setAllTasksRouteStatusInRoutes([recommendedRoute], "route true");
-                                        resolve(
-                                            {
-                                                recommended_route: recommendedRoute,
-                                                all_tasks: this.userTasks
-                                            }
-                                        );
-                                    })
-                                    .catch(errRecommendedRoute => reject({error:"Error RecommendedRoute" + errRecommendedRoute}));
+                                    );
                                 })
-                                .catch(errDirectionsForRoutesWithSegments => reject({error:"Error DirectionsForRoutesWithSegments" + errDirectionsForRoutesWithSegments}));
+                                .catch(errRecommendedRoute => reject({error:"Error RecommendedRoute" + errRecommendedRoute}));
                             })
-                            .catch(errRoutesWithSegments => reject({error:"Error RoutesWithSegments" + errRoutesWithSegments}));
+                            .catch(errDirectionsForRoutesWithSegments => reject({error:"Error DirectionsForRoutesWithSegments" + errDirectionsForRoutesWithSegments}));
                         })
-                        .catch(errPossibleRoutes => reject({error:"Error PossibleRoutes" + errPossibleRoutes}));
+                        .catch(errRoutesWithSegments => reject({error:"Error RoutesWithSegments" + errRoutesWithSegments}));
                     })
-                    .catch(errSuiteblePlaces => reject({error:"Error SuiteblePlaces" + errSuiteblePlaces}));
+                    .catch(errPossibleRoutes => reject({error:"Error PossibleRoutes" + errPossibleRoutes}));
                 })
-                .catch(errPolygon => reject({error:"Error Polygon" + errPolygon}));
+                .catch(errSuiteblePlaces => reject({error:"Error SuiteblePlaces" + errSuiteblePlaces}));
+            })
+            .catch(errPolygon => reject({error:"Error Polygon" + errPolygon}));
         })
     };
 
+    // function for determine anchor points for looking suitable places
     calcPolygon() {      
         return new Promise((resolve, reject)=>{
             let poligonDots = [];
@@ -340,6 +307,7 @@ module.exports = class {
         });
     }
 
+    // setting anchor points
     checkAndSetPuligonDot(poligonDots, dot){
         let i = 0;
         if(dot.lat === 0 || dot.lng === 0){
@@ -355,11 +323,7 @@ module.exports = class {
         }
     }
 
-    getFullData(data){  
-      return this.googleAPIs.googleGetPlaceData(data.taskIndex, data.place_id);
-    }
-
-    //get suteble places for all tasks
+    // get suteble places for all tasks
     getSuiteblePlaces(polygonPoints, tasks){
         return new Promise((resolve, reject)=>{
 
@@ -374,10 +338,10 @@ module.exports = class {
             }
 
             for(let i = 0 ; i < tasks.length ; i++){
-                //separating to place with addres and without
+                // separating to place with address and without
                 if(tasks[i].location.address === ''){
 
-                    //if the place without adress the plase is note concrete and must get all suteble plases for task in all poligon points
+                    // if the place without address - the place is not concrete and must get all suitable places for task in all polygon points
                     for(let k = 0 ; k < polygonPoints.length ; k ++){
                         
                         promises.push( this.googleAPIs.googleGetPlacesByRadius(i, tasks[i], polygonPoints[k], 1500));
@@ -438,16 +402,13 @@ module.exports = class {
         });
     }
 
-    //need
-    saveRoute(){
-
-    }
-
+    // function for choosing recommended route
     chooseRecommendedRoute(directionsForRoutesWithSegments){
         return new Promise((resolve, reject)=>{
 
             let recommendedRoute;
 
+            // choose best route by number of segments and duration
             for (let i = 0; i < directionsForRoutesWithSegments.length; i++) {
                 
                 recommendedRoute || (recommendedRoute = directionsForRoutesWithSegments[i]);
@@ -465,6 +426,7 @@ module.exports = class {
                 }
             }
 
+            // add aditional fields for recomended route
             recommendedRoute.tasks = [];
             recommendedRoute.date = this.date;
             for(let i = 0; i < recommendedRoute.segments.length; i++ ){
@@ -519,6 +481,7 @@ module.exports = class {
         });
     }
 
+    // calculating the early opening hours
     calcWaitTimeToOpenBeforeStart(point, routeCurrentTime){
         if(point.task_identifier.time.start_time !== "" ){
             
@@ -538,6 +501,7 @@ module.exports = class {
         );
     }
 
+    // function for add for all segments direction from google direction API 
     buildRouteWithSegmentsAndDerection(routeWithSegments, startHour){
         return new Promise(async (resolve, reject) => {
             let route = {
@@ -556,23 +520,20 @@ module.exports = class {
                 routeWithSegments[i].arriveTime = route.route_current_time;
                 if(routeWithSegments[i].startPoint.task_identifier.name !== 'Start'
                 ){
-
                     let waitTime = this.calcWaitTimeToOpenBeforeStart(routeWithSegments[i].startPoint, route.route_current_time);
-                   
+                
                     if(waitTime === undefined){
                         resolve(undefined);
                         return;
                     }
                       
                     route.route_wait_time += waitTime;
-
                     routeWithSegments[i].waitTime = waitTime;
                     routeWithSegments[i].duration = 
                         DateTime.convertTimeToMinutes(
                             (routeWithSegments[i].startPoint.task_identifier.time.duration === "")?
                             "00:15": routeWithSegments[i].startPoint.task_identifier.time.duration
                         );
-                   
                 } else {
                     routeWithSegments[i].duration = 0;
                     routeWithSegments[i].waitTime = 0;
@@ -627,6 +588,7 @@ module.exports = class {
         });
     }
 
+    // get directions for all routes 
     getAllDirectionForRoutesWithSegments(allRoutesWithSegments){
         return new Promise( async (resolve, reject) => {   
             let poromises = [];
@@ -640,7 +602,7 @@ module.exports = class {
                             route, startHour
                         );
                         poromises.push(routeWithDirections);
-                        startHour += 120;
+                        startHour += 120; 
                     }
                 }
             }
@@ -662,6 +624,7 @@ module.exports = class {
         });
     }
 
+    // check which tasks are included in route 
     setAllTasksRouteStatusInRoutes(route, status){
         for(let i = 0; i < route.length; i++){
             for(let k = 0; k < route[i].segments.length; k++){
@@ -676,12 +639,14 @@ module.exports = class {
         }
     }
 
+    // check which task are included in route 
     setAllTasksRouteStatus(tasks, status){
         for(let i = 0; i < tasks.length; i++){
             tasks[i].route_status = status;
         }
     }
 
+    // check which task are included in route 
     setTasksRouteStatus(taskId, status){
         for(let i = 0; i < this.userTasks.length; i++){
             if(this.userTasks[i]._id == taskId){
@@ -691,6 +656,7 @@ module.exports = class {
         }
     }
 
+    // sort all routes by direct distance
     sortByAirDistanceNumOfSegments(allRauteWithSegments){
         const MAX_NUM_OF_REQUESTS = 100.0;
 
@@ -701,6 +667,7 @@ module.exports = class {
             ); 
         };
 
+        // calculating direct distance between points
         let calcSumOfAirDistance = (route) => {
 
             let calcAirDistance = (point1, point2) => {

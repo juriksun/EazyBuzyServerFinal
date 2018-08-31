@@ -1,11 +1,27 @@
+/*
+* Shenkar College of Engineering and Design.
+* Department of Software Engineering
+* EazyBuzy - Software Engineering B.Sc. Final Project 2018
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Supervisor:
+*       Dr. Michael Kiperberg
+*/
 'use strict';
 const User = require('../models/user_mod');
 
+/*
+* the main purpose of user controller class role is work with user data base
+*/
 module.exports = class{
     constructor(){
 
     }
 
+    // get full data of user contain id
     getUserWithId(user){
         return new Promise((resolve, reject) => {
             // console.log(user)
@@ -20,6 +36,7 @@ module.exports = class{
             });
         });
     }
+
     // Secure method only information not sensative will be returned
     getUserPartialData(user){
         return new Promise((resolve, reject) => {
@@ -34,6 +51,7 @@ module.exports = class{
         });
     }
 
+    // check if the user exist 
     userExist(username){
         return new Promise((resolve, reject) => {
             // console.log(username)
@@ -48,6 +66,7 @@ module.exports = class{
         });
     }
 
+    // save new user in database
     setNewUser(user){
         return new Promise( (resolve,reject) => {
             this.userExist(user)

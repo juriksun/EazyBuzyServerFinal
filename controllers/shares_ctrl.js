@@ -1,8 +1,23 @@
+/*
+* Shenkar College of Engineering and Design.
+* Department of Software Engineering
+* EazyBuzy - Software Engineering B.Sc. Final Project 2018
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Supervisor:
+*       Dr. Michael Kiperberg
+*/
 'use strict';
-
+/*
+* methods for share controller
+*/
 let SharesController = require('../modules/shares_controller_mdl'),
     sharesController = new SharesController();
 
+// share task method
 exports.setTaskForShare = (req , res) => {
     console.log("set new task to share");
     if(req.body.username_from !== undefined && req.body.username_to !== undefined && req.body.task_id !== undefined ){

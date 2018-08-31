@@ -1,3 +1,15 @@
+/*
+* Shenkar College of Engineering and Design.
+* Department of Software Engineering
+* EazyBuzy - Software Engineering B.Sc. Final Project 2018
+*   Created by:
+*       Shamir Krizler
+*       Nir Mekin
+*       Alexander Djura
+*
+*   Supervisor:
+*       Dr. Michael Kiperberg
+*/
 'use strict';
 const   express     = require('express'),
         bodyParser  = require('body-parser'),
@@ -16,7 +28,6 @@ app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
 
 app.set('port', port);
-//app.use('/', express.static('./public'));//for API
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -26,7 +37,6 @@ app.use((req, res, next) => {
 });
 
 /*** All routes ***/
-// app.get('/', (req, res)=>{res.status(200).sendFile(__dirname + "public/api.html")});//for api
 app.use('/info', get_info_ctrl.execute);
 // ROUTES
 app.use('/create_route', routes_ctrl.createRoute);
